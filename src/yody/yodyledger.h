@@ -1,5 +1,5 @@
-#ifndef QTUMLEDGER_H
-#define QTUMLEDGER_H
+#ifndef YODYLEDGER_H
+#define YODYLEDGER_H
 
 #include <string>
 #include <vector>

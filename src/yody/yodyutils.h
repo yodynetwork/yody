@@ -1,5 +1,5 @@
-#ifndef QTUMUTILS_H
-#define QTUMUTILS_H
+#ifndef YODYUTILS_H
+#define YODYUTILS_H
 
 #include <libdevcore/Common.h>
 #include <libdevcore/FixedHash.h>

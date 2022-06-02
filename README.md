@@ -33,7 +33,7 @@ Basic usage resources:
 
 Development resources:
 
-* [Yody Book - A Developer's Guide To QTUM](http://book.qtum.site/en/)
+* [Yody Book - A Developer's Guide To YODY](http://book.qtum.site/en/)
 * [Yody contract usage](https://docs.qtum.site/en/QRC20-Token-Introduce.html)
 * [Deploying a custom token to Yody](https://blog.qtum.org/qtum-custom-token-walkthrough-467d725fa27d)
 * [YodyJS document](https://yodynetwork.github.io/qtumjs-doc/)
@@ -60,7 +60,7 @@ Developer's Tools
   * https://github.com/yodynetwork/qtumportal
 * Docker images for running qtum services
   * https://github.com/yodynetwork/qtum-docker
-* qtum.info API that powers the block explorer and the QTUM Web wallet
+* qtum.info API that powers the block explorer and the YODY Web wallet
   * https://github.com/yodynetwork/yodyinfo-api#yodyinfo-api-documentation
 
 
@@ -71,7 +71,7 @@ Yody Core is our primary mainnet wallet. It implements a full node and is capabl
 
 Yody Core currently implements the following:
 
-* Sending/Receiving QTUM coins
+* Sending/Receiving YODY coins
 * Sending/Receiving QRC20 tokens on the Yody network
 * Staking and creating blocks for the Yody network
 * Creating and interacting with smart contracts
@@ -93,7 +93,7 @@ A browser wallet that supports the Ledger hardware wallet, offline cold wallet, 
 
 Web site https://qtumwallet.org
 
-User documentation https://github.com/yodynetwork/documents/tree/master/en/QTUM-WebWallet-usage
+User documentation https://github.com/yodynetwork/documents/tree/master/en/YODY-WebWallet-usage
 
 ### Yody Electrum
 

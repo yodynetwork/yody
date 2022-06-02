@@ -1,5 +1,5 @@
-#ifndef QTUM_QT_STAKEPAGE_H
-#define QTUM_QT_STAKEPAGE_H
+#ifndef YODY_QT_STAKEPAGE_H
+#define YODY_QT_STAKEPAGE_H
 
 #include <interfaces/wallet.h>
 
@@ -63,4 +63,4 @@ private:
     void updateAnnualROI();
 };
 
-#endif // QTUM_QT_STAKEPAGE_H
+#endif // YODY_QT_STAKEPAGE_H
