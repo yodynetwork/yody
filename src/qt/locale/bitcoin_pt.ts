@@ -184,8 +184,8 @@ Assinar só é possível com endereços do tipo "legado".</translation>
         <translation type="unfinished">Insira a password antiga e a nova para a carteira.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Lembra se que encrostar a sua carteira não o pode defender na totalidade os seus qtums de serem roubados por um malware que possa infectar o seu computador.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Lembra se que encrostar a sua carteira não o pode defender na totalidade os seus yodys de serem roubados por um malware que possa infectar o seu computador.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -539,8 +539,8 @@ Assinar só é possível com endereços do tipo "legado".</translation>
         <translation type="unfinished">A conectar aos pares…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Solicitar pagamentos (gera códigos QR e qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Solicitar pagamentos (gera códigos QR e yody: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -614,8 +614,8 @@ Assinar só é possível com endereços do tipo "legado".</translation>
         <translation type="unfinished">&amp;Endereços de receção</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
-        <translation type="unfinished">Abrir um qtum URI</translation>
+        <source>Open a yody: URI</source>
+        <translation type="unfinished">Abrir um yody URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1056,7 +1056,7 @@ Assinar só é possível com endereços do tipo "legado".</translation>
     </message>
     <message>
         <source>The entered address "%1" is not a valid Yody address.</source>
-        <translation type="unfinished">O endereço introduzido "%1" não é um endereço qtum válido.</translation>
+        <translation type="unfinished">O endereço introduzido "%1" não é um endereço yody válido.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1210,12 +1210,12 @@ Assinar só é possível com endereços do tipo "legado".</translation>
         <translation type="unfinished">Formulário</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the yody network, as detailed below.</source>
         <translation type="unfinished">Transações recentes podem não ser visíveis por agora, portanto o saldo da sua carteira pode estar incorreto. Esta informação será corrigida quando a sua carteira acabar de sincronizar com a rede, como está explicado em baixo.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">Tentar enviar qtums que estão afetadas por transações ainda não exibidas não será aceite pela rede.</translation>
+        <source>Attempting to spend yodys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">Tentar enviar yodys que estão afetadas por transações ainda não exibidas não será aceite pela rede.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1261,7 +1261,7 @@ Assinar só é possível com endereços do tipo "legado".</translation>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open qtum URI</source>
+        <source>Open yody URI</source>
         <translation type="unfinished">Abrir um Yody URI</translation>
     </message>
     </context>
@@ -1366,7 +1366,7 @@ Assinar só é possível com endereços do tipo "legado".</translation>
     </message>
     <message>
         <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir a porta do cliente qtum automaticamente no seu router. Isto apenas funciona se o seu router suportar UPnP e este se encontrar ligado.</translation>
+        <translation>Abrir a porta do cliente yody automaticamente no seu router. Isto apenas funciona se o seu router suportar UPnP e este se encontrar ligado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1711,16 +1711,16 @@ ID transação: %1</translation>
         <translation type="unfinished">Erro do pedido de pagamento</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation type="unfinished">Impossível iniciar o controlador de qtum: click-to-pay</translation>
+        <source>Cannot start yody: click-to-pay handler</source>
+        <translation type="unfinished">Impossível iniciar o controlador de yody: click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">Manuseamento de URI</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation type="unfinished">'qtum://' não é um URI válido. Utilize 'qtum:'.</translation>
+        <source>'yody://' is not a valid URI. Use 'yody:' instead.</source>
+        <translation type="unfinished">'yody://' não é um URI válido. Utilize 'yody:'.</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
@@ -2384,7 +2384,7 @@ ID transação: %1</translation>
         <translation type="unfinished">Esconder configurações de taxas de transação</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for yody transactions than the network can process.</source>
         <translation type="unfinished">Quando o volume de transações é maior que o espaço nos blocos, os mineradores, bem como os nós de retransmissão, podem impor uma taxa mínima. Pagar apenas esta taxa mínima é muito bom, mas esteja ciente que isso pode resultar numa transação nunca confirmada, uma vez que há mais pedidos para transações do que a rede pode processar.</translation>
     </message>
     <message>
@@ -2626,8 +2626,8 @@ ID transação: %1</translation>
         <translation type="unfinished">A quantidade para enviar na unidade selecionada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">A taxa será deduzida ao valor que está a ser enviado. O destinatário irá receber menos qtums do que as que inseridas no campo do valor. Se estiverem selecionados múltiplos destinatários, a taxa será repartida equitativamente.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less yodys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">A taxa será deduzida ao valor que está a ser enviado. O destinatário irá receber menos yodys do que as que inseridas no campo do valor. Se estiverem selecionados múltiplos destinatários, a taxa será repartida equitativamente.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2654,8 +2654,8 @@ ID transação: %1</translation>
         <translation type="unfinished">Introduza uma etiqueta para este endereço para o adicionar à sua lista de endereços usados</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
-        <translation type="unfinished">Uma mensagem que estava anexada ao URI qtum: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede Yody.</translation>
+        <source>A message that was attached to the yody: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Uma mensagem que estava anexada ao URI yody: que será armazenada com a transação para sua referência. Nota: Esta mensagem não será enviada através da rede Yody.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2677,7 +2677,7 @@ ID transação: %1</translation>
         <translation>&amp;Assinar Mensagem</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive yodys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished">Pode assinar mensagens com os seus endereços para provar que são seus. Tenha atenção ao assinar mensagens ambíguas, pois ataques de phishing podem tentar enganá-lo de modo a assinar a sua identidade para os atacantes. Apenas assine declarações detalhadas com as quais concorde.</translation>
     </message>
     <message>
@@ -3382,14 +3382,14 @@ Ir para o arquivo &gt; Abrir carteira para carregar a carteira
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">Os programadores de %s</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s corrompido. Tente usar a ferramenta de carteira qtum-wallet para salvar ou restaurar um backup.</translation>
+        <source>%s corrupt. Try using the wallet tool yody-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s corrompido. Tente usar a ferramenta de carteira yody-wallet para salvar ou restaurar um backup.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>

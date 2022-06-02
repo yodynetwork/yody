@@ -1,4 +1,4 @@
-#include <qt/qtumversionchecker.h>
+#include <qt/yodyversionchecker.h>
 #include <clientversion.h>
 
 #include <QNetworkAccessManager>
@@ -9,7 +9,7 @@
 #include <QRegularExpressionMatchIterator>
 #include <QTimer>
 
-#define paternVersion "qtum-([0-9]+\\.)?([0-9]+\\.)?([0-9]+)-"
+#define paternVersion "yody-([0-9]+\\.)?([0-9]+\\.)?([0-9]+)-"
 
 YodyVersionChecker::YodyVersionChecker(QObject *parent) : QObject(parent)
 {

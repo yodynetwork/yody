@@ -7,8 +7,8 @@ from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import *
 from test_framework.script import *
 from test_framework.p2p import *
-from test_framework.qtum import generatesynchronized
-from test_framework.qtumconfig import ENABLE_REDUCED_BLOCK_TIME
+from test_framework.yody import generatesynchronized
+from test_framework.yodyconfig import ENABLE_REDUCED_BLOCK_TIME
 
 import sys
 

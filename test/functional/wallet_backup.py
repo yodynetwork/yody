@@ -41,8 +41,8 @@ from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
 )
-from test_framework.qtumconfig import INITIAL_BLOCK_REWARD
-from test_framework.qtum import generatesynchronized
+from test_framework.yodyconfig import INITIAL_BLOCK_REWARD
+from test_framework.yody import generatesynchronized
 
 class WalletBackupTest(BitcoinTestFramework):
     def set_test_params(self):

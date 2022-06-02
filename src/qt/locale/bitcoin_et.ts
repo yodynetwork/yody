@@ -178,8 +178,8 @@
         <translation type="unfinished">Sisesta rahakoti vana salafraas ja uus salafraas.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Pea meeles, et rahakoti krüpteerimine ei välista qtumide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Pea meeles, et rahakoti krüpteerimine ei välista yodyide vargust, kui sinu arvuti on nakatunud pahavaraga.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -428,8 +428,8 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Loo maksepäring (genereerib QR koodid ja qtumi: URId)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Loo maksepäring (genereerib QR koodid ja yodyi: URId)</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -901,7 +901,7 @@
         <translation type="unfinished">Maksepäringu tõrge</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
+        <source>Cannot start yody: click-to-pay handler</source>
         <translation type="unfinished">Yody ei käivitu: vajuta-maksa toiming</translation>
     </message>
     <message>
@@ -1812,7 +1812,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation type="unfinished">See on test-versioon - kasutamine omal riisikol - ära kasuta mining'uks ega kaupmeeste programmides</translation>

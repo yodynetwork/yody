@@ -449,7 +449,7 @@
         <translation>Лентата с инструменти</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
         <translation type="unfinished">Изискване на плащания(генерира QR кодове и биткойн: URIs)</translation>
     </message>
     <message>
@@ -1167,7 +1167,7 @@
         <translation type="unfinished">Възникна грешка по време назаявката за плащане</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
+        <source>Cannot start yody: click-to-pay handler</source>
         <translation type="unfinished">Биткойн не можe да се стартира: click-to-pay handler</translation>
     </message>
     <message>
@@ -2199,7 +2199,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>Do you want to rebuild the block database now?</source>
         <translation type="unfinished">Желаете ли да пресъздадете базата данни с блокове сега?</translation>

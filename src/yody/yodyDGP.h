@@ -1,7 +1,7 @@
 #ifndef YODYDGP_H
 #define YODYDGP_H
 
-#include <qtum/qtumstate.h>
+#include <yody/yodystate.h>
 #include <primitives/block.h>
 #include <validation.h>
 #include <util/strencodings.h>

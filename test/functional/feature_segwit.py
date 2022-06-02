@@ -54,8 +54,8 @@ from test_framework.util import (
     bytes_to_hex_str,
     try_rpc,
 )
-from test_framework.qtumconfig import COINBASE_MATURITY, INITIAL_BLOCK_REWARD, ENABLE_REDUCED_BLOCK_TIME, MAX_BLOCK_BASE_SIZE, MAX_BLOCK_SIGOPS, FACTOR_REDUCED_BLOCK_TIME
-from test_framework.qtum import convert_btc_address_to_qtum, generatesynchronized
+from test_framework.yodyconfig import COINBASE_MATURITY, INITIAL_BLOCK_REWARD, ENABLE_REDUCED_BLOCK_TIME, MAX_BLOCK_BASE_SIZE, MAX_BLOCK_SIGOPS, FACTOR_REDUCED_BLOCK_TIME
+from test_framework.yody import convert_btc_address_to_yody, generatesynchronized
 
 NODE_0 = 0
 NODE_2 = 2
@@ -340,9 +340,9 @@ class SegWitTest(BitcoinTestFramework):
 
         # Import a compressed key and an uncompressed key, generate some multisig addresses
         self.nodes[0].importprivkey("92e6XLo5jVAVwrQKPNTs93oQco8f8sDNBcpv73Dsrs397fQtFQn")
-        uncompressed_spendable_address = [convert_btc_address_to_qtum("mvozP4UwyGD2mGZU4D2eMvMLPB9WkMmMQu")]
+        uncompressed_spendable_address = [convert_btc_address_to_yody("mvozP4UwyGD2mGZU4D2eMvMLPB9WkMmMQu")]
         self.nodes[0].importprivkey("cNC8eQ5dg3mFAVePDX4ddmPYpPbw41r9bm2jd1nLJT77e6RrzTRR")
-        compressed_spendable_address = [convert_btc_address_to_qtum("mmWQubrDomqpgSYekvsU7HWEVjLFHAakLe")]
+        compressed_spendable_address = [convert_btc_address_to_yody("mmWQubrDomqpgSYekvsU7HWEVjLFHAakLe")]
         assert not self.nodes[0].getaddressinfo(uncompressed_spendable_address[0])['iscompressed']
         assert self.nodes[0].getaddressinfo(compressed_spendable_address[0])['iscompressed']
 
@@ -507,9 +507,9 @@ class SegWitTest(BitcoinTestFramework):
         # Repeat some tests. This time we don't add witness scripts with importaddress
         # Import a compressed key and an uncompressed key, generate some multisig addresses
         self.nodes[0].importprivkey("927pw6RW8ZekycnXqBQ2JS5nPyo1yRfGNN8oq74HeddWSpafDJH")
-        uncompressed_spendable_address = [convert_btc_address_to_qtum("mguN2vNSCEUh6rJaXoAVwY3YZwZvEmf5xi")]
+        uncompressed_spendable_address = [convert_btc_address_to_yody("mguN2vNSCEUh6rJaXoAVwY3YZwZvEmf5xi")]
         self.nodes[0].importprivkey("cMcrXaaUC48ZKpcyydfFo8PxHAjpsYLhdsp6nmtB3E2ER9UUHWnw")
-        compressed_spendable_address = [convert_btc_address_to_qtum("n1UNmpmbVUJ9ytXYXiurmGPQ3TRrXqPWKL")]
+        compressed_spendable_address = [convert_btc_address_to_yody("n1UNmpmbVUJ9ytXYXiurmGPQ3TRrXqPWKL")]
 
         self.nodes[0].importpubkey(pubkeys[5])
         compressed_solvable_address = [key_to_p2pkh(pubkeys[5])]

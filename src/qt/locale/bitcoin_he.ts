@@ -179,7 +179,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">נא לספק את הסיסמה הישנה ולתת סיסמה חדשה לארנק.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">זכור שהצפנת הארנק לא יכולה להגן עליך לגמרי מגניבת המטבעות שלך על ידי תוכנה זדונית שנמצאת על המחשב שלך.</translation>
     </message>
     <message>
@@ -486,8 +486,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>סרגל כלים לשוניות</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :qtum)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :yody)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -561,7 +561,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;כתובות לקבלה</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
+        <source>Open a yody: URI</source>
         <translation type="unfinished">פתיחת קטום: כתובת משאב</translation>
     </message>
     <message>
@@ -1130,11 +1130,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">טופס</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the yody network, as detailed below.</source>
         <translation type="unfinished">ייתכן שהעברות שבוצעו לאחרונה לא יופיעו עדיין, ולכן המאזן בארנק שלך יהיה שגוי. המידע הנכון יוצג במלואו כאשר הארנק שלך יסיים להסתנכרן עם רשת הקטום, כמפורט למטה.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend yodys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished">הרשת תסרב לקבל הוצאת ביטקוינים במידה והם כבר נמצאים בהעברות אשר לא מוצגות עדיין.</translation>
     </message>
     <message>
@@ -1169,7 +1169,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open qtum URI</source>
+        <source>Open yody URI</source>
         <translation type="unfinished">פתיחת כתובת משאב קטום</translation>
     </message>
     <message>
@@ -1625,16 +1625,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">שגיאת בקשת תשלום</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation type="unfinished">לא ניתן להפעיל את המקשר qtum: click-to-pay</translation>
+        <source>Cannot start yody: click-to-pay handler</source>
+        <translation type="unfinished">לא ניתן להפעיל את המקשר yody: click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">טיפול בכתובות</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation type="unfinished">'//:qtum' אינה כתובת תקנית. נא להשתמש ב־"qtum:‎"‏ במקום.</translation>
+        <source>'yody://' is not a valid URI. Use 'yody:' instead.</source>
+        <translation type="unfinished">'//:yody' אינה כתובת תקנית. נא להשתמש ב־"yody:‎"‏ במקום.</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
@@ -2241,7 +2241,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">הסתרת הגדרות עמלת עסקה</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for yody transactions than the network can process.</source>
         <translation type="unfinished">כאשר יש פחות נפח עסקאות מאשר מקום בבלוק, כורים וכן צמתות מקשרות יכולות להכתיב עמלות מינימום. התשלום של עמלת מינימום הנו תקין, אך יש לקחת בחשבון שהדבר יכול לגרום לעסקה שלא תאושר ברגע שיש יותר ביקוש לעסקאות קטום מאשר הרשת יכולה לעבד.</translation>
     </message>
     <message>
@@ -2487,7 +2487,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">הסכום לשליחה במטבע הנבחר</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less yodys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished">העמלה תנוכה מהסכום שנשלח. הנמען יקבל פחות ביטקוינים ממה שסיפקת בשדה הסכום. אם נבחרו מספר נמענים, העמלה תחולק באופן שווה.</translation>
     </message>
     <message>
@@ -2515,7 +2515,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">יש לתת תווית לכתובת זו כדי להוסיף אותה לרשימת הכתובות בשימוש</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <source>A message that was attached to the yody: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
         <translation type="unfinished">הודעה שצורפה לקטום: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הקטום.</translation>
     </message>
     <message>
@@ -2538,7 +2538,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>חתימה על הו&amp;דעה</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive yodys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished">אפשר לחתום על הודעות/הסכמים באמצעות הכתובות שלך, כדי להוכיח שבאפשרותך לקבל את הביטקוינים הנשלחים אליהן. יש להיזהר ולא לחתום על תוכן עמום או אקראי, מכיוון שתקיפות דיוג עשויות לנסות לגנוב את זהותך. יש לחתום רק על הצהרות מפורטות שהנך מסכים/ה להן.</translation>
     </message>
     <message>
@@ -3213,14 +3213,14 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">ה %s מפתחים</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s משובש. נסו להשתמש בכלי הארנק qtum-wallet כדי להציל או לשחזר מגיבוי..</translation>
+        <source>%s corrupt. Try using the wallet tool yody-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s משובש. נסו להשתמש בכלי הארנק yody-wallet כדי להציל או לשחזר מגיבוי..</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>

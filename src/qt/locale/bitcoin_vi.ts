@@ -165,8 +165,8 @@
         <translation type="unfinished">Nhập cụm mật khẩu cũ và mật khẩu mới cho ví.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Xin lưu ý rằng mật mã hóa ví của bạn không thể bảo vệ hoàn toàn qtum của bạn khỏi đánh cắp bởi các phẩn mềm gián điệp nhiễm vào máy tính của bạn.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Xin lưu ý rằng mật mã hóa ví của bạn không thể bảo vệ hoàn toàn yody của bạn khỏi đánh cắp bởi các phẩn mềm gián điệp nhiễm vào máy tính của bạn.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -406,8 +406,8 @@
         <translation>Các thanh công cụ</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Yêu cầu thanh toán (tạo QR code và qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Yêu cầu thanh toán (tạo QR code và yody: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -472,8 +472,8 @@
         <translation type="unfinished">&amp;Các địa chỉ đang nhận</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
-        <translation type="unfinished">Mở một qtum: URI</translation>
+        <source>Open a yody: URI</source>
+        <translation type="unfinished">Mở một yody: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -955,12 +955,12 @@
 <context>
     <name>ModalOverlay</name>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
-        <translation type="unfinished">Giao dịch gần đây có thể chưa được hiển thị, và vì vậy số dư wallet của bạn có thể không dúng. Thông tin này sẽ được làm đúng khi wallet hoàn thành đồng bộ với qtum network, như chi tiết bên dưới.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the yody network, as detailed below.</source>
+        <translation type="unfinished">Giao dịch gần đây có thể chưa được hiển thị, và vì vậy số dư wallet của bạn có thể không dúng. Thông tin này sẽ được làm đúng khi wallet hoàn thành đồng bộ với yody network, như chi tiết bên dưới.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">Cố gắng spend các qtums bị ảnh hưởng bởi các giao dịch chưa được hiển thị sẽ không được chấp nhận bởi mạng.</translation>
+        <source>Attempting to spend yodys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">Cố gắng spend các yodys bị ảnh hưởng bởi các giao dịch chưa được hiển thị sẽ không được chấp nhận bởi mạng.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -994,8 +994,8 @@
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open qtum URI</source>
-        <translation type="unfinished">Mở qtum URI</translation>
+        <source>Open yody URI</source>
+        <translation type="unfinished">Mở yody URI</translation>
     </message>
     </context>
 <context>
@@ -1290,12 +1290,12 @@
 <context>
     <name>PaymentServer</name>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation type="unfinished">Không thể khởi tạo qtum: click-to-pay handler</translation>
+        <source>Cannot start yody: click-to-pay handler</source>
+        <translation type="unfinished">Không thể khởi tạo yody: click-to-pay handler</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation type="unfinished">'qtum://' không khả dụng URI. Dùng thay vì 'qtum:' .</translation>
+        <source>'yody://' is not a valid URI. Use 'yody:' instead.</source>
+        <translation type="unfinished">'yody://' không khả dụng URI. Dùng thay vì 'yody:' .</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
@@ -1772,8 +1772,8 @@
         <translation type="unfinished">Ẩn cài đặt phí giao dịch</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
-        <translation type="unfinished">Khi có khối lượng giao dịch ít hơn chổ trống trong các khối, các nhà đào mỏ cũng như các nút chuyển tiếp có thể thực thi chỉ với một khoản phí tối thiểu. Chỉ trả khoản phí tối thiểu này là tốt, nhưng lưu ý rằng điều này có thể dẫn đến một giao dịch không bao giờ xác nhận một khi có nhu cầu giao dịch qtum nhiều hơn khả năng mạng có thể xử lý.</translation>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for yody transactions than the network can process.</source>
+        <translation type="unfinished">Khi có khối lượng giao dịch ít hơn chổ trống trong các khối, các nhà đào mỏ cũng như các nút chuyển tiếp có thể thực thi chỉ với một khoản phí tối thiểu. Chỉ trả khoản phí tối thiểu này là tốt, nhưng lưu ý rằng điều này có thể dẫn đến một giao dịch không bao giờ xác nhận một khi có nhu cầu giao dịch yody nhiều hơn khả năng mạng có thể xử lý.</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -1969,8 +1969,8 @@
         <translation type="unfinished">Lượng tiền để gửi trong mỗi đơn vị đã chọn</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">The fee sẽ được khấu trừ từ số tiền đang gửi. Người nhận sẽ receive ít qtums hơn bạn gõ vào khoảng trống. Nếu nhiều người gửi được chọn, fee sẽ được chia đều.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less yodys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">The fee sẽ được khấu trừ từ số tiền đang gửi. Người nhận sẽ receive ít yodys hơn bạn gõ vào khoảng trống. Nếu nhiều người gửi được chọn, fee sẽ được chia đều.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1997,8 +1997,8 @@
         <translation type="unfinished">Nhập một label cho cái address này để thêm vào danh sách địa chỉ đã sử dụng</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
-        <translation type="unfinished">Một tin nhắn được đính kèm với số qtum: URI mà sẽ được lưu giữ với transaction dành cho tài liệu tham khảo. Lưu ý: Tin nhắn này sẽ không được gửi thông qua Yody network.</translation>
+        <source>A message that was attached to the yody: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Một tin nhắn được đính kèm với số yody: URI mà sẽ được lưu giữ với transaction dành cho tài liệu tham khảo. Lưu ý: Tin nhắn này sẽ không được gửi thông qua Yody network.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2020,8 +2020,8 @@
         <translation>&amp;Sign Tin nhắn</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation type="unfinished">Bạn có thể ký/đồng ý với địa chỉ chứng minh bạn có thể receive qtums đã gửi đến chúng. Cẩn thận không ký bất cứ không rõ hay random, như các cuộc tấn công lừa đảo có thể cố lừa bạn ký tên vào danh tính của bạn.. Chỉ ký các bản tuyên bố hoàn chỉnh mà bạn đồng ý.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive yodys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">Bạn có thể ký/đồng ý với địa chỉ chứng minh bạn có thể receive yodys đã gửi đến chúng. Cẩn thận không ký bất cứ không rõ hay random, như các cuộc tấn công lừa đảo có thể cố lừa bạn ký tên vào danh tính của bạn.. Chỉ ký các bản tuyên bố hoàn chỉnh mà bạn đồng ý.</translation>
     </message>
     <message>
         <source>The Yody address to sign the message with</source>
@@ -2281,7 +2281,7 @@
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>Cannot provide specific connections and have addrman find outgoing connections at the same.</source>
         <translation type="unfinished">Không thể cung cấp kết nối nào và có addrman tìm kết nối đi cùng một lúc.</translation>

@@ -88,7 +88,7 @@ public:
 };
 
 /**
- * @brief The YodyDelegation class Communicate with the qtum delegation contract
+ * @brief The YodyDelegation class Communicate with the yody delegation contract
  */
 class YodyDelegation {
     

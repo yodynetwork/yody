@@ -72,7 +72,7 @@
     <message>
         <source>These are your Yody addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Berikut ini adalah alamat-alamat qtummu untuk menerima pembayaran. Gunakan tombol 'Buat alamat penerima baru' di tab menerima untuk membuat alamat baru. Tanda tangan hanya bisa digunakan dengan tipe alamat 'warisan'</translation>
+        <translation type="unfinished">Berikut ini adalah alamat-alamat yodymu untuk menerima pembayaran. Gunakan tombol 'Buat alamat penerima baru' di tab menerima untuk membuat alamat baru. Tanda tangan hanya bisa digunakan dengan tipe alamat 'warisan'</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -179,8 +179,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Masukan passphrase lama dan passphrase baru ke dompet</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi qtum Anda dari pencurian oleh malware yang menginfeksi komputer Anda.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Mengenkripsi dompet Anda tidak dapat sepenuhnya melindungi yody Anda dari pencurian oleh malware yang menginfeksi komputer Anda.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -560,8 +560,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Menghubungkan ke peers...</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Permintaan pembayaran (membuat kode QR dan qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Permintaan pembayaran (membuat kode QR dan yody: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -638,8 +638,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Address &amp;Penerima</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
-        <translation type="unfinished">Buka URI qtum:</translation>
+        <source>Open a yody: URI</source>
+        <translation type="unfinished">Buka URI yody:</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1261,12 +1261,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Formulir</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the yody network, as detailed below.</source>
         <translation type="unfinished">Transaksi-transaksi terkini mungkin belum terlihat dan oleh karenanya, saldo dompet Anda mungkin tidak tepat. Informasi ini akan akurat ketika dompet Anda tersinkronisasi dengan jaringan Yody, seperti rincian berikut.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">Usaha untuk menggunakan qtum yang dipengaruhi oleh transaksi yang belum terlihat tidak akan diterima oleh jaringan.</translation>
+        <source>Attempting to spend yodys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">Usaha untuk menggunakan yody yang dipengaruhi oleh transaksi yang belum terlihat tidak akan diterima oleh jaringan.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1316,8 +1316,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open qtum URI</source>
-        <translation type="unfinished">Buka URI qtum:</translation>
+        <source>Open yody URI</source>
+        <translation type="unfinished">Buka URI yody:</translation>
     </message>
     </context>
 <context>
@@ -1794,16 +1794,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Terjadi kesalahan pada permintaan pembayaran</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation type="unfinished">Tidak bisa memulai qtum: handler click-to-pay</translation>
+        <source>Cannot start yody: click-to-pay handler</source>
+        <translation type="unfinished">Tidak bisa memulai yody: handler click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">Pengelolaan URI</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation type="unfinished">'qtum://' bukanlah alamat URI yang valid. Silakan gunakan 'qtum:'.</translation>
+        <source>'yody://' is not a valid URI. Use 'yody:' instead.</source>
+        <translation type="unfinished">'yody://' bukanlah alamat URI yang valid. Silakan gunakan 'yody:'.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2536,8 +2536,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
 Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi per kvB" untuk ukuran transaksi 500 byte virtual (setengah dari 1 kvB) pada akhirnya akan menghasilkan biaya hanya 50 satoshi. </translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
-        <translation type="unfinished">Ketika volume transaksi lebih sedikit daripada ruang di blok, penambang serta simpul yang menyiarkanikan dapat memberlakukan biaya minimum. Anda boleh hanya membayar biaya minimum, tetapi perlu diketahui bahwa ini dapat menghasilkan transaksi yang tidak pernah dikonfirmasi setelah ada lebih banyak permintaan untuk transaksi qtum daripada yang dapat diproses jaringan.</translation>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for yody transactions than the network can process.</source>
+        <translation type="unfinished">Ketika volume transaksi lebih sedikit daripada ruang di blok, penambang serta simpul yang menyiarkanikan dapat memberlakukan biaya minimum. Anda boleh hanya membayar biaya minimum, tetapi perlu diketahui bahwa ini dapat menghasilkan transaksi yang tidak pernah dikonfirmasi setelah ada lebih banyak permintaan untuk transaksi yody daripada yang dapat diproses jaringan.</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2627,7 +2627,7 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
     </message>
     <message>
         <source>Creates a Partially Signed Yody Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Membuat sebagian tertanda transaksi qtum (PSBT) untuk digunakan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSBT</translation>
+        <translation type="unfinished">Membuat sebagian tertanda transaksi yody (PSBT) untuk digunakan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSBT</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -2818,8 +2818,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation type="unfinished">Jumlah yang ingin dikirim dalam unit yang dipilih</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">Biaya akan diambil dari jumlah yang dikirim. Penerima akan menerima qtum lebih sedikit daripada yang di masukkan di bidang jumlah. Jika ada beberapa penerima, biaya dibagi rata.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less yodys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">Biaya akan diambil dari jumlah yang dikirim. Penerima akan menerima yody lebih sedikit daripada yang di masukkan di bidang jumlah. Jika ada beberapa penerima, biaya dibagi rata.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2846,8 +2846,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation type="unfinished">Masukkan label untuk alamat ini untuk dimasukan dalam daftar alamat yang pernah digunakan</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
-        <translation type="unfinished">Pesan yang dilampirkan ke qtum: URI yang akan disimpan dengan transaksi untuk referensi Anda. Catatan: Pesan ini tidak akan dikirim melalui jaringan Yody.</translation>
+        <source>A message that was attached to the yody: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Pesan yang dilampirkan ke yody: URI yang akan disimpan dengan transaksi untuk referensi Anda. Catatan: Pesan ini tidak akan dikirim melalui jaringan Yody.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2869,8 +2869,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation>&amp;Tandakan Pesan</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation type="unfinished">Anda dapat menandatangani pesan / perjanjian dengan alamat Anda untuk membuktikan bahwa Anda dapat menerima qtum yang dikirimkan kepada mereka. Berhati-hatilah untuk tidak menandatangani apa pun yang samar-samar atau acak, karena serangan phishing mungkin mencoba menipu Anda untuk menandatangani identitas Anda kepada mereka. Hanya tandatangani pernyataan terperinci yang Anda setujui.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive yodys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">Anda dapat menandatangani pesan / perjanjian dengan alamat Anda untuk membuktikan bahwa Anda dapat menerima yody yang dikirimkan kepada mereka. Berhati-hatilah untuk tidak menandatangani apa pun yang samar-samar atau acak, karena serangan phishing mungkin mencoba menipu Anda untuk menandatangani identitas Anda kepada mereka. Hanya tandatangani pernyataan terperinci yang Anda setujui.</translation>
     </message>
     <message>
         <source>The Yody address to sign the message with</source>
@@ -3567,7 +3567,7 @@ Pergi ke File &gt; Open Wallet untuk memuat dompet.
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">Pengembang %s</translation>
@@ -3609,8 +3609,8 @@ Pergi ke File &gt; Open Wallet untuk memuat dompet.
         <translation type="unfinished">Kesalahan: Rekaman pengenal dumpfile salah. Mendapat "%s", diharapkan "%s". </translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of qtum-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
-        <translation type="unfinished">Kesalahan: Versi Dumpfile tidak didukung. Versi dompet qtum ini hanya mendukung dumpfile versi 1. Dumpfile yang didapat adalah versi %s</translation>
+        <source>Error: Dumpfile version is not supported. This version of yody-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <translation type="unfinished">Kesalahan: Versi Dumpfile tidak didukung. Versi dompet yody ini hanya mendukung dumpfile versi 1. Dumpfile yang didapat adalah versi %s</translation>
     </message>
     <message>
         <source>Error: Legacy wallets only support the "legacy", "p2sh-segwit", and "bech32" address types</source>

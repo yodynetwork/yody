@@ -19,7 +19,7 @@ from test_framework.util import (
     count_bytes,
     find_vout_for_address,
 )
-from test_framework.qtumconfig import *
+from test_framework.yodyconfig import *
 
 def get_unspent(listunspent, amount):
     for utx in listunspent:
@@ -235,7 +235,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         dec_tx  = self.nodes[2].decoderawtransaction(rawtx)
         assert_equal(utx['txid'], dec_tx['vin'][0]['txid'])
 
-        assert_raises_rpc_error(-5, "Change address must be a valid qtum address", self.nodes[2].fundrawtransaction, rawtx, {'changeAddress':'foobar'})
+        assert_raises_rpc_error(-5, "Change address must be a valid yody address", self.nodes[2].fundrawtransaction, rawtx, {'changeAddress':'foobar'})
 
     def test_valid_change_address(self):
         self.log.info("Test fundrawtxn with a provided change address")

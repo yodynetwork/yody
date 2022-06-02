@@ -2,7 +2,7 @@ OpenBSD build guide
 ======================
 (updated for OpenBSD 6.9)
 
-This guide describes how to build qtumd, qtum-qt, and command-line utilities on OpenBSD.
+This guide describes how to build yodyd, yody-qt, and command-line utilities on OpenBSD.
 
 Preparation
 -------------
@@ -17,7 +17,7 @@ pkg_add automake # (select highest version, e.g. 1.16)
 pkg_add python # (select highest version, e.g. 3.8)
 pkg_add bash
 
-git clone https://github.com/yodynetwork/qtum --recursive
+git clone https://github.com/yodynetwork/yody --recursive
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.

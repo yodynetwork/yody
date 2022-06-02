@@ -27,7 +27,7 @@
 #include <node/blockstorage.h>
 #include <net.h>
 #include <key_io.h>
-#include <qtum/qtumledger.h>
+#include <yody/yodyledger.h>
 #ifdef ENABLE_WALLET
 #include <wallet/wallet.h>
 #endif
@@ -269,18 +269,18 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
 
     }
 
-    //////////////////////////////////////////////////////// qtum
-    YodyDGP qtumDGP(globalState.get(), m_chainstate, fGettingValuesDGP);
-    globalSealEngine->setYodySchedule(qtumDGP.getGasSchedule(nHeight));
-    uint32_t blockSizeDGP = qtumDGP.getBlockSize(nHeight);
-    minGasPrice = qtumDGP.getMinGasPrice(nHeight);
+    //////////////////////////////////////////////////////// yody
+    YodyDGP yodyDGP(globalState.get(), m_chainstate, fGettingValuesDGP);
+    globalSealEngine->setYodySchedule(yodyDGP.getGasSchedule(nHeight));
+    uint32_t blockSizeDGP = yodyDGP.getBlockSize(nHeight);
+    minGasPrice = yodyDGP.getMinGasPrice(nHeight);
     if(gArgs.IsArgSet("-staker-min-tx-gas-price")) {
         CAmount stakerMinGasPrice;
         if(ParseMoney(gArgs.GetArg("-staker-min-tx-gas-price", ""), stakerMinGasPrice)) {
             minGasPrice = std::max(minGasPrice, (uint64_t)stakerMinGasPrice);
         }
     }
-    hardBlockGasLimit = qtumDGP.getBlockGasLimit(nHeight);
+    hardBlockGasLimit = yodyDGP.getBlockGasLimit(nHeight);
     softBlockGasLimit = gArgs.GetArg("-staker-soft-block-gas-limit", hardBlockGasLimit);
     softBlockGasLimit = std::min(softBlockGasLimit, hardBlockGasLimit);
     txGasLimit = gArgs.GetArg("-staker-max-tx-gas-limit", softBlockGasLimit);
@@ -420,7 +420,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateEmptyBlock(const CScript& 
         pblock->prevoutStake.n=0;
     }
 
-    //////////////////////////////////////////////////////// qtum
+    //////////////////////////////////////////////////////// yody
     //state shouldn't change here for an empty block, but if it's not valid it'll fail in CheckBlock later
     pblock->hashStateRoot = uint256(h256Touint(dev::h256(globalState->rootHash())));
     pblock->hashUTXORoot = uint256(h256Touint(dev::h256(globalState->rootHashUTXO())));
@@ -515,31 +515,31 @@ bool BlockAssembler::AttemptToAddContractToBlock(CTxMemPool::txiter iter, uint64
         LogPrintf("AttemptToAddContractToBlock(): Fail to extract contacts from tx %s\n", iter->GetTx().GetHash().ToString());
         return false;
     }
-    std::vector<YodyTransaction> qtumTransactions = resultConverter.first;
+    std::vector<YodyTransaction> yodyTransactions = resultConverter.first;
     dev::u256 txGas = 0;
-    for(YodyTransaction qtumTransaction : qtumTransactions){
-        txGas += qtumTransaction.gas();
+    for(YodyTransaction yodyTransaction : yodyTransactions){
+        txGas += yodyTransaction.gas();
         if(txGas > txGasLimit) {
             // Limit the tx gas limit by the soft limit if such a limit has been specified.
             LogPrintf("AttemptToAddContractToBlock(): The gas needed is bigger than -staker-max-tx-gas-limit for the contract tx %s\n", iter->GetTx().GetHash().ToString());
             return false;
         }
 
-        if(bceResult.usedGas + qtumTransaction.gas() > softBlockGasLimit){
+        if(bceResult.usedGas + yodyTransaction.gas() > softBlockGasLimit){
             // If this transaction's gasLimit could cause block gas limit to be exceeded, then don't add it
             // Log if the contract is the only contract tx
             if(bceResult.usedGas == 0)
                 LogPrintf("AttemptToAddContractToBlock(): The gas needed is bigger than -staker-soft-block-gas-limit for the contract tx %s\n", iter->GetTx().GetHash().ToString());
             return false;
         }
-        if(qtumTransaction.gasPrice() < minGasPrice){
+        if(yodyTransaction.gasPrice() < minGasPrice){
             //if this transaction's gasPrice is less than the current DGP minGasPrice don't add it
             LogPrintf("AttemptToAddContractToBlock(): The gas price is less than -staker-min-tx-gas-price for the contract tx %s\n", iter->GetTx().GetHash().ToString());
             return false;
         }
     }
     // We need to pass the DGP's block gas limit (not the soft limit) since it is consensus critical.
-    ByteCodeExec exec(*pblock, qtumTransactions, hardBlockGasLimit, m_chainstate.m_chain.Tip(), m_chainstate.m_chain);
+    ByteCodeExec exec(*pblock, yodyTransactions, hardBlockGasLimit, m_chainstate.m_chain.Tip(), m_chainstate.m_chain);
     if(!exec.performByteCode()){
         //error, don't add contract
         globalState->setRoot(oldHashStateRoot);
@@ -1046,8 +1046,8 @@ public:
         {
             // Get delegations from events
             std::vector<DelegationEvent> events;
-            qtumDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman());
-            delegations_staker = qtumDelegations.DelegationsFromEvents(events);
+            yodyDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman());
+            delegations_staker = yodyDelegations.DelegationsFromEvents(events);
         }
         else
         {
@@ -1056,23 +1056,23 @@ public:
             if(cacheHeight < cpsHeight)
             {
                 std::vector<DelegationEvent> events;
-                qtumDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman(), cacheHeight, cpsHeight);
-                qtumDelegations.UpdateDelegationsFromEvents(events, cacheDelegationsStaker);
+                yodyDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman(), cacheHeight, cpsHeight);
+                yodyDelegations.UpdateDelegationsFromEvents(events, cacheDelegationsStaker);
                 cacheHeight = cpsHeight;
             }
 
             // Update the wallet delegations
             std::vector<DelegationEvent> events;
-            qtumDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman(), cacheHeight + 1);
+            yodyDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman(), cacheHeight + 1);
             delegations_staker = cacheDelegationsStaker;
-            qtumDelegations.UpdateDelegationsFromEvents(events, delegations_staker);
+            yodyDelegations.UpdateDelegationsFromEvents(events, delegations_staker);
         }
         pwallet->updateDelegationsStaker(delegations_staker);
     }
 
 private:
     CWallet *pwallet;
-    YodyDelegation qtumDelegations;
+    YodyDelegation yodyDelegations;
     int32_t cacheHeight;
     std::map<uint160, Delegation> cacheDelegationsStaker;
     std::vector<uint160> allowList;
@@ -1108,8 +1108,8 @@ public:
             {
                 // Get delegations from events
                 std::vector<DelegationEvent> events;
-                qtumDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman());
-                pwallet->m_my_delegations = qtumDelegations.DelegationsFromEvents(events);
+                yodyDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman());
+                pwallet->m_my_delegations = yodyDelegations.DelegationsFromEvents(events);
             }
             else
             {
@@ -1118,16 +1118,16 @@ public:
                 if(cacheHeight < cpsHeight)
                 {
                     std::vector<DelegationEvent> events;
-                    qtumDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman(), cacheHeight, cpsHeight);
-                    qtumDelegations.UpdateDelegationsFromEvents(events, cacheMyDelegations);
+                    yodyDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman(), cacheHeight, cpsHeight);
+                    yodyDelegations.UpdateDelegationsFromEvents(events, cacheMyDelegations);
                     cacheHeight = cpsHeight;
                 }
 
                 // Update the wallet delegations
                 std::vector<DelegationEvent> events;
-                qtumDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman(), cacheHeight + 1);
+                yodyDelegations.FilterDelegationEvents(events, *this, pwallet->chain().chainman(), cacheHeight + 1);
                 pwallet->m_my_delegations = cacheMyDelegations;
-                qtumDelegations.UpdateDelegationsFromEvents(events, pwallet->m_my_delegations);
+                yodyDelegations.UpdateDelegationsFromEvents(events, pwallet->m_my_delegations);
             }
         }
         else
@@ -1161,7 +1161,7 @@ public:
                 {
                     Delegation delegation;
                     uint160 address = item.first;
-                    if(qtumDelegations.GetDelegation(address, delegation, pwallet->chain().chainman().ActiveChainstate()) && YodyDelegation::VerifyDelegation(address, delegation))
+                    if(yodyDelegations.GetDelegation(address, delegation, pwallet->chain().chainman().ActiveChainstate()) && YodyDelegation::VerifyDelegation(address, delegation))
                     {
                         cacheMyDelegations[address] = delegation;
                     }
@@ -1193,7 +1193,7 @@ public:
 private:
 
     CWallet *pwallet;
-    YodyDelegation qtumDelegations;
+    YodyDelegation yodyDelegations;
     int32_t cacheHeight;
     int32_t cacheAddressHeight;
     std::map<uint160, Delegation> cacheMyDelegations;
@@ -1363,7 +1363,7 @@ public:
 
     {
         // Make this thread recognisable as the mining thread
-        std::string threadName = "qtumstake";
+        std::string threadName = "yodystake";
         if(pwallet && pwallet->GetName() != "")
         {
             threadName = threadName + "-" + pwallet->GetName();

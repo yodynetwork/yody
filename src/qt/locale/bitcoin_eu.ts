@@ -173,8 +173,8 @@
         <translation type="unfinished">Diruzorroaren pasahitz zahar zein berria sartu.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Gogoan izan diruzorroaren enkripzioak ezin dituela zure qtumak zure ordenagailuan izan dezakezun malware batengandik lapurtuak izatetik guztiz babestu .</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Gogoan izan diruzorroaren enkripzioak ezin dituela zure yodyak zure ordenagailuan izan dezakezun malware batengandik lapurtuak izatetik guztiz babestu .</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -468,8 +468,8 @@
         <translation type="unfinished">&amp;Helbideak jasotzen</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
-        <translation type="unfinished">Ireki qtum bat: URI</translation>
+        <source>Open a yody: URI</source>
+        <translation type="unfinished">Ireki yody bat: URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -885,8 +885,8 @@
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open qtum URI</source>
-        <translation type="unfinished">Ireki qtum URIa</translation>
+        <source>Open yody URI</source>
+        <translation type="unfinished">Ireki yody URIa</translation>
     </message>
     <message>
         <source>URI:</source>
@@ -1590,7 +1590,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Zamaketa amaitua</translation>

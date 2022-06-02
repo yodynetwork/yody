@@ -18,7 +18,7 @@ from test_framework.util import (
     assert_equal,
 )
 from test_framework.wallet_util import bytes_to_wif
-from test_framework.qtumconfig import COINBASE_MATURITY, INITIAL_BLOCK_REWARD
+from test_framework.yodyconfig import COINBASE_MATURITY, INITIAL_BLOCK_REWARD
 class RpcCreateMultiSigTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True

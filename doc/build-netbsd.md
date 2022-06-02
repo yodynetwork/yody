@@ -2,7 +2,7 @@ NetBSD build guide
 ======================
 (updated for NetBSD 8.0)
 
-This guide describes how to build qtumd and command-line utilities on NetBSD.
+This guide describes how to build yodyd and command-line utilities on NetBSD.
 
 This guide does not contain instructions for building the GUI.
 
@@ -23,7 +23,7 @@ pkg-config
 python37
 gmp
 
-git clone https://github.com/yodynetwork/qtum --recursive
+git clone https://github.com/yodynetwork/yody --recursive
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.

@@ -184,8 +184,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Введіть стару та нову парольну фразу для гаманця.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">Пам’ятайте, що шифрування гаманця не може повністю захистити ваші qtums від крадіжки, у випадку якщо ваш комп’ютер буде інфіковано шкідливими програмами.</translation>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
+        <translation type="unfinished">Пам’ятайте, що шифрування гаманця не може повністю захистити ваші yodys від крадіжки, у випадку якщо ваш комп’ютер буде інфіковано шкідливими програмами.</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -621,8 +621,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Встановлення з'єднань…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Створити запит платежу (генерує QR-код та qtum: URI)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Створити запит платежу (генерує QR-код та yody: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -693,8 +693,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Адреси для &amp;отримання</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
-        <translation type="unfinished">Відкрити qtum URI</translation>
+        <source>Open a yody: URI</source>
+        <translation type="unfinished">Відкрити yody URI</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1356,12 +1356,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Форма</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the yody network, as detailed below.</source>
         <translation type="unfinished">Нещодавні транзакції ще не відображаються, тому баланс вашого гаманця може бути неточним. Ця інформація буде вірною після того, як ваш гаманець завершить синхронізацію з мережею Yody, враховуйте показники нижче.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">Спроба відправити qtums, які ще не відображаються, не буде прийнята мережею.</translation>
+        <source>Attempting to spend yodys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">Спроба відправити yodys, які ще не відображаються, не буде прийнята мережею.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1407,8 +1407,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open qtum URI</source>
-        <translation type="unfinished">Відкрити qtum URI</translation>
+        <source>Open yody URI</source>
+        <translation type="unfinished">Відкрити yody URI</translation>
     </message>
     </context>
 <context>
@@ -1917,16 +1917,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Помилка запиту платежу</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation type="unfinished">Не вдається запустити qtum: обробник клацни-плати</translation>
+        <source>Cannot start yody: click-to-pay handler</source>
+        <translation type="unfinished">Не вдається запустити yody: обробник клацни-плати</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">Обробка URI</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation type="unfinished">'qtum://' не вірний URI. Використовуйте 'qtum:'.</translation>
+        <source>'yody://' is not a valid URI. Use 'yody:' instead.</source>
+        <translation type="unfinished">'yody://' не вірний URI. Використовуйте 'yody:'.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -1938,7 +1938,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
-        <translation type="unfinished">Неможливо обробити URI! Причиною цього може бути некоректна qtum-адреса або неправильні параметри URI.</translation>
+        <translation type="unfinished">Неможливо обробити URI! Причиною цього може бути некоректна yody-адреса або неправильні параметри URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2725,8 +2725,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
 Примітка: Оскільки в розрахунку враховуються байти, комісія "100 сатоші за квБ" для транзакції розміром 500 віртуальних байт (половина 1 квБ) в результаті становить всього 50 сатоші.</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
-        <translation type="unfinished">Якщо обсяг транзакцій менше, ніж простір у блоках, майнери, а також вузли ретрансляції можуть стягувати мінімальну плату. Сплата лише цієї мінімальної суми може призвести до ніколи не підтверджуваної транзакції, коли буде більше попиту на qtum-транзакції, ніж мережа може обробити.</translation>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for yody transactions than the network can process.</source>
+        <translation type="unfinished">Якщо обсяг транзакцій менше, ніж простір у блоках, майнери, а також вузли ретрансляції можуть стягувати мінімальну плату. Сплата лише цієї мінімальної суми може призвести до ніколи не підтверджуваної транзакції, коли буде більше попиту на yody-транзакції, ніж мережа може обробити.</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2959,7 +2959,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
     </message>
     <message>
         <source>Warning: Invalid Yody address</source>
-        <translation type="unfinished">Увага: Неприпустима qtum-адреса.</translation>
+        <translation type="unfinished">Увага: Неприпустима yody-адреса.</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -3013,8 +3013,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Сума у вибраній одиниці, яку потрібно надіслати</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation type="unfinished">Комісію буде знято зі вказаної суми. До отримувача надійде менше qtumів, ніж було вказано в полі кількості. Якщо ж отримувачів декілька - комісію буде розподілено між ними.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less yodys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation type="unfinished">Комісію буде знято зі вказаної суми. До отримувача надійде менше yodyів, ніж було вказано в полі кількості. Якщо ж отримувачів декілька - комісію буде розподілено між ними.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -3041,8 +3041,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введіть мітку для цієї адреси для додавання її в список використаних адрес</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
-        <translation type="unfinished">Повідомлення, що було додане до qtum:URI та буде збережено разом з транзакцією для довідки. Примітка: Це повідомлення не буде відправлено в мережу Yody.</translation>
+        <source>A message that was attached to the yody: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Повідомлення, що було додане до yody:URI та буде збережено разом з транзакцією для довідки. Примітка: Це повідомлення не буде відправлено в мережу Yody.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -3064,8 +3064,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation>&amp;Підписати повідомлення</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation type="unfinished">Ви можете підписувати повідомлення/угоди своїми адресами, щоб довести можливість отримання qtumів, що будуть надіслані на них. Остерігайтеся підписувати будь-що нечітке чи неочікуване, так як за допомогою фішинг-атаки вас можуть спробувати ввести в оману для отримання вашого підпису під чужими словами. Підписуйте лише чіткі твердження, з якими ви повністю згодні.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive yodys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation type="unfinished">Ви можете підписувати повідомлення/угоди своїми адресами, щоб довести можливість отримання yodyів, що будуть надіслані на них. Остерігайтеся підписувати будь-що нечітке чи неочікуване, так як за допомогою фішинг-атаки вас можуть спробувати ввести в оману для отримання вашого підпису під чужими словами. Підписуйте лише чіткі твердження, з якими ви повністю згодні.</translation>
     </message>
     <message>
         <source>The Yody address to sign the message with</source>
@@ -3811,14 +3811,14 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">Розробники %s</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s пошкоджено. Спробуйте скористатися інструментом гаманця qtum-wallet для відновлення або відновлення резервної копії.</translation>
+        <source>%s corrupt. Try using the wallet tool yody-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s пошкоджено. Спробуйте скористатися інструментом гаманця yody-wallet для відновлення або відновлення резервної копії.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>
@@ -3857,8 +3857,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">Помилка: Неправильний запис ідентифікатора файлу дампа. Отримано "%s", очікується "%s".</translation>
     </message>
     <message>
-        <source>Error: Dumpfile version is not supported. This version of qtum-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
-        <translation type="unfinished">Помилка: Версія файлу дампа не підтримується. Ця версія qtum-wallet підтримує лише файли дампа версії 1. Отримано файл дампа версії %s</translation>
+        <source>Error: Dumpfile version is not supported. This version of yody-wallet only supports version 1 dumpfiles. Got dumpfile with version %s</source>
+        <translation type="unfinished">Помилка: Версія файлу дампа не підтримується. Ця версія yody-wallet підтримує лише файли дампа версії 1. Отримано файл дампа версії %s</translation>
     </message>
     <message>
         <source>Error: Legacy wallets only support the "legacy", "p2sh-segwit", and "bech32" address types</source>

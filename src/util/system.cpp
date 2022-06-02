@@ -79,7 +79,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCOIN_CONF_FILENAME = "qtum.conf";
+const char * const BITCOIN_CONF_FILENAME = "yody.conf";
 const char * const BITCOIN_SETTINGS_FILENAME = "settings.json";
 
 ArgsManager gArgs;
@@ -788,7 +788,7 @@ fs::path GetDefaultDataDir()
 {
     // Windows: C:\Users\Username\AppData\Roaming\Yody
     // macOS: ~/Library/Application Support/Yody
-    // Unix-like: ~/.qtum
+    // Unix-like: ~/.yody
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "Yody";
@@ -804,7 +804,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/Yody";
 #else
     // Unix-like
-    return pathRet / ".qtum";
+    return pathRet / ".yody";
 #endif
 #endif
 }

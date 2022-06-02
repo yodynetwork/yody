@@ -391,8 +391,8 @@
         <translation>Alatke za tabove</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Zatražite plaćanje (generiše QR kodove i qtum: URI-e)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Zatražite plaćanje (generiše QR kodove i yody: URI-e)</translation>
     </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
@@ -868,7 +868,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Zavrseno ucitavanje</translation>

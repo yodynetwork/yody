@@ -99,11 +99,11 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs) || gArgs.IsArgSet("-version")) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " qtum-tx utility version " + FormatFullVersion() + "\n";
+        std::string strUsage = PACKAGE_NAME " yody-tx utility version " + FormatFullVersion() + "\n";
         if (!gArgs.IsArgSet("-version")) {
             strUsage += "\n"
-                "Usage:  qtum-tx [options] <hex-tx> [commands]  Update hex-encoded qtum transaction\n"
-                "or:     qtum-tx [options] -create [commands]   Create hex-encoded qtum transaction\n"
+                "Usage:  yody-tx [options] <hex-tx> [commands]  Update hex-encoded yody transaction\n"
+                "or:     yody-tx [options] -create [commands]   Create hex-encoded yody transaction\n"
                 "\n";
             strUsage += gArgs.GetHelpMessage();
         }

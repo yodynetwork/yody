@@ -26,7 +26,7 @@ from test_framework.util import (
     assert_raises_rpc_error,
     find_vout_for_address,
 )
-from test_framework.qtumconfig import COINBASE_MATURITY, INITIAL_BLOCK_REWARD
+from test_framework.yodyconfig import COINBASE_MATURITY, INITIAL_BLOCK_REWARD
 
 class multidict(dict):
     """Dictionary that allows duplicate keys.

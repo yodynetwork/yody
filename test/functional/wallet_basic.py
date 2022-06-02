@@ -15,8 +15,8 @@ from test_framework.util import (
     assert_raises_rpc_error,
 )
 from test_framework.wallet_util import test_address
-from test_framework.qtumconfig import *
-from test_framework.qtum import convert_btc_address_to_qtum, generatesynchronized, convert_btc_bech32_address_to_qtum
+from test_framework.yodyconfig import *
+from test_framework.yody import convert_btc_address_to_yody, generatesynchronized, convert_btc_bech32_address_to_yody
 
 NOT_A_NUMBER_OR_STRING = "Amount is not a number or string"
 OUT_OF_RANGE = "Amount out of range"
@@ -421,7 +421,7 @@ class WalletTest(BitcoinTestFramework):
             assert_raises_rpc_error(-5, "Pubkey is not a valid public key", self.nodes[0].importpubkey, "5361746f736869204e616b616d6f746f")
 
             # Bech32m addresses cannot be imported into a legacy wallet
-            assert_raises_rpc_error(-5, "Bech32m addresses cannot be imported into legacy wallets", self.nodes[0].importaddress, convert_btc_bech32_address_to_qtum("bcrt1p0xlxvlhemja6c4dqv22uapctqupfhlxm9h8z3k2e72q4k9hcz7vqc8gma6"))
+            assert_raises_rpc_error(-5, "Bech32m addresses cannot be imported into legacy wallets", self.nodes[0].importaddress, convert_btc_bech32_address_to_yody("bcrt1p0xlxvlhemja6c4dqv22uapctqupfhlxm9h8z3k2e72q4k9hcz7vqc8gma6"))
 
             # Import address and private key to check correct behavior of spendable unspents
             # 1. Send some coins to generate new UTXO
@@ -620,8 +620,8 @@ class WalletTest(BitcoinTestFramework):
 
         # Test getaddressinfo on external address. Note that these addresses are taken from disablewallet.py
         assert_raises_rpc_error(-5, "Invalid prefix for Base58-encoded address", self.nodes[0].getaddressinfo, "3J98t1WpEZ73CNmQviecrnyiWrnqRhWNLy")
-        address_info = self.nodes[0].getaddressinfo(convert_btc_address_to_qtum("mneYUmWYsuk7kySiURxCi3AGxrAqZxLgPZ"))
-        assert_equal(address_info['address'], convert_btc_address_to_qtum("mneYUmWYsuk7kySiURxCi3AGxrAqZxLgPZ"))
+        address_info = self.nodes[0].getaddressinfo(convert_btc_address_to_yody("mneYUmWYsuk7kySiURxCi3AGxrAqZxLgPZ"))
+        assert_equal(address_info['address'], convert_btc_address_to_yody("mneYUmWYsuk7kySiURxCi3AGxrAqZxLgPZ"))
         assert_equal(address_info["scriptPubKey"], "76a9144e3854046c7bd1594ac904e4793b6a45b36dea0988ac")
         assert not address_info["ismine"]
         assert not address_info["iswatchonly"]

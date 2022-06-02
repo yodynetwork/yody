@@ -142,11 +142,11 @@ ChainTestingSetup::ChainTestingSetup(const std::string& chainName, const std::ve
     m_node.scheduler->m_service_thread = std::thread(util::TraceThread, "scheduler", [&] { m_node.scheduler->serviceQueue(); });
     GetMainSignals().RegisterBackgroundSignalScheduler(*m_node.scheduler);
 
-////////////////////////////////////////////////////////////// qtum
+////////////////////////////////////////////////////////////// yody
     const CChainParams& chainparams = Params();
     fRequireStandard = !gArgs.GetBoolArg("-acceptnonstdtxn", !chainparams.RequireStandard());
     dev::eth::NoProof::init();		
-    boost::filesystem::path pathTemp = fs::temp_directory_path() / strprintf("test_qtum_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
+    boost::filesystem::path pathTemp = fs::temp_directory_path() / strprintf("test_yody_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
     boost::filesystem::create_directories(pathTemp);
     const dev::h256 hashDB(dev::sha3(dev::rlp("")));
     globalState = std::unique_ptr<YodyState>(new YodyState(dev::u256(0), YodyState::openDB(pathTemp.string(), hashDB, dev::WithExisting::Trust), pathTemp.string(), dev::eth::BaseState::Empty));
@@ -194,7 +194,7 @@ ChainTestingSetup::~ChainTestingSetup()
     m_node.chainman.reset();
     pblocktree.reset();
 
-/////////////////////////////////////////////// // qtum
+/////////////////////////////////////////////// // yody
     delete globalState.release();
     globalSealEngine.reset();
 ///////////////////////////////////////////////

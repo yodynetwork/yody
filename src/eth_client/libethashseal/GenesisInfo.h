@@ -16,7 +16,7 @@ namespace eth
 /// The network id.
 enum class Network
 {
-    qtumNetwork = 1
+    yodyNetwork = 1
 };
 
 std::string const& genesisInfo(Network _n);

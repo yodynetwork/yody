@@ -7,7 +7,7 @@
 
 from decimal import Decimal
 from itertools import product
-from test_framework.qtumconfig import INITIAL_BLOCK_REWARD
+from test_framework.yodyconfig import INITIAL_BLOCK_REWARD
 
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import (
@@ -17,7 +17,7 @@ from test_framework.util import (
     assert_raises_rpc_error,
     find_output,
 )
-from test_framework.qtum import convert_btc_bech32_address_to_qtum
+from test_framework.yody import convert_btc_bech32_address_to_yody
 
 import json
 import os
@@ -442,7 +442,7 @@ class PSBTTest(BitcoinTestFramework):
         for creator in creators:
             new_outputs = {}
             for k in creator['outputs']:
-                new_key = convert_btc_bech32_address_to_qtum(list(k.keys())[0])
+                new_key = convert_btc_bech32_address_to_yody(list(k.keys())[0])
                 new_value = list(k.values())[0]
                 new_outputs[new_key] = new_value
             creator['outputs'] = new_outputs

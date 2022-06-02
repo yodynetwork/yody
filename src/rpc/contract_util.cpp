@@ -69,9 +69,9 @@ UniValue CallToContract(const UniValue& params, ChainstateManager &chainman)
 
     dev::Address senderAddress;
     if(!params[2].isNull()){
-        CTxDestination qtumSenderAddress = DecodeDestination(params[2].get_str());
-        if (IsValidDestination(qtumSenderAddress)) {
-            PKHash keyid = std::get<PKHash>(qtumSenderAddress);
+        CTxDestination yodySenderAddress = DecodeDestination(params[2].get_str());
+        if (IsValidDestination(yodySenderAddress)) {
+            PKHash keyid = std::get<PKHash>(yodySenderAddress);
             senderAddress = dev::Address(HexStr(valtype(keyid.begin(),keyid.end())));
         }else{
             senderAddress = dev::Address(params[2].get_str());

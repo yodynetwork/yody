@@ -183,7 +183,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Írja be a tárca régi és új jelszavát.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
         <translation type="unfinished">Ne feledd, hogy a tárca titkosítása nem nyújt teljes védelmet az adathalász programok fertőzésével szemben.</translation>
     </message>
     <message>
@@ -564,8 +564,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Csatlakozás az ügyfelekhez…</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Fizetési kérelem (QR-kódot és "qtum:" URI azonosítót hoz létre)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Fizetési kérelem (QR-kódot és "yody:" URI azonosítót hoz létre)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -642,8 +642,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Fogadó címek</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
-        <translation type="unfinished">Egy qtum: URI hivatkozás megnyitása</translation>
+        <source>Open a yody: URI</source>
+        <translation type="unfinished">Egy yody: URI hivatkozás megnyitása</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -1252,12 +1252,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Űrlap</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
-        <translation type="unfinished">A legutóbbi tranzakciók még lehet, hogy nem láthatók, és így előfordulhat, hogy a tárca egyenlege helytelen. A tárca azon nyomban az aktuális egyenleget fogja mutatni, amint befejezte a qtum hálózattal történő szinkronizációt, amely alább van részletezve.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the yody network, as detailed below.</source>
+        <translation type="unfinished">A legutóbbi tranzakciók még lehet, hogy nem láthatók, és így előfordulhat, hogy a tárca egyenlege helytelen. A tárca azon nyomban az aktuális egyenleget fogja mutatni, amint befejezte a yody hálózattal történő szinkronizációt, amely alább van részletezve.</translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation type="unfinished">A hálózat nem fogadja el azoknak a qtumoknak az elköltését, amelyek érintettek a még nem látszódó tranzakciókban.</translation>
+        <source>Attempting to spend yodys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation type="unfinished">A hálózat nem fogadja el azoknak a yodyoknak az elköltését, amelyek érintettek a még nem látszódó tranzakciókban.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1295,8 +1295,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open qtum URI</source>
-        <translation type="unfinished">Nyisd meg a qtum címedet</translation>
+        <source>Open yody URI</source>
+        <translation type="unfinished">Nyisd meg a yody címedet</translation>
     </message>
     </context>
 <context>
@@ -1760,16 +1760,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Hiba történt a fizetési kérelem során</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation type="unfinished">A qtum nem tud elindulni: click-to-pay kezelő</translation>
+        <source>Cannot start yody: click-to-pay handler</source>
+        <translation type="unfinished">A yody nem tud elindulni: click-to-pay kezelő</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation type="unfinished">URI kezelés</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation type="unfinished">'qtum://' nem érvényes egységes erőforrás azonosító (URI). Használd helyette a 'qtum'-t.</translation>
+        <source>'yody://' is not a valid URI. Use 'yody:' instead.</source>
+        <translation type="unfinished">'yody://' nem érvényes egységes erőforrás azonosító (URI). Használd helyette a 'yody'-t.</translation>
     </message>
     <message>
         <source>Cannot process payment request because BIP70 is not supported.
@@ -2409,7 +2409,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">Rejtsd el a tranzakciós költségek beállításait</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for yody transactions than the network can process.</source>
         <translation type="unfinished">Ha kevesebb a tranzakció mint amennyi hely lenne egy blokkban, akkor a bányászok és a többi node megkövetelheti a minimum díjat. E minimum díjat fizetni elegendő lehet, de tudnod kell, hogy ez esetleg soha nem konfirmálódó tranzakciót eredményezhet ahogy a tranzakciók száma magasabb lesz mint a network által megengedett.</translation>
     </message>
     <message>
@@ -2655,7 +2655,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">A küldendő összeg a választott egységben.</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less yodys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished">Znesek plačila bo zmanjšan za znesek provizije. Prejemnik bo prejel manjše število kovancev, kot je bil vnešeni znesek. Če je prejemnikov več, bo provizija med njih enakomerno porazdeljena.</translation>
     </message>
     <message>
@@ -2683,8 +2683,8 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation type="unfinished">Adjon egy címkét ehhez a címhez, hogy bekerüljön a használt címek közé</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
-        <translation type="unfinished">Sporočilo, ki ste ga pripeli na URI tipa qtum:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja Yody.</translation>
+        <source>A message that was attached to the yody: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Sporočilo, ki ste ga pripeli na URI tipa yody:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja Yody.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2706,7 +2706,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
         <translation>Üzenet aláírása...</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive yodys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished">S svojimi naslovi lahko podpisujete sporočila ali pogodbe in s tem dokazujete, da na teh naslovih lahko prejemate kovance. Bodite previdni in ne podpisujte ničesar nejasnega ali naključnega, ker vas zlikovci preko ribarjenja (phishing) lahko prelisičijo, da na njih prepišete svojo identiteto. Podpisujte samo podrobno opisane izjave, s katerimi se strinjate.</translation>
     </message>
     <message>
@@ -3404,14 +3404,14 @@ A Fájl &gt; Megnyitás menüben lehet megnyitni.
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>The %s developers</source>
         <translation type="unfinished">A %s fejlesztők</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</source>
-        <translation type="unfinished">%s sérült. Megpróbálhatod a qtumt-wallet tárcaj mentő eszközt, vagy mentésből helyreállítani a tárcát.</translation>
+        <source>%s corrupt. Try using the wallet tool yody-wallet to salvage or restoring a backup.</source>
+        <translation type="unfinished">%s sérült. Megpróbálhatod a yodyt-wallet tárcaj mentő eszközt, vagy mentésből helyreállítani a tárcát.</translation>
     </message>
     <message>
         <source>-maxtxfee is set very high! Fees this large could be paid on a single transaction.</source>

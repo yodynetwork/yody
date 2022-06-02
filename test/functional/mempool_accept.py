@@ -36,7 +36,7 @@ from test_framework.util import (
     assert_raises_rpc_error,
 )
 
-from test_framework.qtumconfig import COINBASE_MATURITY
+from test_framework.yodyconfig import COINBASE_MATURITY
 
 class MempoolAcceptanceTest(BitcoinTestFramework):
     def set_test_params(self):

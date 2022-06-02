@@ -322,7 +322,7 @@ Alihkan fail data ke dalam tab semasa</translation>
     </message>
     <message>
         <source>Sign messages with your Yody addresses to prove you own them</source>
-        <translation>sahkan mesej bersama alamat qtum anda untuk menunjukkan alamat ini anda punya</translation>
+        <translation>sahkan mesej bersama alamat yody anda untuk menunjukkan alamat ini anda punya</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Yody addresses</source>
@@ -346,8 +346,8 @@ Alihkan fail data ke dalam tab semasa</translation>
 </translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Request payments (generates QR codes and qtum: URIs)
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Request payments (generates QR codes and yody: URIs)
 </translation>
     </message>
     <message>
@@ -566,7 +566,7 @@ Alihkan fail data ke dalam tab semasa</translation>
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Baca Selesai</translation>

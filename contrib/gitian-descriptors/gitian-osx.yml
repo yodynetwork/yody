@@ -1,5 +1,5 @@
 ---
-name: "qtum-core-osx-22"
+name: "yody-core-osx-22"
 enable_cache: true
 distro: "ubuntu"
 suites:
@@ -29,10 +29,10 @@ packages:
 - "xorriso"
 - "libtinfo5"
 remotes:
-- "url": "https://github.com/yodynetwork/qtum.git"
-  "dir": "qtum"
-- "url": "https://github.com/yodynetwork/qtum-evmone.git"
-  "dir": "qtum-evmone"
+- "url": "https://github.com/yodynetwork/yody.git"
+  "dir": "yody"
+- "url": "https://github.com/yodynetwork/yody-evmone.git"
+  "dir": "yody-evmone"
 files:
 - "Xcode-12.1-12A7403-extracted-SDK-with-libcxx-headers.tar.gz"
 script: |
@@ -88,7 +88,7 @@ script: |
   create_per-host_faketime_wrappers "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd qtum
+  cd yody
   BASEPREFIX="${PWD}/depends"
 
   mkdir -p ${BASEPREFIX}/SDKs
@@ -126,7 +126,7 @@ script: |
     tar --strip-components=1 -xf "${GIT_ARCHIVE}"
 
     #this is a hack since gitian has no natural support for submodules
-    cp -r ../../qtum-evmone/* ./src/evmone
+    cp -r ../../yody-evmone/* ./src/evmone
     #make sure this file exists... 
     cat ./src/evmone/include/evmone/evmone.h 
 

@@ -45,7 +45,7 @@
 #include <QProgressDialog>
 #include <QPushButton>
 #include <QVBoxLayout>
-#include <qt/qtumpushbutton.h>
+#include <qt/yodypushbutton.h>
 
 WalletView::WalletView(const PlatformStyle *_platformStyle, QWidget *parent):
     QStackedWidget(parent),

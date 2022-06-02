@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "Yody"
-            VALUE "FileDescription",    "qtum-wallet (CLI tool for " PACKAGE_NAME " wallets)"
+            VALUE "FileDescription",    "yody-wallet (CLI tool for " PACKAGE_NAME " wallets)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "qtum-wallet"
+            VALUE "InternalName",       "yody-wallet"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "qtum-wallet.exe"
-            VALUE "ProductName",        "qtum-wallet"
+            VALUE "OriginalFilename",   "yody-wallet.exe"
+            VALUE "ProductName",        "yody-wallet"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

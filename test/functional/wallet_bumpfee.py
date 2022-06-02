@@ -32,8 +32,8 @@ from test_framework.util import (
     assert_greater_than,
     assert_raises_rpc_error,
 )
-from test_framework.qtumconfig import COINBASE_MATURITY
-from test_framework.qtum import generatesynchronized
+from test_framework.yodyconfig import COINBASE_MATURITY
+from test_framework.yody import generatesynchronized
 
 WALLET_PASSPHRASE = "test"
 WALLET_PASSPHRASE_TIMEOUT = 3600

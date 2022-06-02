@@ -3,7 +3,7 @@
 
 #include <univalue.h>
 #include <validation.h>
-#include <qtum/qtumtoken.h>
+#include <yody/yodytoken.h>
 
 class ChainstateManager;
 

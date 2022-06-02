@@ -3,7 +3,7 @@
 
 #include <QObject>
 
-#define YODY_RELEASES "https://github.com/yodynetwork/qtum/releases"
+#define YODY_RELEASES "https://github.com/yodynetwork/yody/releases"
 
 class Version {
 

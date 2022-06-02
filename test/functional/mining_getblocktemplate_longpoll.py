@@ -12,7 +12,7 @@ from test_framework.blocktools import COINBASE_MATURITY
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import get_rpc_proxy
 from test_framework.wallet import MiniWallet
-from test_framework.qtum import generatesynchronized
+from test_framework.yody import generatesynchronized
 
 class LongpollThread(threading.Thread):
     def __init__(self, node):

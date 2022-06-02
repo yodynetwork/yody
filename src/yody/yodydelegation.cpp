@@ -1,4 +1,4 @@
-#include <qtum/qtumdelegation.h>
+#include <yody/yodydelegation.h>
 #include <chainparams.h>
 #include <util/contractabi.h>
 #include <util/convert.h>
