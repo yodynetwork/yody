@@ -1,5 +1,5 @@
-#ifndef QTUMTOKEN_H
-#define QTUMTOKEN_H
+#ifndef YODYTOKEN_H
+#define YODYTOKEN_H
 #include <string>
 #include <vector>
 #include <map>
@@ -114,4 +114,4 @@ private:
     YodyTokenData* d;
 };
 
-#endif // QTUMTOKEN_H
+#endif // YODYTOKEN_H

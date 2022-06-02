@@ -1,5 +1,5 @@
-#ifndef QTUMHWITOOL_H
-#define QTUMHWITOOL_H
+#ifndef YODYHWITOOL_H
+#define YODYHWITOOL_H
 
 #include <QObject>
 #include <QString>
@@ -253,4 +253,4 @@ private:
     YodyHwiToolPriv* d;
 };
 
-#endif // QTUMHWITOOL_H
+#endif // YODYHWITOOL_H

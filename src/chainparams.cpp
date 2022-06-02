@@ -707,7 +707,7 @@ public:
         consensus.QIP6Height = consensus.nBlocktimeDownscaleFactor*500 + 500;
         consensus.QIP7Height = 0; // QIP7 activated on regtest
 
-        // QTUM have 500 blocks of maturity, increased values for regtest in unit tests in order to correspond with it
+        // YODY have 500 blocks of maturity, increased values for regtest in unit tests in order to correspond with it
         consensus.nSubsidyHalvingInterval = 750;
         consensus.nSubsidyHalvingIntervalV2 = consensus.nBlocktimeDownscaleFactor*750;
         consensus.nRuleChangeActivationThreshold = consensus.nBlocktimeDownscaleFactor*558; // 75% for testchains

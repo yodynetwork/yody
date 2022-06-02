@@ -724,7 +724,7 @@ void BitcoinGUI::setClientModel(ClientModel *_clientModel, interfaces::BlockAndH
         // Check for updates
         if(_clientModel->getOptionsModel()->getCheckForUpdates() && qtumVersionChecker->newVersionAvailable())
         {
-            QString link = QString("<a href=%1>%2</a>").arg(QTUM_RELEASES, QTUM_RELEASES);
+            QString link = QString("<a href=%1>%2</a>").arg(YODY_RELEASES, YODY_RELEASES);
             QString message(tr("New version of Yody wallet is available on the Yody source code repository: <br /> %1. <br />It is recommended to download it and update this application").arg(link));
             QMessageBox::information(this, tr("Check for updates"), message);
         }

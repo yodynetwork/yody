@@ -1,5 +1,5 @@
-#ifndef QTUMDELEGATION_H
-#define QTUMDELEGATION_H
+#ifndef YODYDELEGATION_H
+#define YODYDELEGATION_H
 #include <string>
 #include <vector>
 #include <map>

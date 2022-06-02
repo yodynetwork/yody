@@ -59,12 +59,12 @@ static constexpr uint64_t GB_BYTES{1000000000};
 static constexpr int DEFAULT_PRUNE_TARGET_GB{2};
 
 /* Mainnet qtum explorer uri */
-#define QTUM_INFO_MAINNET "<a href='https://qtum.info/%1/%2'>%2</a>"
+#define YODY_INFO_MAINNET "<a href='https://qtum.info/%1/%2'>%2</a>"
 
 /* Testnet qtum explorer uri */
-#define QTUM_INFO_TESTNET "<a href='https://testnet.qtum.info/%1/%2'>%2</a>"
+#define YODY_INFO_TESTNET "<a href='https://testnet.qtum.info/%1/%2'>%2</a>"
 
 /* Hardware wallet interface uri */
-#define QTUM_HWI_TOOL "<a href='https://github.com/yodynetwork/HWI/tags'>HWI Tool</a>"
+#define YODY_HWI_TOOL "<a href='https://github.com/yodynetwork/HWI/tags'>HWI Tool</a>"
 
 #endif // BITCOIN_QT_GUICONSTANTS_H

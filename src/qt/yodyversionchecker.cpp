@@ -30,7 +30,7 @@ bool YodyVersionChecker::newVersionAvailable()
 QList<Version> YodyVersionChecker::getVersions()
 {
     QNetworkAccessManager manager;
-    QNetworkReply *response = manager.get(QNetworkRequest(QUrl(QTUM_RELEASES)));
+    QNetworkReply *response = manager.get(QNetworkRequest(QUrl(YODY_RELEASES)));
     QTimer timer;
     timer.setSingleShot(true);
     QEventLoop event;

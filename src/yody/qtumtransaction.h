@@ -1,5 +1,5 @@
-#ifndef QTUMTRANSACTION_H
-#define QTUMTRANSACTION_H
+#ifndef YODYTRANSACTION_H
+#define YODYTRANSACTION_H
 
 #include <libethereum/Transaction.h>
 

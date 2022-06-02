@@ -1,9 +1,9 @@
-#ifndef QTUMVERSIONCHECKER_H
-#define QTUMVERSIONCHECKER_H
+#ifndef YODYVERSIONCHECKER_H
+#define YODYVERSIONCHECKER_H
 
 #include <QObject>
 
-#define QTUM_RELEASES "https://github.com/yodynetwork/qtum/releases"
+#define YODY_RELEASES "https://github.com/yodynetwork/qtum/releases"
 
 class Version {
 
@@ -95,4 +95,4 @@ private:
     Version currentVersion;
 };
 
-#endif // QTUMVERSIONCHECKER_H
+#endif // YODYVERSIONCHECKER_H
