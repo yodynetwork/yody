@@ -204,7 +204,7 @@ private:
     HelpMessageDialog* helpMessageDialog = nullptr;
     ModalOverlay* modalOverlay = nullptr;
     ModalOverlay *modalBackupOverlay = nullptr;
-    YodyVersionChecker *qtumVersionChecker = nullptr;
+    YodyVersionChecker *yodyVersionChecker = nullptr;
 
     QMenu* m_network_context_menu = new QMenu(this);
 

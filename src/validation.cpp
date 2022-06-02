@@ -62,7 +62,7 @@
 #include <wallet/wallet.h>
 #include <util/convert.h>
 #include <util/signstr.h>
-#include <qtum/qtumledger.h>
+#include <yody/yodyledger.h>
 
 #include <algorithm>
 #include <numeric>
@@ -97,7 +97,7 @@ const std::vector<std::string> CHECKLEVEL_DOC {
     "each level includes the checks of the previous levels",
 };
 
- ////////////////////////////// qtum
+ ////////////////////////////// yody
 #include <iostream>
 #include <bitset>
 #include "pubkey.h"
@@ -146,7 +146,7 @@ Mutex g_best_block_mutex;
 std::condition_variable g_best_block_cv;
 uint256 g_best_block;
 bool g_parallel_script_checks{false};
-bool fAddressIndex = false; // qtum
+bool fAddressIndex = false; // yody
 bool fLogEvents = false;
 bool fRequireStandard = true;
 bool fCheckBlockIndex = false;
@@ -751,7 +751,7 @@ bool MemPoolAccept::PreChecks(ATMPArgs& args, Workspace& ws)
 
     dev::u256 txMinGasPrice = 0;
 
-    //////////////////////////////////////////////////////////// // qtum
+    //////////////////////////////////////////////////////////// // yody
     if(!CheckOpSender(tx, chainparams, m_active_chainstate.m_blockman.GetSpendHeight(m_view))){
         return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-invalid-sender");
     }
@@ -761,9 +761,9 @@ bool MemPoolAccept::PreChecks(ATMPArgs& args, Workspace& ws)
             return state.Invalid(TxValidationResult::TX_INVALID_SENDER_SCRIPT, "bad-txns-invalid-sender-script");
         }
 
-        YodyDGP qtumDGP(globalState.get(), m_active_chainstate, fGettingValuesDGP);
-        uint64_t minGasPrice = qtumDGP.getMinGasPrice(m_active_chainstate.m_chain.Tip()->nHeight + 1);
-        uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(m_active_chainstate.m_chain.Tip()->nHeight + 1);
+        YodyDGP yodyDGP(globalState.get(), m_active_chainstate, fGettingValuesDGP);
+        uint64_t minGasPrice = yodyDGP.getMinGasPrice(m_active_chainstate.m_chain.Tip()->nHeight + 1);
+        uint64_t blockGasLimit = yodyDGP.getBlockGasLimit(m_active_chainstate.m_chain.Tip()->nHeight + 1);
         size_t count = 0;
         for(const CTxOut& o : tx.vout)
             count += o.scriptPubKey.HasOpCreate() || o.scriptPubKey.HasOpCall() ? 1 : 0;
@@ -773,13 +773,13 @@ bool MemPoolAccept::PreChecks(ATMPArgs& args, Workspace& ws)
         if(!converter.extractionYodyTransactions(resultConverter)){
             return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-bad-contract-format", "AcceptToMempool(): Contract transaction of the wrong format");
         }
-        std::vector<YodyTransaction> qtumTransactions = resultConverter.first;
-        std::vector<EthTransactionParams> qtumETP = resultConverter.second;
+        std::vector<YodyTransaction> yodyTransactions = resultConverter.first;
+        std::vector<EthTransactionParams> yodyETP = resultConverter.second;
 
         dev::u256 sumGas = dev::u256(0);
         dev::u256 gasAllTxs = dev::u256(0);
-        for(YodyTransaction qtumTransaction : qtumTransactions){
-            sumGas += qtumTransaction.gas() * qtumTransaction.gasPrice();
+        for(YodyTransaction yodyTransaction : yodyTransactions){
+            sumGas += yodyTransaction.gas() * yodyTransaction.gasPrice();
 
             if(sumGas > dev::u256(INT64_MAX)) {
                 return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-gas-stipend-overflow", "AcceptToMempool(): Transaction's gas stipend overflows");
@@ -790,11 +790,11 @@ bool MemPoolAccept::PreChecks(ATMPArgs& args, Workspace& ws)
             }
 
             if(txMinGasPrice != 0) {
-                txMinGasPrice = std::min(txMinGasPrice, qtumTransaction.gasPrice());
+                txMinGasPrice = std::min(txMinGasPrice, yodyTransaction.gasPrice());
             } else {
-                txMinGasPrice = qtumTransaction.gasPrice();
+                txMinGasPrice = yodyTransaction.gasPrice();
             }
-            VersionVM v = qtumTransaction.getVersion();
+            VersionVM v = yodyTransaction.getVersion();
             if(v.format!=0)
                 return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-version-format", "AcceptToMempool(): Contract execution uses unknown version format");
             if(v.rootVM != 1)
@@ -805,29 +805,29 @@ bool MemPoolAccept::PreChecks(ATMPArgs& args, Workspace& ws)
                 return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-version-flags", "AcceptToMempool(): Contract execution uses unknown flag options");
 
             //check gas limit is not less than minimum mempool gas limit
-            if(qtumTransaction.gas() < gArgs.GetArg("-minmempoolgaslimit", MEMPOOL_MIN_GAS_LIMIT))
+            if(yodyTransaction.gas() < gArgs.GetArg("-minmempoolgaslimit", MEMPOOL_MIN_GAS_LIMIT))
                 return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-too-little-mempool-gas", "AcceptToMempool(): Contract execution has lower gas limit than allowed to accept into mempool");
 
             //check gas limit is not less than minimum gas limit (unless it is a no-exec tx)
-            if(qtumTransaction.gas() < MINIMUM_GAS_LIMIT && v.rootVM != 0)
+            if(yodyTransaction.gas() < MINIMUM_GAS_LIMIT && v.rootVM != 0)
                 return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-too-little-gas", "AcceptToMempool(): Contract execution has lower gas limit than allowed");
 
-            if(qtumTransaction.gas() > UINT32_MAX)
+            if(yodyTransaction.gas() > UINT32_MAX)
                 return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-too-much-gas", "AcceptToMempool(): Contract execution can not specify greater gas limit than can fit in 32-bits");
 
-            gasAllTxs += qtumTransaction.gas();
+            gasAllTxs += yodyTransaction.gas();
             if(gasAllTxs > dev::u256(blockGasLimit))
                 return state.Invalid(TxValidationResult::TX_GAS_EXCEEDS_LIMIT, "bad-txns-gas-exceeds-blockgaslimit");
 
             //don't allow less than DGP set minimum gas price to prevent MPoS greedy mining/spammers
-            if(v.rootVM!=0 && (uint64_t)qtumTransaction.gasPrice() < minGasPrice)
+            if(v.rootVM!=0 && (uint64_t)yodyTransaction.gasPrice() < minGasPrice)
                 return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-low-gas-price", "AcceptToMempool(): Contract execution has lower gas price than allowed");
         }
 
-        if(!CheckMinGasPrice(qtumETP, minGasPrice))
+        if(!CheckMinGasPrice(yodyETP, minGasPrice))
             return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-small-gasprice");
 
-        if(count > qtumTransactions.size())
+        if(count > yodyTransactions.size())
             return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-incorrect-format");
     }
     ////////////////////////////////////////////////////////////
@@ -1143,7 +1143,7 @@ bool MemPoolAccept::Finalize(const ATMPArgs& args, Workspace& ws)
     // - the transaction is not dependent on any other transactions in the mempool
     bool validForFeeEstimation = !fReplacementTransaction && !bypass_limits && IsCurrentForFeeEstimation(m_active_chainstate) && m_pool.HasNoInputsOf(tx);
 
-    //////////////////////////////////////////////////////////////// // qtum
+    //////////////////////////////////////////////////////////////// // yody
     // Add memory address index
     if (fAddressIndex)
     {
@@ -1813,7 +1813,7 @@ DisconnectResult CChainState::DisconnectBlock(const CBlock& block, const CBlockI
         return DISCONNECT_FAILED;
     }
 
-    /////////////////////////////////////////////////////////// // qtum
+    /////////////////////////////////////////////////////////// // yody
     std::vector<std::pair<CAddressIndexKey, CAmount> > addressIndex;
     std::vector<std::pair<CAddressUnspentKey, CAddressUnspentValue> > addressUnspentIndex;
     ///////////////////////////////////////////////////////////
@@ -1838,7 +1838,7 @@ DisconnectResult CChainState::DisconnectBlock(const CBlock& block, const CBlockI
             }
         }
 
-        /////////////////////////////////////////////////////////// // qtum
+        /////////////////////////////////////////////////////////// // yody
         if (pfClean == NULL && fAddressIndex) {
 
             for (unsigned int k = tx.vout.size(); k-- > 0;) {
@@ -1902,8 +1902,8 @@ DisconnectResult CChainState::DisconnectBlock(const CBlock& block, const CBlockI
     // move best block pointer to prevout block
     view.SetBestBlock(pindex->pprev->GetBlockHash());
 
-    globalState->setRoot(uintToh256(pindex->pprev->hashStateRoot)); // qtum
-    globalState->setRootUTXO(uintToh256(pindex->pprev->hashUTXORoot)); // qtum
+    globalState->setRoot(uintToh256(pindex->pprev->hashStateRoot)); // yody
+    globalState->setRootUTXO(uintToh256(pindex->pprev->hashUTXORoot)); // yody
 
     if(pfClean == NULL && fLogEvents){
         pstorageresult->deleteResults(block.vtx);
@@ -1919,7 +1919,7 @@ DisconnectResult CChainState::DisconnectBlock(const CBlock& block, const CBlockI
             pblocktree->EraseDelegateIndex(pindex->nHeight);
     }
 
-    //////////////////////////////////////////////////// // qtum
+    //////////////////////////////////////////////////// // yody
     if (pfClean == NULL && fAddressIndex) {
         if (!pblocktree->EraseAddressIndex(addressIndex)) {
             error("Failed to delete address index");
@@ -2049,7 +2049,7 @@ static int64_t nTimeCallbacks = 0;
 static int64_t nTimeTotal = 0;
 static int64_t nBlocksTotal = 0;
 
-/////////////////////////////////////////////////////////////////////// qtum
+/////////////////////////////////////////////////////////////////////// yody
 bool GetSpentCoinFromBlock(const CBlockIndex* pindex, COutPoint prevout, Coin* coin) {
     std::shared_ptr<CBlock> pblock = std::make_shared<CBlock>();
     CBlock& block = *pblock;
@@ -2209,8 +2209,8 @@ std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::v
     else
     	block.vtx.erase(block.vtx.begin()+1,block.vtx.end());
 
-    YodyDGP qtumDGP(globalState.get(), chainstate, fGettingValuesDGP);
-    uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(chainstate.m_chain.Tip()->nHeight + 1);
+    YodyDGP yodyDGP(globalState.get(), chainstate, fGettingValuesDGP);
+    uint64_t blockGasLimit = yodyDGP.getBlockGasLimit(chainstate.m_chain.Tip()->nHeight + 1);
 
     if(gasLimit == 0){
         gasLimit = blockGasLimit - 1;
@@ -2420,12 +2420,12 @@ UniValue vmLogToJSON(const ResultExecute& execRes, const CTransaction& tx, const
 }
 
 void writeVMlog(const std::vector<ResultExecute>& res, CChain& chain, const CTransaction& tx, const CBlock& block){
-    boost::filesystem::path qtumDir = gArgs.GetDataDirNet() / "vmExecLogs.json";
+    boost::filesystem::path yodyDir = gArgs.GetDataDirNet() / "vmExecLogs.json";
     std::stringstream ss;
     if(fIsVMlogFile){
         ss << ",";
     } else {
-        std::ofstream file(qtumDir.string(), std::ios::out | std::ios::app);
+        std::ofstream file(yodyDir.string(), std::ios::out | std::ios::app);
         file << "{\"logs\":[]}";
         file.close();
     }
@@ -2439,7 +2439,7 @@ void writeVMlog(const std::vector<ResultExecute>& res, CChain& chain, const CTra
         }
     }
     
-    std::ofstream file(qtumDir.string(), std::ios::in | std::ios::out);
+    std::ofstream file(yodyDir.string(), std::ios::in | std::ios::out);
     file.seekp(-2, std::ios::end);
     file << ss.str();
     file.close();
@@ -2576,7 +2576,7 @@ dev::Address ByteCodeExec::EthAddrFromScript(const CScript& script){
     return dev::Address();
 }
 
-bool YodyTxConverter::extractionYodyTransactions(ExtractYodyTX& qtumtx){
+bool YodyTxConverter::extractionYodyTransactions(ExtractYodyTX& yodytx){
     // Get the address of the sender that pay the coins for the contract transactions
     refundSender = dev::Address(GetSenderAddress(txBit, view, blockTransactions, chainstate, mempool));
 
@@ -2598,7 +2598,7 @@ bool YodyTxConverter::extractionYodyTransactions(ExtractYodyTX& qtumtx){
             }
         }
     }
-    qtumtx = std::make_pair(resultTX, resultETP);
+    yodytx = std::make_pair(resultTX, resultETP);
     return true;
 }
 
@@ -2735,12 +2735,12 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
     assert(*pindex->phashBlock == block.GetHash());
     int64_t nTimeStart = GetTimeMicros();
 
-    ///////////////////////////////////////////////// // qtum
-    YodyDGP qtumDGP(globalState.get(), *this, fGettingValuesDGP);
-    globalSealEngine->setYodySchedule(qtumDGP.getGasSchedule(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1) ));
-    uint32_t sizeBlockDGP = qtumDGP.getBlockSize(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
-    uint64_t minGasPrice = qtumDGP.getMinGasPrice(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
-    uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
+    ///////////////////////////////////////////////// // yody
+    YodyDGP yodyDGP(globalState.get(), *this, fGettingValuesDGP);
+    globalSealEngine->setYodySchedule(yodyDGP.getGasSchedule(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1) ));
+    uint32_t sizeBlockDGP = yodyDGP.getBlockSize(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
+    uint64_t minGasPrice = yodyDGP.getMinGasPrice(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
+    uint64_t blockGasLimit = yodyDGP.getBlockGasLimit(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
     dgpMaxBlockSize = sizeBlockDGP ? sizeBlockDGP : dgpMaxBlockSize;
     updateBlockSizeParams(dgpMaxBlockSize);
     CBlock checkBlock(block.GetBlockHeader());
@@ -2754,7 +2754,7 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
 
 
     // Move this check from CheckBlock to ConnectBlock as it depends on DGP values
-    if (block.vtx.empty() || block.vtx.size() > dgpMaxBlockSize || ::GetSerializeSize(block, PROTOCOL_VERSION | SERIALIZE_TRANSACTION_NO_WITNESS) > dgpMaxBlockSize) // qtum
+    if (block.vtx.empty() || block.vtx.size() > dgpMaxBlockSize || ::GetSerializeSize(block, PROTOCOL_VERSION | SERIALIZE_TRANSACTION_NO_WITNESS) > dgpMaxBlockSize) // yody
         return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "bad-blk-length", "size limits failed");
 
     // Move this check from ContextualCheckBlock to ConnectBlock as it depends on DGP values
@@ -2966,7 +2966,7 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
     int64_t nSigOpsCost = 0;
     blockundo.vtxundo.reserve(block.vtx.size() - 1);
 
-    ///////////////////////////////////////////////////////// // qtum
+    ///////////////////////////////////////////////////////// // yody
     std::vector<std::pair<CAddressIndexKey, CAmount> > addressIndex;
     std::vector<std::pair<CAddressUnspentKey, CAddressUnspentValue> > addressUnspentIndex;
     std::vector<std::pair<CSpentIndexKey, CSpentIndexValue> > spentIndex;
@@ -3023,7 +3023,7 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
                 return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "bad-txns-nonfinal");
             }
 
-            ////////////////////////////////////////////////////////////////// // qtum
+            ////////////////////////////////////////////////////////////////// // yody
             if (fAddressIndex)
             {
                 for (size_t j = 0; j < tx.vin.size(); j++) {
@@ -3097,7 +3097,7 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
             nValueOut += nTxValueOut;
         }
 
-///////////////////////////////////////////////////////////////////////////////////////// qtum
+///////////////////////////////////////////////////////////////////////////////////////// yody
         if(!CheckOpSender(tx, m_params, pindex->nHeight)){
             return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "bad-txns-invalid-sender");
         }
@@ -3248,7 +3248,7 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
         }
 /////////////////////////////////////////////////////////////////////////////////////////
 
-        /////////////////////////////////////////////////////////////////////////////////// // qtum
+        /////////////////////////////////////////////////////////////////////////////////// // yody
         if (fAddressIndex) {
 
             for (unsigned int k = 0; k < tx.vout.size(); k++) {
@@ -3294,7 +3294,7 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
     int64_t nTime4 = GetTimeMicros(); nTimeVerify += nTime4 - nTime2;
     LogPrint(BCLog::BENCH, "    - Verify %u txins: %.2fms (%.3fms/txin) [%.2fs (%.2fms/blk)]\n", nInputs - 1, MILLI * (nTime4 - nTime2), nInputs <= 1 ? 0 : MILLI * (nTime4 - nTime2) / (nInputs-1), nTimeVerify * MICRO, nTimeVerify * MILLI / nBlocksTotal);
 
-////////////////////////////////////////////////////////////////// // qtum
+////////////////////////////////////////////////////////////////// // yody
     if(pindex->nHeight == m_params.GetConsensus().nOfflineStakeHeight){
         globalState->deployDelegationsContract();
     }
@@ -3424,7 +3424,7 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
     }
 
     assert(pindex->phashBlock);
-    ///////////////////////////////////////////////////////////// // qtum
+    ///////////////////////////////////////////////////////////// // yody
     if (fAddressIndex) {
         if (!pblocktree->WriteAddressIndex(addressIndex)) {
             return AbortNode(state, "Failed to write address index");
@@ -3849,8 +3849,8 @@ bool CChainState::ConnectTip(BlockValidationState& state, CBlockIndex* pindexNew
     {
         CCoinsViewCache view(&CoinsTip());
 
-        dev::h256 oldHashStateRoot(globalState->rootHash()); // qtum
-        dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // qtum
+        dev::h256 oldHashStateRoot(globalState->rootHash()); // yody
+        dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // yody
 
         bool rv = ConnectBlock(blockConnecting, state, pindexNew, view);
         GetMainSignals().BlockChecked(blockConnecting, state);
@@ -3858,8 +3858,8 @@ bool CChainState::ConnectTip(BlockValidationState& state, CBlockIndex* pindexNew
             if (state.IsInvalid())
                 InvalidBlockFound(pindexNew, state);
 
-            globalState->setRoot(oldHashStateRoot); // qtum
-            globalState->setRootUTXO(oldHashUTXORoot); // qtum
+            globalState->setRoot(oldHashStateRoot); // yody
+            globalState->setRootUTXO(oldHashUTXORoot); // yody
             pstorageresult->clearCacheResult();
             return error("%s: ConnectBlock %s failed, %s", __func__, pindexNew->GetBlockHash().ToString(), state.ToString());
         }
@@ -5615,12 +5615,12 @@ bool TestBlockValidity(BlockValidationState& state,
     if (!ContextualCheckBlock(block, state, chainparams.GetConsensus(), pindexPrev))
         return error("%s: Consensus::ContextualCheckBlock: %s", __func__, state.ToString());
 
-    dev::h256 oldHashStateRoot(globalState->rootHash()); // qtum
-    dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // qtum
+    dev::h256 oldHashStateRoot(globalState->rootHash()); // yody
+    dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // yody
 
     if (!chainstate.ConnectBlock(block, state, &indexDummy, viewNew, true)) {
-        globalState->setRoot(oldHashStateRoot); // qtum
-        globalState->setRootUTXO(oldHashUTXORoot); // qtum
+        globalState->setRoot(oldHashStateRoot); // yody
+        globalState->setRootUTXO(oldHashUTXORoot); // yody
         pstorageresult->clearCacheResult();
         return false;
     }
@@ -5897,7 +5897,7 @@ bool CChainState::LoadBlockIndexDB()
     pblocktree->ReadReindexing(fReindexing);
     if(fReindexing) fReindex = true;
 
-    ///////////////////////////////////////////////////////////// // qtum
+    ///////////////////////////////////////////////////////////// // yody
     pblocktree->ReadFlag("addrindex", fAddressIndex);
     LogPrintf("LoadBlockIndexDB(): address index %s\n", fAddressIndex ? "enabled" : "disabled");
     /////////////////////////////////////////////////////////////
@@ -5978,10 +5978,10 @@ bool CVerifyDB::VerifyDB(
     BlockValidationState state;
     int reportDone = 0;
 
-////////////////////////////////////////////////////////////////////////// // qtum
+////////////////////////////////////////////////////////////////////////// // yody
     dev::h256 oldHashStateRoot(globalState->rootHash());
     dev::h256 oldHashUTXORoot(globalState->rootHashUTXO());
-    YodyDGP qtumDGP(globalState.get(), chainstate, fGettingValuesDGP);
+    YodyDGP yodyDGP(globalState.get(), chainstate, fGettingValuesDGP);
 //////////////////////////////////////////////////////////////////////////
 
     LogPrintf("[0%%]..."); /* Continued */
@@ -6005,8 +6005,8 @@ bool CVerifyDB::VerifyDB(
             break;
         }
 
-        ///////////////////////////////////////////////////////////////////// // qtum
-        uint32_t sizeBlockDGP = qtumDGP.getBlockSize(pindex->nHeight);
+        ///////////////////////////////////////////////////////////////////// // yody
+        uint32_t sizeBlockDGP = yodyDGP.getBlockSize(pindex->nHeight);
         dgpMaxBlockSize = sizeBlockDGP ? sizeBlockDGP : dgpMaxBlockSize;
         updateBlockSizeParams(dgpMaxBlockSize);
         /////////////////////////////////////////////////////////////////////
@@ -6068,20 +6068,20 @@ bool CVerifyDB::VerifyDB(
             if (!ReadBlockFromDisk(block, pindex, chainparams.GetConsensus()))
                 return error("VerifyDB(): *** ReadBlockFromDisk failed at %d, hash=%s", pindex->nHeight, pindex->GetBlockHash().ToString());
 
-            dev::h256 oldHashStateRoot(globalState->rootHash()); // qtum
-            dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // qtum
+            dev::h256 oldHashStateRoot(globalState->rootHash()); // yody
+            dev::h256 oldHashUTXORoot(globalState->rootHashUTXO()); // yody
 
             if (!chainstate.ConnectBlock(block, state, pindex, coins)) {
-                globalState->setRoot(oldHashStateRoot); // qtum
-                globalState->setRootUTXO(oldHashUTXORoot); // qtum
+                globalState->setRoot(oldHashStateRoot); // yody
+                globalState->setRootUTXO(oldHashUTXORoot); // yody
                 pstorageresult->clearCacheResult();
                 return error("VerifyDB(): *** found unconnectable block at %d, hash=%s (%s)", pindex->nHeight, pindex->GetBlockHash().ToString(), state.ToString());
             }
             if (ShutdownRequested()) return true;
         }
     } else {
-        globalState->setRoot(oldHashStateRoot); // qtum
-        globalState->setRootUTXO(oldHashUTXORoot); // qtum
+        globalState->setRoot(oldHashStateRoot); // yody
+        globalState->setRootUTXO(oldHashUTXORoot); // yody
     }
 
     LogPrintf("[DONE].\n");
@@ -6245,7 +6245,7 @@ bool ChainstateManager::LoadBlockIndex()
         // Use the provided setting for -logevents in the new database
         fLogEvents = gArgs.GetBoolArg("-logevents", DEFAULT_LOGEVENTS);
         pblocktree->WriteFlag("logevents", fLogEvents);
-        /////////////////////////////////////////////////////////////// // qtum
+        /////////////////////////////////////////////////////////////// // yody
         fAddressIndex = gArgs.GetBoolArg("-addrindex", DEFAULT_ADDRINDEX);
         pblocktree->WriteFlag("addrindex", fAddressIndex);
         ///////////////////////////////////////////////////////////////
@@ -7251,7 +7251,7 @@ void ChainstateManager::MaybeRebalanceCaches()
     }
 }
 
-////////////////////////////////////////////////////////////////////////////////// // qtum
+////////////////////////////////////////////////////////////////////////////////// // yody
 bool GetAddressIndex(uint256 addressHash, int type, std::vector<std::pair<CAddressIndexKey, CAmount> > &addressIndex, int start, int end)
 {
     if (!fAddressIndex)

@@ -2,11 +2,11 @@
 Version=0.17.6
 Name=Yody Core Testnet
 Comment=Connect to the Yody P2P Network Testnet
-Exec=qtum-qt -testnet %u
+Exec=yody-qt -testnet %u
 Terminal=false
 Type=Application
-Icon=qtumtestnet128
-MimeType=x-scheme-handler/qtum;
+Icon=yodytestnet128
+MimeType=x-scheme-handler/yody;
 Categories=Network;
 StartupWMClass=Yody-qt-testnet
-Name[en_US]=qtum-qt-testnet
+Name[en_US]=yody-qt-testnet

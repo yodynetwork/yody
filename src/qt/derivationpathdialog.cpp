@@ -1,6 +1,6 @@
 #include <qt/derivationpathdialog.h>
 #include <qt/forms/ui_derivationpathdialog.h>
-#include <qt/qtumhwitool.h>
+#include <qt/yodyhwitool.h>
 #include <outputtype.h>
 #include <QRegularExpression>
 #include <QRegularExpressionValidator>

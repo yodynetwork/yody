@@ -6,22 +6,22 @@
 
 from test_framework.test_framework import BitcoinTestFramework
 
-from test_framework.qtum import convert_btc_bech32_address_to_qtum, convert_btc_address_to_qtum
+from test_framework.yody import convert_btc_bech32_address_to_yody, convert_btc_address_to_yody
 from test_framework.segwit_addr import Encoding
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
 )
 
-BECH32_VALID = convert_btc_bech32_address_to_qtum('bcrt1qtmp74ayg7p24uslctssvjm06q5phz4yrxucgnv')
-BECH32_INVALID_BECH32 = convert_btc_bech32_address_to_qtum('bcrt1p0xlxvlhemja6c4dqv22uapctqupfhlxm9h8z3k2e72q4k9hcz7vqdmchcc')
-BECH32_INVALID_BECH32M = convert_btc_bech32_address_to_qtum('bcrt1qw508d6qejxtdg4y5r3zarvary0c5xw7k35mrzd', encoding=Encoding.BECH32M)
-BECH32_INVALID_VERSION = convert_btc_bech32_address_to_qtum('bcrt130xlxvlhemja6c4dqv22uapctqupfhlxm9h8z3k2e72q4k9hcz7vqynjegk')
-BECH32_INVALID_SIZE = convert_btc_bech32_address_to_qtum('bcrt1s0xlxvlhemja6c4dqv22uapctqupfhlxm9h8z3k2e72q4k9hcz7v8n0nx0muaewav25430mtr')
-BECH32_INVALID_V0_SIZE = convert_btc_bech32_address_to_qtum('bcrt1qw508d6qejxtdg4y5r3zarvary0c5xw7kqqq5k3my')
+BECH32_VALID = convert_btc_bech32_address_to_yody('bcrt1qtmp74ayg7p24uslctssvjm06q5phz4yrxucgnv')
+BECH32_INVALID_BECH32 = convert_btc_bech32_address_to_yody('bcrt1p0xlxvlhemja6c4dqv22uapctqupfhlxm9h8z3k2e72q4k9hcz7vqdmchcc')
+BECH32_INVALID_BECH32M = convert_btc_bech32_address_to_yody('bcrt1qw508d6qejxtdg4y5r3zarvary0c5xw7k35mrzd', encoding=Encoding.BECH32M)
+BECH32_INVALID_VERSION = convert_btc_bech32_address_to_yody('bcrt130xlxvlhemja6c4dqv22uapctqupfhlxm9h8z3k2e72q4k9hcz7vqynjegk')
+BECH32_INVALID_SIZE = convert_btc_bech32_address_to_yody('bcrt1s0xlxvlhemja6c4dqv22uapctqupfhlxm9h8z3k2e72q4k9hcz7v8n0nx0muaewav25430mtr')
+BECH32_INVALID_V0_SIZE = convert_btc_bech32_address_to_yody('bcrt1qw508d6qejxtdg4y5r3zarvary0c5xw7kqqq5k3my')
 BECH32_INVALID_PREFIX = 'qc1q79ley3n84mj5pz8n879fzdqfz92qayjp74hrx6'
 
-BASE58_VALID = convert_btc_address_to_qtum('mipcBbFg9gMiCh81Kj8tqqdgoZub1ZJRfn')
+BASE58_VALID = convert_btc_address_to_yody('mipcBbFg9gMiCh81Kj8tqqdgoZub1ZJRfn')
 BASE58_INVALID_PREFIX = '17VZNX1SN5NtKa8UQFxwQbFeFc3iqRYhem'
 
 INVALID_ADDRESS = 'asfah14i8fajz0123f'

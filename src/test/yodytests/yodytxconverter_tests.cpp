@@ -68,9 +68,9 @@ void runTest(CChainState& chainstate, CTxMemPool& mempool, bool isCreation, size
     tx2 = createTX(outs2, hashParentTx);
     CTransaction transaction(tx2);
     YodyTxConverter converter(transaction, chainstate, &mempool, NULL);
-    ExtractYodyTX qtumTx;
-    BOOST_CHECK(converter.extractionYodyTransactions(qtumTx));
-    std::vector<YodyTransaction> result = qtumTx.first;
+    ExtractYodyTX yodyTx;
+    BOOST_CHECK(converter.extractionYodyTransactions(yodyTx));
+    std::vector<YodyTransaction> result = yodyTx.first;
     if(script2 == CScript()){
         BOOST_CHECK(result.size() == n);
     } else {
@@ -104,11 +104,11 @@ void runFailingTest(CChainState& chainstate, CTxMemPool& mempool, bool isCreatio
     tx2 = createTX(outs2, hashParentTx);
     CTransaction transaction(tx2);
     YodyTxConverter converter(transaction, chainstate, &mempool, NULL);
-    ExtractYodyTX qtumTx;
-    BOOST_CHECK(!converter.extractionYodyTransactions(qtumTx));
+    ExtractYodyTX yodyTx;
+    BOOST_CHECK(!converter.extractionYodyTransactions(yodyTx));
 }
 
-BOOST_FIXTURE_TEST_SUITE(qtumtxconverter_tests, TestingSetup)
+BOOST_FIXTURE_TEST_SUITE(yodytxconverter_tests, TestingSetup)
 
 BOOST_AUTO_TEST_CASE(parse_txcreate){
     CScript script1 = CScript() << CScriptNum(VersionVM::GetEVMDefault().toRaw()) << CScriptNum(int64_t(gasLimit)) << CScriptNum(int64_t(gasPrice)) << data << OP_CREATE;

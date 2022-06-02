@@ -1,19 +1,19 @@
 #include <boost/test/unit_test.hpp>
-#include <qtumtests/test_utils.h>
+#include <yodytests/test_utils.h>
 #include <script/standard.h>
 #include <chainparams.h>
-#include <qtumtests/precompiled_utils.h>
-#include <test/qtumtests/data/btc_ecrecover.json.h>
-#include <test/qtumtests/data/ecrecover.json.h>
-#include <test/qtumtests/data/sha256.json.h>
-#include <test/qtumtests/data/ripemd160.json.h>
-#include <test/qtumtests/data/identity.json.h>
-#include <test/qtumtests/data/modexp.json.h>
-#include <test/qtumtests/data/modexp_eip2565.json.h>
-#include <test/qtumtests/data/alt_bn128_G1_add.json.h>
-#include <test/qtumtests/data/alt_bn128_G1_mul.json.h>
-#include <test/qtumtests/data/alt_bn128_pairing_product.json.h>
-#include <test/qtumtests/data/blake2_compression.json.h>
+#include <yodytests/precompiled_utils.h>
+#include <test/yodytests/data/btc_ecrecover.json.h>
+#include <test/yodytests/data/ecrecover.json.h>
+#include <test/yodytests/data/sha256.json.h>
+#include <test/yodytests/data/ripemd160.json.h>
+#include <test/yodytests/data/identity.json.h>
+#include <test/yodytests/data/modexp.json.h>
+#include <test/yodytests/data/modexp_eip2565.json.h>
+#include <test/yodytests/data/alt_bn128_G1_add.json.h>
+#include <test/yodytests/data/alt_bn128_G1_mul.json.h>
+#include <test/yodytests/data/alt_bn128_pairing_product.json.h>
+#include <test/yodytests/data/blake2_compression.json.h>
 
 namespace LondonTest{
 

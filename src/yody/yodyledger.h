@@ -23,7 +23,7 @@ struct LedgerDevice
 };
 
 /**
- * @brief The YodyLedger class Communicate with the qtum ledger
+ * @brief The YodyLedger class Communicate with the yody ledger
  */
 class YodyLedger {
     

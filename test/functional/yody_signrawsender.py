@@ -8,7 +8,7 @@ from test_framework.util import *
 from test_framework.blocktools import *
 from test_framework.p2p import *
 from test_framework.address import *
-from test_framework.qtum import *
+from test_framework.yody import *
 
 class YodySignRawSenderTest(BitcoinTestFramework):
     def set_test_params(self):
@@ -75,7 +75,7 @@ class YodySignRawSenderTest(BitcoinTestFramework):
         self.nodes[0].generate(1)
         self.sync_all()
 
-        # Now send some qtum to both addresses (one contract will increase its balance and the other one will throw),
+        # Now send some yody to both addresses (one contract will increase its balance and the other one will throw),
         # sign using signrawsendertransactionwithkey using a node that does not hold the keys in its keystore
         contract_addresses = list(set(self.nodes[0].listcontracts().keys()) - contract_addresses)
         senders = [self.nodes[0].getnewaddress() for i in range(2)]

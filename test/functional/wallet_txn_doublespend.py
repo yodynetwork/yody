@@ -10,7 +10,7 @@ from test_framework.util import (
     assert_equal,
     find_output,
 )
-from test_framework.qtumconfig import INITIAL_BLOCK_REWARD
+from test_framework.yodyconfig import INITIAL_BLOCK_REWARD
 
 
 class TxnMallTest(BitcoinTestFramework):

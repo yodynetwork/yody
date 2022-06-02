@@ -20,7 +20,7 @@ from test_framework.messages import COIN, MAX_MONEY
 from test_framework.p2p import P2PDataStore
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import assert_equal
-from test_framework.qtumconfig import *
+from test_framework.yodyconfig import *
 
 MAX_FUTURE_BLOCK_TIME = 4
 

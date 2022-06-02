@@ -34,8 +34,8 @@ from .util import (
     p2p_port,
     wait_until_helper,
 )
-from .qtumconfig import COINBASE_MATURITY
-from .qtum import generatesynchronized
+from .yodyconfig import COINBASE_MATURITY
+from .yody import generatesynchronized
 
 
 class TestStatus(Enum):
@@ -233,12 +233,12 @@ class BitcoinTestFramework(metaclass=BitcoinTestMetaClass):
         fname_bitcoind = os.path.join(
             config["environment"]["BUILDDIR"],
             "src",
-            "qtumd" + config["environment"]["EXEEXT"],
+            "yodyd" + config["environment"]["EXEEXT"],
         )
         fname_bitcoincli = os.path.join(
             config["environment"]["BUILDDIR"],
             "src",
-            "qtum-cli" + config["environment"]["EXEEXT"],
+            "yody-cli" + config["environment"]["EXEEXT"],
         )
         self.options.bitcoind = os.getenv("BITCOIND", default=fname_bitcoind)
         self.options.bitcoincli = os.getenv("BITCOINCLI", default=fname_bitcoincli)

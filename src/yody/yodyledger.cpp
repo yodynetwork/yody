@@ -1,4 +1,4 @@
-#include <qtum/qtumledger.h>
+#include <yody/yodyledger.h>
 #include <util/system.h>
 #include <chainparams.h>
 #include <univalue.h>
@@ -98,7 +98,7 @@ bool isPyPath(const std::string& str)
 }
 #endif
 
-// Start process from qtumd
+// Start process from yodyd
 class CProcess
 {
 public:

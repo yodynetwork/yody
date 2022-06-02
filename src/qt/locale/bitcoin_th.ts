@@ -319,7 +319,7 @@
     </message>
     <message>
         <source>Sign messages with your Yody addresses to prove you own them</source>
-        <translation>เซ็นชื่อด้วยข้อความ ที่เก็บ Yody เพื่อแสดงว่าท่านเป็นเจ้าของ qtum นี้จริง</translation>
+        <translation>เซ็นชื่อด้วยข้อความ ที่เก็บ Yody เพื่อแสดงว่าท่านเป็นเจ้าของ yody นี้จริง</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Yody addresses</source>
@@ -342,16 +342,16 @@
         <translation>แถบเครื่องมือแท็บ</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">เรียกเก็บ การชำระเงิน (สร้าง QR codes และ qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">เรียกเก็บ การชำระเงิน (สร้าง QR codes และ yody: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
-        <translation type="unfinished">แสดงรายการ ที่เก็บเงินที่จะส่ง qtum ออก และป้ายชื่อ ที่ใช้ไปแล้ว</translation>
+        <translation type="unfinished">แสดงรายการ ที่เก็บเงินที่จะส่ง yody ออก และป้ายชื่อ ที่ใช้ไปแล้ว</translation>
     </message>
     <message>
         <source>Show the list of used receiving addresses and labels</source>
-        <translation type="unfinished">แสดงรายการ ที่เก็บเงินที่จะรับ qtum เข้า และป้ายชื่อ ที่ใช้ไปแล้ว</translation>
+        <translation type="unfinished">แสดงรายการ ที่เก็บเงินที่จะรับ yody เข้า และป้ายชื่อ ที่ใช้ไปแล้ว</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1358,7 +1358,7 @@
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>Unable to generate keys</source>
         <translation type="unfinished">ไม่สามารถสร้างกุญแจ</translation>

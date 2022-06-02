@@ -46,7 +46,7 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "Yody"
-#define QAPP_ORG_DOMAIN "qtum.org"
+#define QAPP_ORG_DOMAIN "yody.org"
 #define QAPP_APP_NAME_DEFAULT "Yody-Qt"
 #define QAPP_APP_NAME_TESTNET "Yody-Qt-testnet"
 #define QAPP_APP_NAME_SIGNET "Yody-Qt-signet"
@@ -58,11 +58,11 @@ static constexpr uint64_t GB_BYTES{1000000000};
 // Default prune target displayed in GUI.
 static constexpr int DEFAULT_PRUNE_TARGET_GB{2};
 
-/* Mainnet qtum explorer uri */
-#define YODY_INFO_MAINNET "<a href='https://qtum.info/%1/%2'>%2</a>"
+/* Mainnet yody explorer uri */
+#define YODY_INFO_MAINNET "<a href='https://yody.info/%1/%2'>%2</a>"
 
-/* Testnet qtum explorer uri */
-#define YODY_INFO_TESTNET "<a href='https://testnet.qtum.info/%1/%2'>%2</a>"
+/* Testnet yody explorer uri */
+#define YODY_INFO_TESTNET "<a href='https://testnet.yody.info/%1/%2'>%2</a>"
 
 /* Hardware wallet interface uri */
 #define YODY_HWI_TOOL "<a href='https://github.com/yodynetwork/HWI/tags'>HWI Tool</a>"

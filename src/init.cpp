@@ -113,7 +113,7 @@ static const char* DEFAULT_ASMAP_FILENAME="ip_asn.map";
 /**
  * The PID file facilities.
  */
-static const char* BITCOIN_PID_FILENAME = "qtumd.pid";
+static const char* BITCOIN_PID_FILENAME = "yodyd.pid";
 
 static fs::path GetPidFile(const ArgsManager& args)
 {
@@ -192,7 +192,7 @@ void Shutdown(NodeContext& node)
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    util::ThreadRename("qtum-shutoff");
+    util::ThreadRename("yody-shutoff");
 
 #ifdef ENABLE_WALLET
     // Force stop the stakers before any other components
@@ -623,7 +623,7 @@ void SetupServerArgs(ArgsManager& argsman)
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/yodynetwork/qtum>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/yodynetwork/yody>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i").translated, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
@@ -1368,9 +1368,9 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
     // Warn about relative -datadir path.
     if (args.IsArgSet("-datadir") && !fs::path(args.GetArg("-datadir", "")).is_absolute()) {
         LogPrintf("Warning: relative datadir option '%s' specified, which will be interpreted relative to the " /* Continued */
-                  "current working directory '%s'. This is fragile, because if qtum is started in the future "
+                  "current working directory '%s'. This is fragile, because if yody is started in the future "
                   "from a different location, it will be unable to locate the current data files. There could "
-                  "also be data loss if qtum is started while in a temporary directory.\n",
+                  "also be data loss if yody is started while in a temporary directory.\n",
                   args.GetArg("-datadir", ""), fs::current_path().string());
     }
 
@@ -1705,7 +1705,7 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
                     break;
                 }
 
-                /////////////////////////////////////////////////////////// qtum
+                /////////////////////////////////////////////////////////// yody
                 if((args.IsArgSet("-dgpstorage") && args.IsArgSet("-dgpevm")) || (!args.IsArgSet("-dgpstorage") && args.IsArgSet("-dgpevm")) ||
                   (!args.IsArgSet("-dgpstorage") && !args.IsArgSet("-dgpevm"))){
                     fGettingValuesDGP = true;
@@ -1714,15 +1714,15 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
                 }
 
                 dev::eth::NoProof::init();
-                fs::path qtumStateDir = gArgs.GetDataDirNet() / "stateYody";
-                bool fStatus = fs::exists(qtumStateDir);
-                const std::string dirYody(qtumStateDir.string());
+                fs::path yodyStateDir = gArgs.GetDataDirNet() / "stateYody";
+                bool fStatus = fs::exists(yodyStateDir);
+                const std::string dirYody(yodyStateDir.string());
                 const dev::h256 hashDB(dev::sha3(dev::rlp("")));
                 dev::eth::BaseState existsYodystate = fStatus ? dev::eth::BaseState::PreExisting : dev::eth::BaseState::Empty;
                 globalState = std::unique_ptr<YodyState>(new YodyState(dev::u256(0), YodyState::openDB(dirYody, hashDB, dev::WithExisting::Trust), dirYody, existsYodystate));
                 globalSealEngine = std::unique_ptr<dev::eth::SealEngineFace>(cp.createSealEngine());
 
-                pstorageresult.reset(new StorageResults(qtumStateDir.string()));
+                pstorageresult.reset(new StorageResults(yodyStateDir.string()));
                 if (fReset) {
                     pstorageresult->wipeResults();
                 }
@@ -1806,7 +1806,7 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
                 break;
             }
 
-            /////////////////////////////////////////////////////////// qtum
+            /////////////////////////////////////////////////////////// yody
             {
                 LOCK(cs_main);
                 CChain& active_chain = chainman.ActiveChain();
@@ -1840,8 +1840,8 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
                 LOCK(cs_main);
 
                 CChain& active_chain = chainman.ActiveChain();
-                YodyDGP qtumDGP(globalState.get(), chainman.ActiveChainstate(), fGettingValuesDGP);
-                globalSealEngine->setYodySchedule(qtumDGP.getGasSchedule(active_chain.Height() + (active_chain.Height()+1 >= chainparams.GetConsensus().QIP7Height ? 0 : 1) ));
+                YodyDGP yodyDGP(globalState.get(), chainman.ActiveChainstate(), fGettingValuesDGP);
+                globalSealEngine->setYodySchedule(yodyDGP.getGasSchedule(active_chain.Height() + (active_chain.Height()+1 >= chainparams.GetConsensus().QIP7Height ? 0 : 1) ));
 
                 for (CChainState* chainstate : chainman.GetAll()) {
                     if (!is_coinsview_empty(chainstate)) {

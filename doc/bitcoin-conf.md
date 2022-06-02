@@ -1,10 +1,10 @@
-# `qtum.conf` Configuration File
+# `yody.conf` Configuration File
 
-The configuration file is used by `qtumd`, `qtum-qt` and `qtum-cli`.
+The configuration file is used by `yodyd`, `yody-qt` and `yody-cli`.
 
 All command-line options (except for `-?`, `-help`, `-version` and `-conf`) may be specified in a configuration file, and all configuration file options (except for `includeconf`) may also be specified on the command line. Command-line options override values set in the configuration file and configuration file options override values set in the GUI.
 
-Changes to the configuration file while `qtumd` or `qtum-qt` is running only take effect after restarting.
+Changes to the configuration file while `yodyd` or `yody-qt` is running only take effect after restarting.
 
 ## Configuration File Format
 
@@ -49,16 +49,16 @@ rpcport=4000
 
 ## Configuration File Path
 
-The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `qtum.conf` and it is located in the Yody data directory, but both the Yody data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
+The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `yody.conf` and it is located in the Yody data directory, but both the Yody data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
 
-The `includeconf=<file>` option in the `qtum.conf` file can be used to include additional configuration files.
+The `includeconf=<file>` option in the `yody.conf` file can be used to include additional configuration files.
 
 ### Default configuration file locations
 
 Operating System | Data Directory | Example Path
 -- | -- | --
-Windows | `%APPDATA%\Yody\` | `C:\Users\username\AppData\Roaming\Yody\qtum.conf`
-Linux | `$HOME/.qtum/` | `/home/username/.qtum/qtum.conf`
-macOS | `$HOME/Library/Application Support/Yody/` | `/Users/username/Library/Application Support/Yody/qtum.conf`
+Windows | `%APPDATA%\Yody\` | `C:\Users\username\AppData\Roaming\Yody\yody.conf`
+Linux | `$HOME/.yody/` | `/home/username/.yody/yody.conf`
+macOS | `$HOME/Library/Application Support/Yody/` | `/Users/username/Library/Application Support/Yody/yody.conf`
 
-You can find an example qtum.conf file in [share/examples/bitcoin.conf](../share/examples/bitcoin.conf).
+You can find an example yody.conf file in [share/examples/bitcoin.conf](../share/examples/bitcoin.conf).

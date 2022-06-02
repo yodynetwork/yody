@@ -1,7 +1,7 @@
 #ifndef YODY_CONVERT_H
 #define YODY_CONVERT_H
 
-////////////////////////////////////////////////////// qtum
+////////////////////////////////////////////////////// yody
 #include <uint256.h>
 #include <libdevcore/Common.h>
 #include <libdevcore/CommonData.h>

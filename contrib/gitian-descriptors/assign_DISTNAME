@@ -3,7 +3,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
 # A helper script to be sourced into the gitian descriptors
-git remote add origin https://github.com/yodynetwork/qtum
+git remote add origin https://github.com/yodynetwork/yody
 git fetch origin
 
 if RECENT_TAG="$(git describe --exact-match HEAD 2> /dev/null)"; then
@@ -11,4 +11,4 @@ if RECENT_TAG="$(git describe --exact-match HEAD 2> /dev/null)"; then
 else
     VERSION="$(git rev-parse --short=12 HEAD)"
 fi
-DISTNAME="qtum-${VERSION}"
+DISTNAME="yody-${VERSION}"

@@ -33,7 +33,7 @@
 #include <util/translation.h>
 #include <wallet/coincontrol.h>
 #include <wallet/wallet.h> // for CRecipient
-#include <qt/qtumhwitool.h>
+#include <qt/yodyhwitool.h>
 
 #include <stdint.h>
 #include <functional>

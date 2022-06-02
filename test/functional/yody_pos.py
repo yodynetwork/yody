@@ -10,7 +10,7 @@ from test_framework.p2p import *
 from test_framework.blocktools import *
 from test_framework.address import *
 from test_framework.key import ECKey
-from test_framework.qtumconfig import TIMESTAMP_MASK
+from test_framework.yodyconfig import TIMESTAMP_MASK
 import io
 import struct
 

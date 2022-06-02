@@ -124,9 +124,9 @@ CMutableTransaction ConstructTransaction(const UniValue& inputs_in, const UniVal
             // Get dgp gas limit and gas price
             LOCK(cs_main);
             CChain& active_chain = chainman.ActiveChain();
-            YodyDGP qtumDGP(globalState.get(), chainman.ActiveChainstate(), fGettingValuesDGP);
-            uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(active_chain.Height());
-            uint64_t minGasPrice = CAmount(qtumDGP.getMinGasPrice(active_chain.Height()));
+            YodyDGP yodyDGP(globalState.get(), chainman.ActiveChainstate(), fGettingValuesDGP);
+            uint64_t blockGasLimit = yodyDGP.getBlockGasLimit(active_chain.Height());
+            uint64_t minGasPrice = CAmount(yodyDGP.getMinGasPrice(active_chain.Height()));
             CAmount nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
 
             bool createContract = Contract.exists("bytecode") && Contract["bytecode"].isStr();

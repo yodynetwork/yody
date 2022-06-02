@@ -282,10 +282,10 @@ public:
     {
         LOCK(::cs_main);
 
-        YodyDGP qtumDGP(globalState.get(), chainman().ActiveChainstate(), fGettingValuesDGP);
+        YodyDGP yodyDGP(globalState.get(), chainman().ActiveChainstate(), fGettingValuesDGP);
         int numBlocks = chainman().ActiveChain().Height();
-        blockGasLimit = qtumDGP.getBlockGasLimit(numBlocks);
-        minGasPrice = CAmount(qtumDGP.getMinGasPrice(numBlocks));
+        blockGasLimit = yodyDGP.getBlockGasLimit(numBlocks);
+        minGasPrice = CAmount(yodyDGP.getMinGasPrice(numBlocks));
         nGasPrice = (minGasPrice>DEFAULT_GAS_PRICE)?minGasPrice:DEFAULT_GAS_PRICE;
     }
     void getSyncInfo(int& numBlocks, bool& isSyncing) override
