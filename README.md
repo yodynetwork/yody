@@ -61,7 +61,7 @@ Developer's Tools
 * Docker images for running qtum services
   * https://github.com/qtumproject/qtum-docker
 * qtum.info API that powers the block explorer and the QTUM Web wallet
-  * https://github.com/qtumproject/qtuminfo-api#qtuminfo-api-documentation
+  * https://github.com/qtumproject/yodyinfo-api#yodyinfo-api-documentation
 
 
 What is Qtum Core?
