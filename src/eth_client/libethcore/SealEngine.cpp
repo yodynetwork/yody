@@ -157,7 +157,7 @@ SealEngineFace* SealEngineRegistrar::create(ChainOperationParams const& _params)
 
 EVMSchedule const& SealEngineBase::evmSchedule(u256 const& _blockNumber) const
 {
-	//////////////////////////////////////////////////////// // qtum
+	//////////////////////////////////////////////////////// // yody
 	if (u256(0) == chainParams().EIP158ForkBlock && 
 		u256(0) == chainParams().EIP150ForkBlock &&
 		u256(0) == chainParams().homesteadForkBlock &&

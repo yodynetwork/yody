@@ -1,4 +1,4 @@
-﻿#include <qtum/qtumtoken.h>
+﻿#include <yody/yodytoken.h>
 #include <validation.h>
 #include <util/moneystr.h>
 #include <util/contractabi.h>
@@ -96,11 +96,11 @@ struct YodyTokenData
 
 bool YodyToken::ToHash160(const std::string& strYodyAddress, std::string& strHash160)
 {
-    CTxDestination qtumAddress = DecodeDestination(strYodyAddress);
-    if(!IsValidDestination(qtumAddress))
+    CTxDestination yodyAddress = DecodeDestination(strYodyAddress);
+    if(!IsValidDestination(yodyAddress))
         return false;
-    if(std::holds_alternative<PKHash>(qtumAddress)){
-        PKHash keyid = std::get<PKHash>(qtumAddress);
+    if(std::holds_alternative<PKHash>(yodyAddress)){
+        PKHash keyid = std::get<PKHash>(yodyAddress);
         strHash160 = HexStr(valtype(keyid.begin(),keyid.end()));
     }else{
         return false;
@@ -112,9 +112,9 @@ bool YodyToken::ToYodyAddress(const std::string& strHash160, std::string& strYod
 {
     uint160 key(ParseHex(strHash160.c_str()));
     PKHash keyid(key);
-    CTxDestination qtumAddress = keyid;
-    if(IsValidDestination(qtumAddress)){
-        strYodyAddress = EncodeDestination(qtumAddress);
+    CTxDestination yodyAddress = keyid;
+    if(IsValidDestination(yodyAddress)){
+        strYodyAddress = EncodeDestination(yodyAddress);
         return true;
     }
     return false;

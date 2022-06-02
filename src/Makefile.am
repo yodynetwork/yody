@@ -40,7 +40,7 @@ LIBBITCOIN_SERVER=libbitcoin_server.a
 LIBBITCOIN_COMMON=libbitcoin_common.a
 LIBBITCOIN_CONSENSUS=libbitcoin_consensus.a
 LIBBITCOIN_CLI=libbitcoin_cli.a
-LIBBITCOIN_UTIL=libqtum_util.a
+LIBBITCOIN_UTIL=libyody_util.a
 LIBBITCOIN_CRYPTO_BASE=crypto/libbitcoin_crypto_base.a
 LIBBITCOINQT=qt/libbitcoinqt.a
 LIBSECP256K1=secp256k1/libsecp256k1.la
@@ -98,29 +98,29 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += qtumd
+  bin_PROGRAMS += yodyd
 endif
 
 if BUILD_BITCOIN_NODE
-  bin_PROGRAMS += qtum-node
+  bin_PROGRAMS += yody-node
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += qtum-cli
+  bin_PROGRAMS += yody-cli
 endif
 
 if BUILD_BITCOIN_TX
-  bin_PROGRAMS += qtum-tx
+  bin_PROGRAMS += yody-tx
 endif
 
 if ENABLE_WALLET
 if BUILD_BITCOIN_WALLET
-  bin_PROGRAMS += qtum-wallet
+  bin_PROGRAMS += yody-wallet
 endif
 endif
 
 if BUILD_BITCOIN_UTIL
-  bin_PROGRAMS += qtum-util
+  bin_PROGRAMS += yody-util
 endif
 
 .PHONY: FORCE check-symbols check-security
@@ -321,27 +321,27 @@ BITCOIN_CORE_H = \
   zmq/zmqpublishnotifier.h \
   zmq/zmqrpc.h \
   zmq/zmqutil.h \
-  qtum/qtumstate.h \
-  qtum/qtumtransaction.h \
-  qtum/qtumDGP.h \
-  qtum/storageresults.h \
-  qtum/qtumutils.h \
-  qtum/qtumdelegation.h \
-  qtum/qtumtoken.h \
-  qtum/qtumledger.h
+  yody/yodystate.h \
+  yody/yodytransaction.h \
+  yody/yodyDGP.h \
+  yody/storageresults.h \
+  yody/yodyutils.h \
+  yody/yodydelegation.h \
+  yody/yodytoken.h \
+  yody/yodyledger.h
 
 obj/build.h: FORCE
 	@$(MKDIR_P) $(builddir)/obj
 	@$(top_srcdir)/share/genbuild.sh "$(abs_top_builddir)/src/obj/build.h" \
 	  "$(abs_top_srcdir)"
-libqtum_util_a-clientversion.$(OBJEXT): obj/build.h
+libyody_util_a-clientversion.$(OBJEXT): obj/build.h
 
 ipc/capnp/libbitcoin_ipc_a-ipc.$(OBJEXT): $(libbitcoin_ipc_mpgen_input:=.h)
 
 # server: shared between bitcoind and bitcoin-qt
 # Contains code accessing mempool and chain state that is meant to be separated
 # from wallet and gui code (see node/README.md). Shared code should go in
-# libbitcoin_common or libqtum_util libraries, instead.
+# libbitcoin_common or libyody_util libraries, instead.
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(NATPMP_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -400,9 +400,9 @@ libbitcoin_server_a_SOURCES = \
   validation.cpp \
   validationinterface.cpp \
   versionbits.cpp \
-  qtum/qtumstate.cpp \
-  qtum/storageresults.cpp \
-  qtum/qtumledger.cpp \
+  yody/yodystate.cpp \
+  yody/storageresults.cpp \
+  yody/yodyledger.cpp \
   $(BITCOIN_CORE_H)
 
 if ENABLE_WALLET
@@ -612,10 +612,10 @@ libbitcoin_common_a_SOURCES = \
   script/signingprovider.cpp \
   script/standard.cpp \
   warnings.cpp \
-  qtum/qtumutils.cpp \
-  qtum/qtumDGP.cpp \
-  qtum/qtumtoken.cpp \
-  qtum/qtumdelegation.cpp \
+  yody/yodyutils.cpp \
+  yody/yodyDGP.cpp \
+  yody/yodytoken.cpp \
+  yody/yodydelegation.cpp \
   util/contractabi.cpp \
   libff/libff/algebra/curves/public_params.hpp \
   libff/libff/algebra/curves/curve_utils.hpp \
@@ -700,7 +700,7 @@ libbitcoin_common_a_SOURCES = \
   eth_client/libdevcrypto/LibSnark.h \
   eth_client/libethashseal/GenesisInfo.cpp \
   eth_client/libethashseal/GenesisInfo.h \
-  eth_client/libethashseal/genesis/qtumNetwork.cpp \
+  eth_client/libethashseal/genesis/yodyNetwork.cpp \
   eth_client/libethcore/ABI.h \
   eth_client/libethcore/BlockHeader.cpp \
   eth_client/libethcore/BlockHeader.h \
@@ -791,9 +791,9 @@ libbitcoin_common_a_SOURCES = \
 # util: shared between all executables.
 # This library *must* be included to make sure that the glibc
 # backward-compatibility objects and their sanity checks are linked.
-libqtum_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-libqtum_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-libqtum_util_a_SOURCES = \
+libyody_util_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+libyody_util_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+libyody_util_a_SOURCES = \
   support/lockedpool.cpp \
   chainparamsbase.cpp \
   clientversion.cpp \
@@ -836,11 +836,11 @@ libqtum_util_a_SOURCES = \
   $(BITCOIN_CORE_H)
 
 if USE_LIBEVENT
-libqtum_util_a_SOURCES += util/url.cpp
+libyody_util_a_SOURCES += util/url.cpp
 endif
 
 if GLIBC_BACK_COMPAT
-libqtum_util_a_SOURCES += compat/glibc_compat.cpp
+libyody_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
@@ -853,20 +853,20 @@ libbitcoin_cli_a_SOURCES = \
   rpc/client.cpp \
   $(BITCOIN_CORE_H)
 
-nodist_libqtum_util_a_SOURCES = $(srcdir)/obj/build.h
+nodist_libyody_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
 # bitcoind & bitcoin-node binaries #
-qtum_daemon_sources = bitcoind.cpp
-qtum_bin_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-qtum_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
-qtum_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+yody_daemon_sources = bitcoind.cpp
+yody_bin_cppflags = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+yody_bin_cxxflags = $(AM_CXXFLAGS) $(PIE_FLAGS)
+yody_bin_ldflags = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-qtum_daemon_sources += bitcoind-res.rc
+yody_daemon_sources += bitcoind-res.rc
 endif
 
-qtum_bin_ldadd = \
+yody_bin_ldadd = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_SERVER) \
@@ -883,31 +883,31 @@ qtum_bin_ldadd = \
   $(LIBFF) \
   $(LIBSECP256K1)
 
-qtum_bin_ldadd += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS) $(GMP_LIBS) $(GMPXX_LIBS)
+yody_bin_ldadd += $(BOOST_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(NATPMP_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS) $(SQLITE_LIBS) $(GMP_LIBS) $(GMPXX_LIBS)
 
-qtumd_SOURCES = $(qtum_daemon_sources) init/bitcoind.cpp
-qtumd_CPPFLAGS = $(qtum_bin_cppflags)
-qtumd_CXXFLAGS = $(qtum_bin_cxxflags)
-qtumd_LDFLAGS = $(qtum_bin_ldflags)
-qtumd_LDADD = $(LIBBITCOIN_SERVER) $(qtum_bin_ldadd)
+yodyd_SOURCES = $(yody_daemon_sources) init/bitcoind.cpp
+yodyd_CPPFLAGS = $(yody_bin_cppflags)
+yodyd_CXXFLAGS = $(yody_bin_cxxflags)
+yodyd_LDFLAGS = $(yody_bin_ldflags)
+yodyd_LDADD = $(LIBBITCOIN_SERVER) $(yody_bin_ldadd)
 
-qtum_node_SOURCES = $(qtum_daemon_sources) init/bitcoin-node.cpp
-qtum_node_CPPFLAGS = $(qtum_bin_cppflags)
-qtum_node_CXXFLAGS = $(qtum_bin_cxxflags)
-qtum_node_LDFLAGS = $(qtum_bin_ldflags)
-qtum_node_LDADD = $(LIBBITCOIN_SERVER) $(qtum_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
+yody_node_SOURCES = $(yody_daemon_sources) init/bitcoin-node.cpp
+yody_node_CPPFLAGS = $(yody_bin_cppflags)
+yody_node_CXXFLAGS = $(yody_bin_cxxflags)
+yody_node_LDFLAGS = $(yody_bin_ldflags)
+yody_node_LDADD = $(LIBBITCOIN_SERVER) $(yody_bin_ldadd) $(LIBBITCOIN_IPC) $(LIBMULTIPROCESS_LIBS)
 
 # bitcoin-cli binary #
-qtum_cli_SOURCES = bitcoin-cli.cpp
-qtum_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-qtum_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-qtum_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+yody_cli_SOURCES = bitcoin-cli.cpp
+yody_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+yody_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+yody_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-qtum_cli_SOURCES += bitcoin-cli-res.rc
+yody_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-qtum_cli_LDADD = \
+yody_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
@@ -918,20 +918,20 @@ qtum_cli_LDADD = \
   $(LIBCRYPTOPP) \
   $(LIBSECP256K1)
 
-qtum_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+yody_cli_LDADD += $(BOOST_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
 # bitcoin-tx binary #
-qtum_tx_SOURCES = bitcoin-tx.cpp
-qtum_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-qtum_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-qtum_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+yody_tx_SOURCES = bitcoin-tx.cpp
+yody_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+yody_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+yody_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-qtum_tx_SOURCES += bitcoin-tx-res.rc
+yody_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-qtum_tx_LDADD = \
+yody_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -943,32 +943,32 @@ qtum_tx_LDADD = \
   $(LIBCRYPTOPP) \
   $(LIBSECP256K1)
 
-qtum_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+yody_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
 # bitcoin-wallet binary #
-qtum_wallet_SOURCES = bitcoin-wallet.cpp validation.cpp rpc/server.cpp
-qtum_wallet_CPPFLAGS = $(qtum_bin_cppflags)
-qtum_wallet_CXXFLAGS = $(qtum_bin_cxxflags)
-qtum_wallet_LDFLAGS = $(qtum_bin_ldflags)
-qtum_wallet_LDADD = $(LIBBITCOIN_WALLET_TOOL) $(qtum_bin_ldadd)
+yody_wallet_SOURCES = bitcoin-wallet.cpp validation.cpp rpc/server.cpp
+yody_wallet_CPPFLAGS = $(yody_bin_cppflags)
+yody_wallet_CXXFLAGS = $(yody_bin_cxxflags)
+yody_wallet_LDFLAGS = $(yody_bin_ldflags)
+yody_wallet_LDADD = $(LIBBITCOIN_WALLET_TOOL) $(yody_bin_ldadd)
 
 if TARGET_WINDOWS
-qtum_wallet_SOURCES += bitcoin-wallet-res.rc
+yody_wallet_SOURCES += bitcoin-wallet-res.rc
 endif
 #
 
 # bitcoin-util binary #
-qtum_util_SOURCES = bitcoin-util.cpp
-qtum_util_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-qtum_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-qtum_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
+yody_util_SOURCES = bitcoin-util.cpp
+yody_util_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+yody_util_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+yody_util_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS) $(PTHREAD_FLAGS)
 
 if TARGET_WINDOWS
-qtum_util_SOURCES += bitcoin-util-res.rc
+yody_util_SOURCES += bitcoin-util-res.rc
 endif
 
-qtum_util_LDADD = \
+yody_util_LDADD = \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
   $(LIBUNIVALUE) \
@@ -976,7 +976,7 @@ qtum_util_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-qtum_util_LDADD += $(BOOST_LIBS)
+yody_util_LDADD += $(BOOST_LIBS)
 #
 
 # bitcoinconsensus library #

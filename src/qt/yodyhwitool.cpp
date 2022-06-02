@@ -2,13 +2,13 @@
 #include <config/bitcoin-config.h>
 #endif
 
-#include <qt/qtumhwitool.h>
+#include <qt/yodyhwitool.h>
 #include <qt/guiutil.h>
 #include <qt/execrpccommand.h>
 #include <qt/walletmodel.h>
 #include <util/strencodings.h>
 #include <util/system.h>
-#include <qtum/qtumledger.h>
+#include <yody/yodyledger.h>
 #include <chainparams.h>
 #include <outputtype.h>
 

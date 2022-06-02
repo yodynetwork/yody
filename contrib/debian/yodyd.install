@@ -1,2 +1,2 @@
-usr/local/bin/qtumd usr/bin
-usr/local/bin/qtum-cli usr/bin
+usr/local/bin/yodyd usr/bin
+usr/local/bin/yody-cli usr/bin

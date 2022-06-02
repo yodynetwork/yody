@@ -5,7 +5,7 @@ Setup
 ---------------------
 Yody Core is the original Yody client and it builds the backbone of the network. It downloads and, by default, stores the entire history of Yody transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
-To download Yody Core, visit [qtumcore.org](https://www.qtumcore.org/).
+To download Yody Core, visit [yodycore.org](https://www.yodycore.org/).
 
 Running
 ---------------------
@@ -15,12 +15,12 @@ The following are some helpful notes on how to run Yody Core on your native plat
 
 Unpack the files into a directory and run:
 
-- `bin/qtum-qt` (GUI) or
-- `bin/qtumd` (headless)
+- `bin/yody-qt` (GUI) or
+- `bin/yodyd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run qtum-qt.exe.
+Unpack the files into a directory, and then run yody-qt.exe.
 
 ### macOS
 

@@ -1,5 +1,5 @@
 ---
-name: "qtum-dmg-signer"
+name: "yody-dmg-signer"
 distro: "ubuntu"
 suites:
 - "focal"
@@ -10,13 +10,13 @@ packages:
 - "xorriso"
 - "python3-pip"
 remotes:
-- "url": "https://github.com/yodynetwork/qtum-detached-sigs.git"
+- "url": "https://github.com/yodynetwork/yody-detached-sigs.git"
   "dir": "signature"
 - "url": "https://github.com/achow101/signapple.git"
   "dir": "signapple"
   "commit": "b084cbbf44d5330448ffce0c7d118f75781b64bd"
 files:
-- "qtum-osx-unsigned.tar.gz"
+- "yody-osx-unsigned.tar.gz"
 script: |
   set -e -o pipefail
 
@@ -42,9 +42,9 @@ script: |
   export PATH="$HOME/.local/bin":$PATH
   cd ..
 
-  UNSIGNED_TARBALL=qtum-osx-unsigned.tar.gz
+  UNSIGNED_TARBALL=yody-osx-unsigned.tar.gz
   UNSIGNED_APP=dist/Yody-Qt.app
-  SIGNED=qtum-osx-signed.dmg
+  SIGNED=yody-osx-signed.dmg
   tar -xf ${UNSIGNED_TARBALL}
   OSX_VOLNAME="$(cat osx_volname)"
   ./detached-sig-apply.sh ${UNSIGNED_APP} signature/osx/dist

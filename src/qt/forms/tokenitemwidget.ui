@@ -242,7 +242,7 @@
   <customwidget>
    <class>YodyPushButton</class>
    <extends>QPushButton</extends>
-   <header>qt/qtumpushbutton.h</header>
+   <header>qt/yodypushbutton.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

@@ -3,7 +3,7 @@
 #include <validation.h>
 #include <chainparams.h>
 #include <script/script.h>
-#include <qtum/qtumstate.h>
+#include <yody/yodystate.h>
 #include <libevm/VMFace.h>
 #include <validation.h>
 
@@ -13,7 +13,7 @@ using namespace dev::eth;
 
 YodyState::YodyState(u256 const& _accountStartNonce, OverlayDB const& _db, const string& _path, BaseState _bs) :
         State(_accountStartNonce, _db, _bs) {
-            dbUTXO = YodyState::openDB(_path + "/qtumDB", sha3(rlp("")), WithExisting::Trust);
+            dbUTXO = YodyState::openDB(_path + "/yodyDB", sha3(rlp("")), WithExisting::Trust);
 	        stateUTXO = SecureTrieDB<Address, OverlayDB>(&dbUTXO);
 }
 
@@ -87,7 +87,7 @@ ResultExecute YodyState::execute(EnvInfo const& _envInfo, SealEngineFace const& 
                 printfErrorLog(res.excepted);
             }
 
-            qtum::commit(cacheUTXO, stateUTXO, m_cache);
+            yody::commit(cacheUTXO, stateUTXO, m_cache);
             cacheUTXO.clear();
             bool removeEmptyAccounts = _envInfo.number() >= _sealEngine.chainParams().EIP158ForkBlock;
             commit(removeEmptyAccounts ? State::CommitBehaviour::RemoveEmptyAccounts : State::CommitBehaviour::KeepEmptyAccounts);
@@ -183,7 +183,7 @@ Vin* YodyState::vin(dev::Address const& _addr)
 //     if (_commitBehaviour == CommitBehaviour::RemoveEmptyAccounts)
 //         removeEmptyAccounts();
 
-//     qtum::commit(cacheUTXO, stateUTXO, m_cache);
+//     yody::commit(cacheUTXO, stateUTXO, m_cache);
 //     cacheUTXO.clear();
         
 //     m_touched += dev::eth::commit(m_cache, m_state);

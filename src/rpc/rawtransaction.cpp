@@ -45,10 +45,10 @@
 
 static void TxToJSON(const CTransaction& tx, const uint256 hashBlock, UniValue& entry, CChainState& active_chainstate)
 {
-    // Call into TxToUniv() in qtum-common to decode the transaction hex.
+    // Call into TxToUniv() in yody-common to decode the transaction hex.
     //
     // Blockchain contextual information (confirmations and blocktime) is not
-    // available to code in qtum-common, so we query them here and push the
+    // available to code in yody-common, so we query them here and push the
     // data into the returned UniValue.
     TxToUniv(tx, uint256(), entry, true, RPCSerializationFlags());
 
@@ -289,10 +289,10 @@ static RPCHelpMan getrawtransaction()
                                          {RPCResult::Type::STR, "hex", "the hex"},
                                          {RPCResult::Type::NUM, "reqSigs", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Number of required signatures"},
                                          {RPCResult::Type::STR, "type", "The type, eg 'pubkeyhash'"},
-                                         {RPCResult::Type::STR, "address", /* optional */ true, "qtum address (only if a well-defined address exists)"},
-                                         {RPCResult::Type::ARR, "addresses", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Array of qtum addresses",
+                                         {RPCResult::Type::STR, "address", /* optional */ true, "yody address (only if a well-defined address exists)"},
+                                         {RPCResult::Type::ARR, "addresses", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Array of yody addresses",
                                          {
-                                             {RPCResult::Type::STR, "address", "qtum address"},
+                                             {RPCResult::Type::STR, "address", "yody address"},
                                          }},
                                      }},
                                  }},
@@ -371,7 +371,7 @@ static RPCHelpMan getrawtransaction()
         return EncodeHexTx(*tx, RPCSerializationFlags());
     }
 
-    //////////////////////////////////////////////////////// // qtum
+    //////////////////////////////////////////////////////// // yody
     int nHeight = 0;
     int nConfirmations = 0;
     int nBlockTime = 0;
@@ -584,7 +584,7 @@ static RPCHelpMan createrawtransaction()
                         {
                             {"", RPCArg::Type::OBJ_USER_KEYS, RPCArg::Optional::OMITTED, "",
                                 {
-                                    {"address", RPCArg::Type::AMOUNT, RPCArg::Optional::NO, "A key-value pair. The key (string) is the qtum address, the value (float or string) is the amount in " + CURRENCY_UNIT},
+                                    {"address", RPCArg::Type::AMOUNT, RPCArg::Optional::NO, "A key-value pair. The key (string) is the yody address, the value (float or string) is the amount in " + CURRENCY_UNIT},
                                 },
                                 },
                             {"", RPCArg::Type::OBJ, RPCArg::Optional::OMITTED, "",
@@ -599,7 +599,7 @@ static RPCHelpMan createrawtransaction()
                                     {"amount", RPCArg::Type::AMOUNT,  RPCArg::Default{0}, "Value in YODY to send with the call, should be a valid amount, default 0"},
                                     {"gasLimit", RPCArg::Type::NUM,  RPCArg::Optional::OMITTED, "The gas limit for the transaction"},
                                     {"gasPrice", RPCArg::Type::NUM,  RPCArg::Optional::OMITTED, "The gas price for the transaction"},
-                                    {"senderAddress", RPCArg::Type::STR, RPCArg::Optional::OMITTED, "The qtum address that will be used to create the contract."},
+                                    {"senderAddress", RPCArg::Type::STR, RPCArg::Optional::OMITTED, "The yody address that will be used to create the contract."},
                                 },
                                 },
                              {"contract", RPCArg::Type::OBJ, RPCArg::Optional::OMITTED, "(create contract)",
@@ -607,7 +607,7 @@ static RPCHelpMan createrawtransaction()
                                      {"bytecode", RPCArg::Type::STR_HEX, RPCArg::Optional::NO, "contract bytcode."},
                                      {"gasLimit", RPCArg::Type::NUM,  RPCArg::Optional::OMITTED, "The gas limit for the transaction"},
                                      {"gasPrice", RPCArg::Type::NUM,  RPCArg::Optional::OMITTED, "The gas price for the transaction"},
-                                     {"senderAddress", RPCArg::Type::STR, RPCArg::Optional::OMITTED, "The qtum address that will be used to create the contract."},
+                                     {"senderAddress", RPCArg::Type::STR, RPCArg::Optional::OMITTED, "The yody address that will be used to create the contract."},
                                  },
                                  },
                         },
@@ -709,10 +709,10 @@ static RPCHelpMan decoderawtransaction()
                                     {RPCResult::Type::STR_HEX, "hex", "the hex"},
                                     {RPCResult::Type::NUM, "reqSigs", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Number of required signatures"},
                                     {RPCResult::Type::STR, "type", "The type, eg 'pubkeyhash'"},
-                                    {RPCResult::Type::STR, "address", /* optional */ true, "qtum address (only if a well-defined address exists)"},
-                                    {RPCResult::Type::ARR, "addresses", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Array of qtum addresses",
+                                    {RPCResult::Type::STR, "address", /* optional */ true, "yody address (only if a well-defined address exists)"},
+                                    {RPCResult::Type::ARR, "addresses", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Array of yody addresses",
                                     {
-                                        {RPCResult::Type::STR, "address", "qtum address"},
+                                        {RPCResult::Type::STR, "address", "yody address"},
                                     }},
                                 }},
                             }},
@@ -766,11 +766,11 @@ static RPCHelpMan decodescript()
                     {
                         {RPCResult::Type::STR, "asm", "Script public key"},
                         {RPCResult::Type::STR, "type", "The output type (e.g. "+GetAllOutputTypes()+")"},
-                        {RPCResult::Type::STR, "address", /* optional */ true, "qtum address (only if a well-defined address exists)"},
+                        {RPCResult::Type::STR, "address", /* optional */ true, "yody address (only if a well-defined address exists)"},
                         {RPCResult::Type::NUM, "reqSigs", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Number of required signatures"},
-                        {RPCResult::Type::ARR, "addresses", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Array of qtum addresses",
+                        {RPCResult::Type::ARR, "addresses", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Array of yody addresses",
                         {
-                            {RPCResult::Type::STR, "address", "qtum address"},
+                            {RPCResult::Type::STR, "address", "yody address"},
                         }},
                         {RPCResult::Type::STR, "p2sh", "address of P2SH script wrapping this redeem script (not returned if the script is already a P2SH)"},
                         {RPCResult::Type::OBJ, "segwit", "Result of a witness script public key wrapping this redeem script (not returned if the script is a P2SH or witness)",
@@ -778,9 +778,9 @@ static RPCHelpMan decodescript()
                             {RPCResult::Type::STR, "asm", "String representation of the script public key"},
                             {RPCResult::Type::STR_HEX, "hex", "Hex string of the script public key"},
                             {RPCResult::Type::STR, "type", "The type of the script public key (e.g. witness_v0_keyhash or witness_v0_scripthash)"},
-                            {RPCResult::Type::STR, "address", /* optional */ true, "qtum address (only if a well-defined address exists)"},
+                            {RPCResult::Type::STR, "address", /* optional */ true, "yody address (only if a well-defined address exists)"},
                             {RPCResult::Type::NUM, "reqSigs", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Number of required signatures"},
-                            {RPCResult::Type::ARR, "addresses", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Array of qtum addresses",
+                            {RPCResult::Type::ARR, "addresses", /* optional */ true, "(DEPRECATED, returned only if config option -deprecatedrpc=addresses is passed) Array of yody addresses",
                             {
                                 {RPCResult::Type::STR, "address", "segwit address"},
                             }},
@@ -1805,7 +1805,7 @@ static RPCHelpMan createpsbt()
                         {
                             {"", RPCArg::Type::OBJ_USER_KEYS, RPCArg::Optional::OMITTED, "",
                                 {
-                                    {"address", RPCArg::Type::AMOUNT, RPCArg::Optional::NO, "A key-value pair. The key (string) is the qtum address, the value (float or string) is the amount in " + CURRENCY_UNIT},
+                                    {"address", RPCArg::Type::AMOUNT, RPCArg::Optional::NO, "A key-value pair. The key (string) is the yody address, the value (float or string) is the amount in " + CURRENCY_UNIT},
                                 },
                                 },
                             {"", RPCArg::Type::OBJ, RPCArg::Optional::OMITTED, "",

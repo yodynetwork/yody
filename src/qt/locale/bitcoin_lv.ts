@@ -47,11 +47,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation type="unfinished">Izvēlies adresi uz kuru sūtīt qtums</translation>
+        <translation type="unfinished">Izvēlies adresi uz kuru sūtīt yodys</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation type="unfinished">Izvēlies adresi ar kuru saņemt qtums</translation>
+        <translation type="unfinished">Izvēlies adresi ar kuru saņemt yodys</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -355,8 +355,8 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">Pieprasīt maksājumus (izveido QR kodu un qtum: URIs)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">Pieprasīt maksājumus (izveido QR kodu un yody: URIs)</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -629,7 +629,7 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation type="unfinished">Ieslēgt qtum &amp;kontroles funkcijas</translation>
+        <translation type="unfinished">Ieslēgt yody &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
@@ -1228,7 +1228,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>Done loading</source>
         <translation type="unfinished">Ielāde pabeigta</translation>

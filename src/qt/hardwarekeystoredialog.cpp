@@ -4,7 +4,7 @@
 
 #include <qt/hardwarekeystoredialog.h>
 #include <qt/forms/ui_hardwarekeystoredialog.h>
-#include <qt/qtumhwitool.h>
+#include <qt/yodyhwitool.h>
 
 #include <QRadioButton>
 #include <QVBoxLayout>

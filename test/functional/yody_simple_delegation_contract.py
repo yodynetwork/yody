@@ -4,8 +4,8 @@ from test_framework.test_framework import BitcoinTestFramework
 from test_framework.messages import *
 from test_framework.script import *
 from test_framework.p2p import *
-from test_framework.qtum import *
-from test_framework.qtumconfig import *
+from test_framework.yody import *
+from test_framework.yodyconfig import *
 from test_framework.util import *
 
 class YodySimpleDelegationContractTest(BitcoinTestFramework):

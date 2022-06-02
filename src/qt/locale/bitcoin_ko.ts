@@ -269,7 +269,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>새로운 지갑 비밀번호를 입력하세요. 암호는 10개 이상의 문자 또는 8개 이상의 단어로 입력하세요.</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
+        <source>Remember that encrypting your wallet cannot fully protect your yodys from being stolen by malware infecting your computer.</source>
         <translation>지갑을 암호화 해도 컴퓨터에 바이러스가 있을시 안전하기 않다는 것을 참고하세요.</translation>
     </message>
     <message>
@@ -378,8 +378,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">받기 </translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="unfinished">지불 요청 (QR 코드 생성과 qtum: URI)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="unfinished">지불 요청 (QR 코드 생성과 yody: URI)</translation>
     </message>
     <message>
         <source>Smart &amp;Contracts</source>
@@ -558,8 +558,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">받을 주소</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
-        <translation>qtum: URI 열기</translation>
+        <source>Open a yody: URI</source>
+        <translation>yody: URI 열기</translation>
     </message>
     <message>
         <source>Show the list of used receiving addresses and labels</source>
@@ -1408,7 +1408,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">컨트랙트의 바이트 코드</translation>
     </message>
     <message>
-        <source>The qtum address that will be used to create the contract.</source>
+        <source>The yody address that will be used to create the contract.</source>
         <translation type="unfinished">컨트랙트 생성을 위한 Yody주소</translation>
     </message>
     <message>
@@ -1686,11 +1686,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>서식</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the yody network, as detailed below.</source>
         <translation>최근 거래 미반영으로 잔액이 정확하지 않을 수 있습니다. 해당 정보는 퀀텀 네트워크 동기화 후 수정될 예정입니다. 제세한 내용은 아래와 같습니다. </translation>
     </message>
     <message>
-        <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend yodys that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>네트워크는 미확인된 거래에 속한 YODY 사용을 승인하지 않습니다 </translation>
     </message>
     <message>
@@ -1754,7 +1754,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
 <context>
     <name>OpenURIDialog</name>
     <message>
-        <source>Open qtum URI</source>
+        <source>Open yody URI</source>
         <translation>YODY URI 열기</translation>
     </message>
 </context>
@@ -2323,8 +2323,8 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>지불 요청 에러</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation>无法启动 qtum 协议的“
+        <source>Cannot start yody: click-to-pay handler</source>
+        <translation>无法启动 yody 协议的“
 一键支付”处理器</translation>
     </message>
     <message>
@@ -2332,8 +2332,8 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>URI 처리</translation>
     </message>
     <message>
-        <source>'qtum://' is not a valid URI. Use 'qtum:' instead.</source>
-        <translation>'qtum://"은 잘못된 URI입니다. 'qtum:'을 사용하십시오.</translation>
+        <source>'yody://' is not a valid URI. Use 'yody:' instead.</source>
+        <translation>'yody://"은 잘못된 URI입니다. 'yody:'을 사용하십시오.</translation>
     </message>
     <message>
         <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
@@ -2779,8 +2779,8 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation type="vanished">탭 툴바</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
-        <translation type="vanished">지불 요청 (QR 코드 생성과 qtum: URI)</translation>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
+        <translation type="vanished">지불 요청 (QR 코드 생성과 yody: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -2875,8 +2875,8 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation type="vanished">받는 주소</translation>
     </message>
     <message>
-        <source>Open a qtum: URI</source>
-        <translation>qtum: URI 열기</translation>
+        <source>Open a yody: URI</source>
+        <translation>yody: URI 열기</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -3717,7 +3717,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>거래 수수료 설정 숨기기</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for qtum transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for yody transactions than the network can process.</source>
         <translation>거래량이 블록에 남은 공간보다 적은 경우, 채굴자나 중계 노드들이 최소 수수료를 허용할 수 있습니다. 최소 수수료만 지불하는건 괜찮지만, 네트워크가 처리할 수 있는 용량을 넘는 YODY 거래가 있을 경우에는 이 거래가 승인이 안될 수 있다는 점을 유의하세요.</translation>
     </message>
     <message>
@@ -3978,7 +3978,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>선택한 단위로 보낼 수량</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less qtums than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less yodys than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>거래 수수료가 송금 총액에서 차감됩니다. 받는이가 받을 금액은 입력하신 금액보다 적을 예정이고 여러 명이 받는다면 수수료는 균등하게 차감될 예정입니다. </translation>
     </message>
     <message>
@@ -4006,7 +4006,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>해당 주소에 라벨을 추가하여 사용했던 리스트에 추가해주세요. </translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <source>A message that was attached to the yody: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
         <translation>퀀텀 URI에 첨부된 메시지는 참조를 위해 거래와 함께 저장됩니다. 주의: 메시지는 퀀텀 네트워크를 통해 전달되는 것은 아닙니다. </translation>
     </message>
     <message>
@@ -4097,7 +4097,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation type="unfinished">보낼 YODY 개수. 디폴트는 0</translation>
     </message>
     <message>
-        <source>The qtum address that will be used as sender.</source>
+        <source>The yody address that will be used as sender.</source>
         <translation type="unfinished">보낸 주소로 사용될 퀀텀 주소</translation>
     </message>
     <message>
@@ -4238,7 +4238,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>메시지 서명</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive qtums sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive yodys sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>소유하고 계신 주소로 메시지/협의에 대해 서명하여 해당 주소를 통해 YODY을 받을 수 있음을 증명할 수 있습니다. 피싱 공격을 예방하기 위해 명확하지 않은 내용 또는 랜덤 메시지에 대한 서명은 삼가 하시고 메시지에 대해 충분히 동의할 경우에만 서명하세요. </translation>
     </message>
     <message>
@@ -5371,7 +5371,7 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="unfinished">에러：외부 연결에 대한 확인 실패 (확인 신호 회귀 에러 %s)</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</source>
+        <source>%s corrupt. Try using the wallet tool yody-wallet to salvage or restoring a backup.</source>
         <translation>%s가 손상되었습니다. '비트 코인-지갑'을 사용하여 백업을 구제하거나 복원하십시오.</translation>
     </message>
     <message>
@@ -5820,7 +5820,7 @@ Go to File &gt; Open Wallet to load a wallet.
     </message>
 </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation type="vanished">MIT 소프트웨어 라이센스를 통해 배포합니다. 첨부된 %s 파일 또는 %s 를 확인하세요. </translation>
@@ -6070,7 +6070,7 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="vanished">에러：외부 연결에 대한 확인 실패 (확인 신호 회귀 에러 %s)</translation>
     </message>
     <message>
-        <source>%s corrupt. Try using the wallet tool qtum-wallet to salvage or restoring a backup.</source>
+        <source>%s corrupt. Try using the wallet tool yody-wallet to salvage or restoring a backup.</source>
         <translation>%s가 손상되었습니다. '비트 코인-지갑'을 사용하여 백업을 구제하거나 복원하십시오.</translation>
     </message>
     <message>

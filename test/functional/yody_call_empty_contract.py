@@ -8,7 +8,7 @@ from test_framework.util import *
 from test_framework.script import *
 from test_framework.p2p import *
 
-from test_framework.qtum import generatesynchronized
+from test_framework.yody import generatesynchronized
 import sys
 
 class YodyCallContractStateNotRevertedTest(BitcoinTestFramework):

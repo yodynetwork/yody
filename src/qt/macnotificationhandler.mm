@@ -13,7 +13,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.qtum.Yody-Qt";
+        return @"org.yody.Yody-Qt";
     } else {
         return [self __bundleIdentifier];
     }

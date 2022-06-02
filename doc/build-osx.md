@@ -2,7 +2,7 @@
 
 **Updated for MacOS [11.2](https://www.apple.com/macos/big-sur/)**
 
-This guide describes how to build qtumd, command-line utilities, and GUI on macOS
+This guide describes how to build yodyd, command-line utilities, and GUI on macOS
 
 **Note:** The following is for Intel Macs only!
 
@@ -92,14 +92,14 @@ Now that all the required dependencies are installed, let's clone the Yody Core 
 All build scripts and commands will run from this directory.
 
 ``` bash
-git clone --recursive https://github.com/yodynetwork/qtum.git
+git clone --recursive https://github.com/yodynetwork/yody.git
 ```
 
 ### 5. Install Optional Dependencies
 
 #### Wallet Dependencies
 
-It is not necessary to build wallet functionality to run `qtumd` or  `qtum-qt`.
+It is not necessary to build wallet functionality to run `yodyd` or  `yody-qt`.
 To enable legacy wallets, you must install `berkeley-db@4`.
 To enable [descriptor wallets](https://github.com/bitcoin/bitcoin/blob/master/doc/descriptors.md), `sqlite` is required.
 Skip `berkeley-db@4` if you intend to *exclusively* use descriptor wallets.
@@ -292,10 +292,10 @@ make deploy
 
 ## Running Yody Core
 
-Yody Core should now be available at `./src/qtumd`.
-If you compiled support for the GUI, it should be available at `./src/qt/qtum-qt`.
+Yody Core should now be available at `./src/yodyd`.
+If you compiled support for the GUI, it should be available at `./src/qt/yody-qt`.
 
-The first time you run `qtumd` or `qtum-qt`, it will start downloading the blockchain.
+The first time you run `yodyd` or `yody-qt`, it will start downloading the blockchain.
 This process could take many hours, or even days on slower than average systems.
 
 By default, blockchain and wallet data files will be stored in:
@@ -309,9 +309,9 @@ Before running, you may create an empty configuration file:
 ```shell
 mkdir -p "/Users/${USER}/Library/Application Support/Yody"
 
-touch "/Users/${USER}/Library/Application Support/Yody/qtum.conf"
+touch "/Users/${USER}/Library/Application Support/Yody/yody.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/Yody/qtum.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/Yody/yody.conf"
 ```
 
 You can monitor the download process by looking at the debug.log file:
@@ -323,8 +323,8 @@ tail -f $HOME/Library/Application\ Support/Yody/debug.log
 ## Other commands:
 
 ```shell
-./src/qtumd -daemon      # Starts the qtum daemon.
-./src/qtum-cli --help    # Outputs a list of command-line options.
-./src/qtum-cli help      # Outputs a list of RPC commands when the daemon is running.
-./src/qt/qtum-qt -server # Starts the qtum-qt server mode, allows qtum-cli control
+./src/yodyd -daemon      # Starts the yody daemon.
+./src/yody-cli --help    # Outputs a list of command-line options.
+./src/yody-cli help      # Outputs a list of RPC commands when the daemon is running.
+./src/qt/yody-qt -server # Starts the yody-qt server mode, allows yody-cli control
 ```

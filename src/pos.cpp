@@ -15,7 +15,7 @@
 #include <script/sign.h>
 #include <consensus/consensus.h>
 #include <util/signstr.h>
-#include <qtum/qtumdelegation.h>
+#include <yody/yodydelegation.h>
 #include <script/standard.h>
 
 using namespace std;
@@ -23,8 +23,8 @@ using namespace std;
 // Delegation contract function
 YodyDelegation& GetYodyDelegation()
 {
-    static YodyDelegation qtumDelegation;
-    return qtumDelegation;
+    static YodyDelegation yodyDelegation;
+    return yodyDelegation;
 }
 
 // Stake Modifier (hash modifier of proof-of-stake):
@@ -203,19 +203,19 @@ bool CheckProofOfStake(CBlockIndex* pindexPrev, BlockValidationState& state, con
         /////////////////////////////////////////////////
 
         // Check if the delegation contract exist
-        YodyDelegation& qtumDelegation = GetYodyDelegation();
-        if(!qtumDelegation.ExistDelegationContract())
+        YodyDelegation& yodyDelegation = GetYodyDelegation();
+        if(!yodyDelegation.ExistDelegationContract())
             return state.Invalid(BlockValidationResult::BLOCK_HEADER_REJECT, "stake-delegation-contract-not-exist", strprintf("CheckProofOfStake() : The delegation contract doesn't exist, block height %i", nOfflineStakeHeight)); // Internal error, delegation contract not exist
 
         // Get the delegation from the contract
         uint160 address = uint160(ExtractPublicKeyHash(coinHeaderPrev.out.scriptPubKey));
         Delegation delegation;
-        if(!qtumDelegation.GetDelegation(address, delegation, chainstate)) {
+        if(!yodyDelegation.GetDelegation(address, delegation, chainstate)) {
             return state.Invalid(BlockValidationResult::BLOCK_HEADER_REJECT, "stake-get-delegation-failed", strprintf("CheckProofOfStake() : Failed to get delegation from the delegation contract")); // Internal error, get delegation from the delegation contract
         }
 
         // Verify delegation received from the contract
-        bool verifiedDelegation = qtumDelegation.VerifyDelegation(address, delegation);
+        bool verifiedDelegation = yodyDelegation.VerifyDelegation(address, delegation);
         bool hasDelegationProof = vchPoD.size() > 0;
 
         // Check that if PoD is present then the delegation received from the contract can be verified
@@ -549,9 +549,9 @@ int GetDelegationFeeTx(const CTransaction& tx, const Coin& coin, bool delegateOu
 bool GetDelegationFeeFromContract(const uint160& address, uint8_t& fee, CChainState& chainstate)
 {
     Delegation delegation;
-    YodyDelegation& qtumDelegation = GetYodyDelegation();
-    bool ret = qtumDelegation.GetDelegation(address, delegation, chainstate);
-    if(ret) ret &= qtumDelegation.VerifyDelegation(address, delegation);
+    YodyDelegation& yodyDelegation = GetYodyDelegation();
+    bool ret = yodyDelegation.GetDelegation(address, delegation, chainstate);
+    if(ret) ret &= yodyDelegation.VerifyDelegation(address, delegation);
     if(ret)
     {
         fee = delegation.fee;

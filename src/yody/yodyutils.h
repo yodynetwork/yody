@@ -5,9 +5,9 @@
 #include <libdevcore/FixedHash.h>
 
 /**
- * qtumutils Provides utility functions to EVM for functionalities that already exist in qtum
+ * yodyutils Provides utility functions to EVM for functionalities that already exist in yody
  */
-namespace qtumutils
+namespace yodyutils
 {
 /**
  * @brief btc_ecrecover Wrapper to CPubKey::RecoverCompact

@@ -12,9 +12,9 @@
 #include <script/script.h>
 #include <util/strencodings.h>
 
-#include <qtum/qtumstate.h>
-#include <qtum/qtumDGP.h>
-#include <qtum/qtumtransaction.h>
+#include <yody/yodystate.h>
+#include <yody/yodyDGP.h>
+#include <yody/yodytransaction.h>
 #include <validation.h>
 #include <streams.h>
 

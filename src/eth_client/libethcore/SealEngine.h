@@ -77,10 +77,10 @@ public:
     }
     virtual std::pair<bool, bytes> executePrecompiled(Address const& _a, bytesConstRef _in, u256 const&) const { return m_params.precompiled.at(_a).execute(_in); }
 
-////////////////////////////////////////////////////////////// // qtum
-    void setYodySchedule(EVMSchedule _qtumSchedule) const { qtumSchedule = _qtumSchedule; }
+////////////////////////////////////////////////////////////// // yody
+    void setYodySchedule(EVMSchedule _yodySchedule) const { yodySchedule = _yodySchedule; }
 
-    EVMSchedule& getYodySchedule() const { return qtumSchedule; }
+    EVMSchedule& getYodySchedule() const { return yodySchedule; }
 
     //deleteAddresses is a set that keeps track of accounts that were inserted as part of sending to pubkeyhash addresses
     //This is added to when doing a CALL to a non-existent address (if the account does not exist, it assumes you're sending to pubkeyhash)
@@ -96,7 +96,7 @@ private:
     mutable Mutex x_options;
     std::unordered_map<std::string, bytes> m_options;
 
-    mutable EVMSchedule qtumSchedule; // qtum
+    mutable EVMSchedule yodySchedule; // yody
 
     ChainOperationParams m_params;
 };

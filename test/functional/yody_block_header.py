@@ -8,7 +8,7 @@ from test_framework.util import *
 from test_framework.blocktools import *
 from test_framework.p2p import *
 from test_framework.address import *
-from test_framework.qtum import *
+from test_framework.yody import *
 import time
 from test_framework.key import ECKey
 from test_framework.script import *

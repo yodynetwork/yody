@@ -127,9 +127,9 @@ void StyleSheet::setStyleSheet(QWidget *widget, const QString &style_name)
 void StyleSheet::setStyleSheet(QApplication *app, const QString& style_name)
 {
     QStyle* mainStyle = QStyleFactory::create("fusion");
-    YodyStyle* qtumStyle = new YodyStyle;
-    qtumStyle->setBaseStyle(mainStyle);
-    app->setStyle(qtumStyle);
+    YodyStyle* yodyStyle = new YodyStyle;
+    yodyStyle->setBaseStyle(mainStyle);
+    app->setStyle(yodyStyle);
 
     QPalette mainPalette(app->palette());
     mainPalette.setColor(QPalette::Link, GetStyleValue("appstyle/link-color", LINK_COLOR).toString());

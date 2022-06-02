@@ -7,14 +7,14 @@
 using namespace dev;
 
 //Client configurations
-#include "genesis/qtumNetwork.cpp"
+#include "genesis/yodyNetwork.cpp"
 
 std::string const& dev::eth::genesisInfo(Network _n)
 {
     switch (_n)
     {
     //Client genesis
-    case Network::qtumNetwork: return c_genesisInfoYodyNetwork;
+    case Network::yodyNetwork: return c_genesisInfoYodyNetwork;
 
     default:
         throw std::invalid_argument("Invalid network value");
@@ -25,7 +25,7 @@ h256 const& dev::eth::genesisStateRoot(Network _n)
 {
     switch (_n)
     {
-    case Network::qtumNetwork: return c_genesisStateRootYodyNetwork;
+    case Network::yodyNetwork: return c_genesisStateRootYodyNetwork;
     default:
         throw std::invalid_argument("Invalid network value");
     }

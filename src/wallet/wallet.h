@@ -29,7 +29,7 @@
 #include <wallet/walletutil.h>
 #include <consensus/params.h>
 #include <pos.h>
-#include <qtum/qtumdelegation.h>
+#include <yody/yodydelegation.h>
 
 #include <algorithm>
 #include <atomic>
@@ -1110,10 +1110,10 @@ public:
     /* Remove super staker entry from the wallet */
     bool RemoveSuperStakerEntry(const uint256& superStakerHash, bool fFlushOnClose=true);
 
-    /* Start staking qtums */
+    /* Start staking yodys */
     void StartStake();
 
-    /* Stop staking qtums */
+    /* Stop staking yodys */
     void StopStake();
 
     /* Is staking closing */

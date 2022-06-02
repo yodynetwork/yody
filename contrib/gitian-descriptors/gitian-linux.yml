@@ -1,5 +1,5 @@
 ---
-name: "qtum-core-linux-22"
+name: "yody-core-linux-22"
 enable_cache: true
 distro: "ubuntu"
 suites:
@@ -46,10 +46,10 @@ packages:
 - "libmicrohttpd-dev"
 - "libminiupnpc-dev"
 remotes:
-- "url": "https://github.com/yodynetwork/qtum.git"
-  "dir": "qtum"
-- "url": "https://github.com/yodynetwork/qtum-evmone.git"
-  "dir": "qtum-evmone"
+- "url": "https://github.com/yodynetwork/yody.git"
+  "dir": "yody"
+- "url": "https://github.com/yodynetwork/yody-evmone.git"
+  "dir": "yody-evmone"
 files: []
 script: |
   set -e -o pipefail
@@ -114,7 +114,7 @@ script: |
   create_per-host_faketime_wrappers "2000-01-01 12:00:00"
   export PATH=${WRAP_DIR}:${PATH}
 
-  cd qtum
+  cd yody
   BASEPREFIX="${PWD}/depends"
   # Build dependencies for each host
   for i in $HOSTS; do
@@ -155,7 +155,7 @@ script: |
     tar --strip-components=1 -xf "${GIT_ARCHIVE}"
 
     #this is a hack since gitian has no natural support for submodules
-    cp -r ../../qtum-evmone/* ./src/evmone
+    cp -r ../../yody-evmone/* ./src/evmone
     #make sure this file exists... 
     cat ./src/evmone/include/evmone/evmone.h 
 

@@ -350,7 +350,7 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and qtum: URIs)</source>
+        <source>Request payments (generates QR codes and yody: URIs)</source>
         <translation type="unfinished">Solicitar pagos (genera codigo QR y URL's de Yody)</translation>
     </message>
     <message>
@@ -838,8 +838,8 @@
         <translation type="unfinished">Error en petición de pago</translation>
     </message>
     <message>
-        <source>Cannot start qtum: click-to-pay handler</source>
-        <translation type="unfinished">No se pudo iniciar qtum: manejador de pago-al-clic</translation>
+        <source>Cannot start yody: click-to-pay handler</source>
+        <translation type="unfinished">No se pudo iniciar yody: manejador de pago-al-clic</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1727,7 +1727,7 @@
     </message>
     </context>
 <context>
-    <name>qtum-core</name>
+    <name>yody-core</name>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
         <translation type="unfinished">Esta es una versión de pre-prueba - utilícela bajo su propio riesgo. No la utilice para usos comerciales o de minería.</translation>

@@ -12,7 +12,7 @@ from test_framework.messages import (
     COIN,
     tx_from_hex,
 )
-from test_framework.qtumconfig import *
+from test_framework.yodyconfig import *
 
 
 class TxnMallTest(BitcoinTestFramework):

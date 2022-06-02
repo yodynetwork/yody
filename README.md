@@ -1,7 +1,7 @@
 What is Yody?
 -------------
 
-Yody is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Yody's Bitcoin-like UTXO blockchain. For more general information about Yody as well as links to join our community, go to https://qtum.org
+Yody is a decentralized blockchain project built on Bitcoin's UTXO model, with support for Ethereum Virtual Machine based smart contracts, and secured by a proof of stake consensus model. It achieves this through the revolutionary Account Abstraction Layer which allows the EVM to communicate with Yody's Bitcoin-like UTXO blockchain. For more general information about Yody as well as links to join our community, go to https://yody.org
 
 Welcome to the Yody Fastlane Main Network. This is the main network where the tokens hold value and should be guarded very carefully. If you are testing the network, or developing unstable software on Yody, we highly recommend using either testnet or regtest mode. 
 
@@ -21,29 +21,29 @@ These are some resources that might be helpful in understanding Yody.
 
 Basic usage resources:
 
-* [User guide](https://docs.qtum.site/en/)
-* [Yody-Qt Wallet Tutorial](https://github.com/yodynetwork/documents/tree/master/en/Yody-Wallet-Tutorial#qtum-qt-wallet-tutorial)
+* [User guide](https://docs.yody.site/en/)
+* [Yody-Qt Wallet Tutorial](https://github.com/yodynetwork/documents/tree/master/en/Yody-Wallet-Tutorial#yody-qt-wallet-tutorial)
 * [Yody staking tutorial](https://github.com/yodynetwork/documents/tree/master/en/How-to-Stake-with-Yody)
 * [Yody tutorial on Raspberry Pi](https://github.com/yodynetwork/documents/tree/master/en/Yody-on-Raspberry-Pi)
 * [Running Yody on Amazon AWS using Yody AMI](https://github.com/yodynetwork/documents/tree/master/en/Yody-AWS)
 * [Encrypting and unlocking wallet](https://github.com/yodynetwork/documents/tree/master/en/Encrypt-and-Unlock-Yody-Wallet)
 * [Testnet guide](https://github.com/yodynetwork/documents/blob/master/en/Testnet-User-Guide.md)
-* [Block explorer](https://qtum.info), [Older explorer](https://explorer.qtum.org)
+* [Block explorer](https://yody.info), [Older explorer](https://explorer.yody.org)
 
 
 Development resources:
 
-* [Yody Book - A Developer's Guide To YODY](http://book.qtum.site/en/)
-* [Yody contract usage](https://docs.qtum.site/en/QRC20-Token-Introduce.html)
-* [Deploying a custom token to Yody](https://blog.qtum.org/qtum-custom-token-walkthrough-467d725fa27d)
-* [YodyJS document](https://yodynetwork.github.io/qtumjs-doc/)
-* [Smart contract ICO example](http://book.qtum.site/en/part3/ico.htm)
-* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-qtum-sparknet-faucet)
+* [Yody Book - A Developer's Guide To YODY](http://book.yody.site/en/)
+* [Yody contract usage](https://docs.yody.site/en/QRC20-Token-Introduce.html)
+* [Deploying a custom token to Yody](https://blog.yody.org/yody-custom-token-walkthrough-467d725fa27d)
+* [YodyJS document](https://yodynetwork.github.io/yodyjs-doc/)
+* [Smart contract ICO example](http://book.yody.site/en/part3/ico.htm)
+* [Early example faucet contract](http://earlz.net/view/2017/06/30/2144/the-yody-sparknet-faucet)
 
 General Info about Yody:
 
-* [CIRCLERESEARCH Yody Primer](https://www.circle.com/marketing/pdfs/research/circle-research-qtum.pdf)
-* [Yody's PoS vs CASPER](https://www.reddit.com/r/Yody/comments/788oa5/qtums_pos_vs_casper_and_the_nothingatstake_problem/)
+* [CIRCLERESEARCH Yody Primer](https://www.circle.com/marketing/pdfs/research/circle-research-yody.pdf)
+* [Yody's PoS vs CASPER](https://www.reddit.com/r/Yody/comments/788oa5/yodys_pos_vs_casper_and_the_nothingatstake_problem/)
 * [Technical article explaining Yody's PoS model in depth](http://earlz.net/view/2017/07/27/1904/the-missing-explanation-of-proof-of-stake-version)
 
 
@@ -53,14 +53,14 @@ Developer's Tools
 * Smart contract deployment tool
   * https://github.com/yodynetwork/solar
 * DApp JavaScript Library
-  * https://github.com/yodynetwork/qtumjs
-* A toolkit for building qtum light wallets
-  * https://github.com/yodynetwork/qtumjs-wallet
-* CORS qtumd RPC proxy for DApp
-  * https://github.com/yodynetwork/qtumportal
-* Docker images for running qtum services
-  * https://github.com/yodynetwork/qtum-docker
-* qtum.info API that powers the block explorer and the YODY Web wallet
+  * https://github.com/yodynetwork/yodyjs
+* A toolkit for building yody light wallets
+  * https://github.com/yodynetwork/yodyjs-wallet
+* CORS yodyd RPC proxy for DApp
+  * https://github.com/yodynetwork/yodyportal
+* Docker images for running yody services
+  * https://github.com/yodynetwork/yody-docker
+* yody.info API that powers the block explorer and the YODY Web wallet
   * https://github.com/yodynetwork/yodyinfo-api#yodyinfo-api-documentation
 
 
@@ -91,7 +91,7 @@ Yody Core uses a full node model, and thus requires downloading the entire block
 
 A browser wallet that supports the Ledger hardware wallet, offline cold wallet, restoration from mobile wallets, creation of QRC20 tokens and QRC1155 NFTs.
 
-Web site https://qtumwallet.org
+Web site https://yodywallet.org
 
 User documentation https://github.com/yodynetwork/documents/tree/master/en/YODY-WebWallet-usage
 
@@ -99,15 +99,15 @@ User documentation https://github.com/yodynetwork/documents/tree/master/en/YODY-
 
 A light wallet that supports the Ledger and Trezor hardware wallets and is based on the well-known Electrum wallet software. 
 
-Download: https://github.com/yodynetwork/qtum-electrum/releases
+Download: https://github.com/yodynetwork/yody-electrum/releases
 
 ### iOS and Android Wallets
 
 These wallets run on mobile devices and synchronize quickly. 
 
-Android Download: https://play.google.com/store/apps/details?id=org.qtum.newwallet
+Android Download: https://play.google.com/store/apps/details?id=org.yody.newwallet
 
-iOS Download: https://github.com/yodynetwork/qtum-ios (open source, deprecated)
+iOS Download: https://github.com/yodynetwork/yody-ios (open source, deprecated)
 
 ### Qnekt Chrome Wallet
 
@@ -118,12 +118,12 @@ This light wallet runs in your Chrome browser as a browser extension, based on t
 
 Make sure to check out these resources as well for more information and to keep up to date with all the latest news about Yody. At least 1 developer is always around, so if you're developing on Yody and need help, we'd love to welcome you to our community.
 
-*	@Yody on Twitter https://twitter.com/qtum
-* Yody blog https://blog.qtum.org/
-*	Yody Telegram Group https://t.me/qtumofficial, other languages available
+*	@Yody on Twitter https://twitter.com/yody
+* Yody blog https://blog.yody.org/
+*	Yody Telegram Group https://t.me/yodyofficial, other languages available
 * Yody Discord https://discordapp.com/invite/wRfmkQ9
 *	/r/Yody on Reddit https://www.reddit.com/r/Yody/
-*	Yody.org https://qtum.org
+*	Yody.org https://yody.org
 *	Yody on Facebook https://www.facebook.com/YodyOfficial/
 
 ### Yody Smart Contract Limitations
@@ -140,7 +140,7 @@ Make sure to check out these resources as well for more information and to keep 
 
 ### Validate and Reproduce Binaries
 
-Yody uses a tool called Gitian to make reproducible builds that can be verified by anyone. Instructions on setting up a Gitian VM and building Yody are provided in [Gitan Building](https://github.com/yodynetwork/qtum/blob/master/doc/gitian-building.md)
+Yody uses a tool called Gitian to make reproducible builds that can be verified by anyone. Instructions on setting up a Gitian VM and building Yody are provided in [Gitan Building](https://github.com/yodynetwork/yody/blob/master/doc/gitian-building.md)
 
 ### Build on Ubuntu
 
@@ -156,8 +156,8 @@ This is a quick start script for compiling Yody on Ubuntu
     # If you want to build the Qt GUI:
     sudo apt-get install libqt5gui5 libqt5core5a libqt5dbus5 qttools5-dev qttools5-dev-tools libprotobuf-dev protobuf-compiler qrencode
 
-    git clone https://github.com/yodynetwork/qtum --recursive
-    cd qtum
+    git clone https://github.com/yodynetwork/yody --recursive
+    cd yody
 
     # Note autogen will prompt to install some more dependencies if needed
     ./autogen.sh
@@ -166,7 +166,7 @@ This is a quick start script for compiling Yody on Ubuntu
     
 ### Build on CentOS
 
-Here is a brief description for compiling Yody on CentOS, for more details please refer to [the specific document](https://github.com/yodynetwork/qtum/blob/master/doc/build-unix.md)
+Here is a brief description for compiling Yody on CentOS, for more details please refer to [the specific document](https://github.com/yodynetwork/yody/blob/master/doc/build-unix.md)
 
     # Compiling boost manually
     sudo yum install python-devel bzip2-devel
@@ -186,8 +186,8 @@ Here is a brief description for compiling Yody on CentOS, for more details pleas
     sudo yum install qt5-qttools-devel protobuf-devel qrencode-devel
     
     # Building Yody
-    git clone --recursive https://github.com/yodynetwork/qtum.git
-    cd qtum
+    git clone --recursive https://github.com/yodynetwork/yody.git
+    cd yody
     ./autogen.sh
     ./configure
     make -j4
@@ -215,14 +215,14 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 #### Build Yody Core
 
-1. Clone the qtum source code and cd into `qtum`
+1. Clone the yody source code and cd into `yody`
 
-        git clone --recursive https://github.com/yodynetwork/qtum.git
-        cd qtum
+        git clone --recursive https://github.com/yodynetwork/yody.git
+        cd yody
 
-2.  Build qtum-core:
+2.  Build yody-core:
 
-    Configure and build the headless qtum binaries as well as the GUI (if Qt is found).
+    Configure and build the headless yody binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
 
@@ -236,7 +236,7 @@ NOTE: Building with Qt4 is still supported, however, could result in a broken UI
 
 ### Run
 
-Then you can either run the command-line daemon using `src/qtumd` and `src/qtum-cli`, or you can run the Qt GUI using `src/qt/qtum-qt`
+Then you can either run the command-line daemon using `src/yodyd` and `src/yody-cli`, or you can run the Qt GUI using `src/qt/yody-qt`
 
 License
 -------
@@ -247,10 +247,10 @@ Development Process
 -------------------
 
 The `master` branch is regularly built and tested, but is not guaranteed to be
-completely stable. [Tags](https://github.com/yodynetwork/qtum/tags) are created
+completely stable. [Tags](https://github.com/yodynetwork/yody/tags) are created
 regularly to indicate new official, stable release versions of Yody.
 
-The contribution workflow is described in [CONTRIBUTING.md](https://github.com/yodynetwork/qtum/blob/master/CONTRIBUTING.md)
+The contribution workflow is described in [CONTRIBUTING.md](https://github.com/yodynetwork/yody/blob/master/CONTRIBUTING.md)
 and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
 
 Testing

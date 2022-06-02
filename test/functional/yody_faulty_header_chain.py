@@ -8,7 +8,7 @@ from test_framework.util import *
 from test_framework.script import *
 from test_framework.p2p import *
 from test_framework.messages import *
-from test_framework.qtum import *
+from test_framework.yody import *
 import time
 import io
 

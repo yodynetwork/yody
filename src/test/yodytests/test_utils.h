@@ -17,7 +17,7 @@ inline void initState(){
     boost::filesystem::create_directories(pathTemp);
     const std::string dirYody = pathTemp.string();
     const dev::h256 hashDB(dev::sha3(dev::rlp("")));
-    globalState = std::unique_ptr<YodyState>(new YodyState(dev::u256(0), YodyState::openDB(dirYody, hashDB, dev::WithExisting::Trust), dirYody + "/qtumDB", dev::eth::BaseState::Empty));
+    globalState = std::unique_ptr<YodyState>(new YodyState(dev::u256(0), YodyState::openDB(dirYody, hashDB, dev::WithExisting::Trust), dirYody + "/yodyDB", dev::eth::BaseState::Empty));
 
     globalState->setRootUTXO(dev::sha3(dev::rlp(""))); // temp
 }
@@ -65,8 +65,8 @@ inline YodyTransaction createYodyTransaction(valtype data, dev::u256 value, dev:
 
 inline std::pair<std::vector<ResultExecute>, ByteCodeExecResult> executeBC(std::vector<YodyTransaction> txs, ChainstateManager& chainman){
     CBlock block(generateBlock());
-    YodyDGP qtumDGP(globalState.get(), chainman.ActiveChainstate(), fGettingValuesDGP);
-    uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(chainman.ActiveChain().Tip()->nHeight + 1);
+    YodyDGP yodyDGP(globalState.get(), chainman.ActiveChainstate(), fGettingValuesDGP);
+    uint64_t blockGasLimit = yodyDGP.getBlockGasLimit(chainman.ActiveChain().Tip()->nHeight + 1);
     ByteCodeExec exec(block, txs, blockGasLimit, chainman.ActiveChain().Tip(), chainman.ActiveChain());
     exec.performByteCode();
     std::vector<ResultExecute> res = exec.getResult();

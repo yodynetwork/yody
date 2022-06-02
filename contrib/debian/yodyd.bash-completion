@@ -1,2 +1,2 @@
-contrib/qtumd.bash-completion	        qtumd
-contrib/qtum-cli.bash-completion	qtum-cli
+contrib/yodyd.bash-completion	        yodyd
+contrib/yody-cli.bash-completion	yody-cli
