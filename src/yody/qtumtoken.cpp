@@ -7,7 +7,7 @@
 #include <util/convert.h>
 #include <libethcore/ABI.h>
 
-namespace QtumToken_NS
+namespace YodyToken_NS
 {
 const char *TOKEN_ABI = "[{\"constant\":true,\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_spender\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_from\",\"type\":\"address\"},{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"decimals\",\"outputs\":[{\"name\":\"\",\"type\":\"uint8\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"burn\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_from\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"burnFrom\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_to\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"}],\"name\":\"transfer\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_spender\",\"type\":\"address\"},{\"name\":\"_value\",\"type\":\"uint256\"},{\"name\":\"_extraData\",\"type\":\"bytes\"}],\"name\":\"approveAndCall\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"},{\"name\":\"\",\"type\":\"address\"}],\"name\":\"allowance\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"name\":\"initialSupply\",\"type\":\"uint256\"},{\"name\":\"tokenName\",\"type\":\"string\"},{\"name\":\"decimalUnits\",\"type\":\"uint8\"},{\"name\":\"tokenSymbol\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":true,\"name\":\"to\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"from\",\"type\":\"address\"},{\"indexed\":false,\"name\":\"value\",\"type\":\"uint256\"}],\"name\":\"Burn\",\"type\":\"event\"}]";
 const char *PARAM_ADDRESS = "address";
@@ -21,39 +21,39 @@ const char *PARAM_CHANGE_TO_SENDER = "changeToSender";
 const char *PARAM_PSBT = "psbt";
 }
 
-bool QtumTokenExec::execValid(const int &, const bool &)
+bool YodyTokenExec::execValid(const int &, const bool &)
 {
     return false;
 }
 
-bool QtumTokenExec::execEventsValid(const int &, const int64_t &)
+bool YodyTokenExec::execEventsValid(const int &, const int64_t &)
 {
     return false;
 }
 
-bool QtumTokenExec::exec(const bool &, const std::map<std::string, std::string> &, std::string &, std::string &)
+bool YodyTokenExec::exec(const bool &, const std::map<std::string, std::string> &, std::string &, std::string &)
 {
     return false;
 }
 
-bool QtumTokenExec::execEvents(const int64_t &, const int64_t &, const int64_t&, const std::string &, const std::string &, const std::string &, const int &, std::vector<TokenEvent> &)
+bool YodyTokenExec::execEvents(const int64_t &, const int64_t &, const int64_t&, const std::string &, const std::string &, const std::string &, const int &, std::vector<TokenEvent> &)
 {
     return false;
 }
 
-bool QtumTokenExec::privateKeysDisabled()
+bool YodyTokenExec::privateKeysDisabled()
 {
     return false;
 }
 
-QtumTokenExec::~QtumTokenExec()
+YodyTokenExec::~YodyTokenExec()
 {}
 
-struct QtumTokenData
+struct YodyTokenData
 {
     std::map<std::string, std::string> lstParams;
     std::string address;
-    QtumTokenExec* tokenExec;
+    YodyTokenExec* tokenExec;
     ContractABI* ABI;
     int funcName;
     int funcApprove;
@@ -74,7 +74,7 @@ struct QtumTokenData
     std::string psbt;
     std::string errorMessage;
 
-    QtumTokenData():
+    YodyTokenData():
         tokenExec(0),
         ABI(0),
         funcName(-1),
@@ -94,9 +94,9 @@ struct QtumTokenData
     {}
 };
 
-bool QtumToken::ToHash160(const std::string& strQtumAddress, std::string& strHash160)
+bool YodyToken::ToHash160(const std::string& strYodyAddress, std::string& strHash160)
 {
-    CTxDestination qtumAddress = DecodeDestination(strQtumAddress);
+    CTxDestination qtumAddress = DecodeDestination(strYodyAddress);
     if(!IsValidDestination(qtumAddress))
         return false;
     if(std::holds_alternative<PKHash>(qtumAddress)){
@@ -108,19 +108,19 @@ bool QtumToken::ToHash160(const std::string& strQtumAddress, std::string& strHas
     return true;
 }
 
-bool QtumToken::ToQtumAddress(const std::string& strHash160, std::string& strQtumAddress)
+bool YodyToken::ToYodyAddress(const std::string& strHash160, std::string& strYodyAddress)
 {
     uint160 key(ParseHex(strHash160.c_str()));
     PKHash keyid(key);
     CTxDestination qtumAddress = keyid;
     if(IsValidDestination(qtumAddress)){
-        strQtumAddress = EncodeDestination(qtumAddress);
+        strYodyAddress = EncodeDestination(qtumAddress);
         return true;
     }
     return false;
 }
 
-uint256 QtumToken::ToUint256(const std::string &data)
+uint256 YodyToken::ToUint256(const std::string &data)
 {
     dev::bytes rawData = dev::fromHex(data);
     dev::bytesConstRef o(&rawData);
@@ -128,15 +128,15 @@ uint256 QtumToken::ToUint256(const std::string &data)
     return u256Touint(outData);
 }
 
-QtumToken::QtumToken():
+YodyToken::YodyToken():
     d(0)
 {
-    d = new QtumTokenData();
+    d = new YodyTokenData();
     clear();
 
     // Compute functions indexes
     d->ABI = new ContractABI();
-    if(d->ABI->loads(QtumToken_NS::TOKEN_ABI))
+    if(d->ABI->loads(YodyToken_NS::TOKEN_ABI))
     {
         for(size_t i = 0; i < d->ABI->functions.size(); i++)
         {
@@ -201,7 +201,7 @@ QtumToken::QtumToken():
     }
 }
 
-QtumToken::~QtumToken()
+YodyToken::~YodyToken()
 {
     d->tokenExec = 0;
 
@@ -210,37 +210,37 @@ QtumToken::~QtumToken()
     d = 0;
 }
 
-void QtumToken::setAddress(const std::string &address)
+void YodyToken::setAddress(const std::string &address)
 {
-    d->lstParams[QtumToken_NS::PARAM_ADDRESS] = address;
+    d->lstParams[YodyToken_NS::PARAM_ADDRESS] = address;
 }
 
-void QtumToken::setDataHex(const std::string &datahex)
+void YodyToken::setDataHex(const std::string &datahex)
 {
-    d->lstParams[QtumToken_NS::PARAM_DATAHEX] = datahex;
+    d->lstParams[YodyToken_NS::PARAM_DATAHEX] = datahex;
 }
 
-void QtumToken::setAmount(const std::string &amount)
+void YodyToken::setAmount(const std::string &amount)
 {
-    d->lstParams[QtumToken_NS::PARAM_AMOUNT] = amount;
+    d->lstParams[YodyToken_NS::PARAM_AMOUNT] = amount;
 }
 
-void QtumToken::setGasLimit(const std::string &gaslimit)
+void YodyToken::setGasLimit(const std::string &gaslimit)
 {
-    d->lstParams[QtumToken_NS::PARAM_GASLIMIT] = gaslimit;
+    d->lstParams[YodyToken_NS::PARAM_GASLIMIT] = gaslimit;
 }
 
-void QtumToken::setGasPrice(const std::string &gasPrice)
+void YodyToken::setGasPrice(const std::string &gasPrice)
 {
-    d->lstParams[QtumToken_NS::PARAM_GASPRICE] = gasPrice;
+    d->lstParams[YodyToken_NS::PARAM_GASPRICE] = gasPrice;
 }
 
-void QtumToken::setSender(const std::string &sender)
+void YodyToken::setSender(const std::string &sender)
 {
-    d->lstParams[QtumToken_NS::PARAM_SENDER] = sender;
+    d->lstParams[YodyToken_NS::PARAM_SENDER] = sender;
 }
 
-void QtumToken::clear()
+void YodyToken::clear()
 {
     d->lstParams.clear();
 
@@ -248,26 +248,26 @@ void QtumToken::clear()
     setGasPrice(FormatMoney(DEFAULT_GAS_PRICE));
     setGasLimit(std::to_string(DEFAULT_GAS_LIMIT_OP_SEND));
 
-    d->lstParams[QtumToken_NS::PARAM_BROADCAST] = "true";
-    d->lstParams[QtumToken_NS::PARAM_CHANGE_TO_SENDER] = "true";
+    d->lstParams[YodyToken_NS::PARAM_BROADCAST] = "true";
+    d->lstParams[YodyToken_NS::PARAM_CHANGE_TO_SENDER] = "true";
 }
 
-std::string QtumToken::getTxId()
+std::string YodyToken::getTxId()
 {
     return d->txid;
 }
 
-std::string QtumToken::getPsbt()
+std::string YodyToken::getPsbt()
 {
     return d->psbt;
 }
 
-void QtumToken::setTxId(const std::string& txid)
+void YodyToken::setTxId(const std::string& txid)
 {
     d->txid = txid;
 }
 
-bool QtumToken::name(std::string &result, bool sendTo)
+bool YodyToken::name(std::string &result, bool sendTo)
 {
     std::vector<std::string> input;
     std::vector<std::string> output;
@@ -285,7 +285,7 @@ bool QtumToken::name(std::string &result, bool sendTo)
     return true;
 }
 
-bool QtumToken::approve(const std::string &_spender, const std::string &_value, bool &success, bool sendTo)
+bool YodyToken::approve(const std::string &_spender, const std::string &_value, bool &success, bool sendTo)
 {
     std::string spender = _spender;
     if(!ToHash160(spender, spender))
@@ -312,7 +312,7 @@ bool QtumToken::approve(const std::string &_spender, const std::string &_value, 
     return true;
 }
 
-bool QtumToken::totalSupply(std::string &result, bool sendTo)
+bool YodyToken::totalSupply(std::string &result, bool sendTo)
 {
     std::vector<std::string> input;
     std::vector<std::string> output;
@@ -330,7 +330,7 @@ bool QtumToken::totalSupply(std::string &result, bool sendTo)
     return true;
 }
 
-bool QtumToken::transferFrom(const std::string &_from, const std::string &_to, const std::string &_value, bool &success, bool sendTo)
+bool YodyToken::transferFrom(const std::string &_from, const std::string &_to, const std::string &_value, bool &success, bool sendTo)
 {
     std::string from = _from;
     if(!ToHash160(from, from))
@@ -363,7 +363,7 @@ bool QtumToken::transferFrom(const std::string &_from, const std::string &_to, c
     return true;
 }
 
-bool QtumToken::decimals(std::string &result, bool sendTo)
+bool YodyToken::decimals(std::string &result, bool sendTo)
 {
     std::vector<std::string> input;
     std::vector<std::string> output;
@@ -381,7 +381,7 @@ bool QtumToken::decimals(std::string &result, bool sendTo)
     return true;
 }
 
-bool QtumToken::decimals(uint32_t &result)
+bool YodyToken::decimals(uint32_t &result)
 {
     std::string str;
     bool ret = decimals(str);
@@ -390,7 +390,7 @@ bool QtumToken::decimals(uint32_t &result)
     return ret;
 }
 
-bool QtumToken::burn(const std::string &_value, bool &success, bool sendTo)
+bool YodyToken::burn(const std::string &_value, bool &success, bool sendTo)
 {
     std::vector<std::string> input;
     input.push_back(_value);
@@ -410,13 +410,13 @@ bool QtumToken::burn(const std::string &_value, bool &success, bool sendTo)
     return true;
 }
 
-bool QtumToken::balanceOf(std::string &result, bool sendTo)
+bool YodyToken::balanceOf(std::string &result, bool sendTo)
 {
-    std::string spender = d->lstParams[QtumToken_NS::PARAM_SENDER];
+    std::string spender = d->lstParams[YodyToken_NS::PARAM_SENDER];
     return balanceOf(spender, result, sendTo);
 }
 
-bool QtumToken::balanceOf(const std::string &_spender, std::string &result, bool sendTo)
+bool YodyToken::balanceOf(const std::string &_spender, std::string &result, bool sendTo)
 {
     std::string spender = _spender;
     if(!ToHash160(spender, spender))
@@ -442,7 +442,7 @@ bool QtumToken::balanceOf(const std::string &_spender, std::string &result, bool
     return true;
 }
 
-bool QtumToken::burnFrom(const std::string &_from, const std::string &_value, bool &success, bool sendTo)
+bool YodyToken::burnFrom(const std::string &_from, const std::string &_value, bool &success, bool sendTo)
 {
     std::string from = _from;
     if(!ToHash160(from, from))
@@ -469,7 +469,7 @@ bool QtumToken::burnFrom(const std::string &_from, const std::string &_value, bo
     return true;
 }
 
-bool QtumToken::symbol(std::string &result, bool sendTo)
+bool YodyToken::symbol(std::string &result, bool sendTo)
 {
     std::vector<std::string> input;
     std::vector<std::string> output;
@@ -487,7 +487,7 @@ bool QtumToken::symbol(std::string &result, bool sendTo)
     return true;
 }
 
-bool QtumToken::transfer(const std::string &_to, const std::string &_value, bool& success, bool sendTo)
+bool YodyToken::transfer(const std::string &_to, const std::string &_value, bool& success, bool sendTo)
 {
     std::string to = _to;
     if(!ToHash160(to, to))
@@ -514,7 +514,7 @@ bool QtumToken::transfer(const std::string &_to, const std::string &_value, bool
     return true;
 }
 
-bool QtumToken::approveAndCall(const std::string &_spender, const std::string &_value, const std::string &_extraData, bool &success, bool sendTo)
+bool YodyToken::approveAndCall(const std::string &_spender, const std::string &_value, const std::string &_extraData, bool &success, bool sendTo)
 {
     std::string spender = _spender;
     if(!ToHash160(spender, spender))
@@ -542,7 +542,7 @@ bool QtumToken::approveAndCall(const std::string &_spender, const std::string &_
     return true;
 }
 
-bool QtumToken::allowance(const std::string &_from, const std::string &_to, std::string &result, bool sendTo)
+bool YodyToken::allowance(const std::string &_from, const std::string &_to, std::string &result, bool sendTo)
 {
     std::string from = _from;
     if(!ToHash160(from, from))
@@ -574,17 +574,17 @@ bool QtumToken::allowance(const std::string &_from, const std::string &_to, std:
     return true;
 }
 
-bool QtumToken::transferEvents(std::vector<TokenEvent> &tokenEvents, int64_t fromBlock, int64_t toBlock, int64_t minconf)
+bool YodyToken::transferEvents(std::vector<TokenEvent> &tokenEvents, int64_t fromBlock, int64_t toBlock, int64_t minconf)
 {
     return execEvents(fromBlock, toBlock, minconf, d->evtTransfer, tokenEvents);
 }
 
-bool QtumToken::burnEvents(std::vector<TokenEvent> &tokenEvents, int64_t fromBlock, int64_t toBlock, int64_t minconf)
+bool YodyToken::burnEvents(std::vector<TokenEvent> &tokenEvents, int64_t fromBlock, int64_t toBlock, int64_t minconf)
 {
     return execEvents(fromBlock, toBlock, minconf, d->evtBurn, tokenEvents);
 }
 
-bool QtumToken::exec(const std::vector<std::string> &input, int func, std::vector<std::string> &output, bool sendTo)
+bool YodyToken::exec(const std::vector<std::string> &input, int func, std::vector<std::string> &output, bool sendTo)
 {
     // Convert the input data into hex encoded binary data
     d->txid = "";
@@ -640,7 +640,7 @@ bool QtumToken::exec(const std::vector<std::string> &input, int func, std::vecto
     return true;
 }
 
-void QtumToken::addTokenEvent(std::vector<TokenEvent> &tokenEvents, TokenEvent tokenEvent)
+void YodyToken::addTokenEvent(std::vector<TokenEvent> &tokenEvents, TokenEvent tokenEvent)
 {
     // Check if the event is from an existing token transaction and update the value
     bool found = false;
@@ -668,7 +668,7 @@ void QtumToken::addTokenEvent(std::vector<TokenEvent> &tokenEvents, TokenEvent t
         tokenEvents.push_back(tokenEvent);
 }
 
-bool QtumToken::execEvents(int64_t fromBlock, int64_t toBlock, int64_t minconf, int func, std::vector<TokenEvent> &tokenEvents)
+bool YodyToken::execEvents(int64_t fromBlock, int64_t toBlock, int64_t minconf, int func, std::vector<TokenEvent> &tokenEvents)
 {
     // Check parameters
     if(d->tokenExec == 0 || !(d->tokenExec->execEventsValid(func, fromBlock)))
@@ -680,8 +680,8 @@ bool QtumToken::execEvents(int64_t fromBlock, int64_t toBlock, int64_t minconf, 
     // Search for events
     std::vector<TokenEvent> result;
     std::string eventName = function.selector();
-    std::string contractAddress = d->lstParams[QtumToken_NS::PARAM_ADDRESS];
-    std::string senderAddress = d->lstParams[QtumToken_NS::PARAM_SENDER];
+    std::string contractAddress = d->lstParams[YodyToken_NS::PARAM_ADDRESS];
+    std::string senderAddress = d->lstParams[YodyToken_NS::PARAM_SENDER];
     ToHash160(senderAddress, senderAddress);
     senderAddress  = "000000000000000000000000" + senderAddress;
     int numTopics = function.numIndexed() + 1;
@@ -697,57 +697,57 @@ bool QtumToken::execEvents(int64_t fromBlock, int64_t toBlock, int64_t minconf, 
     return true;
 }
 
-std::string QtumToken::getErrorMessage()
+std::string YodyToken::getErrorMessage()
 {
     return d->errorMessage;
 }
 
-void QtumToken::setQtumTokenExec(QtumTokenExec *tokenExec)
+void YodyToken::setYodyTokenExec(YodyTokenExec *tokenExec)
 {
     d->tokenExec = tokenExec;
 }
 
-const char* QtumToken::paramAddress()
+const char* YodyToken::paramAddress()
 {
-    return QtumToken_NS::PARAM_ADDRESS;
+    return YodyToken_NS::PARAM_ADDRESS;
 }
 
-const char* QtumToken::paramDatahex()
+const char* YodyToken::paramDatahex()
 {
-    return QtumToken_NS::PARAM_DATAHEX;
+    return YodyToken_NS::PARAM_DATAHEX;
 }
 
-const char* QtumToken::paramAmount()
+const char* YodyToken::paramAmount()
 {
-    return QtumToken_NS::PARAM_AMOUNT;
+    return YodyToken_NS::PARAM_AMOUNT;
 }
 
-const char* QtumToken::paramGasLimit()
+const char* YodyToken::paramGasLimit()
 {
-    return QtumToken_NS::PARAM_GASLIMIT;
+    return YodyToken_NS::PARAM_GASLIMIT;
 }
 
-const char* QtumToken::paramGasPrice()
+const char* YodyToken::paramGasPrice()
 {
-    return QtumToken_NS::PARAM_GASPRICE;
+    return YodyToken_NS::PARAM_GASPRICE;
 }
 
-const char* QtumToken::paramSender()
+const char* YodyToken::paramSender()
 {
-    return QtumToken_NS::PARAM_SENDER;
+    return YodyToken_NS::PARAM_SENDER;
 }
 
-const char* QtumToken::paramBroadcast()
+const char* YodyToken::paramBroadcast()
 {
-    return QtumToken_NS::PARAM_BROADCAST;
+    return YodyToken_NS::PARAM_BROADCAST;
 }
 
-const char* QtumToken::paramChangeToSender()
+const char* YodyToken::paramChangeToSender()
 {
-    return QtumToken_NS::PARAM_CHANGE_TO_SENDER;
+    return YodyToken_NS::PARAM_CHANGE_TO_SENDER;
 }
 
-const char* QtumToken::paramPsbt()
+const char* YodyToken::paramPsbt()
 {
-    return QtumToken_NS::PARAM_PSBT;
+    return YodyToken_NS::PARAM_PSBT;
 }

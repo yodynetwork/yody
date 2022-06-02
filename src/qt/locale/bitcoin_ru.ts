@@ -66,11 +66,11 @@
         <translation type="unfinished">Адреса для получения</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">Это ваши qtum-адреса для отправки платежей. Всегда проверяйте сумму и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Yody addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Это ваши qtum-адреса для получения платежей. Используйте кнопку «Создать новый адрес для получения» на вкладке Получить, чтобы создать новые адреса.
 Подписание возможно только с адресами типа "legacy".</translation>
@@ -244,7 +244,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>QtumApplication</name>
+    <name>YodyApplication</name>
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">Неизвестная ошибка</translation>
@@ -294,7 +294,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Сумма</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
+        <source>Enter a Yody address (e.g. %1)</source>
         <translation type="unfinished">Введите qtum-адрес (напр. %1)</translation>
     </message>
     <message>
@@ -431,7 +431,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Обзор</translation>
@@ -494,7 +494,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Прокси &lt;b&gt;включён&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
+        <source>Send coins to a Yody address</source>
         <translation>Отправить средства на qtum-адрес</translation>
     </message>
     <message>
@@ -546,7 +546,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Подписать &amp;сообщение...</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
         <translation>Подписывайте сообщения вашими qtum-адресами, чтобы доказать, что вы ими владеете</translation>
     </message>
     <message>
@@ -554,7 +554,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Проверить сообщение</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
         <translation>Проверяйте сообщения, чтобы убедиться, что они подписаны конкретными qtum-адресами</translation>
     </message>
     <message>
@@ -678,11 +678,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Синхронизировано</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction</source>
+        <source>Load Partially Signed Yody Transaction</source>
         <translation type="unfinished">Загрузить частично подписанную qtum-транзакцию (PSBT)</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+        <source>Load Partially Signed Yody Transaction from clipboard</source>
         <translation type="unfinished">Загрузить частично подписанную qtum-транзакцию из буфера обмена</translation>
     </message>
     <message>
@@ -722,7 +722,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Закрыть все кошельки</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
         <translation type="unfinished">Показать помощь по %1, чтобы просмотреть список доступных параметров командной строки</translation>
     </message>
     <message>
@@ -762,12 +762,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 клиент</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n активное подключение к сети Qtum.</numerusform>
-            <numerusform>%n активных подключений к сети Qtum.</numerusform>
-            <numerusform>%n активных подключений к сети Qtum.</numerusform>
+            <numerusform>%n активное подключение к сети Yody.</numerusform>
+            <numerusform>%n активных подключений к сети Yody.</numerusform>
+            <numerusform>%n активных подключений к сети Yody.</numerusform>
         </translation>
     </message>
     <message>
@@ -1197,7 +1197,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Изменить адрес для отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <source>The entered address "%1" is not a valid Yody address.</source>
         <translation type="unfinished">Введенный адрес "%1" не является действительным qtum-адресом.</translation>
     </message>
     <message>
@@ -1243,8 +1243,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message>
-        <source>Qtum</source>
-        <translation type="unfinished">Qtum Core</translation>
+        <source>Yody</source>
+        <translation type="unfinished">Yody Core</translation>
     </message>
     <message>
         <source>%1 GB of free space available</source>
@@ -1276,7 +1276,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
+        <source>%1 will download and store a copy of the Yody block chain.</source>
         <translation type="unfinished">%1 скачает и сохранит копию цепочки блоков qtum.</translation>
     </message>
     <message>
@@ -1543,11 +1543,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Путь к скрипту внешней подписи</translation>
     </message>
     <message>
-        <source>Full path to a Qtum Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Полный путь к сценарию, совместимому с Qtum Core (например, C:\Downloads\hwi.exe или /Users/you/Downloads/hwi.py). Осторожно: вредоносные программы могут украсть ваши монеты!</translation>
+        <source>Full path to a Yody Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Полный путь к сценарию, совместимому с Yody Core (например, C:\Downloads\hwi.exe или /Users/you/Downloads/hwi.py). Осторожно: вредоносные программы могут украсть ваши монеты!</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Автоматически открыть порт qtum-клиента на маршрутизаторе. Работает, если ваш маршрутизатор поддерживает UPnP, и данная функция на нём включена.</translation>
     </message>
     <message>
@@ -1555,7 +1555,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Пробросить порт через &amp;UPnP</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
         <translation type="unfinished">Автоматически открыть порт qtum-клиента на роутере. Работает? если ваш роутер поддерживает NAT-PMP, и данная функция на нём включена. Внешний порт может быть случайным.</translation>
     </message>
     <message>
@@ -1571,7 +1571,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Разрешить входящие соединения</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
         <translation type="unfinished">Подключиться к сети qtum через прокси SOCKS5.</translation>
     </message>
     <message>
@@ -1643,7 +1643,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Показывать ли параметры управления монетами.</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <source>Connect to the Yody network through a separate SOCKS5 proxy for Tor onion services.</source>
         <translation type="unfinished">Подключаться к сети qtum через отдельный прокси SOCKS5 для скрытых сервисов Tor.</translation>
     </message>
     <message>
@@ -1735,7 +1735,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
         <translation>Показанная информация может быть устаревшей. Ваш кошелёк автоматически синхронизируется с сетью qtum после подключения, но этот процесс пока не завершён.</translation>
     </message>
     <message>
@@ -1958,7 +1958,7 @@ If you are receiving this error you should request the merchant provide a BIP21 
 Если вы получили эту ошибку, вам следует попросить у продавца URI, совместимый с BIP21.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
         <translation type="unfinished">Не удалось обработать URI! Это может быть вызвано тем, что qtum-адрес неверен или параметры URI неправильно сформированы.</translation>
     </message>
     <message>
@@ -2453,7 +2453,7 @@ For more information on using this console, type %6.
         <translation type="unfinished">&amp;Сообщение:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
         <translation type="unfinished">Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса. Внимание: это сообщение не будет отправлено вместе с платежом через сеть qtum.</translation>
     </message>
     <message>
@@ -2836,7 +2836,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Создать &amp;без подписи</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Yody Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation type="unfinished">Создает частично подписанную qtum-транзакцию (PSBT), чтобы использовать её, например, с офлайновым кошельком %1, или PSBT-совместимым аппаратным кошельком.</translation>
     </message>
     <message>
@@ -2911,7 +2911,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Вы можете увеличить комиссию позже (указан Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Qtum Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Yody Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation type="unfinished">Пожалуйста, ещё раз просмотрите черновик вашей транзакции. Будет создана частично подписанная qtum-транзакция (PSBT), которую можно сохранить или скопировать, после чего подписать, например, офлайновым кошельком %1 или PSBT-совместимым аппаратным кошельком.</translation>
     </message>
     <message>
@@ -2983,7 +2983,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
+        <source>Warning: Invalid Yody address</source>
         <translation type="unfinished">Предупреждение: неверный qtum-адрес</translation>
     </message>
     <message>
@@ -3022,8 +3022,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Выбрать ранее использованный адрес</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
-        <translation type="unfinished">Qtum-адрес, на который нужно отправить платёж</translation>
+        <source>The Yody address to send the payment to</source>
+        <translation type="unfinished">Yody-адрес, на который нужно отправить платёж</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -3066,7 +3066,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введите метку для этого адреса, чтобы добавить его в список использованных адресов</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
         <translation type="unfinished">Сообщение, которое было прикреплено к URI и которое будет сохранено вместе с транзакцией для вашего сведения. Обратите внимание: сообщение не будет отправлено через сеть qtum.</translation>
     </message>
     <message>
@@ -3093,8 +3093,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Вы можете подписывать сообщения/соглашения своими адресами, чтобы доказать, что вы можете получать qtums на них. Будьте осторожны и не подписывайте непонятные или случайные сообщения, так как мошенники могут таким образом пытаться присвоить вашу личность. Подписывайте только такие сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
-        <translation type="unfinished">Qtum-адрес, которым подписать сообщение</translation>
+        <source>The Yody address to sign the message with</source>
+        <translation type="unfinished">Yody-адрес, которым подписать сообщение</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -3117,7 +3117,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation>Скопировать текущую подпись в буфер обмена</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
+        <source>Sign the message to prove you own this Yody address</source>
         <translation>Подписать сообщение, чтобы доказать владение qtum-адресом</translation>
     </message>
     <message>
@@ -3141,8 +3141,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Введите ниже адрес получателя, сообщение (убедитесь, что переводы строк, пробелы, знаки табуляции и т. п. скопированы в точности) и подпись, чтобы проверить сообщение. Убедитесь, что вы не придаёте сообщению большего смысла, чем оно на самом деле несёт, чтобы не стать жертвой атаки "человек посередине". Обратите внимание, что подпись доказывает лишь то, что подписавший может получать qtums на этот адрес, но никак не то, что он отправил какую-либо транзакцию!</translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
-        <translation type="unfinished">Qtum-адрес, которым было подписано сообщение</translation>
+        <source>The Yody address the message was signed with</source>
+        <translation type="unfinished">Yody-адрес, которым было подписано сообщение</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -3153,7 +3153,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee rate of "100 satos
         <translation type="unfinished">Подпись, созданная при подписании сообщения</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
         <translation>Проверить сообщение, чтобы убедиться, что оно действительно подписано указанным qtum-адресом</translation>
     </message>
     <message>

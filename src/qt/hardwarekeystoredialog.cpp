@@ -67,7 +67,7 @@ void HardwareKeystoreDialog::setCurrentIndex(int index)
 bool HardwareKeystoreDialog::SelectDevice(QString &fingerprint,  QString& errorMessage, bool& canceled, bool stake, QWidget *parent)
 {
     // Enumerate devices
-    QtumHwiTool hwiTool(parent);
+    YodyHwiTool hwiTool(parent);
     QList<HWDevice> devices;
     canceled = false;
     if(hwiTool.enumerate(devices, stake))

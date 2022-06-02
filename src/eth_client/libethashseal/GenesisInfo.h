@@ -22,7 +22,7 @@ enum class Network
 std::string const& genesisInfo(Network _n);
 h256 const& genesisStateRoot(Network _n);
 
-/// Set the improvements activation blocks for Qtum
+/// Set the improvements activation blocks for Yody
 struct EVMConsensus
 {
     EVMConsensus() {}
@@ -40,12 +40,12 @@ struct EVMConsensus
 };
 
 /**
- * @brief genesisInfoQtum Get the genesis information for EVM
+ * @brief genesisInfoYody Get the genesis information for EVM
  * @param _n Network type
- * @param _consensus Qtum network consensus parameters (mainnet, testnet, signet or regtest parameters)
+ * @param _consensus Yody network consensus parameters (mainnet, testnet, signet or regtest parameters)
  * @return Genesis information for EVM
  */
-std::string genesisInfoQtum(Network _n, EVMConsensus _consensus);
+std::string genesisInfoYody(Network _n, EVMConsensus _consensus);
 
 }
 }

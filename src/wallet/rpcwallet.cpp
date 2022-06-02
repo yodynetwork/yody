@@ -291,7 +291,7 @@ bool SetDefaultSignSenderAddress(const CWallet& wallet, CTxDestination& destAdre
 static RPCHelpMan getnewaddress()
 {
     return RPCHelpMan{"getnewaddress",
-                "\nReturns a new Qtum address for receiving payments.\n"
+                "\nReturns a new Yody address for receiving payments.\n"
                 "If 'label' is specified, it is added to the address book \n"
                 "so payments received with the address will be associated with 'label'.\n",
                 {
@@ -345,7 +345,7 @@ static RPCHelpMan getnewaddress()
 static RPCHelpMan getrawchangeaddress()
 {
     return RPCHelpMan{"getrawchangeaddress",
-                "\nReturns a new Qtum address, for receiving change.\n"
+                "\nReturns a new Yody address, for receiving change.\n"
                 "This is for use with raw transactions, NOT normal use.\n",
                 {
                     {"address_type", RPCArg::Type::STR, RPCArg::DefaultHint{"set by -changetype"}, "The address type to use. Options are \"legacy\", \"p2sh-segwit\", and \"bech32\"."},
@@ -411,7 +411,7 @@ static RPCHelpMan setlabel()
 
     CTxDestination dest = DecodeDestination(request.params[0].get_str());
     if (!IsValidDestination(dest)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Qtum address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Yody address");
     }
 
     std::string label = LabelFromValue(request.params[1]);
@@ -433,7 +433,7 @@ void ParseRecipients(const UniValue& address_amounts, const UniValue& subtract_f
     for (const std::string& address: address_amounts.getKeys()) {
         CTxDestination dest = DecodeDestination(address);
         if (!IsValidDestination(dest)) {
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Qtum address: ") + address);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Yody address: ") + address);
         }
 
         if (destinations.count(dest)) {
@@ -531,7 +531,7 @@ static CTransactionRef SplitUTXOs(std::shared_ptr<CWallet> const pwallet, const 
     if (nValue > nTotal)
         throw JSONRPCError(RPC_WALLET_INSUFFICIENT_FUNDS, "Insufficient funds");
 
-    // Parse Qtum address
+    // Parse Yody address
     CScript scriptPubKey = GetScriptForDestination(address);
 
     // Split into utxos with nValue
@@ -747,7 +747,7 @@ static RPCHelpMan sendtoaddress()
     if (!request.params[11].isNull()){
     senderAddress = DecodeDestination(request.params[11].get_str());
         if (!IsValidDestination(senderAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Qtum address to send from");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Yody address to send from");
         else
             fHasSender=true;
     }
@@ -836,7 +836,7 @@ static RPCHelpMan splitutxosforaddress()
     CTxDestination address = DecodeDestination(request.params[0].get_str());
 
     if (!IsValidDestination(address)) {
-        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Qtum address");
+        throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Yody address");
     }
     CScript scriptPubKey = GetScriptForDestination(address);
     if (!pwallet->IsMine(scriptPubKey)) {
@@ -974,7 +974,7 @@ void getDgpData(uint64_t& blockGasLimit, uint64_t& minGasPrice, CAmount& nGasPri
     if(globalState.get() && chainman)
     {
         LOCK(cs_main);
-        QtumDGP qtumDGP(globalState.get(), chainman->ActiveChainstate(), fGettingValuesDGP);
+        YodyDGP qtumDGP(globalState.get(), chainman->ActiveChainstate(), fGettingValuesDGP);
         int height = chainman->ActiveChain().Height();
         blockGasLimit = qtumDGP.getBlockGasLimit(height);
         minGasPrice = CAmount(qtumDGP.getMinGasPrice(height));
@@ -1068,7 +1068,7 @@ static RPCHelpMan createcontract()
     if (!request.params[3].isNull()){
         senderAddress = DecodeDestination(request.params[3].get_str());
         if (!IsValidDestination(senderAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Qtum address to send from");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Yody address to send from");
         if (!IsValidContractSenderAddress(senderAddress))
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid contract sender address. Only P2PK and P2PKH allowed");
         else
@@ -1337,7 +1337,7 @@ UniValue SendToContract(CWallet& wallet, const UniValue& params, ChainstateManag
     if (!params[5].isNull()){
         senderAddress = DecodeDestination(params[5].get_str());
         if (!IsValidDestination(senderAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Qtum address to send from");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Yody address to send from");
         if (!IsValidContractSenderAddress(senderAddress))
             throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid contract sender address. Only P2PK and P2PKH allowed");
         else
@@ -1698,7 +1698,7 @@ static RPCHelpMan sendtocontract()
                         {"datahex", RPCArg::Type::STR_HEX, RPCArg::Optional::NO, "data to send."},
                         {"amount", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "The amount in " + CURRENCY_UNIT + " to send. eg 0.1, default: 0"},
                         {"gaslimit", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasLimit, default: "+i64tostr(DEFAULT_GAS_LIMIT_OP_SEND)+", max: "+i64tostr(blockGasLimit)},
-                        {"gasprice", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasPrice Qtum price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)},
+                        {"gasprice", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasPrice Yody price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)},
                         {"senderaddress", RPCArg::Type::STR_HEX, RPCArg::Optional::OMITTED_NAMED_ARG, "The qtum address that will be used as sender."},
                         {"broadcast", RPCArg::Type::BOOL, RPCArg::Default{true}, "Whether to broadcast the transaction or not."},
                         {"changetosender", RPCArg::Type::BOOL, RPCArg::Default{true}, "Return the change to the sender."},
@@ -1751,7 +1751,7 @@ static RPCHelpMan removedelegationforaddress()
                     {
                         {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The qtum address to remove delegation, the address will be used as sender too."},
                         {"gaslimit", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasLimit, default: "+i64tostr(DEFAULT_GAS_LIMIT_OP_SEND)+", max: "+i64tostr(blockGasLimit)},
-                        {"gasprice", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasPrice Qtum price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)},
+                        {"gasprice", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasPrice Yody price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)},
                     },
                     RPCResult{
                         RPCResult::Type::OBJ, "", "",
@@ -1778,7 +1778,7 @@ static RPCHelpMan removedelegationforaddress()
     // Get send to contract parameters for removing delegation for address
     UniValue params(UniValue::VARR);
     UniValue contractaddress = HexStr(Params().GetConsensus().delegationsAddress);
-    UniValue datahex = QtumDelegation::BytecodeRemove();
+    UniValue datahex = YodyDelegation::BytecodeRemove();
     UniValue amount = 0;
     UniValue gasLimit = !request.params[1].isNull() ? request.params[1] : DEFAULT_GAS_LIMIT_OP_SEND;
     UniValue gasPrice = !request.params[2].isNull() ? request.params[2] : FormatMoney(nGasPrice);
@@ -1812,7 +1812,7 @@ static RPCHelpMan setdelegateforaddress()
                         {"fee", RPCArg::Type::NUM, RPCArg::Optional::NO, "Percentage of the reward that will be paid to the staker."},
                         {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The qtum address that contain the coins that will be delegated to the staker, the address will be used as sender too."},
                         {"gaslimit", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasLimit, default: "+i64tostr(DEFAULT_GAS_LIMIT_OP_CREATE)+", max: "+i64tostr(blockGasLimit)},
-                        {"gasprice", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasPrice Qtum price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)},
+                        {"gasprice", RPCArg::Type::AMOUNT, RPCArg::Optional::OMITTED_NAMED_ARG, "gasPrice Yody price per gas unit, default: "+FormatMoney(nGasPrice)+", min:"+FormatMoney(minGasPrice)},
                     },
                     RPCResult{
                         RPCResult::Type::OBJ, "", "",
@@ -1895,7 +1895,7 @@ static RPCHelpMan setdelegateforaddress()
     // Serialize the data
     std::string datahex;
     std::string errorMessage;
-    if(!QtumDelegation::BytecodeAdd(hexStaker, fee, PoD, datahex, errorMessage))
+    if(!YodyDelegation::BytecodeAdd(hexStaker, fee, PoD, datahex, errorMessage))
         throw JSONRPCError(RPC_TYPE_ERROR, errorMessage);
 
     // Add the send to contract parameters to the list
@@ -2152,7 +2152,7 @@ static RPCHelpMan listsuperstakervaluesforaddress()
                     "\nList super staker configuration values for address." +
                     HELP_REQUIRING_PASSPHRASE,
                     {
-                        {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The super staker Qtum address."},
+                        {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The super staker Yody address."},
                     },
                     RPCResult{
                         RPCResult::Type::OBJ, "", "",
@@ -2221,7 +2221,7 @@ static RPCHelpMan removesuperstakervaluesforaddress()
                     "\nRemove super staker configuration values for address." +
                     HELP_REQUIRING_PASSPHRASE,
                     {
-                        {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The super staker Qtum address."},
+                        {"address", RPCArg::Type::STR, RPCArg::Optional::NO, "The super staker Yody address."},
                     },
                     RPCResult{RPCResult::Type::NONE, "", ""},
                     RPCExamples{
@@ -2409,7 +2409,7 @@ static CAmount GetReceived(const CWallet& wallet, const UniValue& params, bool b
         // Get the address
         CTxDestination dest = DecodeDestination(params[0].get_str());
         if (!IsValidDestination(dest)) {
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Qtum address");
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, "Invalid Yody address");
         }
         CScript script_pub_key = GetScriptForDestination(dest);
         if (!wallet.IsMine(script_pub_key)) {
@@ -2782,7 +2782,7 @@ static RPCHelpMan sendmanywithdupes()
     for (const std::string& name_ : keys) {
         CTxDestination dest = DecodeDestination(name_);
         if (!IsValidDestination(dest)) {
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Qtum address: ") + name_);
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Yody address: ") + name_);
         }
 
         destinations.insert(dest);
@@ -2829,7 +2829,7 @@ static RPCHelpMan addmultisigaddress()
 {
     return RPCHelpMan{"addmultisigaddress",
                 "\nAdd an nrequired-to-sign multisignature address to the wallet. Requires a new wallet backup.\n"
-                "Each key is a Qtum address or hex-encoded public key.\n"
+                "Each key is a Yody address or hex-encoded public key.\n"
                 "This functionality is only intended for use with non-watchonly addresses.\n"
                 "See `importaddress` for watchonly p2sh address support.\n"
                 "If 'label' is specified, assign address to that label.\n",
@@ -4976,7 +4976,7 @@ static RPCHelpMan listunspent()
             const UniValue& input = inputs[idx];
             CTxDestination dest = DecodeDestination(input.get_str());
             if (!IsValidDestination(dest)) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Qtum address: ") + input.get_str());
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid Yody address: ") + input.get_str());
             }
             if (!destinations.insert(dest).second) {
                 throw JSONRPCError(RPC_INVALID_PARAMETER, std::string("Invalid parameter, duplicated address: ") + input.get_str());

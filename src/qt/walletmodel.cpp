@@ -896,7 +896,7 @@ void WalletModel::checkHardwareWallet()
     if(hardwareWalletInitRequired)
     {
         // Init variables
-        QtumHwiTool hwiTool;
+        YodyHwiTool hwiTool;
         hwiTool.setModel(this);
         QString errorMessage;
         bool error = false;
@@ -1032,7 +1032,7 @@ void WalletModel::checkHardwareDevice()
         QString fingerprint_stake = getFingerprint(true);
         if(!fingerprint_stake.isEmpty())
         {
-            QtumHwiTool hwiTool;
+            YodyHwiTool hwiTool;
             QList<HWDevice> _devices;
             if(hwiTool.enumerate(_devices, true))
             {
@@ -1050,7 +1050,7 @@ void WalletModel::checkHardwareDevice()
         QString fingerprint_not_stake = getFingerprint();
         if(!fingerprint_not_stake.isEmpty())
         {
-            QtumHwiTool hwiTool;
+            YodyHwiTool hwiTool;
             QList<HWDevice> _devices;
             if(hwiTool.enumerate(_devices, false))
             {

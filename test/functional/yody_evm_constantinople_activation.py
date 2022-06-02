@@ -7,7 +7,7 @@ from test_framework.p2p import *
 from test_framework.address import *
 from test_framework.qtum import *
 
-class QtumEVMConstantinopleActivationTest(BitcoinTestFramework):
+class YodyEVMConstantinopleActivationTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -38,4 +38,4 @@ class QtumEVMConstantinopleActivationTest(BitcoinTestFramework):
             self.node.generate(1)
 
 if __name__ == '__main__':
-    QtumEVMConstantinopleActivationTest().main()
+    YodyEVMConstantinopleActivationTest().main()

@@ -49,7 +49,7 @@ rpcport=4000
 
 ## Configuration File Path
 
-The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `qtum.conf` and it is located in the Qtum data directory, but both the Qtum data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
+The configuration file is not automatically created; you can create it using your favorite text editor. By default, the configuration file name is `qtum.conf` and it is located in the Yody data directory, but both the Yody data directory and the configuration file path may be changed using the `-datadir` and `-conf` command-line options.
 
 The `includeconf=<file>` option in the `qtum.conf` file can be used to include additional configuration files.
 
@@ -57,8 +57,8 @@ The `includeconf=<file>` option in the `qtum.conf` file can be used to include a
 
 Operating System | Data Directory | Example Path
 -- | -- | --
-Windows | `%APPDATA%\Qtum\` | `C:\Users\username\AppData\Roaming\Qtum\qtum.conf`
+Windows | `%APPDATA%\Yody\` | `C:\Users\username\AppData\Roaming\Yody\qtum.conf`
 Linux | `$HOME/.qtum/` | `/home/username/.qtum/qtum.conf`
-macOS | `$HOME/Library/Application Support/Qtum/` | `/Users/username/Library/Application Support/Qtum/qtum.conf`
+macOS | `$HOME/Library/Application Support/Yody/` | `/Users/username/Library/Application Support/Yody/qtum.conf`
 
 You can find an example qtum.conf file in [share/examples/bitcoin.conf](../share/examples/bitcoin.conf).

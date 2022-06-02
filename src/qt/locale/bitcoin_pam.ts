@@ -58,8 +58,8 @@
         <translation type="unfinished">Address king pamag-Tanggap</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Reni reng kekang Qtum address king pamagpadalang kabayaran. Lawan mulang masalese reng alaga ampo ing address na ning tumanggap bayu ka magpadalang barya.</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Reni reng kekang Yody address king pamagpadalang kabayaran. Lawan mulang masalese reng alaga ampo ing address na ning tumanggap bayu ka magpadalang barya.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -212,7 +212,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>Show general overview of wallet</source>
         <translation>Ipakit ing kabuuang lawe ning wallet</translation>
@@ -242,8 +242,8 @@
         <translation>Magpakit impormasion tungkul king Qt</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Magpadalang barya king Qtum address</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>Magpadalang barya king Yody address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -312,7 +312,7 @@
         <translation type="unfinished">&amp;Awang</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -381,8 +381,8 @@
         <translation type="unfinished">Alilan ya ing address king pamagpadala</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
-        <translation type="unfinished">Ing pepalub yung address "%1" ali ya katanggap-tanggap a Qtum address.</translation>
+        <source>The entered address "%1" is not a valid Yody address.</source>
+        <translation type="unfinished">Ing pepalub yung address "%1" ali ya katanggap-tanggap a Yody address.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -440,8 +440,8 @@
         <translation>&amp;Pun</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ibuklat yang antimanu ing Qtum client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ibuklat yang antimanu ing Yody client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -499,8 +499,8 @@
 <context>
     <name>OverviewPage</name>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
-        <translation>Ing makaltong impormasion mapalyaring luma ne. Ing kekang wallet otomatiku yang mag-synchronize keng Qtum network istung mekakonekta ne king network, oneng ing prosesung ini ali ya pa kumpletu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
+        <translation>Ing makaltong impormasion mapalyaring luma ne. Ing kekang wallet otomatiku yang mag-synchronize keng Yody network istung mekakonekta ne king network, oneng ing prosesung ini ali ya pa kumpletu.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -738,8 +738,8 @@
         <translation>Kopyan ing kasalungsungan pirma king system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
-        <translation>Pirman ing mensayi ban patune na keka ya ining Qtum address</translation>
+        <source>Sign the message to prove you own this Yody address</source>
+        <translation>Pirman ing mensayi ban patune na keka ya ining Yody address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -758,8 +758,8 @@
         <translation>&amp;Beripikan ing Mensayi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
-        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Qtum address</translation>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
+        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Yody address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

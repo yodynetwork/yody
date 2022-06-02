@@ -66,11 +66,11 @@
         <translation type="unfinished">முகவரிகள் பெறப்படுகின்றன</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">இவை பணம் அனுப்புவதற்கு உங்களின் பிட்காயின் முகவரிகள். பிட்காயின்களை அனுப்புவதற்கு முன் எப்பொழுதும் தொகையும் பெறுதலையும் சரிபார்க்கவும்.</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Yody addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">பிட்காயின் பெறுவதற்காக உங்கள் முகவரி இவை. புதிய முகவரிகளை உருவாக்க 'புதிய முகவரியை உருவாக்கு' என்ற பட்டனை கிளிக் செய்யவும்.
 கையொப்பமிடுவது 'மரபு' வகையின் முகவரிகளால் மட்டுமே சாத்தியமாகும்.</translation>
@@ -257,7 +257,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">விலை</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
+        <source>Enter a Yody address (e.g. %1)</source>
         <translation type="unfinished">ஒரு விக்கிபீடியா முகவரியை உள்ளிடவும் (எ.கா. %1)</translation>
     </message>
     <message>
@@ -320,7 +320,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -383,7 +383,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">ப்ராக்ஸி இயக்கப்பட்டது: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
+        <source>Send coins to a Yody address</source>
         <translation>ஒரு விக்கிபீடியா முகவரிக்கு நாணயங்களை அனுப்பவும்</translation>
     </message>
     <message>
@@ -415,11 +415,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>உங்கள் பணப்பைச் சேர்ந்த தனிப்பட்ட விசைகளை குறியாக்குக</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
         <translation>உங்கள் பிட்டினின் முகவரியுடன் செய்திகளை உங்களிடம் வைத்திருப்பதை நிரூபிக்க</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
         <translation>குறிப்பிடப்பட்ட விக்கிபீடியா முகவர்களுடன் கையொப்பமிடப்பட்டதை உறுதிப்படுத்த, செய்திகளை சரிபார்க்கவும்</translation>
     </message>
     <message>
@@ -490,7 +490,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>தேதி வரை</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction</source>
+        <source>Load Partially Signed Yody Transaction</source>
         <translation type="unfinished"> ஓரளவு கையொப்பமிடப்பட்ட பிட்காயின் பரிவர்த்தனையை ஏற்றவும்
 </translation>
     </message>
@@ -531,8 +531,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">அனைத்து பணப்பைகள் மூடு</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">சாத்தியமான Qtum கட்டளை-வரி விருப்பங்களைக் கொண்ட பட்டியலைப் பெற %1 உதவிச் செய்தியைக் காட்டு</translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">சாத்தியமான Yody கட்டளை-வரி விருப்பங்களைக் கொண்ட பட்டியலைப் பெற %1 உதவிச் செய்தியைக் காட்டு</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -571,7 +571,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 கிளையன்</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -912,7 +912,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">முகவரியை அனுப்புவதைத் திருத்து</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <source>The entered address "%1" is not a valid Yody address.</source>
         <translation type="unfinished">உள்ளிட்ட முகவரி "%1" என்பது செல்லுபடியாகும் விக்கிபீடியா முகவரி அல்ல.</translation>
     </message>
     <message>
@@ -974,8 +974,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
-        <translation type="unfinished">Qtum தொகுதி சங்கிலியின் நகலை %1 பதிவிறக்கம் செய்து சேமித்து வைக்கும்.</translation>
+        <source>%1 will download and store a copy of the Yody block chain.</source>
+        <translation type="unfinished">Yody தொகுதி சங்கிலியின் நகலை %1 பதிவிறக்கம் செய்து சேமித்து வைக்கும்.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1190,8 +1190,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp; உறுதிப்படுத்தப்படாத மாற்றத்தை செலவழிக்கவும்</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>ரூட்டரில் Qtum கிளையன்ட் போர்ட் தானாக திறக்க. இது உங்கள் திசைவி UPnP ஐ ஆதரிக்கும் போது மட்டுமே இயங்குகிறது.</translation>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>ரூட்டரில் Yody கிளையன்ட் போர்ட் தானாக திறக்க. இது உங்கள் திசைவி UPnP ஐ ஆதரிக்கும் போது மட்டுமே இயங்குகிறது.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1206,8 +1206,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Incomin &amp; g இணைப்புகளை அனுமதிக்கவும்</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Qtum பிணையத்துடன் SOCKS5 ப்ராக்ஸி மூலம் இணைக்கவும்.</translation>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Yody பிணையத்துடன் SOCKS5 ப்ராக்ஸி மூலம் இணைக்கவும்.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1333,7 +1333,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>படிவம்</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
         <translation>காட்டப்படும் தகவல் காலாவதியானதாக இருக்கலாம். ஒரு இணைப்பு நிறுவப்பட்ட பிறகு, உங்கள் பணப்பை தானாக பிட்கோடு நெட்வொர்க்குடன் ஒத்திசைக்கிறது, ஆனால் இந்த செயல்முறை இன்னும் முடிவடையவில்லை.</translation>
     </message>
     <message>
@@ -1420,7 +1420,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Cannot start qtum: click-to-pay handler</source>
-        <translation type="unfinished">Qtum தொடங்க முடியாது: கிளிக் க்கு ஊதியம் கையாளுதல்</translation>
+        <translation type="unfinished">Yody தொடங்க முடியாது: கிளிக் க்கு ஊதியம் கையாளுதல்</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1431,7 +1431,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">'qtum: //' சரியான URI அல்ல. அதற்கு பதிலாக 'பிட்கின்:' பயன்படுத்தவும்.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
         <translation type="unfinished">URI அலச முடியாது! தவறான பிட்கின் முகவரி அல்லது தவறான URI அளவுருக்கள் காரணமாக இது ஏற்படலாம்.</translation>
     </message>
     <message>
@@ -1766,8 +1766,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;செய்தி:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
-        <translation type="unfinished">கோரிக்கையை திறக்கும் போது காட்டப்படும் இது பணம் கோரிக்கை இணைக்க ஒரு விருப்ப செய்தி. குறிப்பு: Qtum நெட்வொர்க்கில் பணம் செலுத்தியவுடன் செய்தி அனுப்பப்படாது.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
+        <translation type="unfinished">கோரிக்கையை திறக்கும் போது காட்டப்படும் இது பணம் கோரிக்கை இணைக்க ஒரு விருப்ப செய்தி. குறிப்பு: Yody நெட்வொர்க்கில் பணம் செலுத்தியவுடன் செய்தி அனுப்பப்படாது.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2134,7 +2134,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
+        <source>Warning: Invalid Yody address</source>
         <translation type="unfinished">எச்சரிக்கை: தவறான பிட்காயின் முகவரி</translation>
     </message>
     <message>
@@ -2173,7 +2173,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">முன்பு பயன்படுத்திய முகவரியைத் தேர்வுசெய்</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
+        <source>The Yody address to send the payment to</source>
         <translation type="unfinished">கட்டணத்தை அனுப்ப பிட்காயின் முகவரி</translation>
     </message>
     <message>
@@ -2213,7 +2213,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">இந்த முகவரியை பயன்படுத்தப்பட்ட முகவரிகளின் பட்டியலில் சேர்க்க ஒரு லேபிளை உள்ளிடவும்.</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
         <translation type="unfinished">பிட்காயினுடன் இணைக்கப்பட்ட செய்தி: உங்கள் எதிர்கால குறிப்புக்காக பரிவர்த்தனையுடன் யூஆர்ஐ சேமிக்கப்படும். குறிப்பு: இந்த செய்தி பிட்காயின் வலையமைப்பிற்கு அனுப்பப்படாது.</translation>
     </message>
     <message>
@@ -2240,7 +2240,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">மற்றவர்களுக்கு அனுப்பப்பட்ட பிட்காயின்களைப் நீங்கள் பெறலாம் என்பதை நிரூபிக்க உங்கள் முகவரிகளுடன் செய்திகள் / ஒப்பந்தங்களில் கையொப்பமிடலாம். தெளிவற்ற அல்லது சீரற்ற எதையும் கையொப்பமிடாமல் கவனமாக இருங்கள், ஏனெனில் ஃபிஷிங் தாக்குதல்கள் உங்கள் அடையாளத்தை அவர்களிடம் கையொப்பமிட்டு ஏமாற்ற முயற்சிக்கும். நீங்கள் ஒப்புக்கொள்ளும் முழுமையான மற்றும் விரிவான அறிக்கைகளில் மட்டுமே கையொப்பமிடுங்கள்.</translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
+        <source>The Yody address to sign the message with</source>
         <translation type="unfinished">செய்தியை கையொப்பமிட பிட்காயின் முகவரி</translation>
     </message>
     <message>
@@ -2264,7 +2264,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>தற்போதைய கையொப்பத்தை கிளிப்போர்டுக்கு காபி செய்</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
+        <source>Sign the message to prove you own this Yody address</source>
         <translation>இந்த பிட்காயின் முகவரி உங்களுக்கு சொந்தமானது என்பதை நிரூபிக்க செய்தியை கையொப்பமிடுங்கள்</translation>
     </message>
     <message>
@@ -2284,11 +2284,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>&amp;செய்தியைச் சரிபார்க்கவும்</translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
+        <source>The Yody address the message was signed with</source>
         <translation type="unfinished">செய்தி கையொப்பமிடப்பட்ட பிட்காயின் முகவரி</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
         <translation>குறிப்பிட்ட பிட்காயின் முகவரியுடன் கையொப்பமிடப்பட்டதா என்பதை உறுதிப்படுத்த இந்த செய்தியைச் சரிபார்க்கவும்</translation>
     </message>
     <message>

@@ -66,8 +66,8 @@
         <translation type="unfinished">Derbyn cyfeiriadau</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Rhain ydi eich cyfeiriadau Qtum ar gyfer gyrru taliadau. Gwnewch yn sicr o'r swm a'r cyfeiriad derbyn cyn gyrru arian.</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Rhain ydi eich cyfeiriadau Yody ar gyfer gyrru taliadau. Gwnewch yn sicr o'r swm a'r cyfeiriad derbyn cyn gyrru arian.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -280,7 +280,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Trosolwg</translation>
@@ -335,8 +335,8 @@
         <translation type="unfinished">Gweithgaredd rhwydwaith wedi anablu.</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Anfon arian i gyfeiriad Qtum</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>Anfon arian i gyfeiriad Yody</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -367,12 +367,12 @@
         <translation>Amgryptio'r allweddi preifat sy'n perthyn i'ch waled</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Arwyddo negeseuon gyda eich cyfeiriadau Qtum i brofi mae chi sy'n berchen arnynt</translation>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
+        <translation>Arwyddo negeseuon gyda eich cyfeiriadau Yody i brofi mae chi sy'n berchen arnynt</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Gwirio negeseuon i sicrhau eu bod wedi eu harwyddo gyda cyfeiriadau Qtum penodol</translation>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
+        <translation>Gwirio negeseuon i sicrhau eu bod wedi eu harwyddo gyda cyfeiriadau Yody penodol</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -461,7 +461,7 @@
         <translation type="unfinished">&amp;Ffenestr</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

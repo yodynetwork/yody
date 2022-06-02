@@ -9,7 +9,7 @@
 struct TokenData;
 class WalletModel;
 
-class Token : public QtumTokenExec, public QtumToken
+class Token : public YodyTokenExec, public YodyToken
 {
 public:
     Token();

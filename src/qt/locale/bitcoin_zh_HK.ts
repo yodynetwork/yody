@@ -66,8 +66,8 @@
         <translation type="unfinished">收款地址</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">這些是你要付款過去的 Qtum 位址。在付款之前，務必要檢查金額和收款位址是否正確。</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">這些是你要付款過去的 Yody 位址。在付款之前，務必要檢查金額和收款位址是否正確。</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -154,7 +154,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR QTUMS&lt;/b&gt;!</source>
-        <translation type="unfinished">警告: 如果你將錢包加密後又忘記密碼，你就會&lt;b&gt;失去所有 Qtum 了&lt;/b&gt;！</translation>
+        <translation type="unfinished">警告: 如果你將錢包加密後又忘記密碼，你就會&lt;b&gt;失去所有 Yody 了&lt;/b&gt;！</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -174,7 +174,7 @@
     </message>
     <message>
         <source>Remember that encrypting your wallet cannot fully protect your qtums from being stolen by malware infecting your computer.</source>
-        <translation type="unfinished">請記得將錢包加密不能完全防止你的 Qtums 經被入侵電腦的惡意程式偷取。</translation>
+        <translation type="unfinished">請記得將錢包加密不能完全防止你的 Yodys 經被入侵電腦的惡意程式偷取。</translation>
     </message>
     <message>
         <source>Wallet to be encrypted</source>
@@ -233,7 +233,7 @@
     </message>
 </context>
 <context>
-    <name>QtumApplication</name>
+    <name>YodyApplication</name>
     <message>
         <source>Internal error</source>
         <translation type="unfinished">內部錯誤</translation>
@@ -246,8 +246,8 @@
         <translation type="unfinished">錯誤: %1</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
-        <translation type="unfinished">輸入一個 Qtum 位址 (例如 %1)</translation>
+        <source>Enter a Yody address (e.g. %1)</source>
+        <translation type="unfinished">輸入一個 Yody 位址 (例如 %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -315,7 +315,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>總覽 &amp;O</translation>
@@ -369,8 +369,8 @@
         <translation type="unfinished">錢包:</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>付款至一個 Qtum 位址</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>付款至一個 Yody 位址</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -451,7 +451,7 @@
         <translation type="unfinished">主視窗</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />

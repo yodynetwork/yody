@@ -1754,7 +1754,7 @@ RPCHelpMan getdelegationinfoforaddress()
     }
 
     // Get delegation for an address
-    QtumDelegation qtumDelegation;
+    YodyDelegation qtumDelegation;
     Delegation delegation;
     PKHash pkhash = std::get<PKHash>(dest);
     uint160 address = uint160(pkhash);
@@ -1858,7 +1858,7 @@ RPCHelpMan getdelegationsforstaker()
     }
 
     // Get delegations for staker
-    QtumDelegation qtumDelegation;
+    YodyDelegation qtumDelegation;
     std::vector<DelegationEvent> events;
     PKHash pkhash = std::get<PKHash>(dest);
     uint160 address = uint160(pkhash);

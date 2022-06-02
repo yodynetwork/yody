@@ -103,7 +103,7 @@ const std::vector<std::string> CHECKLEVEL_DOC {
 #include "pubkey.h"
 #include <univalue.h>
 
-std::unique_ptr<QtumState> globalState;
+std::unique_ptr<YodyState> globalState;
 std::shared_ptr<dev::eth::SealEngineFace> globalSealEngine;
 bool fRecordLogOpcodes = false;
 bool fIsVMlogFile = false;
@@ -761,24 +761,24 @@ bool MemPoolAccept::PreChecks(ATMPArgs& args, Workspace& ws)
             return state.Invalid(TxValidationResult::TX_INVALID_SENDER_SCRIPT, "bad-txns-invalid-sender-script");
         }
 
-        QtumDGP qtumDGP(globalState.get(), m_active_chainstate, fGettingValuesDGP);
+        YodyDGP qtumDGP(globalState.get(), m_active_chainstate, fGettingValuesDGP);
         uint64_t minGasPrice = qtumDGP.getMinGasPrice(m_active_chainstate.m_chain.Tip()->nHeight + 1);
         uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(m_active_chainstate.m_chain.Tip()->nHeight + 1);
         size_t count = 0;
         for(const CTxOut& o : tx.vout)
             count += o.scriptPubKey.HasOpCreate() || o.scriptPubKey.HasOpCall() ? 1 : 0;
         unsigned int contractflags = GetContractScriptFlags(m_active_chainstate.m_blockman.GetSpendHeight(m_view), chainparams.GetConsensus());
-        QtumTxConverter converter(tx, m_active_chainstate, &m_pool, NULL, NULL, contractflags);
-        ExtractQtumTX resultConverter;
-        if(!converter.extractionQtumTransactions(resultConverter)){
+        YodyTxConverter converter(tx, m_active_chainstate, &m_pool, NULL, NULL, contractflags);
+        ExtractYodyTX resultConverter;
+        if(!converter.extractionYodyTransactions(resultConverter)){
             return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-tx-bad-contract-format", "AcceptToMempool(): Contract transaction of the wrong format");
         }
-        std::vector<QtumTransaction> qtumTransactions = resultConverter.first;
+        std::vector<YodyTransaction> qtumTransactions = resultConverter.first;
         std::vector<EthTransactionParams> qtumETP = resultConverter.second;
 
         dev::u256 sumGas = dev::u256(0);
         dev::u256 gasAllTxs = dev::u256(0);
-        for(QtumTransaction qtumTransaction : qtumTransactions){
+        for(YodyTransaction qtumTransaction : qtumTransactions){
             sumGas += qtumTransaction.gas() * qtumTransaction.gasPrice();
 
             if(sumGas > dev::u256(INT64_MAX)) {
@@ -2209,7 +2209,7 @@ std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::v
     else
     	block.vtx.erase(block.vtx.begin()+1,block.vtx.end());
 
-    QtumDGP qtumDGP(globalState.get(), chainstate, fGettingValuesDGP);
+    YodyDGP qtumDGP(globalState.get(), chainstate, fGettingValuesDGP);
     uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(chainstate.m_chain.Tip()->nHeight + 1);
 
     if(gasLimit == 0){
@@ -2220,20 +2220,20 @@ std::vector<ResultExecute> CallContract(const dev::Address& addrContract, std::v
     block.vtx.push_back(MakeTransactionRef(CTransaction(tx)));
     dev::u256 nonce = globalState->getNonce(senderAddress);
  
-    QtumTransaction callTransaction;
+    YodyTransaction callTransaction;
     if(addrContract == dev::Address())
     {
-        callTransaction = QtumTransaction(nAmount, 1, dev::u256(gasLimit), opcode, nonce);
+        callTransaction = YodyTransaction(nAmount, 1, dev::u256(gasLimit), opcode, nonce);
     }
     else
     {
-        callTransaction = QtumTransaction(nAmount, 1, dev::u256(gasLimit), addrContract, opcode, nonce);
+        callTransaction = YodyTransaction(nAmount, 1, dev::u256(gasLimit), addrContract, opcode, nonce);
     }
     callTransaction.forceSender(senderAddress);
     callTransaction.setVersion(VersionVM::GetEVMDefault());
 
     
-    ByteCodeExec exec(block, std::vector<QtumTransaction>(1, callTransaction), blockGasLimit, pblockindex, chainstate.m_chain);
+    ByteCodeExec exec(block, std::vector<YodyTransaction>(1, callTransaction), blockGasLimit, pblockindex, chainstate.m_chain);
     exec.performByteCode(dev::eth::Permanence::Reverted);
     return exec.getResult();
 }
@@ -2473,7 +2473,7 @@ void LastHashes::clear()
 }
 
 bool ByteCodeExec::performByteCode(dev::eth::Permanence type){
-    for(QtumTransaction& tx : txs){
+    for(YodyTransaction& tx : txs){
         //validate VM version
         if(tx.getVersion().toRaw() != VersionVM::GetEVMDefault().toRaw()){
             return false;
@@ -2482,7 +2482,7 @@ bool ByteCodeExec::performByteCode(dev::eth::Permanence type){
         if(!tx.isCreation() && !globalState->addressInUse(tx.receiveAddress())){
             dev::eth::ExecutionResult execRes;
             execRes.excepted = dev::eth::TransactionException::Unknown;
-            result.push_back(ResultExecute{execRes, QtumTransactionReceipt(dev::h256(), dev::h256(), dev::u256(), dev::eth::LogEntries()), CTransaction()});
+            result.push_back(ResultExecute{execRes, YodyTransactionReceipt(dev::h256(), dev::h256(), dev::u256(), dev::eth::LogEntries()), CTransaction()});
             continue;
         }
         result.push_back(globalState->execute(envInfo, *globalSealEngine.get(), tx, chain, type, OnOpFunc()));
@@ -2576,12 +2576,12 @@ dev::Address ByteCodeExec::EthAddrFromScript(const CScript& script){
     return dev::Address();
 }
 
-bool QtumTxConverter::extractionQtumTransactions(ExtractQtumTX& qtumtx){
+bool YodyTxConverter::extractionYodyTransactions(ExtractYodyTX& qtumtx){
     // Get the address of the sender that pay the coins for the contract transactions
     refundSender = dev::Address(GetSenderAddress(txBit, view, blockTransactions, chainstate, mempool));
 
     // Extract contract transactions
-    std::vector<QtumTransaction> resultTX;
+    std::vector<YodyTransaction> resultTX;
     std::vector<EthTransactionParams> resultETP;
     for(size_t i = 0; i < txBit.vout.size(); i++){
         if(txBit.vout[i].scriptPubKey.HasOpCreate() || txBit.vout[i].scriptPubKey.HasOpCall()){
@@ -2602,7 +2602,7 @@ bool QtumTxConverter::extractionQtumTransactions(ExtractQtumTX& qtumtx){
     return true;
 }
 
-bool QtumTxConverter::receiveStack(const CScript& scriptPubKey){
+bool YodyTxConverter::receiveStack(const CScript& scriptPubKey){
     sender = false;
     EvalScript(stack, scriptPubKey, nFlags, BaseSignatureChecker(), SigVersion::BASE, nullptr);
     if (stack.empty())
@@ -2622,7 +2622,7 @@ bool QtumTxConverter::receiveStack(const CScript& scriptPubKey){
     return true;
 }
 
-bool QtumTxConverter::parseEthTXParams(EthTransactionParams& params){
+bool YodyTxConverter::parseEthTXParams(EthTransactionParams& params){
     try{
         dev::Address receiveAddress;
         valtype vecAddr;
@@ -2670,13 +2670,13 @@ bool QtumTxConverter::parseEthTXParams(EthTransactionParams& params){
     }
 }
 
-QtumTransaction QtumTxConverter::createEthTX(const EthTransactionParams& etp, uint32_t nOut){
-    QtumTransaction txEth;
+YodyTransaction YodyTxConverter::createEthTX(const EthTransactionParams& etp, uint32_t nOut){
+    YodyTransaction txEth;
     if (etp.receiveAddress == dev::Address() && opcode != OP_CALL){
-        txEth = QtumTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.code, dev::u256(0));
+        txEth = YodyTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.code, dev::u256(0));
     }
     else{
-        txEth = QtumTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.receiveAddress, etp.code, dev::u256(0));
+        txEth = YodyTransaction(txBit.vout[nOut].nValue, etp.gasPrice, etp.gasLimit, etp.receiveAddress, etp.code, dev::u256(0));
     }
     dev::Address sender(GetSenderAddress(txBit, view, blockTransactions, chainstate, mempool, (int)nOut));
     txEth.forceSender(sender);
@@ -2688,7 +2688,7 @@ QtumTransaction QtumTxConverter::createEthTX(const EthTransactionParams& etp, ui
     return txEth;
 }
 
-size_t QtumTxConverter::correctedStackSize(size_t size){
+size_t YodyTxConverter::correctedStackSize(size_t size){
     // OP_SENDER add 3 more parameters in stack besides those for OP_CREATE or OP_CALL
     return sender ? size + 3 : size;
 }
@@ -2736,8 +2736,8 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
     int64_t nTimeStart = GetTimeMicros();
 
     ///////////////////////////////////////////////// // qtum
-    QtumDGP qtumDGP(globalState.get(), *this, fGettingValuesDGP);
-    globalSealEngine->setQtumSchedule(qtumDGP.getGasSchedule(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1) ));
+    YodyDGP qtumDGP(globalState.get(), *this, fGettingValuesDGP);
+    globalSealEngine->setYodySchedule(qtumDGP.getGasSchedule(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1) ));
     uint32_t sizeBlockDGP = qtumDGP.getBlockSize(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
     uint64_t minGasPrice = qtumDGP.getMinGasPrice(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
     uint64_t blockGasLimit = qtumDGP.getBlockGasLimit(pindex->nHeight + (pindex->nHeight+1 >= m_params.GetConsensus().QIP7Height ? 0 : 1));
@@ -3110,25 +3110,25 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
                 return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "bad-txns-invalid-sender-script");
             }
 
-            QtumTxConverter convert(tx, *this, m_mempool, &view, &block.vtx, contractflags);
+            YodyTxConverter convert(tx, *this, m_mempool, &view, &block.vtx, contractflags);
 
-            ExtractQtumTX resultConvertQtumTX;
-            if(!convert.extractionQtumTransactions(resultConvertQtumTX)){
+            ExtractYodyTX resultConvertYodyTX;
+            if(!convert.extractionYodyTransactions(resultConvertYodyTX)){
                 return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "bad-tx-bad-contract-format", "ConnectBlock(): Contract transaction of the wrong format");
             }
-            if(!CheckMinGasPrice(resultConvertQtumTX.second, minGasPrice))
+            if(!CheckMinGasPrice(resultConvertYodyTX.second, minGasPrice))
                 return state.Invalid(BlockValidationResult::BLOCK_CONSENSUS, "bad-tx-low-gas-price", "ConnectBlock(): Contract execution has lower gas price than allowed");
 
 
             dev::u256 gasAllTxs = dev::u256(0);
-            ByteCodeExec exec(block, resultConvertQtumTX.first, blockGasLimit, pindex->pprev, m_chain);
+            ByteCodeExec exec(block, resultConvertYodyTX.first, blockGasLimit, pindex->pprev, m_chain);
             //validate VM version and other ETH params before execution
             //Reject anything unknown (could be changed later by DGP)
             //TODO evaluate if this should be relaxed for soft-fork purposes
             bool nonZeroVersion=false;
             dev::u256 sumGas = dev::u256(0);
             CAmount nTxFee = view.GetValueIn(tx)-tx.GetValueOut();
-            for(QtumTransaction& qtx : resultConvertQtumTX.first){
+            for(YodyTransaction& qtx : resultConvertYodyTX.first){
                 sumGas += qtx.gas() * qtx.gasPrice();
 
                 if(sumGas > dev::u256(INT64_MAX)) {
@@ -3194,7 +3194,7 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
             if (fLogEvents && !fJustCheck)
             {
                 uint64_t countCumulativeGasUsed = blockGasUsed;
-                for(size_t k = 0; k < resultConvertQtumTX.first.size(); k ++){
+                for(size_t k = 0; k < resultConvertYodyTX.first.size(); k ++){
                     for(auto& log : resultExec[k].txRec.log()) {
                         if(!heightIndexes.count(log.address)){
                             heightIndexes[log.address].first = CHeightTxIndexKey(pindex->nHeight, log.address);
@@ -3208,15 +3208,15 @@ bool CChainState::ConnectBlock(const CBlock& block, BlockValidationState& state,
                         uint32_t(pindex->nHeight),
                         tx.GetHash(),
                         uint32_t(i),
-                        resultConvertQtumTX.first[k].from(),
-                        resultConvertQtumTX.first[k].to(),
+                        resultConvertYodyTX.first[k].from(),
+                        resultConvertYodyTX.first[k].to(),
                         countCumulativeGasUsed,
                         gasUsed,
                         resultExec[k].execRes.newAddress,
                         resultExec[k].txRec.log(),
                         resultExec[k].execRes.excepted,
                         exceptedMessage(resultExec[k].execRes.excepted, resultExec[k].execRes.output),
-                        resultConvertQtumTX.first[k].getNVout(),
+                        resultConvertYodyTX.first[k].getNVout(),
                         resultExec[k].txRec.bloom(),
                         resultExec[k].txRec.stateRoot(),
                         resultExec[k].txRec.utxoRoot(),
@@ -4509,7 +4509,7 @@ bool SignBlockHWI(std::shared_ptr<CBlock> pblock, CWallet& wallet, std::vector<u
     if(wallet.m_ledger_id == "") {
         return false;
     }
-    QtumLedger &device = QtumLedger::instance();
+    YodyLedger &device = YodyLedger::instance();
 
     // Make a blank psbt
     PartiallySignedTransaction psbtx_in;
@@ -4581,7 +4581,7 @@ bool SignBlockLedger(std::shared_ptr<CBlock> pblock, CWallet& wallet)
     if(ret) pblock->SetBlockSignature(vchSig);
     if(!ret && !wallet.IsStakeClosing())
     {
-        std::string errorMessage = QtumLedger::instance().errorMessage();
+        std::string errorMessage = YodyLedger::instance().errorMessage();
         LogPrintf("WARN: %s: fail to sign block (%s)\n", __func__, errorMessage);
     }
     return ret;
@@ -5981,7 +5981,7 @@ bool CVerifyDB::VerifyDB(
 ////////////////////////////////////////////////////////////////////////// // qtum
     dev::h256 oldHashStateRoot(globalState->rootHash());
     dev::h256 oldHashUTXORoot(globalState->rootHashUTXO());
-    QtumDGP qtumDGP(globalState.get(), chainstate, fGettingValuesDGP);
+    YodyDGP qtumDGP(globalState.get(), chainstate, fGettingValuesDGP);
 //////////////////////////////////////////////////////////////////////////
 
     LogPrintf("[0%%]..."); /* Continued */
@@ -6353,7 +6353,7 @@ void CChainState::LoadExternalBlockFile(FILE* fileIn, FlatFilePos* dbp)
                 }
 
                 // In Bitcoin this only needed to be done for genesis and at the end of block indexing
-                // But for Qtum PoS we need to sync this after every block to ensure txdb is populated for
+                // But for Yody PoS we need to sync this after every block to ensure txdb is populated for
                 // validating PoS proofs
                 {
                     BlockValidationState state;
@@ -7309,15 +7309,15 @@ CAmount GetTxGasFee(const CMutableTransaction& _tx, const CTxMemPool& mempool, C
         CCoinsViewCache& view = active_chainstate.CoinsTip();
         const CChainParams& chainparams = Params();
         unsigned int contractflags = GetContractScriptFlags(active_chainstate.m_blockman.GetSpendHeight(view), chainparams.GetConsensus());
-        QtumTxConverter convert(tx, active_chainstate, &mempool, NULL, NULL, contractflags);
+        YodyTxConverter convert(tx, active_chainstate, &mempool, NULL, NULL, contractflags);
 
-        ExtractQtumTX resultConvertQtumTX;
-        if(!convert.extractionQtumTransactions(resultConvertQtumTX)){
+        ExtractYodyTX resultConvertYodyTX;
+        if(!convert.extractionYodyTransactions(resultConvertYodyTX)){
             return nGasFee;
         }
 
         dev::u256 sumGas = dev::u256(0);
-        for(QtumTransaction& qtx : resultConvertQtumTX.first){
+        for(YodyTransaction& qtx : resultConvertYodyTX.first){
             sumGas += qtx.gas() * qtx.gasPrice();
         }
 

@@ -11,7 +11,7 @@ import subprocess
 
 pp = pprint.PrettyPrinter()
 
-class QtumEVMConstantinopleOpcodesTest(BitcoinTestFramework):
+class YodyEVMConstantinopleOpcodesTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -507,4 +507,4 @@ class QtumEVMConstantinopleOpcodesTest(BitcoinTestFramework):
         self.extcodehash_test(should_fail=False)
 
 if __name__ == '__main__':
-    QtumEVMConstantinopleOpcodesTest().main()
+    YodyEVMConstantinopleOpcodesTest().main()

@@ -9,7 +9,7 @@ from test_framework.qtum import *
 import time
 
 
-class QtumDuplicateStakeTest(BitcoinTestFramework):
+class YodyDuplicateStakeTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -179,4 +179,4 @@ class QtumDuplicateStakeTest(BitcoinTestFramework):
 
 
 if __name__ == '__main__':
-    QtumDuplicateStakeTest().main()
+    YodyDuplicateStakeTest().main()

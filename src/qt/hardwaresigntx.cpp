@@ -14,7 +14,7 @@
 
 HardwareSignTx::HardwareSignTx(QWidget *_widget) : QObject(_widget)
 {
-    tool = new QtumHwiTool(this);
+    tool = new YodyHwiTool(this);
     widget = _widget;
 }
 

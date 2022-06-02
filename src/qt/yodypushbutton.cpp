@@ -1,17 +1,17 @@
 #include "qtumpushbutton.h"
 #include <QStylePainter>
 
-QtumPushButton::QtumPushButton(QWidget *parent):
+YodyPushButton::YodyPushButton(QWidget *parent):
     QPushButton(parent),
     m_iconCached(false)
 {}
 
-QtumPushButton::QtumPushButton(const QString &text, QWidget *parent):
+YodyPushButton::YodyPushButton(const QString &text, QWidget *parent):
     QPushButton(text, parent),
     m_iconCached(false)
 {}
 
-void QtumPushButton::paintEvent(QPaintEvent *)
+void YodyPushButton::paintEvent(QPaintEvent *)
 {
     QStylePainter p(this);
     QStyleOptionButton option;
@@ -20,7 +20,7 @@ void QtumPushButton::paintEvent(QPaintEvent *)
     p.drawControl(QStyle::CE_PushButton, option);
 }
 
-void QtumPushButton::updateIcon(QStyleOptionButton &pushbutton)
+void YodyPushButton::updateIcon(QStyleOptionButton &pushbutton)
 {
     // Update sunken icon
     if((pushbutton.state & QStyle::State_Enabled) &&

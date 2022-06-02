@@ -66,8 +66,8 @@
         <translation type="unfinished">ที่อยู่การรับ</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">ที่อยู่ Qtum ของคุณสำหรับการส่งการชำระเงิน โปรดตรวจสอบจำนวนเงินและที่อยู่รับก่อนที่จะส่งเหรียญ</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">ที่อยู่ Yody ของคุณสำหรับการส่งการชำระเงิน โปรดตรวจสอบจำนวนเงินและที่อยู่รับก่อนที่จะส่งเหรียญ</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -232,7 +232,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;ภาพรวม</translation>
@@ -286,8 +286,8 @@
         <translation type="unfinished">กระเป๋าสตางค์:</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>ส่งเหรียญไปยังที่อยู่ Qtum</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>ส่งเหรียญไปยังที่อยู่ Yody</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -318,12 +318,12 @@
         <translation>เข้ารหัสกุญแจส่วนตัวที่เป็นของกระเป๋าสตางค์ของคุณ</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>เซ็นชื่อด้วยข้อความ ที่เก็บ Qtum เพื่อแสดงว่าท่านเป็นเจ้าของ qtum นี้จริง</translation>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
+        <translation>เซ็นชื่อด้วยข้อความ ที่เก็บ Yody เพื่อแสดงว่าท่านเป็นเจ้าของ qtum นี้จริง</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>ตรวจสอบ ข้อความ เพื่อให้แน่ใจว่า การเซ็นต์ชื่อ ด้วยที่เก็บ Qtum แล้ว</translation>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
+        <translation>ตรวจสอบ ข้อความ เพื่อให้แน่ใจว่า การเซ็นต์ชื่อ ด้วยที่เก็บ Yody แล้ว</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -420,8 +420,8 @@
         <translation type="unfinished">ปิดกระเป๋าสตางค์ทั้งหมด</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">แสดง %1 ข้อความช่วยเหลือ เพื่อแสดงรายการ ตัวเลือกที่เป็นไปได้สำหรับ Qtum command-line</translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">แสดง %1 ข้อความช่วยเหลือ เพื่อแสดงรายการ ตัวเลือกที่เป็นไปได้สำหรับ Yody command-line</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -452,10 +452,10 @@
         <translation type="unfinished">%1 ลูกค้า</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n active connection(s) to Qtum network.</numerusform>
+            <numerusform>%n active connection(s) to Yody network.</numerusform>
         </translation>
     </message>
     <message>
@@ -880,16 +880,16 @@
         <translation type="unfinished">&amp;ใช้เงินทอนที่ยังไม่ยืนยัน</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>เปิด Qtum ไคล์เอ็นท์พอร์ต/client port บน router โดยอัตโนมัติ วิธีนี้ใช้ได้เมื่อ router สนับสนุน UPnP และสถานะเปิดใช้งาน</translation>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>เปิด Yody ไคล์เอ็นท์พอร์ต/client port บน router โดยอัตโนมัติ วิธีนี้ใช้ได้เมื่อ router สนับสนุน UPnP และสถานะเปิดใช้งาน</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>จองพอร์ต โดยใช้ &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">เชื่อมต่อกับ Qtum เน็ตเวิร์ก ผ่านพร็อกซี่แบบ SOCKS5</translation>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">เชื่อมต่อกับ Yody เน็ตเวิร์ก ผ่านพร็อกซี่แบบ SOCKS5</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>

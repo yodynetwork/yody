@@ -66,11 +66,11 @@
         <translation type="unfinished">Alamat-alamat penerima</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Berikut ini adalah alamat-alamat Qtum Anda yang digunakan untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin-koin.</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Berikut ini adalah alamat-alamat Yody Anda yang digunakan untuk mengirimkan pembayaran. Selalu periksa jumlah dan alamat penerima sebelum mengirimkan koin-koin.</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Yody addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Berikut ini adalah alamat-alamat qtummu untuk menerima pembayaran. Gunakan tombol 'Buat alamat penerima baru' di tab menerima untuk membuat alamat baru. Tanda tangan hanya bisa digunakan dengan tipe alamat 'warisan'</translation>
     </message>
@@ -235,7 +235,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>QtumApplication</name>
+    <name>YodyApplication</name>
     <message>
         <source>Runaway exception</source>
         <translation type="unfinished">Pengecualian pelarian</translation>
@@ -284,8 +284,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Jumlah</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
-        <translation type="unfinished">Masukkan alamat Qtum (contoh %1)</translation>
+        <source>Enter a Yody address (e.g. %1)</source>
+        <translation type="unfinished">Masukkan alamat Yody (contoh %1)</translation>
     </message>
     <message>
         <source>Unroutable</source>
@@ -373,7 +373,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Kilasan</translation>
@@ -432,8 +432,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Proxy di &lt;b&gt;aktifkan&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Kirim koin ke alamat Qtum</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>Kirim koin ke alamat Yody</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -484,16 +484,16 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Tanda tangani dan kirim pessan...</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Tanda tangani sebuah pesan menggunakan alamat Qtum Anda untuk membuktikan bahwa Anda adalah pemiliknya</translation>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
+        <translation>Tanda tangani sebuah pesan menggunakan alamat Yody Anda untuk membuktikan bahwa Anda adalah pemiliknya</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">&amp;Verifikasi pesan...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Qtum tertentu</translation>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
+        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat Yody tertentu</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -614,12 +614,12 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Terbaru</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction</source>
-        <translation type="unfinished">Muat transaksi Qtum yang ditandatangani seperapat</translation>
+        <source>Load Partially Signed Yody Transaction</source>
+        <translation type="unfinished">Muat transaksi Yody yang ditandatangani seperapat</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction from clipboard</source>
-        <translation type="unfinished">Muat transaksi Qtum yang ditandatangani seperapat dari clipboard</translation>
+        <source>Load Partially Signed Yody Transaction from clipboard</source>
+        <translation type="unfinished">Muat transaksi Yody yang ditandatangani seperapat dari clipboard</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -658,8 +658,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Tutup semua dompet</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah Qtum yang memungkinkan</translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">Tampilkan %1 pesan bantuan untuk mendapatkan daftar opsi baris perintah Yody yang memungkinkan</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -694,10 +694,10 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 klien</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n koneksi yang aktif ke jaringan Qtum</numerusform>
+            <numerusform>%n koneksi yang aktif ke jaringan Yody</numerusform>
         </translation>
     </message>
     <message>
@@ -1099,8 +1099,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ubah alamat pengirim</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
-        <translation type="unfinished">Alamat yang dimasukkan "%1" bukanlah alamat Qtum yang valid.</translation>
+        <source>The entered address "%1" is not a valid Yody address.</source>
+        <translation type="unfinished">Alamat yang dimasukkan "%1" bukanlah alamat Yody yang valid.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -1172,8 +1172,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
-        <translation type="unfinished">%1 akan mengunduh dan menyimpan salinan Qtum block chain.</translation>
+        <source>%1 will download and store a copy of the Yody block chain.</source>
+        <translation type="unfinished">%1 akan mengunduh dan menyimpan salinan Yody block chain.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1262,7 +1262,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
-        <translation type="unfinished">Transaksi-transaksi terkini mungkin belum terlihat dan oleh karenanya, saldo dompet Anda mungkin tidak tepat. Informasi ini akan akurat ketika dompet Anda tersinkronisasi dengan jaringan Qtum, seperti rincian berikut.</translation>
+        <translation type="unfinished">Transaksi-transaksi terkini mungkin belum terlihat dan oleh karenanya, saldo dompet Anda mungkin tidak tepat. Informasi ini akan akurat ketika dompet Anda tersinkronisasi dengan jaringan Yody, seperti rincian berikut.</translation>
     </message>
     <message>
         <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1423,20 +1423,20 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">&amp;Jalur skrip penanda tangan eksternal</translation>
     </message>
     <message>
-        <source>Full path to a Qtum Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
-        <translation type="unfinished">Jalur lengkap ke skrip yang kompatibel dengan Qtum Core (seperti C:\Downloads\hwi.exe atau /Users/you/Downloads/hwi.py). Hati-hati: malware dapat mencuri koin Anda!</translation>
+        <source>Full path to a Yody Core compatible script (e.g. C:\Downloads\hwi.exe or /Users/you/Downloads/hwi.py). Beware: malware can steal your coins!</source>
+        <translation type="unfinished">Jalur lengkap ke skrip yang kompatibel dengan Yody Core (seperti C:\Downloads\hwi.exe atau /Users/you/Downloads/hwi.py). Hati-hati: malware dapat mencuri koin Anda!</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Otomatis membuka port client Qtum di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Otomatis membuka port client Yody di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Petakan port dengan &amp;UPnP</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
-        <translation type="unfinished">Otomatis membuka port client Qtum di router. Hanya berjalan apabila router anda mendukung NAT-PMP dan di-enable. Port eksternal bisa jadi acak. </translation>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <translation type="unfinished">Otomatis membuka port client Yody di router. Hanya berjalan apabila router anda mendukung NAT-PMP dan di-enable. Port eksternal bisa jadi acak. </translation>
     </message>
     <message>
         <source>Map port using NA&amp;T-PMP</source>
@@ -1451,8 +1451,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Terima koneksi-koneksi masuk</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Hubungkan ke jaringan Qtum melalui SOCKS5 proxy.</translation>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Hubungkan ke jaringan Yody melalui SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1519,8 +1519,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">Ingin menunjukkan cara pengaturan koin atau tidak.</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation type="unfinished">Hubungkan kepada Qtum network menggunakan proxy SOCKS5 yang terpisah untuk servis Tor onion</translation>
+        <source>Connect to the Yody network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation type="unfinished">Hubungkan kepada Yody network menggunakan proxy SOCKS5 yang terpisah untuk servis Tor onion</translation>
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -1603,8 +1603,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Qtum ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan Yody ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1814,8 +1814,8 @@ Akibat celah keamanan yang meluas di BIP70, sangat disarankan agar mengabaikan p
 Jika Anda menerima kesalahan ini, Anda harus meminta pedagang untuk memberikan URI yang kompatibel dengan BIP21. </translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
-        <translation type="unfinished">URI tidak bisa dimengerti! Hal ini bisa disebabkan karena alamat Qtum yang tidak sah atau parameter URI yang tidak tepat.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
+        <translation type="unfinished">URI tidak bisa dimengerti! Hal ini bisa disebabkan karena alamat Yody yang tidak sah atau parameter URI yang tidak tepat.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -2267,8 +2267,8 @@ Untuk informasi lebih lanjut tentang menggunakan konsol ini, ketik %6.
         <translation type="unfinished">&amp;Pesan:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
-        <translation type="unfinished">Pesan opsional untuk dilampirkan ke permintaan pembayaran, yang akan ditampilkan ketika permintaan dibuka. Catatan: Pesan tidak akan dikirim dengan pembayaran melalui jaringan Qtum.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
+        <translation type="unfinished">Pesan opsional untuk dilampirkan ke permintaan pembayaran, yang akan ditampilkan ketika permintaan dibuka. Catatan: Pesan tidak akan dikirim dengan pembayaran melalui jaringan Yody.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2626,7 +2626,7 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation type="unfinished">bu&amp;at Tidak ditandai</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Yody Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation type="unfinished">Membuat sebagian tertanda transaksi qtum (PSBT) untuk digunakan dengan contoh dompet offline %1, atau dompet yang kompatibel dengan PSBT</translation>
     </message>
     <message>
@@ -2763,8 +2763,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
-        <translation type="unfinished">Peringatan: Alamat Qtum tidak valid</translation>
+        <source>Warning: Invalid Yody address</source>
+        <translation type="unfinished">Peringatan: Alamat Yody tidak valid</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2798,8 +2798,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation type="unfinished">Pilih alamat yang telah digunakan sebelumnya</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
-        <translation type="unfinished">Alamat Qtum untuk mengirim pembayaran</translation>
+        <source>The Yody address to send the payment to</source>
+        <translation type="unfinished">Alamat Yody untuk mengirim pembayaran</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -2846,8 +2846,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation type="unfinished">Masukkan label untuk alamat ini untuk dimasukan dalam daftar alamat yang pernah digunakan</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
-        <translation type="unfinished">Pesan yang dilampirkan ke qtum: URI yang akan disimpan dengan transaksi untuk referensi Anda. Catatan: Pesan ini tidak akan dikirim melalui jaringan Qtum.</translation>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Pesan yang dilampirkan ke qtum: URI yang akan disimpan dengan transaksi untuk referensi Anda. Catatan: Pesan ini tidak akan dikirim melalui jaringan Yody.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2873,8 +2873,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation type="unfinished">Anda dapat menandatangani pesan / perjanjian dengan alamat Anda untuk membuktikan bahwa Anda dapat menerima qtum yang dikirimkan kepada mereka. Berhati-hatilah untuk tidak menandatangani apa pun yang samar-samar atau acak, karena serangan phishing mungkin mencoba menipu Anda untuk menandatangani identitas Anda kepada mereka. Hanya tandatangani pernyataan terperinci yang Anda setujui.</translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
-        <translation type="unfinished">Alamat Qtum untuk menandatangani pesan</translation>
+        <source>The Yody address to sign the message with</source>
+        <translation type="unfinished">Alamat Yody untuk menandatangani pesan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2901,8 +2901,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation>Salin tanda tangan terpilih ke sistem klipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
-        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Qtum ini</translation>
+        <source>Sign the message to prove you own this Yody address</source>
+        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat Yody ini</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2925,8 +2925,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation type="unfinished">Masukkan alamat penerima, pesan (pastikan Anda menyalin persis jeda baris, spasi, tab, dll) dan tanda tangan di bawah untuk memverifikasi pesan. Berhati-hatilah untuk tidak memberi informasi lebih ke tanda tangan daripada apa yang ada dalam pesan yang ditandatangani itu sendiri, untuk menghindari dikelabui oleh serangan man-in-the-middle. Perhatikan bahwa ini hanya membuktikan pihak penandatangan menerima dengan alamat, tapi tidak dapat membuktikan pengiriman dari transaksi apa pun!</translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
-        <translation type="unfinished">Alamat Qtum yang menandatangani pesan</translation>
+        <source>The Yody address the message was signed with</source>
+        <translation type="unfinished">Alamat Yody yang menandatangani pesan</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -2937,8 +2937,8 @@ Catatan: Karena biaya dihitung berdasarkan per byte, tarif biaya "100 satoshi pe
         <translation type="unfinished"> Tanda tangan diberikan saat pesan telah ditandatangani</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
-        <translation>Verifikasi pesan untuk memastikannya ditandatangani dengan alamat Qtum tersebut</translation>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
+        <translation>Verifikasi pesan untuk memastikannya ditandatangani dengan alamat Yody tersebut</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

@@ -53,7 +53,7 @@ macOS comes with a built-in Terminal located in:
 ### 1. Xcode Command Line Tools
 
 The Xcode Command Line Tools are a collection of build tools for macOS.
-These tools must be installed in order to build Qtum Core from source.
+These tools must be installed in order to build Yody Core from source.
 
 To install, run the following command from your terminal:
 
@@ -85,10 +85,10 @@ To install, run the following from your terminal:
 brew install cmake automake libtool boost --c++11 --without-single --without-static pkg-config protobuf libevent gmp
 ```
 
-### 4. Clone Qtum repository
+### 4. Clone Yody repository
 
 `git` should already be installed by default on your system.
-Now that all the required dependencies are installed, let's clone the Qtum Core repository to a directory.
+Now that all the required dependencies are installed, let's clone the Yody Core repository to a directory.
 All build scripts and commands will run from this directory.
 
 ``` bash
@@ -130,7 +130,7 @@ brew install sqlite
 
 ###### Qt
 
-Qtum Core includes a GUI built with the cross-platform Qt Framework.
+Yody Core includes a GUI built with the cross-platform Qt Framework.
 To compile the GUI, we need to install `qt@5`.
 Skip if you don't intend to use the GUI.
 
@@ -213,7 +213,7 @@ brew install python
 
 #### Deploy Dependencies
 
-You can deploy a `.dmg` containing the Qtum Core application using `make deploy`.
+You can deploy a `.dmg` containing the Yody Core application using `make deploy`.
 This command depends on a couple of python packages, so it is required that you have `python` installed.
 
 Ensuring that `python` is installed, you can install the deploy dependencies by running the following commands in your terminal:
@@ -226,11 +226,11 @@ brew install librsvg
 pip3 install ds_store mac_alias
 ```
 
-## Building Qtum Core
+## Building Yody Core
 
 ### 1. Configuration
 
-There are many ways to configure Qtum Core, here are a few common examples:
+There are many ways to configure Yody Core, here are a few common examples:
 
 ##### Wallet (BDB + SQlite) Support, No GUI:
 
@@ -275,7 +275,7 @@ Examine the output of the following command for a full list of configuration opt
 ### 2. Compile
 
 After configuration, you are ready to compile.
-Run the following in your terminal to compile Qtum Core:
+Run the following in your terminal to compile Yody Core:
 
 ``` bash
 make        # use "-j N" here for N parallel jobs
@@ -290,9 +290,9 @@ You can also create a  `.dmg` containing the `.app` bundle by running the follow
 make deploy
 ```
 
-## Running Qtum Core
+## Running Yody Core
 
-Qtum Core should now be available at `./src/qtumd`.
+Yody Core should now be available at `./src/qtumd`.
 If you compiled support for the GUI, it should be available at `./src/qt/qtum-qt`.
 
 The first time you run `qtumd` or `qtum-qt`, it will start downloading the blockchain.
@@ -301,23 +301,23 @@ This process could take many hours, or even days on slower than average systems.
 By default, blockchain and wallet data files will be stored in:
 
 ``` bash
-/Users/${USER}/Library/Application Support/Qtum/
+/Users/${USER}/Library/Application Support/Yody/
 ```
 
 Before running, you may create an empty configuration file:
 
 ```shell
-mkdir -p "/Users/${USER}/Library/Application Support/Qtum"
+mkdir -p "/Users/${USER}/Library/Application Support/Yody"
 
-touch "/Users/${USER}/Library/Application Support/Qtum/qtum.conf"
+touch "/Users/${USER}/Library/Application Support/Yody/qtum.conf"
 
-chmod 600 "/Users/${USER}/Library/Application Support/Qtum/qtum.conf"
+chmod 600 "/Users/${USER}/Library/Application Support/Yody/qtum.conf"
 ```
 
 You can monitor the download process by looking at the debug.log file:
 
 ```shell
-tail -f $HOME/Library/Application\ Support/Qtum/debug.log
+tail -f $HOME/Library/Application\ Support/Yody/debug.log
 ```
 
 ## Other commands:

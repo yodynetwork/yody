@@ -29,7 +29,7 @@ void parseParam(const UniValue& val, std::vector<boost::optional<dev::h256>> &h2
 /**
  * @brief The CallToken class Read available token data
  */
-class CallToken : public QtumTokenExec, public QtumToken
+class CallToken : public YodyTokenExec, public YodyToken
 {
 public:
     CallToken(ChainstateManager &_chainman);

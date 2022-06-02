@@ -11,7 +11,7 @@ import subprocess
 
 pp = pprint.PrettyPrinter()
 
-class QtumEVMLondonTest(BitcoinTestFramework):
+class YodyEVMLondonTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -145,4 +145,4 @@ class QtumEVMLondonTest(BitcoinTestFramework):
         assert(self.contract_address not in self.node.listcontracts())
         
 if __name__ == '__main__':
-    QtumEVMLondonTest().main()
+    YodyEVMLondonTest().main()

@@ -66,11 +66,11 @@
         <translation type="unfinished">כתובות לקבלה</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">אלה כתובות הקטום שלך לשליחת תשלומים. חשוב לבדוק את הסכום ואת הכתובת המקבלת לפני שליחת מטבעות.</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Yody addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">אלה כתובת הקטום שלך לקבלת תשלומים. ניתן להשתמש בכפתור „יצירת כתובת קבלה חדשה” בלשונית הקבלה ליצירת כתובות חדשות.
 חתימה אפשרית רק עבור כתובות מסוג „legacy”.</translation>
@@ -235,7 +235,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>QtumApplication</name>
+    <name>YodyApplication</name>
     <message>
         <source>A fatal error occurred. %1 can no longer continue safely and will quit.</source>
         <translation type="unfinished">אירעה שגיאה חמורה, %1 לא יכול להמשיך בבטחון ולכן יופסק.</translation>
@@ -268,7 +268,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">סכום</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
+        <source>Enter a Yody address (e.g. %1)</source>
         <translation type="unfinished">נא לספק כתובת קטום  (למשל: %1)</translation>
     </message>
     <message>
@@ -367,7 +367,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
 </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;סקירה</translation>
@@ -430,7 +430,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">שרת הפרוקסי &lt;b&gt;פעיל&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
+        <source>Send coins to a Yody address</source>
         <translation>שליחת מטבעות לכתובת קטום</translation>
     </message>
     <message>
@@ -462,11 +462,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>הצפנת המפתחות הפרטיים ששייכים לארנק שלך</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
         <translation>חתום על הודעות עם כתובות הקטום שלך כדי להוכיח שהן בבעלותך</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
         <translation>אמת הודעות כדי להבטיח שהן נחתמו עם כתובת קטום מסוימות</translation>
     </message>
     <message>
@@ -537,11 +537,11 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>עדכני</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction</source>
+        <source>Load Partially Signed Yody Transaction</source>
         <translation type="unfinished">העלה עיסקת קטום חתומה חלקית</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+        <source>Load Partially Signed Yody Transaction from clipboard</source>
         <translation type="unfinished">טעינת עסקת קטום חתומה חלקית מלוח הגזירים</translation>
     </message>
     <message>
@@ -581,7 +581,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">סגירת כל הארנקים</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
         <translation type="unfinished">יש להציג את הודעת העזרה של %1 כדי להציג רשימה עם אפשרויות שורת פקודה לקטום</translation>
     </message>
     <message>
@@ -622,7 +622,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">לקוח %1</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -983,7 +983,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">עריכת כתובת השליחה</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <source>The entered address "%1" is not a valid Yody address.</source>
         <translation type="unfinished">הכתובת שסיפקת "%1" אינה כתובת קטום תקנית.</translation>
     </message>
     <message>
@@ -1029,7 +1029,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
 <context>
     <name>Intro</name>
     <message>
-        <source>Qtum</source>
+        <source>Yody</source>
         <translation type="unfinished">קטום</translation>
     </message>
     <message>
@@ -1049,7 +1049,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
+        <source>%1 will download and store a copy of the Yody block chain.</source>
         <translation type="unfinished">%1 תוריד ותאחסן עותק של שרשרת הבלוקים של קטום.</translation>
     </message>
     <message>
@@ -1276,7 +1276,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">עודף &amp;בלתי מאושר מההשקעה</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>פתיחת הפתחה של קטום בנתב באופן אוטומטי. עובד רק אם UPnP מופעל ונתמך בנתב.</translation>
     </message>
     <message>
@@ -1292,7 +1292,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">לאפשר חיבורים &amp;נכנסים</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
         <translation type="unfinished">התחבר לרשת הקטום דרך פרוקסי SOCKS5.</translation>
     </message>
     <message>
@@ -1356,7 +1356,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">האם להציג תכונות שליטת מטבע או לא.</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <source>Connect to the Yody network through a separate SOCKS5 proxy for Tor onion services.</source>
         <translation type="unfinished">התחבר לרשת קטום דרך פרוקסי נפרד SOCKS5 proxy לשרותי שכבות בצל (onion services).</translation>
     </message>
     <message>
@@ -1431,7 +1431,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>טופס</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
         <translation>המידע המוצג עשוי להיות מיושן. הארנק שלך מסתנכרן באופן אוטומטי עם רשת הקטום לאחר יצירת החיבור, אך התהליך טרם הסתיים.</translation>
     </message>
     <message>
@@ -1637,7 +1637,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">'//:qtum' אינה כתובת תקנית. נא להשתמש ב־"qtum:‎"‏ במקום.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
         <translation type="unfinished">לא ניתן לנתח את כתובת המשאב! מצב זה יכול לקרות עקב כתובת קטום שגויה או פרמטרים שגויים בכתובת המשאב.</translation>
     </message>
     <message>
@@ -1996,7 +1996,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">הו&amp;דעה:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
         <translation type="unfinished">הודעת רשות לצירוף לבקשת התשלום שתוצג בעת פתיחת הבקשה. לתשומת לבך: ההודעה לא תישלח עם התשלום ברשת קטום.</translation>
     </message>
     <message>
@@ -2313,7 +2313,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">י&amp;צירת לא חתומה</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Yody Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation type="unfinished">יוצר עסקת קטום חתומה חלקית (PSBT) לשימוש עם ארנק %1 לא מחובר למשל, או עם PSBT ארנק חומרה תואם.</translation>
     </message>
     <message>
@@ -2361,7 +2361,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">תוכלו להגדיל את העמלה מאוחר יותר (איתות Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Qtum Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Yody Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation type="unfinished">בבקשה לסקור את העיסקה המוצעת. הדבר יצור עיסקת קטום חתומה חלקית (PSBT) אשר ניתן לשמור או להעתיק ואז לחתום עם למשל ארנק לא מקוון %1, או עם ארנק חומרה תואם-PSBT.</translation>
     </message>
     <message>
@@ -2432,7 +2432,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
+        <source>Warning: Invalid Yody address</source>
         <translation type="unfinished">אזהרה: כתובת ביטקיון שגויה</translation>
     </message>
     <message>
@@ -2471,7 +2471,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">בחירת כתובת שהייתה בשימוש</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
+        <source>The Yody address to send the payment to</source>
         <translation type="unfinished">כתובת הקטום של המוטב</translation>
     </message>
     <message>
@@ -2515,7 +2515,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">יש לתת תווית לכתובת זו כדי להוסיף אותה לרשימת הכתובות בשימוש</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
         <translation type="unfinished">הודעה שצורפה לקטום: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הקטום.</translation>
     </message>
     <message>
@@ -2542,7 +2542,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">אפשר לחתום על הודעות/הסכמים באמצעות הכתובות שלך, כדי להוכיח שבאפשרותך לקבל את הביטקוינים הנשלחים אליהן. יש להיזהר ולא לחתום על תוכן עמום או אקראי, מכיוון שתקיפות דיוג עשויות לנסות לגנוב את זהותך. יש לחתום רק על הצהרות מפורטות שהנך מסכים/ה להן.</translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
+        <source>The Yody address to sign the message with</source>
         <translation type="unfinished">כתובת הקטום איתה לחתום את ההודעה</translation>
     </message>
     <message>
@@ -2566,7 +2566,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>העתקת החתימה הנוכחית ללוח הגזירים</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
+        <source>Sign the message to prove you own this Yody address</source>
         <translation>ניתן לחתום על ההודעה כדי להוכיח שכתובת קטום זו בבעלותך</translation>
     </message>
     <message>
@@ -2590,7 +2590,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">יש להזין את כתובת הנמען, ההודעה (נא לוודא שהעתקת במדויק את תווי קפיצות השורה, רווחים, טאבים וכדומה). והחתימה מתחת אשר מאמתת את ההודעה. יש להיזהר שלא לקרוא לתוך החתימה יותר מאשר בהודעה החתומה עצמה, כדי להימנע מניצול לרעה של המתווך שבדרך. יש לשים לב שהדבר רק מוכיח שהצד החותם מקבל עם הכתובת. הדבר אינו מוכיח משלוח כלשהו של עסקה!</translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
+        <source>The Yody address the message was signed with</source>
         <translation type="unfinished">כתובת הקטום שאיתה נחתמה ההודעה</translation>
     </message>
     <message>
@@ -2602,7 +2602,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">החתימה שניתנת כאשר ההודעה נחתמה</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
         <translation>ניתן לאמת את ההודעה כדי להבטיח שהיא נחתמה עם כתובת הקטום הנתונה</translation>
     </message>
     <message>

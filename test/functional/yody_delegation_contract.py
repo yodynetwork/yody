@@ -14,7 +14,7 @@ pp = pprint.PrettyPrinter()
 
 OFFLINE_STAKING_ACTIVATION_HEIGHT = 3*COINBASE_MATURITY+101
 
-class QtumSimpleDelegationContractTest(BitcoinTestFramework):
+class YodySimpleDelegationContractTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 6
@@ -621,4 +621,4 @@ class QtumSimpleDelegationContractTest(BitcoinTestFramework):
         self.sync_all()
 
 if __name__ == '__main__':
-    QtumSimpleDelegationContractTest().main()
+    YodySimpleDelegationContractTest().main()

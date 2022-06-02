@@ -42,7 +42,7 @@ class HelpMessageDialog;
 class ModalOverlay;
 class TitleBar;
 class NavigationBar;
-class QtumVersionChecker;
+class YodyVersionChecker;
 enum class SynchronizationState;
 
 namespace interfaces {
@@ -204,7 +204,7 @@ private:
     HelpMessageDialog* helpMessageDialog = nullptr;
     ModalOverlay* modalOverlay = nullptr;
     ModalOverlay *modalBackupOverlay = nullptr;
-    QtumVersionChecker *qtumVersionChecker = nullptr;
+    YodyVersionChecker *qtumVersionChecker = nullptr;
 
     QMenu* m_network_context_menu = new QMenu(this);
 

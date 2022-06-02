@@ -1,4 +1,4 @@
-# Qtum Core file system
+# Yody Core file system
 
 **Contents**
 
@@ -20,15 +20,15 @@
 
 ## Data directory location
 
-The data directory is the default location where the Qtum Core files are stored.
+The data directory is the default location where the Yody Core files are stored.
 
 1. The default data directory paths for supported platforms are:
 
 Platform | Data directory path
 ---------|--------------------
 Linux    | `$HOME/.qtum/`
-macOS    | `$HOME/Library/Application Support/Qtum/`
-Windows  | `%APPDATA%\Qtum\` <sup>[\[1\]](#note1)</sup>
+macOS    | `$HOME/Library/Application Support/Yody/`
+Windows  | `%APPDATA%\Yody\` <sup>[\[1\]](#note1)</sup>
 
 2. A custom data directory path can be specified with the `-datadir` option.
 
@@ -47,7 +47,7 @@ Subdirectory       | File(s)               | Description
 -------------------|-----------------------|------------
 `blocks/`          |                       | Blocks directory; can be specified by `-blocksdir` option (except for `blocks/index/`)
 `blocks/index/`    | LevelDB database      | Block index; `-blocksdir` option does not affect this path
-`blocks/`          | `blkNNNNN.dat`<sup>[\[2\]](#note2)</sup> | Actual Qtum blocks (in network format, dumped in raw on disk, 128 MiB per file)
+`blocks/`          | `blkNNNNN.dat`<sup>[\[2\]](#note2)</sup> | Actual Yody blocks (in network format, dumped in raw on disk, 128 MiB per file)
 `blocks/`          | `revNNNNN.dat`<sup>[\[2\]](#note2)</sup> | Block undo data (custom format)
 `chainstate/`      | LevelDB database      | Blockchain state (a compact representation of all currently unspent transaction outputs (UTXOs) and metadata about the transactions they are from)
 `indexes/txindex/` | LevelDB database      | Transaction index; *optional*, used if `-txindex=1`
@@ -110,7 +110,7 @@ Subdirectory | File                 | Description
 
 ## Legacy subdirectories and files
 
-These subdirectories and files are no longer used by Qtum Core:
+These subdirectories and files are no longer used by Yody Core:
 
 Path           | Description | Repository notes
 ---------------|-------------|-----------------

@@ -1061,7 +1061,7 @@ bool ExtractDestination(const COutPoint& prevout, const CScript& scriptPubKey, C
         return true;
     }
     else if (whichType == TxoutType::CREATE) {
-        addressRet = PKHash(uint160(QtumState::createQtumAddress(uintToh256(prevout.hash), prevout.n).asBytes()));
+        addressRet = PKHash(uint160(YodyState::createYodyAddress(uintToh256(prevout.hash), prevout.n).asBytes()));
         return true;
     }
     return false;

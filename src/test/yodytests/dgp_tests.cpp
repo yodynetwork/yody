@@ -329,22 +329,22 @@ void createTestContractsAndBlocks(TestChain100Setup* testChain100Setup, const va
     };
 
     dev::h256 hashTemp(hash);
-    std::vector<QtumTransaction> txs;
-    txs.push_back(createQtumTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, addr, 0));
-    txs.push_back(createQtumTransaction(code1, 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, addr, 0));
+    std::vector<YodyTransaction> txs;
+    txs.push_back(createYodyTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, addr, 0));
+    txs.push_back(createYodyTransaction(code1, 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, addr, 0));
     auto result = executeBC(txs, chainman);
 
     generateBlocks(50);
     txs.clear();
-    txs.push_back(createQtumTransaction(code2, 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[4], 0, dev::u256(500000), dev::u256(1), ++hashTemp, addr, 0));
+    txs.push_back(createYodyTransaction(code2, 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[4], 0, dev::u256(500000), dev::u256(1), ++hashTemp, addr, 0));
     result = executeBC(txs, chainman);
 
     generateBlocks(50);
     txs.clear();
-    txs.push_back(createQtumTransaction(code3, 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[6], 0, dev::u256(500000), dev::u256(1), ++hashTemp, addr, 0));
+    txs.push_back(createYodyTransaction(code3, 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[6], 0, dev::u256(500000), dev::u256(1), ++hashTemp, addr, 0));
     result = executeBC(txs, chainman);
 }
 
@@ -366,7 +366,7 @@ BOOST_FIXTURE_TEST_SUITE(dgp_tests, TestChain100Setup)
 BOOST_AUTO_TEST_CASE(gas_schedule_default_state_test1){
     initState();
     contractLoading();
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     dev::eth::EVMSchedule schedule = qtumDGP.getGasSchedule(100);
     BOOST_CHECK(compareEVMSchedule(schedule, dev::eth::EIP158Schedule));
 }
@@ -374,7 +374,7 @@ BOOST_AUTO_TEST_CASE(gas_schedule_default_state_test1){
 BOOST_AUTO_TEST_CASE(gas_schedule_default_state_test2){
     initState();
     contractLoading();
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     dev::eth::EVMSchedule schedule = qtumDGP.getGasSchedule(0);
     BOOST_CHECK(compareEVMSchedule(schedule, dev::eth::EIP158Schedule));
 }
@@ -382,7 +382,7 @@ BOOST_AUTO_TEST_CASE(gas_schedule_default_state_test2){
 BOOST_AUTO_TEST_CASE(gas_schedule_default_state_test3){
     initState();
     contractLoading();
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     int coinbaseMaturity = Params().GetConsensus().CoinbaseMaturity(0);
     dev::eth::EVMSchedule schedule = qtumDGP.getGasSchedule(coinbaseMaturity + 900);
     BOOST_CHECK(compareEVMSchedule(schedule, dev::eth::LondonSchedule));
@@ -393,13 +393,13 @@ BOOST_AUTO_TEST_CASE(gas_schedule_one_paramsInstance_introductory_block_1_test1)
     contractLoading();
 
     dev::h256 hashTemp(hash);
-    std::vector<QtumTransaction> txs;
-    txs.push_back(createQtumTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, GasScheduleDGP, 0));
-    txs.push_back(createQtumTransaction(code[1], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, GasScheduleDGP, 0));
+    std::vector<YodyTransaction> txs;
+    txs.push_back(createYodyTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, GasScheduleDGP, 0));
+    txs.push_back(createYodyTransaction(code[1], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, GasScheduleDGP, 0));
     auto result = executeBC(txs, *m_node.chainman);
 
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     dev::eth::EVMSchedule schedule = qtumDGP.getGasSchedule(0);
     BOOST_CHECK(compareEVMSchedule(schedule, dev::eth::EIP158Schedule));
 }
@@ -409,13 +409,13 @@ BOOST_AUTO_TEST_CASE(gas_schedule_one_paramsInstance_introductory_block_1_test2)
     contractLoading();
 
     dev::h256 hashTemp(hash);
-    std::vector<QtumTransaction> txs;
-    txs.push_back(createQtumTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, GasScheduleDGP, 0));
-    txs.push_back(createQtumTransaction(code[1], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, GasScheduleDGP, 0));
+    std::vector<YodyTransaction> txs;
+    txs.push_back(createYodyTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, GasScheduleDGP, 0));
+    txs.push_back(createYodyTransaction(code[1], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, GasScheduleDGP, 0));
     auto result = executeBC(txs, *m_node.chainman);
 
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     int coinbaseMaturity = Params().GetConsensus().CoinbaseMaturity(0);
     dev::eth::EVMSchedule schedule = qtumDGP.getGasSchedule(coinbaseMaturity + 2); // After initializing the tests, the height of the chain 502
     BOOST_CHECK(compareEVMSchedule(schedule, EVMScheduleContractGasSchedule));
@@ -425,7 +425,7 @@ BOOST_AUTO_TEST_CASE(gas_schedule_passage_from_0_to_130_three_paramsInstance_tes
 //    initState();
     contractLoading();    
     createTestContractsAndBlocks(this, code[1], code[3], code[5], GasScheduleDGP, *m_node.chainman);
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     size_t sizeList = Params().GetConsensus().CoinbaseMaturity(0) + 800;
     for(size_t i = 0; i < sizeList; i++){
         dev::eth::EVMSchedule schedule = qtumDGP.getGasSchedule(i);
@@ -440,7 +440,7 @@ BOOST_AUTO_TEST_CASE(gas_schedule_passage_from_130_to_0_three_paramsInstance_tes
     contractLoading();
     
     createTestContractsAndBlocks(this, code[1], code[3], code[5], GasScheduleDGP, *m_node.chainman);
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     size_t sizeList = Params().GetConsensus().CoinbaseMaturity(0) + 800;
     for(size_t i = sizeList; i > 0; i--){
         dev::eth::EVMSchedule schedule = qtumDGP.getGasSchedule(i);
@@ -453,7 +453,7 @@ BOOST_AUTO_TEST_CASE(gas_schedule_passage_from_130_to_0_three_paramsInstance_tes
 BOOST_AUTO_TEST_CASE(block_size_default_state_test1){
     initState();
     contractLoading();
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     uint32_t nHeight = 100;
     uint32_t blocktimeDownscaleFactor = Params().GetConsensus().BlocktimeDownscaleFactor(nHeight);
     uint32_t blockSize = qtumDGP.getBlockSize(nHeight);
@@ -463,7 +463,7 @@ BOOST_AUTO_TEST_CASE(block_size_default_state_test1){
 BOOST_AUTO_TEST_CASE(block_size_default_state_test2){
     initState();
     contractLoading();
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     uint32_t nHeight = 0;
     uint32_t blocktimeDownscaleFactor = Params().GetConsensus().BlocktimeDownscaleFactor(nHeight);
     uint32_t blockSize = qtumDGP.getBlockSize(0);
@@ -475,13 +475,13 @@ BOOST_AUTO_TEST_CASE(block_size_one_paramsInstance_introductory_block_1_test1){
     contractLoading();
 
     dev::h256 hashTemp(hash);
-    std::vector<QtumTransaction> txs;
-    txs.push_back(createQtumTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, BlockSizeDGP, 0));
-    txs.push_back(createQtumTransaction(code[7], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, BlockSizeDGP, 0));
+    std::vector<YodyTransaction> txs;
+    txs.push_back(createYodyTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, BlockSizeDGP, 0));
+    txs.push_back(createYodyTransaction(code[7], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, BlockSizeDGP, 0));
     auto result = executeBC(txs, *m_node.chainman);
 
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     uint32_t nHeight = 0;
     uint32_t blocktimeDownscaleFactor = Params().GetConsensus().BlocktimeDownscaleFactor(nHeight);
     uint32_t blockSize = qtumDGP.getBlockSize(nHeight);
@@ -493,13 +493,13 @@ BOOST_AUTO_TEST_CASE(block_size_one_paramsInstance_introductory_block_1_test2){
     contractLoading();
 
     dev::h256 hashTemp(hash);
-    std::vector<QtumTransaction> txs;
-    txs.push_back(createQtumTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, BlockSizeDGP, 0));
-    txs.push_back(createQtumTransaction(code[7], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, BlockSizeDGP, 0));
+    std::vector<YodyTransaction> txs;
+    txs.push_back(createYodyTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, BlockSizeDGP, 0));
+    txs.push_back(createYodyTransaction(code[7], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, BlockSizeDGP, 0));
     auto result = executeBC(txs, *m_node.chainman);
 
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     int coinbaseMaturity = Params().GetConsensus().CoinbaseMaturity(0);
     uint32_t blockSize = qtumDGP.getBlockSize(coinbaseMaturity + 2);
     BOOST_CHECK(blockSize == 1000000);
@@ -510,7 +510,7 @@ BOOST_AUTO_TEST_CASE(block_size_passage_from_0_to_130_three_paramsInstance_test)
     contractLoading();
     
     createTestContractsAndBlocks(this, code[7], code[8], code[9], BlockSizeDGP, *m_node.chainman);
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     size_t sizeList = Params().GetConsensus().CoinbaseMaturity(0) + 800;
     for(size_t i = 0; i < sizeList; i++){
         uint32_t blocktimeDownscaleFactor = Params().GetConsensus().BlocktimeDownscaleFactor(i);
@@ -525,7 +525,7 @@ BOOST_AUTO_TEST_CASE(block_size_passage_from_130_to_0_three_paramsInstance_test)
     contractLoading();
     
     createTestContractsAndBlocks(this, code[7], code[8], code[9], BlockSizeDGP, *m_node.chainman);
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     size_t sizeList = Params().GetConsensus().CoinbaseMaturity(0) + 800;
     for(size_t i = sizeList; i > 0; i--){
         uint32_t blocktimeDownscaleFactor = Params().GetConsensus().BlocktimeDownscaleFactor(i);
@@ -538,7 +538,7 @@ BOOST_AUTO_TEST_CASE(block_size_passage_from_130_to_0_three_paramsInstance_test)
 BOOST_AUTO_TEST_CASE(min_gas_price_default_state_test1){
     initState();
     contractLoading();
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     uint64_t minGasPrice = qtumDGP.getMinGasPrice(100);
     BOOST_CHECK(minGasPrice == DEFAULT_MIN_GAS_PRICE_DGP);
 }
@@ -546,7 +546,7 @@ BOOST_AUTO_TEST_CASE(min_gas_price_default_state_test1){
 BOOST_AUTO_TEST_CASE(min_gas_price_default_state_test2){
     initState();
     contractLoading();
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     uint64_t minGasPrice = qtumDGP.getMinGasPrice(0);
     BOOST_CHECK(minGasPrice == DEFAULT_MIN_GAS_PRICE_DGP);
 }
@@ -556,13 +556,13 @@ BOOST_AUTO_TEST_CASE(min_gas_price_one_paramsInstance_introductory_block_1_test1
     contractLoading();
 
     dev::h256 hashTemp(hash);
-    std::vector<QtumTransaction> txs;
-    txs.push_back(createQtumTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, GasPriceDGP, 0));
-    txs.push_back(createQtumTransaction(code[10], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, GasPriceDGP, 0));
+    std::vector<YodyTransaction> txs;
+    txs.push_back(createYodyTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, GasPriceDGP, 0));
+    txs.push_back(createYodyTransaction(code[10], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, GasPriceDGP, 0));
     auto result = executeBC(txs, *m_node.chainman);
 
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     uint64_t minGasPrice = qtumDGP.getMinGasPrice(0);
     BOOST_CHECK(minGasPrice == DEFAULT_MIN_GAS_PRICE_DGP);
 }
@@ -572,13 +572,13 @@ BOOST_AUTO_TEST_CASE(min_gas_price_one_paramsInstance_introductory_block_1_test2
     contractLoading();
 
     dev::h256 hashTemp(hash);
-    std::vector<QtumTransaction> txs;
-    txs.push_back(createQtumTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, GasPriceDGP, 0));
-    txs.push_back(createQtumTransaction(code[10], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
-    txs.push_back(createQtumTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, GasPriceDGP, 0));
+    std::vector<YodyTransaction> txs;
+    txs.push_back(createYodyTransaction(code[0], 0, dev::u256(500000), dev::u256(1), hashTemp, GasPriceDGP, 0));
+    txs.push_back(createYodyTransaction(code[10], 0, dev::u256(500000), dev::u256(1), ++hashTemp, dev::Address(), 0));
+    txs.push_back(createYodyTransaction(code[2], 0, dev::u256(500000), dev::u256(1), ++hashTemp, GasPriceDGP, 0));
     auto result = executeBC(txs, *m_node.chainman);
 
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     int coinbaseMaturity = Params().GetConsensus().CoinbaseMaturity(0);
     uint64_t minGasPrice = qtumDGP.getMinGasPrice(coinbaseMaturity + 2);
     BOOST_CHECK(minGasPrice == 13);
@@ -589,7 +589,7 @@ BOOST_AUTO_TEST_CASE(min_gas_price_passage_from_0_to_130_three_paramsInstance_te
     contractLoading();
     
     createTestContractsAndBlocks(this, code[10], code[11], code[12], GasPriceDGP, *m_node.chainman);
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     size_t sizeList = Params().GetConsensus().CoinbaseMaturity(0) + 800;
     for(size_t i = 0; i < sizeList; i++){
         uint64_t minGasPrice = qtumDGP.getMinGasPrice(i);
@@ -603,7 +603,7 @@ BOOST_AUTO_TEST_CASE(min_gas_price_passage_from_130_to_0_three_paramsInstance_te
     contractLoading();
     
     createTestContractsAndBlocks(this, code[10], code[11], code[12], GasPriceDGP, *m_node.chainman);
-    QtumDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
+    YodyDGP qtumDGP(globalState.get(), m_node.chainman->ActiveChainstate());
     size_t sizeList = Params().GetConsensus().CoinbaseMaturity(0) + 800;
     for(size_t i = sizeList; i > 0; i--){
         uint64_t minGasPrice = qtumDGP.getMinGasPrice(i);

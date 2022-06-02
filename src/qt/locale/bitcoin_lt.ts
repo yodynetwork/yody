@@ -66,8 +66,8 @@
         <translation type="unfinished">Gavimo adresai</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Tai yra jūsų Qtum adresai išeinantiems mokėjimams. Visada pasitikrinkite sumą ir gavėjo adresą prieš siunčiant lėšas.</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Tai yra jūsų Yody adresai išeinantiems mokėjimams. Visada pasitikrinkite sumą ir gavėjo adresą prieš siunčiant lėšas.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -213,7 +213,7 @@
     </message>
 </context>
 <context>
-    <name>QtumApplication</name>
+    <name>YodyApplication</name>
     <message>
         <source>Internal error</source>
         <translation type="unfinished">Vidinė klaida</translation>
@@ -242,8 +242,8 @@
         <translation type="unfinished">Suma</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
-        <translation type="unfinished">Įveskite Qtum adresą (pvz., %1)</translation>
+        <source>Enter a Yody address (e.g. %1)</source>
+        <translation type="unfinished">Įveskite Yody adresą (pvz., %1)</translation>
     </message>
     <message>
         <source>Internal</source>
@@ -323,7 +323,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Apžvalga</translation>
@@ -386,8 +386,8 @@
         <translation type="unfinished">Tarpinis serveris yra &lt;b&gt;įgalintas&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Siųsti monetas Qtum adresui</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>Siųsti monetas Yody adresui</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -418,12 +418,12 @@
         <translation>Užšifruoti privačius raktus, kurie priklauso jūsų piniginei</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Pasirašydami žinutes su savo Qtum adresais įrodysite jog esate jų savininkas</translation>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
+        <translation>Pasirašydami žinutes su savo Yody adresais įrodysite jog esate jų savininkas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Qtum adresas</translation>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Yody adresas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -518,8 +518,8 @@
         <translation type="unfinished">Uždaryti visas pinigines</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">Rodyti %1 pagalbos žinutę su Qtum pasirinkimo komandomis</translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">Rodyti %1 pagalbos žinutę su Yody pasirinkimo komandomis</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -550,7 +550,7 @@
         <translation type="unfinished">%1 klientas</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -906,8 +906,8 @@
         <translation type="unfinished">Keisti siuntimo adresą</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
-        <translation type="unfinished">Įvestas adresas „%1“ nėra galiojantis Qtum adresas.</translation>
+        <source>The entered address "%1" is not a valid Yody address.</source>
+        <translation type="unfinished">Įvestas adresas „%1“ nėra galiojantis Yody adresas.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -973,8 +973,8 @@
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
-        <translation type="unfinished">%1 bus atsisiųsta ir išsaugota Qtum blokų grandinės kopiją.</translation>
+        <source>%1 will download and store a copy of the Yody block chain.</source>
+        <translation type="unfinished">%1 bus atsisiųsta ir išsaugota Yody blokų grandinės kopiją.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1189,8 +1189,8 @@
         <translation type="unfinished">&amp;Išleiskite nepatvirtintus pakeitimus</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatiškai atidaryti Qtum kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatiškai atidaryti Yody kliento prievadą maršrutizatoriuje. Tai veikia tik tada, kai jūsų maršrutizatorius palaiko UPnP ir ji įjungta.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1205,8 +1205,8 @@
         <translation type="unfinished">Leisti gaunamu&amp;s ryšius</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Prisijunkite prie „Qtum“ tinklo per SOCKS5 proxy.</translation>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Prisijunkite prie „Yody“ tinklo per SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1336,8 +1336,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
-        <translation>Rodoma informacija gali būti pasenusi. Piniginė automatiškai sinchronizuojasi su „Qtum“ tinklu po ryšio užmezgimo, tačiau šis procesas dar nebaigtas.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
+        <translation>Rodoma informacija gali būti pasenusi. Piniginė automatiškai sinchronizuojasi su „Yody“ tinklu po ryšio užmezgimo, tačiau šis procesas dar nebaigtas.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1446,8 +1446,8 @@
         <translation type="unfinished">„qtum: //“ nėra galiojantis URI. Vietoj to naudokite „qtum:“.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
-        <translation type="unfinished">URI negalima perskaityti! Tai gali sukelti negaliojantys „Qtum“ adresas arba netinkami URI parametrai.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
+        <translation type="unfinished">URI negalima perskaityti! Tai gali sukelti negaliojantys „Yody“ adresas arba netinkami URI parametrai.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1785,8 +1785,8 @@
         <translation type="unfinished">Žinutė:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
-        <translation type="unfinished">Neprivalomas pranešimas, pridedamas prie mokėjimo prašymo, kuris bus rodomas atidarius užklausą. Pastaba: pranešimas nebus išsiųstas su mokėjimu per „Qtum“ tinklą.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
+        <translation type="unfinished">Neprivalomas pranešimas, pridedamas prie mokėjimo prašymo, kuris bus rodomas atidarius užklausą. Pastaba: pranešimas nebus išsiųstas su mokėjimu per „Yody“ tinklą.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2162,8 +2162,8 @@
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
-        <translation type="unfinished">Įspėjimas: neteisingas Qtum adresas</translation>
+        <source>Warning: Invalid Yody address</source>
+        <translation type="unfinished">Įspėjimas: neteisingas Yody adresas</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2201,8 +2201,8 @@
         <translation type="unfinished">Pasirinkite anksčiau naudojamą adresą</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
-        <translation type="unfinished">Qtum adresas, į kurį siunčiamas mokėjimas</translation>
+        <source>The Yody address to send the payment to</source>
+        <translation type="unfinished">Yody adresas, į kurį siunčiamas mokėjimas</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -2241,8 +2241,8 @@
         <translation type="unfinished">Įveskite šio adreso etiketę, kad ją pridėtumėte prie naudojamų adresų sąrašo</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
-        <translation type="unfinished">Pranešimas, kuris buvo pridėtas prie qtum: URI, kuris bus saugomas kartu su sandoriu jūsų nuoroda. Pastaba: šis pranešimas nebus išsiųstas per „Qtum“ tinklą.</translation>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Pranešimas, kuris buvo pridėtas prie qtum: URI, kuris bus saugomas kartu su sandoriu jūsų nuoroda. Pastaba: šis pranešimas nebus išsiųstas per „Yody“ tinklą.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2264,8 +2264,8 @@
         <translation>&amp;Pasirašyti žinutę</translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
-        <translation type="unfinished">Qtum adresas, kuriuo bus pasirašytas pranešimas su</translation>
+        <source>The Yody address to sign the message with</source>
+        <translation type="unfinished">Yody adresas, kuriuo bus pasirašytas pranešimas su</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2288,7 +2288,7 @@
         <translation>Nukopijuokite dabartinį parašą į sistemos iškarpinę</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
+        <source>Sign the message to prove you own this Yody address</source>
         <translation>Registruotis žinute įrodymuii, kad turite šį adresą</translation>
     </message>
     <message>
@@ -2308,12 +2308,12 @@
         <translation>&amp;Patikrinti žinutę</translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
-        <translation type="unfinished">Qtum adresas, kuriuo buvo pasirašytas pranešimas</translation>
+        <source>The Yody address the message was signed with</source>
+        <translation type="unfinished">Yody adresas, kuriuo buvo pasirašytas pranešimas</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
-        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Qtum adresas</translation>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
+        <translation>Patikrinkite žinutę, jog įsitikintumėte, kad ją pasirašė nurodytas Yody adresas</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

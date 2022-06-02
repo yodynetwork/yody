@@ -7,7 +7,7 @@
 
 extern RecursiveMutex cs_ledger;
 
-class QtumLedgerPriv;
+class YodyLedgerPriv;
 
 struct LedgerDevice
 {
@@ -23,20 +23,20 @@ struct LedgerDevice
 };
 
 /**
- * @brief The QtumLedger class Communicate with the qtum ledger
+ * @brief The YodyLedger class Communicate with the qtum ledger
  */
-class QtumLedger {
+class YodyLedger {
     
 public:
     /**
-     * @brief QtumLedger Constructor
+     * @brief YodyLedger Constructor
      */
-    QtumLedger();
+    YodyLedger();
 
     /**
-     * @brief ~QtumLedger Destructor
+     * @brief ~YodyLedger Destructor
      */
-    virtual ~QtumLedger();
+    virtual ~YodyLedger();
 
     /**
      * @brief signCoinStake Sign proof of stake transaction
@@ -127,7 +127,7 @@ public:
      * @brief instance Get the ledger instance
      * @return
      */
-    static QtumLedger &instance();
+    static YodyLedger &instance();
 
 private:
     bool isStarted();
@@ -149,8 +149,8 @@ private:
     bool endGetKeyPool(const std::string& fingerprint, int type, const std::string& path, bool internal,  int from, int to, std::string& desc);
 
 private:
-    QtumLedger(const QtumLedger&);
-    QtumLedger& operator=(const QtumLedger&);
-    QtumLedgerPriv* d;
+    YodyLedger(const YodyLedger&);
+    YodyLedger& operator=(const YodyLedger&);
+    YodyLedgerPriv* d;
 };
 #endif

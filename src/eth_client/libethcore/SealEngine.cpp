@@ -162,7 +162,7 @@ EVMSchedule const& SealEngineBase::evmSchedule(u256 const& _blockNumber) const
 		u256(0) == chainParams().EIP150ForkBlock &&
 		u256(0) == chainParams().homesteadForkBlock &&
 		 false  == chainParams().allowFutureBlocks){
-			return getQtumSchedule();
+			return getYodySchedule();
 	}
 	////////////////////////////////////////////////////////
 	return chainParams().scheduleForBlockNumber(_blockNumber);

@@ -66,13 +66,13 @@
         <translation type="unfinished">Seoltaí glacadh</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Seo iad do sheoltaí Qtum chun íocaíochtaí a sheoladh. Seiceáil i gcónaí an méid agus an seoladh glactha sula seoltar boinn.</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Seo iad do sheoltaí Yody chun íocaíochtaí a sheoladh. Seiceáil i gcónaí an méid agus an seoladh glactha sula seoltar boinn.</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Yody addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
-        <translation type="unfinished">Seo iad do sheoltaí Qtum chun glacadh le híocaíochtaí. Úsáid an cnaipe ‘Cruthaigh seoladh glactha nua’ sa cluaisín glactha chun seoltaí nua a chruthú.
+        <translation type="unfinished">Seo iad do sheoltaí Yody chun glacadh le híocaíochtaí. Úsáid an cnaipe ‘Cruthaigh seoladh glactha nua’ sa cluaisín glactha chun seoltaí nua a chruthú.
 Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
     </message>
     <message>
@@ -239,7 +239,7 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
     </message>
 </context>
 <context>
-    <name>QtumApplication</name>
+    <name>YodyApplication</name>
     <message>
         <source>A fatal error occurred. %1 can no longer continue safely and will quit.</source>
         <translation type="unfinished">Tharla earráid mharfach. Ní féidir le %1 leanúint ar aghaidh go sábháilte agus scoirfidh sé.</translation>
@@ -272,8 +272,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Suim</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
-        <translation type="unfinished">Iontráil seoladh Qtum (m.sh.%1)</translation>
+        <source>Enter a Yody address (e.g. %1)</source>
+        <translation type="unfinished">Iontráil seoladh Yody (m.sh.%1)</translation>
     </message>
     <message>
         <source>Inbound</source>
@@ -357,7 +357,7 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Forléargas </translation>
@@ -412,8 +412,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Seachfhreastalaí &lt;b&gt;cumasaithe&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Seol boinn chuig seoladh Qtum</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>Seol boinn chuig seoladh Yody</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -444,12 +444,12 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation>Criptigh na heochracha príobháideacha a bhaineann le do sparán</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Sínigh teachtaireachtaí le do sheoltaí Qtum chun a chruthú gur leat iad</translation>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
+        <translation>Sínigh teachtaireachtaí le do sheoltaí Yody chun a chruthú gur leat iad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Teachtaireachtaí a fhíorú lena chinntiú go raibh siad sínithe le seoltaí sainithe Qtum</translation>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
+        <translation>Teachtaireachtaí a fhíorú lena chinntiú go raibh siad sínithe le seoltaí sainithe Yody</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -520,12 +520,12 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation>Suas chun dáta</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction</source>
-        <translation type="unfinished">Lódáil Idirbheart Qtum Sínithe go Páirteach</translation>
+        <source>Load Partially Signed Yody Transaction</source>
+        <translation type="unfinished">Lódáil Idirbheart Yody Sínithe go Páirteach</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction from clipboard</source>
-        <translation type="unfinished">Lódáil Idirbheart Qtum Sínithe go Páirteach ón gearrthaisce</translation>
+        <source>Load Partially Signed Yody Transaction from clipboard</source>
+        <translation type="unfinished">Lódáil Idirbheart Yody Sínithe go Páirteach ón gearrthaisce</translation>
     </message>
     <message>
         <source>Node window</source>
@@ -564,8 +564,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Dún gach sparán</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">Taispeáin an %1 teachtaireacht chabhrach chun liosta a fháil de roghanna Qtum líne na n-orduithe féideartha</translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">Taispeáin an %1 teachtaireacht chabhrach chun liosta a fháil de roghanna Yody líne na n-orduithe féideartha</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -604,7 +604,7 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">%1 cliaint</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -1029,8 +1029,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
-        <translation type="unfinished">Íoslódáileafar %1 and stórálfaidh cóip de bhlocshlabhra Qtum.</translation>
+        <source>%1 will download and store a copy of the Yody block chain.</source>
+        <translation type="unfinished">Íoslódáileafar %1 and stórálfaidh cóip de bhlocshlabhra Yody.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1248,8 +1248,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Caith &amp;sóinseáil neamhdheimhnithe</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Oscail port cliant Qtum go huathoibríoch ar an ródaire. Ní oibríonn sé seo ach nuair a thacaíonn do ródaire le UPnP agus nuair a chumasaítear é.</translation>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Oscail port cliant Yody go huathoibríoch ar an ródaire. Ní oibríonn sé seo ach nuair a thacaíonn do ródaire le UPnP agus nuair a chumasaítear é.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1264,8 +1264,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Ceadai&amp;gh naisc isteach</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Ceangail leis an líonra Qtum trí sheachfhreastalaí SOCKS5.</translation>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Ceangail leis an líonra Yody trí sheachfhreastalaí SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1324,8 +1324,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Gnéithe rialúchán bonn a thaispeáint nó nach.</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation type="unfinished">Ceangail le líonra Qtum trí seachfhreastalaí SOCKS5 ar leith do sheirbhísí Tor oinniún.</translation>
+        <source>Connect to the Yody network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation type="unfinished">Ceangail le líonra Yody trí seachfhreastalaí SOCKS5 ar leith do sheirbhísí Tor oinniún.</translation>
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -1399,8 +1399,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation>Foirm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
-        <translation>Féadfaidh an fhaisnéis a thaispeántar a bheith as dáta. Déanann do sparán sioncrónú go huathoibríoch leis an líonra Qtum tar éis nasc a bhunú, ach níl an próiseas seo críochnaithe fós.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
+        <translation>Féadfaidh an fhaisnéis a thaispeántar a bheith as dáta. Déanann do sparán sioncrónú go huathoibríoch leis an líonra Yody tar éis nasc a bhunú, ach níl an próiseas seo críochnaithe fós.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1605,8 +1605,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Ní URI bailí é 'qtum://'. Úsáid 'qtum:' ina ionad.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
-        <translation type="unfinished">Ní féidir URI a pharsáil! Is féidir le seoladh neamhbhailí Qtum nó paraiméadair URI drochfhoirmithe a bheith mar an chúis.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
+        <translation type="unfinished">Ní féidir URI a pharsáil! Is féidir le seoladh neamhbhailí Yody nó paraiméadair URI drochfhoirmithe a bheith mar an chúis.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1967,8 +1967,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">&amp;Teachtaireacht</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
-        <translation type="unfinished">Teachtaireacht roghnach le ceangal leis an iarratas íocaíocht, a thaispeánfar nuair a osclaítear an iarraidh. Nóta: Ní sheolfar an teachtaireacht leis an íocaíocht thar líonra Qtum.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
+        <translation type="unfinished">Teachtaireacht roghnach le ceangal leis an iarratas íocaíocht, a thaispeánfar nuair a osclaítear an iarraidh. Nóta: Ní sheolfar an teachtaireacht leis an íocaíocht thar líonra Yody.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2284,8 +2284,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Cruthaigh Gan Sín</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Cruthaíonn Idirbheart Qtum Sínithe go Páirteach (IBSP) le húsáid le e.g. sparán as líne %1, nó sparán crua-earraí atá comhoiriúnach le IBSP.</translation>
+        <source>Creates a Partially Signed Yody Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation type="unfinished">Cruthaíonn Idirbheart Yody Sínithe go Páirteach (IBSP) le húsáid le e.g. sparán as líne %1, nó sparán crua-earraí atá comhoiriúnach le IBSP.</translation>
     </message>
     <message>
         <source> from wallet '%1'</source>
@@ -2328,8 +2328,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Féadfaidh tú an táille a mhéadú níos déanaí (comhartha chuig Athchuir-Le-Táille, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Qtum Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
-        <translation type="unfinished">Le do thoil, déan athbhreithniú ar do thogra idirbhirt. Tabharfaidh sé seo Idirbheart Qtum Sínithe go Páirteach (IBSP) ar féidir leat a shábháil nó a chóipeáil agus a shíniú ansin le m.sh. sparán as líne %1, nó sparán crua-earraí atá comhoiriúnach le IBSP.</translation>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Yody Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <translation type="unfinished">Le do thoil, déan athbhreithniú ar do thogra idirbhirt. Tabharfaidh sé seo Idirbheart Yody Sínithe go Páirteach (IBSP) ar féidir leat a shábháil nó a chóipeáil agus a shíniú ansin le m.sh. sparán as líne %1, nó sparán crua-earraí atá comhoiriúnach le IBSP.</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -2400,8 +2400,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
-        <translation type="unfinished">Rabhadh: Seoladh neamhbhailí Qtum</translation>
+        <source>Warning: Invalid Yody address</source>
+        <translation type="unfinished">Rabhadh: Seoladh neamhbhailí Yody</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2439,8 +2439,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Roghnaigh seoladh a úsáideadh roimhe seo</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
-        <translation type="unfinished">Seoladh Qtum chun an íocaíocht a sheoladh chuig</translation>
+        <source>The Yody address to send the payment to</source>
+        <translation type="unfinished">Seoladh Yody chun an íocaíocht a sheoladh chuig</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -2483,8 +2483,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Iontráil lipéad don seoladh seo chun é a chur le liosta na seoltaí úsáidte</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
-        <translation type="unfinished">Teachtaireacht a bhí ceangailte leis an qtum: URI a stórálfar leis an idirbheart le haghaidh do thagairt. Nóta: Ní sheolfar an teachtaireacht seo thar líonra Qtum.</translation>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Teachtaireacht a bhí ceangailte leis an qtum: URI a stórálfar leis an idirbheart le haghaidh do thagairt. Nóta: Ní sheolfar an teachtaireacht seo thar líonra Yody.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2510,8 +2510,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Féadfaidh tú teachtaireachtaí / comhaontuithe a shíniú le do sheoltaí chun a chruthú gur féidir leat qtums a sheoltear chucu a fháil. Bí cúramach gan aon rud doiléir nó randamach a shíniú, mar d’fhéadfadh ionsaithe fioscaireachta iarracht ar d’aitheantas a shíniú chucu. Ná sínigh ach ráitis lán-mhionsonraithe a aontaíonn tú leo.</translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
-        <translation type="unfinished">An seoladh Qtum chun an teachtaireacht a shíniú le</translation>
+        <source>The Yody address to sign the message with</source>
+        <translation type="unfinished">An seoladh Yody chun an teachtaireacht a shíniú le</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2534,8 +2534,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation>Cóipeáil an síniú reatha chuig gearrthaisce an chórais</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
-        <translation>Sínigh an teachtaireacht chun a chruthú gur leat an seoladh Qtum seo</translation>
+        <source>Sign the message to prove you own this Yody address</source>
+        <translation>Sínigh an teachtaireacht chun a chruthú gur leat an seoladh Yody seo</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2558,8 +2558,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">Cuir isteach seoladh an ghlacadóra, teachtaireacht  (déan cinnte go gcóipeálann tú bristeacha líne, spásanna, táib, srl. go díreach) agus sínigh thíos chun an teachtaireacht a fhíorú. Bí cúramach gan níos mó a léamh isteach sa síniú ná mar atá sa teachtaireacht sínithe féin, ionas nach dtarlóidh ionsaí socadáin duit. Tabhair faoi deara nach gcruthóidh sé seo ach go bhfaigheann an páirtí sínithe leis an seoladh, ní féidir leis seolta aon idirbhirt a chruthú!</translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
-        <translation type="unfinished">An seoladh Qtum a síníodh an teachtaireacht leis</translation>
+        <source>The Yody address the message was signed with</source>
+        <translation type="unfinished">An seoladh Yody a síníodh an teachtaireacht leis</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
@@ -2570,8 +2570,8 @@ Ní féidir síniú ach le seoltaí 'oidhreachta'.</translation>
         <translation type="unfinished">An síniú a tugadh nuair a síníodh an teachtaireacht</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
-        <translation>Fíoraigh an teachtaireacht lena chinntiú go raibh sí sínithe leis an seoladh Qtum sainithe </translation>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
+        <translation>Fíoraigh an teachtaireacht lena chinntiú go raibh sí sínithe leis an seoladh Yody sainithe </translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>

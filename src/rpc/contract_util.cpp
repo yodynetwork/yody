@@ -22,7 +22,7 @@ UniValue executionResultToJSON(const dev::eth::ExecutionResult& exRes)
     return result;
 }
 
-UniValue transactionReceiptToJSON(const QtumTransactionReceipt& txRec)
+UniValue transactionReceiptToJSON(const YodyTransactionReceipt& txRec)
 {
     UniValue result(UniValue::VOBJ);
     result.pushKV("stateRoot", txRec.stateRoot().hex());
@@ -392,7 +392,7 @@ UniValue SearchLogs(const UniValue& _params, ChainstateManager &chainman)
 CallToken::CallToken(ChainstateManager &_chainman):
     chainman(_chainman)
 {
-    setQtumTokenExec(this);
+    setYodyTokenExec(this);
 }
 
 bool CallToken::execValid(const int &func, const bool &sendTo)
@@ -498,12 +498,12 @@ bool CallToken::execEvents(const int64_t &fromBlock, const int64_t &toBlock, con
             if(numTopics > 1)
             {
                 tokenEvent.sender = topicsList[1].get_str().substr(24);
-                ToQtumAddress(tokenEvent.sender, tokenEvent.sender);
+                ToYodyAddress(tokenEvent.sender, tokenEvent.sender);
             }
             if(numTopics > 2)
             {
                 tokenEvent.receiver = topicsList[2].get_str().substr(24);
-                ToQtumAddress(tokenEvent.receiver, tokenEvent.receiver);
+                ToYodyAddress(tokenEvent.receiver, tokenEvent.receiver);
             }
             tokenEvent.blockHash = uint256S(eventMap["blockHash"].get_str());
             tokenEvent.blockNumber = eventMap["blockNumber"].get_int64();

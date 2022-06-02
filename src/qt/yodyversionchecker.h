@@ -79,12 +79,12 @@ private:
     }
 };
 
-class QtumVersionChecker : public QObject
+class YodyVersionChecker : public QObject
 {
     Q_OBJECT
 public:
-    explicit QtumVersionChecker(QObject *parent = 0);
-    ~QtumVersionChecker();
+    explicit YodyVersionChecker(QObject *parent = 0);
+    ~YodyVersionChecker();
 
     bool newVersionAvailable();
 

@@ -14,7 +14,7 @@ from decimal import Decimal
 
 pp = pprint.PrettyPrinter()
 
-class QtumEVMLondonTest(BitcoinTestFramework):
+class YodyEVMLondonTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 4
@@ -102,4 +102,4 @@ class QtumEVMLondonTest(BitcoinTestFramework):
             assert_equal(Decimal(balances[i-1]["amount"]), Decimal(self.nodes[i].qrc20balanceof(self.contract_address, self.node_addresses[i-1])))   
         
 if __name__ == '__main__':
-    QtumEVMLondonTest().main()
+    YodyEVMLondonTest().main()

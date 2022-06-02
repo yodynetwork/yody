@@ -66,8 +66,8 @@
         <translation type="unfinished">Mottagaradresser</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Detta är dina Qtum-adresser för att skicka betalningar. Kontrollera alltid belopp och mottagaradress innan du skickar qtum.</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Detta är dina Yody-adresser för att skicka betalningar. Kontrollera alltid belopp och mottagaradress innan du skickar qtum.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -256,8 +256,8 @@ Försök igen.</translation>
         <translation type="unfinished">Belopp</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
-        <translation type="unfinished">Ange en Qtum-adress (t.ex. %1)</translation>
+        <source>Enter a Yody address (e.g. %1)</source>
+        <translation type="unfinished">Ange en Yody-adress (t.ex. %1)</translation>
     </message>
     <message>
         <source>Inbound</source>
@@ -323,7 +323,7 @@ Försök igen.</translation>
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Översikt</translation>
@@ -386,8 +386,8 @@ Försök igen.</translation>
         <translation type="unfinished">Proxy är &lt;b&gt; aktiverad &lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Skicka qtum till en Qtum-adress</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>Skicka qtum till en Yody-adress</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -418,12 +418,12 @@ Försök igen.</translation>
         <translation>Kryptera de privata nycklar som tillhör din plånbok</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Signera meddelanden med dina Qtum-adresser för att bevisa att du äger dem</translation>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
+        <translation>Signera meddelanden med dina Yody-adresser för att bevisa att du äger dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Verifiera meddelanden för att vara säker på att de signerades med angivna Qtum-adresser</translation>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
+        <translation>Verifiera meddelanden för att vara säker på att de signerades med angivna Yody-adresser</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -525,8 +525,8 @@ Försök igen.</translation>
         <translation type="unfinished">Stäng alla plånböcker</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">Visa %1 hjälpmeddelande för att få en lista med möjliga Qtum kommandoradsalternativ.</translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">Visa %1 hjälpmeddelande för att få en lista med möjliga Yody kommandoradsalternativ.</translation>
     </message>
     <message>
         <source>&amp;Mask values</source>
@@ -565,7 +565,7 @@ Försök igen.</translation>
         <translation type="unfinished">%1-klient</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -910,8 +910,8 @@ Försök igen.</translation>
         <translation type="unfinished">Redigera avsändaradress</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
-        <translation type="unfinished">Den angivna adressen "%1" är inte en giltig Qtum-adress.</translation>
+        <source>The entered address "%1" is not a valid Yody address.</source>
+        <translation type="unfinished">Den angivna adressen "%1" är inte en giltig Yody-adress.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -972,8 +972,8 @@ Försök igen.</translation>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
-        <translation type="unfinished">%1 kommer att ladda ner och lagra en kopia av Qtums blockkedja.</translation>
+        <source>%1 will download and store a copy of the Yody block chain.</source>
+        <translation type="unfinished">%1 kommer att ladda ner och lagra en kopia av Yodys blockkedja.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1050,7 +1050,7 @@ Försök igen.</translation>
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the qtum network, as detailed below.</source>
-        <translation type="unfinished">Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserats med Qtum-nätverket enligt informationen nedan.</translation>
+        <translation type="unfinished">Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserats med Yody-nätverket enligt informationen nedan.</translation>
     </message>
     <message>
         <source>Attempting to spend qtums that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -1179,8 +1179,8 @@ Försök igen.</translation>
         <translation type="unfinished">&amp;Spendera obekräftad växel</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Öppna automatiskt Qtum-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Öppna automatiskt Yody-klientens port på routern. Detta fungerar endast om din router stödjer UPnP och det är är aktiverat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1195,8 +1195,8 @@ Försök igen.</translation>
         <translation type="unfinished">Tillåt inkommande anslutningar</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
-        <translation type="unfinished">Anslut till Qtum-nätverket genom en SOCKS5-proxy.</translation>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
+        <translation type="unfinished">Anslut till Yody-nätverket genom en SOCKS5-proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1318,8 +1318,8 @@ Försök igen.</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
-        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Qtum-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
+        <translation>Den visade informationen kan vara inaktuell. Plånboken synkroniseras automatiskt med Yody-nätverket efter att anslutningen är upprättad, men denna process har inte slutförts ännu.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1416,8 +1416,8 @@ Försök igen.</translation>
         <translation type="unfinished">'qtum://' är inte en accepterad URI. Använd 'qtum:' istället.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
-        <translation type="unfinished">URI kan inte parsas! Detta kan orsakas av en ogiltig Qtum-adress eller felaktiga URI-parametrar.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
+        <translation type="unfinished">URI kan inte parsas! Detta kan orsakas av en ogiltig Yody-adress eller felaktiga URI-parametrar.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1742,8 +1742,8 @@ Försök igen.</translation>
         <translation type="unfinished">&amp;Meddelande:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
-        <translation type="unfinished">Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över Qtum-nätverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
+        <translation type="unfinished">Ett valfritt meddelande att bifoga betalningsbegäran, vilket visas när begäran öppnas. Obs: Meddelandet kommer inte att sändas med betalningen över Yody-nätverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1876,7 +1876,7 @@ Försök igen.</translation>
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Skicka Qtums</translation>
+        <translation>Skicka Yodys</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2134,8 +2134,8 @@ Försök igen.</translation>
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
-        <translation type="unfinished">Varning: Ogiltig Qtum-adress</translation>
+        <source>Warning: Invalid Yody address</source>
+        <translation type="unfinished">Varning: Ogiltig Yody-adress</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2173,8 +2173,8 @@ Försök igen.</translation>
         <translation type="unfinished">Välj tidigare använda adresser</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
-        <translation type="unfinished">Qtum-adress att sända betalning till</translation>
+        <source>The Yody address to send the payment to</source>
+        <translation type="unfinished">Yody-adress att sända betalning till</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>
@@ -2217,8 +2217,8 @@ Försök igen.</translation>
         <translation type="unfinished">Ange en etikett för denna adress för att lägga till den i listan med använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
-        <translation type="unfinished">Ett meddelande som bifogades qtum: -URIn och som sparas med transaktionen som referens. Obs: Meddelandet sänds inte över Qtum-nätverket.</translation>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
+        <translation type="unfinished">Ett meddelande som bifogades qtum: -URIn och som sparas med transaktionen som referens. Obs: Meddelandet sänds inte över Yody-nätverket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2244,8 +2244,8 @@ Försök igen.</translation>
         <translation type="unfinished">Du kan signera meddelanden/avtal med dina adresser för att bevisa att du kan ta emot qtum som skickats till dem. Var försiktig så du inte signerar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att signera över din identitet till dem. Signera endast väldetaljerade meddelanden som du godkänner.</translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
-        <translation type="unfinished">Qtum-adress att signera meddelandet med</translation>
+        <source>The Yody address to sign the message with</source>
+        <translation type="unfinished">Yody-adress att signera meddelandet med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2268,8 +2268,8 @@ Försök igen.</translation>
         <translation>Kopiera signaturen till systemets Urklipp</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
-        <translation>Signera meddelandet för att bevisa att du äger denna Qtum-adress</translation>
+        <source>Sign the message to prove you own this Yody address</source>
+        <translation>Signera meddelandet för att bevisa att du äger denna Yody-adress</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2292,16 +2292,16 @@ Försök igen.</translation>
         <translation type="unfinished">Ange mottagarens adress, meddelande (kopiera radbrytningar, mellanslag, TAB-tecken, osv. exakt) och signatur nedan, för att verifiera meddelandet. Undvik att läsa in mera information i signaturen än vad som stod i själva det signerade meddelandet, för att undvika ett man-in-the-middle-angrepp. Notera att detta endast bevisar att den signerande parten tar emot med adressen, det bevisar inte vem som skickat transaktionen!</translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
-        <translation type="unfinished">Qtum-adress som meddelandet signerades med</translation>
+        <source>The Yody address the message was signed with</source>
+        <translation type="unfinished">Yody-adress som meddelandet signerades med</translation>
     </message>
     <message>
         <source>The signed message to verify</source>
         <translation type="unfinished">Signerat meddelande som ska verifieras</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
-        <translation>Verifiera meddelandet för att vara säker på att det signerades med angiven Qtum-adress</translation>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
+        <translation>Verifiera meddelandet för att vara säker på att det signerades med angiven Yody-adress</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2776,7 +2776,7 @@ Försök igen.</translation>
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation type="unfinished">Skicka Qtums</translation>
+        <translation type="unfinished">Skicka Yodys</translation>
     </message>
     <message>
         <source>Fee bump error</source>

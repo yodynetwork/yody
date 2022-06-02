@@ -21,7 +21,7 @@ def get_dir_size(path):
     return size
 
 
-class QtumHeaderSpamTest(BitcoinTestFramework):
+class YodyHeaderSpamTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -325,4 +325,4 @@ class QtumHeaderSpamTest(BitcoinTestFramework):
         assert_equal(self.nodes[1].getchaintips()[0]['hash'], self.node.getbestblockhash())
 
 if __name__ == '__main__':
-    QtumHeaderSpamTest().main()
+    YodyHeaderSpamTest().main()

@@ -14,7 +14,7 @@ import sys
 import random
 import time
 
-class QtumEVMGlobalsTest(BitcoinTestFramework):
+class YodyEVMGlobalsTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -234,4 +234,4 @@ class QtumEVMGlobalsTest(BitcoinTestFramework):
         self.sync_all()
 
 if __name__ == '__main__':
-    QtumEVMGlobalsTest().main()
+    YodyEVMGlobalsTest().main()

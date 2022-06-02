@@ -270,8 +270,8 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     }
 
     //////////////////////////////////////////////////////// qtum
-    QtumDGP qtumDGP(globalState.get(), m_chainstate, fGettingValuesDGP);
-    globalSealEngine->setQtumSchedule(qtumDGP.getGasSchedule(nHeight));
+    YodyDGP qtumDGP(globalState.get(), m_chainstate, fGettingValuesDGP);
+    globalSealEngine->setYodySchedule(qtumDGP.getGasSchedule(nHeight));
     uint32_t blockSizeDGP = qtumDGP.getBlockSize(nHeight);
     minGasPrice = qtumDGP.getMinGasPrice(nHeight);
     if(gArgs.IsArgSet("-staker-min-tx-gas-price")) {
@@ -506,18 +506,18 @@ bool BlockAssembler::AttemptToAddContractToBlock(CTxMemPool::txiter iter, uint64
     uint64_t nBlockSigOpsCost = this->nBlockSigOpsCost;
 
     unsigned int contractflags = GetContractScriptFlags(nHeight, chainparams.GetConsensus());
-    QtumTxConverter convert(iter->GetTx(), m_chainstate, &m_mempool, NULL, &pblock->vtx, contractflags);
+    YodyTxConverter convert(iter->GetTx(), m_chainstate, &m_mempool, NULL, &pblock->vtx, contractflags);
 
-    ExtractQtumTX resultConverter;
-    if(!convert.extractionQtumTransactions(resultConverter)){
+    ExtractYodyTX resultConverter;
+    if(!convert.extractionYodyTransactions(resultConverter)){
         //this check already happens when accepting txs into mempool
         //therefore, this can only be triggered by using raw transactions on the staker itself
         LogPrintf("AttemptToAddContractToBlock(): Fail to extract contacts from tx %s\n", iter->GetTx().GetHash().ToString());
         return false;
     }
-    std::vector<QtumTransaction> qtumTransactions = resultConverter.first;
+    std::vector<YodyTransaction> qtumTransactions = resultConverter.first;
     dev::u256 txGas = 0;
-    for(QtumTransaction qtumTransaction : qtumTransactions){
+    for(YodyTransaction qtumTransaction : qtumTransactions){
         txGas += qtumTransaction.gas();
         if(txGas > txGasLimit) {
             // Limit the tx gas limit by the soft limit if such a limit has been specified.
@@ -1072,7 +1072,7 @@ public:
 
 private:
     CWallet *pwallet;
-    QtumDelegation qtumDelegations;
+    YodyDelegation qtumDelegations;
     int32_t cacheHeight;
     std::map<uint160, Delegation> cacheDelegationsStaker;
     std::vector<uint160> allowList;
@@ -1161,7 +1161,7 @@ public:
                 {
                     Delegation delegation;
                     uint160 address = item.first;
-                    if(qtumDelegations.GetDelegation(address, delegation, pwallet->chain().chainman().ActiveChainstate()) && QtumDelegation::VerifyDelegation(address, delegation))
+                    if(qtumDelegations.GetDelegation(address, delegation, pwallet->chain().chainman().ActiveChainstate()) && YodyDelegation::VerifyDelegation(address, delegation))
                     {
                         cacheMyDelegations[address] = delegation;
                     }
@@ -1193,7 +1193,7 @@ public:
 private:
 
     CWallet *pwallet;
-    QtumDelegation qtumDelegations;
+    YodyDelegation qtumDelegations;
     int32_t cacheHeight;
     int32_t cacheAddressHeight;
     std::map<uint160, Delegation> cacheMyDelegations;
@@ -1871,7 +1871,7 @@ protected:
         if(ledgerId.empty())
             return false;
 
-        QtumLedger &device = QtumLedger::instance();
+        YodyLedger &device = YodyLedger::instance();
         bool fConnected = device.isConnected(ledgerId, true);
         if(!fConnected)
         {
@@ -1898,7 +1898,7 @@ void ThreadStakeMiner(CWallet *pwallet)
     miner = 0;
 }
 
-void StakeQtums(bool fStake, CWallet *pwallet, boost::thread_group*& stakeThread)
+void StakeYodys(bool fStake, CWallet *pwallet, boost::thread_group*& stakeThread)
 {
     if (stakeThread != nullptr)
     {
