@@ -23,7 +23,7 @@ pkg-config
 python37
 gmp
 
-git clone https://github.com/qtumproject/qtum --recursive
+git clone https://github.com/yodynetwork/qtum --recursive
 ```
 
 See [dependencies.md](dependencies.md) for a complete overview.

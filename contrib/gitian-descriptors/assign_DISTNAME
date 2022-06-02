@@ -3,7 +3,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
 # A helper script to be sourced into the gitian descriptors
-git remote add origin https://github.com/qtumproject/qtum
+git remote add origin https://github.com/yodynetwork/qtum
 git fetch origin
 
 if RECENT_TAG="$(git describe --exact-match HEAD 2> /dev/null)"; then

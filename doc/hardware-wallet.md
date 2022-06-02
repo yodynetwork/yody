@@ -3,9 +3,9 @@ HARDWARE WALLET
 
 ## Tools for hardware device support
 
-Use [Ledger Nano S Loader](https://github.com/qtumproject/qtum-ledger-loader/releases) to install the Ledger Nano S Wallet and Ledger Nano S Stake application.
+Use [Ledger Nano S Loader](https://github.com/yodynetwork/qtum-ledger-loader/releases) to install the Ledger Nano S Wallet and Ledger Nano S Stake application.
 
-Use [HWI](https://github.com/qtumproject/HWI) for command line interaction with the Hardware Wallet.
+Use [HWI](https://github.com/yodynetwork/HWI) for command line interaction with the Hardware Wallet.
 
 ## Graphical interface for hardware device
 
@@ -17,11 +17,11 @@ Use the menu `File -> Create Wallet... -> Use a hardware device` for creating ha
 
 Use hardware wallets to send/receive coins.
 
-Ledger Nano S has support for smart contracts using the wallet application that can be installed with [Ledger Nano S Loader](https://github.com/qtumproject/qtum-ledger-loader/releases), it also supports delegation to a staker for offline staking.
+Ledger Nano S has support for smart contracts using the wallet application that can be installed with [Ledger Nano S Loader](https://github.com/yodynetwork/qtum-ledger-loader/releases), it also supports delegation to a staker for offline staking.
 
 ## Graphical interface for hardware device staking
 
-Ledger Nano S has support for staking using the staking application that can be installed with [Ledger Nano S Loader](https://github.com/qtumproject/qtum-ledger-loader/releases).
+Ledger Nano S has support for staking using the staking application that can be installed with [Ledger Nano S Loader](https://github.com/yodynetwork/qtum-ledger-loader/releases).
 
 Using the menu `Settings -> Option -> Main -> Select Ledger device for staking` to select ledger for staking that the `qtum-qt` will automatically connect when started.
 

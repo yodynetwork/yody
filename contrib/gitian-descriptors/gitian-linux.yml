@@ -46,9 +46,9 @@ packages:
 - "libmicrohttpd-dev"
 - "libminiupnpc-dev"
 remotes:
-- "url": "https://github.com/qtumproject/qtum.git"
+- "url": "https://github.com/yodynetwork/qtum.git"
   "dir": "qtum"
-- "url": "https://github.com/qtumproject/qtum-evmone.git"
+- "url": "https://github.com/yodynetwork/qtum-evmone.git"
   "dir": "qtum-evmone"
 files: []
 script: |

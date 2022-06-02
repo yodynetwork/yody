@@ -92,7 +92,7 @@ Now that all the required dependencies are installed, let's clone the Qtum Core 
 All build scripts and commands will run from this directory.
 
 ``` bash
-git clone --recursive https://github.com/qtumproject/qtum.git
+git clone --recursive https://github.com/yodynetwork/qtum.git
 ```
 
 ### 5. Install Optional Dependencies
