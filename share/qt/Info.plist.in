@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.qtumproject.Qtum-Qt</string>
+  <string>org.yodynetwork.Qtum-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>

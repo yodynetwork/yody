@@ -46,7 +46,7 @@ pkg install autoconf automake boost-libs git gmake libevent libtool pkgconf gmp
 ### 2. Clone Qtum Repo
 Now that `git` and all the required dependencies are installed, let's clone the Qtum Core repository to a directory. All build scripts and commands will run from this directory.
 ``` bash
-git clone https://github.com/qtumproject/qtum --recursive
+git clone https://github.com/yodynetwork/qtum --recursive
 ```
 
 ### 3. Install Optional Dependencies

@@ -313,8 +313,8 @@ Clone the git repositories for qtum and Gitian.
 
 ```bash
 git clone https://github.com/devrandom/gitian-builder.git
-git clone https://github.com/qtumproject/qtum --recursive
-git clone https://github.com/qtumproject/gitian.sigs.git
+git clone https://github.com/yodynetwork/qtum --recursive
+git clone https://github.com/yodynetwork/gitian.sigs.git
 ```
 
 Setting up the Gitian image
@@ -380,7 +380,7 @@ Output from `gbuild` will look something like
     remote: Total 57959 (delta 0), reused 0 (delta 0), pack-reused 57958
     Receiving objects: 100% (57959/57959), 53.76 MiB | 484.00 KiB/s, done.
     Resolving deltas: 100% (41590/41590), done.
-    From https://github.com/qtumproject/qtum
+    From https://github.com/yodynetwork/qtum
     ... (new tags, new branch etc)
     --- Building for trusty amd64 ---
     Stopping target if it is up
@@ -458,7 +458,7 @@ Then when building, override the remote URLs that gbuild would otherwise pull fr
 ```bash
 
 cd /some/root/path/
-git clone https://github.com/qtumproject/qtum-detached-sigs.git
+git clone https://github.com/yodynetwork/qtum-detached-sigs.git
 
 BTCPATH=/some/root/path/qtum
 SIGPATH=/some/root/path/qtum-detached-sigs
@@ -490,5 +490,5 @@ Uploading signatures
 ---------------------
 
 After building and signing you can push your signatures (both the `.assert` and `.assert.sig` files) to the
-[qtumproject/gitian.sigs](https://github.com/qtumproject/gitian.sigs/) repository, or if that's not possible create a pull
+[yodynetwork/gitian.sigs](https://github.com/yodynetwork/gitian.sigs/) repository, or if that's not possible create a pull
 request. You can also mail the files to Jordan Earls (earlz@qtum.org) and he will commit them.
