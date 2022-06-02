@@ -118,18 +118,18 @@ public:
         // Replace 0xffffc0 with the activation block number
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 2080512;
 
-        consensus.nMinimumChainWork = uint256S("0x00000000000000000000000000000000000000000000037e70dfa7662e619017"); // 1883974
-        consensus.defaultAssumeValid = uint256S("0xefe5b66cd0963b19ed64850884f039ff4d98c49cd63b9ec763d5c336619d5a6d"); // 1883974
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000013891389"); // 1883974
+        consensus.defaultAssumeValid = uint256S("0x00006614b61a74694c7dde7d46534ea157e630b237252eee8b7c6344135ae0d9"); // 1883974
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xf1;
-        pchMessageStart[1] = 0xcf;
+        pchMessageStart[0] = 0xf2;
+        pchMessageStart[1] = 0xc4;
         pchMessageStart[2] = 0xa6;
-        pchMessageStart[3] = 0xd3;
+        pchMessageStart[3] = 0xd8;
         nDefaultPort = 3888;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 16;
@@ -150,13 +150,13 @@ public:
         vSeeds.emplace_back("yody6.dynu.net"); // Yody mainnet
         vSeeds.emplace_back("yody7.dynu.net"); // Yody mainnet
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,58);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,78);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,50);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,128);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x88, 0xB2, 0x1E};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
-        bech32_hrp = "qc";
+        bech32_hrp = "yc";
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_main), std::end(chainparams_seed_main));
 
@@ -170,18 +170,8 @@ public:
         checkpointData = {
             {
                 { 0, uint256S("000075aef83cf2853580f8ae8ce6f8c3096cfa21d98334d6e3f95e5582ed986c")},
-                { 5000, uint256S("00006a5338e5647872bd91de1d291365e941e14dff1939b5f16d1804d1ce61cd")}, //last PoW block
-                { 45000, uint256S("060c6af680f6975184c7a17059f2ff4970544fcfd4104e73744fe7ab7be14cfc")},
-                { 90000, uint256S("66fcf426b0aa6f2c9e3330cb2775e9e13c4a2b8ceedb50f8931ae0e12078ad50")},
-                { 245000, uint256S("ed79607feeadcedf5b94f1c43df684af5106e79b0989a008a88f9dc2221cc12a")},
-                { 353000, uint256S("d487896851fed42b07771f950fcc4469fbfa79211cfefed800f6d7806255e23f")},
-                { 367795, uint256S("1209326b73e38e44ec5dc210f51dc5d8c3494e9c698521032dd754747d4c1685")},
-                { 445709, uint256S("814e7d91aac6c577e4589b76918f44cf80020212159d39709fbad3f219725c9f")},
-                { 498000, uint256S("497f28fd4b1dadc9ff6dd2ac771483acfd16e4c4664eb45d0a6008dc33811418")},
-                { 708000, uint256S("23c66194def65cfea20d32a71f23807a93a0b207b3d7251246e2c351204fe9d3")},
-                { 888000, uint256S("02caf7a26b995e5054462715a4d31e1a7ff220c53fead7c06de720ac54510433")},
-                { 1405000, uint256S("8ef924fb7d2a28e0420c8731fb34301c204d15fe8d1e68461e5ebe959df011f2")},
-				{ 1883974, uint256S("efe5b66cd0963b19ed64850884f039ff4d98c49cd63b9ec763d5c336619d5a6d")},
+                { 5000, uint256S("00006614b61a74694c7dde7d46534ea157e630b237252eee8b7c6344135ae0d9")}, //last PoW block
+
             }
         };
 
@@ -191,10 +181,10 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block 2250aa6ed692895f7d3a7840e37bdc383584f18e0c7a9e7982521f9b47d6fd6c (height 1885982)
-        	1653074852, // * UNIX timestamp of last known number of transactions
-			7579431, // * total number of transactions between genesis and that timestamp
+        	1653743328, // * UNIX timestamp of last known number of transactions
+			5001, // * total number of transactions between genesis and that timestamp
             //   (the tx=... number in the SetBestChain debug.log lines)
-            0.07127920937539545 // * estimated number of transactions per second after that timestamp
+            1.056449926824169 // * estimated number of transactions per second after that timestamp
         };
 
         consensus.nBlocktimeDownscaleFactor = 4;
@@ -274,13 +264,13 @@ public:
         // Replace 0xffffc0 with the activation block number
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].min_activation_height = 1967616;
 
-        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000001568777684de8c59f80"); // 1930000
-        consensus.defaultAssumeValid = uint256S("0xf4836510a70e25d5c70554abbbcb346abd66af540f616d806fb1c20335c1e874"); // 1930000
+        consensus.nMinimumChainWork = uint256S("0x0000000000000000000000000000000000000000000000000000000013891389"); // 1930000
+        consensus.defaultAssumeValid = uint256S("0x0000466c2f68b7e00cf7de691e1f4bebfb8b827ced18a0d1e4720e1ad9654255"); // 1930000
 
-        pchMessageStart[0] = 0x0d;
-        pchMessageStart[1] = 0x22;
-        pchMessageStart[2] = 0x15;
-        pchMessageStart[3] = 0x06;
+        pchMessageStart[0] = 0x2d;
+        pchMessageStart[1] = 0x42;
+        pchMessageStart[2] = 0x65;
+        pchMessageStart[3] = 0x86;
         nDefaultPort = 13888;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 6;
@@ -296,13 +286,13 @@ public:
         // nodes with support for servicebits filtering should be at the top
         vSeeds.emplace_back("yody4.dynu.net"); // Yody testnet
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,120);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,110);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "tq";
+        bech32_hrp = "ty";
 
         vFixedSeeds = std::vector<uint8_t>(std::begin(chainparams_seed_test), std::end(chainparams_seed_test));
 
@@ -316,16 +306,8 @@ public:
         checkpointData = {
             {
                 {0, uint256S("0000e803ee215c0684ca0d2f9220594d3f828617972aad66feb2ba51f5e14222")},
-                {5000, uint256S("000000302bc22f2f65995506e757fff5c824545db5413e871d57d27a0997e8a0")}, //last PoW block
-                {77000, uint256S("f41e2e8d09bca38827c23cad46ed6d434902da08415d2314d0c8ce285b1970cb")},
-                {230000, uint256S("cd17baf80fa817dd543b83897ccb1e07350019e5b812f4956f69efe855d62601")},
-                {343000, uint256S("ac66f1de1a5fa473b5097b313c203e97d45669485e4c235a32a0f80df64f6948")},
-                {441632, uint256S("2cb93f74cb3e47ec05b745a445f90a023b7136a68f94e9bff7fb49819155ccd8")},
-                {491300, uint256S("75a7db2865423d3af5f0dfd70cfef6053b91f3c018c4b28a4e28c09a8c011e78")},
-                {690000, uint256S("89b010b5333fa9d22c7fcf157c7eeaee1ccfe80c435390243b3d782a1fc1eff7")},
-                {944000, uint256S("6bb6312088d81ca5484460b3466c66c01ff7d1cd4ef91e1dc9555a15b51d025d")},
-                {1405000, uint256S("aff1f9c768e83f90d10a55306993e9042b5740251abc1afdde1429d09e95fa66")},
-				{1930000, uint256S("f4836510a70e25d5c70554abbbcb346abd66af540f616d806fb1c20335c1e874")},
+                {5000, uint256S("0000466c2f68b7e00cf7de691e1f4bebfb8b827ced18a0d1e4720e1ad9654255")}, //last PoW block
+
             }
         };
 
@@ -335,9 +317,9 @@ public:
 
         chainTxData = ChainTxData{
             // Data as of block f948d21fffc54b511638b4c2c73dfa8f1c50661fbf3187a553bf939c361116ea (height 1935143)
-        	1653075072,
-			4040228,
-			0.06307789999321026
+        	1653745554,
+			5001,
+			5.994004796163069
         };
 
         consensus.nBlocktimeDownscaleFactor = 4;
@@ -469,13 +451,13 @@ public:
 
         vFixedSeeds.clear();
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,120);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,110);
         base58Prefixes[SECRET_KEY] =     std::vector<unsigned char>(1,239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
-        bech32_hrp = "tq";
+        bech32_hrp = "ty";
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
