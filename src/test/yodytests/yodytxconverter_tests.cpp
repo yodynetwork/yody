@@ -24,7 +24,7 @@ CMutableTransaction createTX(std::vector<CTxOut> vout, uint256 hashprev = uint25
     return tx;
 }
 
-void checkResult(bool isCreation, std::vector<QtumTransaction> results, uint256 hash){
+void checkResult(bool isCreation, std::vector<YodyTransaction> results, uint256 hash){
     for(size_t i = 0; i < results.size(); i++){
         if(isCreation){
             BOOST_CHECK(results[i].isCreation());
@@ -67,10 +67,10 @@ void runTest(CChainState& chainstate, CTxMemPool& mempool, bool isCreation, size
     }    
     tx2 = createTX(outs2, hashParentTx);
     CTransaction transaction(tx2);
-    QtumTxConverter converter(transaction, chainstate, &mempool, NULL);
-    ExtractQtumTX qtumTx;
-    BOOST_CHECK(converter.extractionQtumTransactions(qtumTx));
-    std::vector<QtumTransaction> result = qtumTx.first;
+    YodyTxConverter converter(transaction, chainstate, &mempool, NULL);
+    ExtractYodyTX qtumTx;
+    BOOST_CHECK(converter.extractionYodyTransactions(qtumTx));
+    std::vector<YodyTransaction> result = qtumTx.first;
     if(script2 == CScript()){
         BOOST_CHECK(result.size() == n);
     } else {
@@ -103,9 +103,9 @@ void runFailingTest(CChainState& chainstate, CTxMemPool& mempool, bool isCreatio
     }
     tx2 = createTX(outs2, hashParentTx);
     CTransaction transaction(tx2);
-    QtumTxConverter converter(transaction, chainstate, &mempool, NULL);
-    ExtractQtumTX qtumTx;
-    BOOST_CHECK(!converter.extractionQtumTransactions(qtumTx));
+    YodyTxConverter converter(transaction, chainstate, &mempool, NULL);
+    ExtractYodyTX qtumTx;
+    BOOST_CHECK(!converter.extractionYodyTransactions(qtumTx));
 }
 
 BOOST_FIXTURE_TEST_SUITE(qtumtxconverter_tests, TestingSetup)

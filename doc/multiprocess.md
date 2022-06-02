@@ -1,4 +1,4 @@
-# Multiprocess Qtum
+# Multiprocess Yody
 
 On unix systems, the `--enable-multiprocess` build option can be passed to `./configure` to build new `qtum-node`, `qtum-wallet`, and `qtum-gui` executables alongside existing `qtumd` and `qtum-qt` executables.
 

@@ -13,7 +13,7 @@ import sys
 import time
 
 
-class QtumDGPTest(BitcoinTestFramework):
+class YodyDGPTest(BitcoinTestFramework):
     def set_test_params(self, split=False):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -1138,4 +1138,4 @@ class QtumDGPTest(BitcoinTestFramework):
         state.assert_state()
 
 if __name__ == '__main__':
-    QtumDGPTest().main()
+    YodyDGPTest().main()

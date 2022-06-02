@@ -11,7 +11,7 @@ import subprocess
 
 pp = pprint.PrettyPrinter()
 
-class QtumEVMConstantinoplePrecompiledContractsTest(BitcoinTestFramework):
+class YodyEVMConstantinoplePrecompiledContractsTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -695,4 +695,4 @@ class QtumEVMConstantinoplePrecompiledContractsTest(BitcoinTestFramework):
         self.bn256pairing_test(should_fail=False)
 
 if __name__ == '__main__':
-    QtumEVMConstantinoplePrecompiledContractsTest().main()
+    YodyEVMConstantinoplePrecompiledContractsTest().main()

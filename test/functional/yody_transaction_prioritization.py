@@ -10,7 +10,7 @@ import sys
 import random
 import time
 
-class QtumTransactionPrioritizationTest(BitcoinTestFramework):
+class YodyTransactionPrioritizationTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -300,4 +300,4 @@ class QtumTransactionPrioritizationTest(BitcoinTestFramework):
         self.verify_contract_ancestor_txs_test(with_restart=True, use_staking=True)
 
 if __name__ == '__main__':
-    QtumTransactionPrioritizationTest().main()
+    YodyTransactionPrioritizationTest().main()

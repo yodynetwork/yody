@@ -291,7 +291,7 @@ BASE_SCRIPTS = [
     'feature_logging.py',
     'feature_anchors.py',
     'feature_coinstatsindex.py',
-    # 'wallet_orphanedreward.py', // N/A in Qtum due to rolling checkpoints 
+    # 'wallet_orphanedreward.py', // N/A in Yody due to rolling checkpoints 
     'p2p_node_network_limited.py',
     'p2p_permissions.py',
     'feature_blocksdir.py',
@@ -373,7 +373,7 @@ BASE_SCRIPTS = [
     'qtum_delegation_contract.py',
     'qtum_qrc20.py'
 ]
-# scripts irreleveant for Qtum
+# scripts irreleveant for Yody
 DISABLED_SCRIPTS = [
       'wallet_orphanedreward.py',
       'feature_cltv.py',

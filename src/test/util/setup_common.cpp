@@ -149,7 +149,7 @@ ChainTestingSetup::ChainTestingSetup(const std::string& chainName, const std::ve
     boost::filesystem::path pathTemp = fs::temp_directory_path() / strprintf("test_qtum_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
     boost::filesystem::create_directories(pathTemp);
     const dev::h256 hashDB(dev::sha3(dev::rlp("")));
-    globalState = std::unique_ptr<QtumState>(new QtumState(dev::u256(0), QtumState::openDB(pathTemp.string(), hashDB, dev::WithExisting::Trust), pathTemp.string(), dev::eth::BaseState::Empty));
+    globalState = std::unique_ptr<YodyState>(new YodyState(dev::u256(0), YodyState::openDB(pathTemp.string(), hashDB, dev::WithExisting::Trust), pathTemp.string(), dev::eth::BaseState::Empty));
     dev::eth::ChainParams cp(chainparams.EVMGenesisInfo());
     cp.EIP150ForkBlock = 0xffffffffffffffff;
     cp.EIP158ForkBlock = 0xffffffffffffffff;

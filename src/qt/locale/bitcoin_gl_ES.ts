@@ -66,8 +66,8 @@
         <translation type="unfinished">Enderezos de recepción</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Estes son os teus enderezos de Qtum para enviar pagamentos. Asegurate sempre de comprobar a cantidade e maila dirección antes de enviar moedas.</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Estes son os teus enderezos de Yody para enviar pagamentos. Asegurate sempre de comprobar a cantidade e maila dirección antes de enviar moedas.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -282,7 +282,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;visión xeral</translation>
@@ -345,8 +345,8 @@
         <translation type="unfinished">Proxy &lt;b&gt;activado&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Envía moedas a un enderezo de Qtum</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>Envía moedas a un enderezo de Yody</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -377,12 +377,12 @@
         <translation>Encripta as claves privadas que pertencen á túa carteira</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Asina mensaxes cos teus enderezos de Qtum para probar que che pertencen</translation>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
+        <translation>Asina mensaxes cos teus enderezos de Yody para probar que che pertencen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Verifica mensaxes para asegurar que foron asinados cos enderezos de Qtum especificados</translation>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
+        <translation>Verifica mensaxes para asegurar que foron asinados cos enderezos de Yody especificados</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -465,7 +465,7 @@
     </message>
     <message>
         <source>Open a qtum: URI</source>
-        <translation type="unfinished">Abre una URI de Qtum</translation>
+        <translation type="unfinished">Abre una URI de Yody</translation>
     </message>
     <message>
         <source>Open Wallet</source>
@@ -480,8 +480,8 @@
         <translation type="unfinished">Pechar carteira</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">Mostra a %1 mensaxe de axuda para obter unha lista cas posibles opcións de línea de comando de Qtum </translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">Mostra a %1 mensaxe de axuda para obter unha lista cas posibles opcións de línea de comando de Yody </translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -508,7 +508,7 @@
         <translation type="unfinished">%1 cliente</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -806,8 +806,8 @@
         <translation type="unfinished">Editar enderezo de envío</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
-        <translation type="unfinished">O enderezo introducido "%1" non é un enderezo de Qtum válido.</translation>
+        <source>The entered address "%1" is not a valid Yody address.</source>
+        <translation type="unfinished">O enderezo introducido "%1" non é un enderezo de Yody válido.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>

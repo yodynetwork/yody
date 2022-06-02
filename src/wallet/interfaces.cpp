@@ -1360,10 +1360,10 @@ public:
                     if(v.scriptPubKey.HasOpCall()){
                         std::vector<unsigned char> data;
                         v.scriptPubKey.GetData(data);
-                        if(QtumDelegation::IsAddBytecode(data))
+                        if(YodyDelegation::IsAddBytecode(data))
                         {
                             std::string hexStaker;
-                            if(!QtumDelegation::GetUnsignedStaker(data, hexStaker))
+                            if(!YodyDelegation::GetUnsignedStaker(data, hexStaker))
                             {
                                 error = "Fail to get unsigned staker";
                                 return false;
@@ -1415,7 +1415,7 @@ public:
                 std::vector<unsigned char> data;
                 v.scriptPubKey.GetData(data);
                 CScript scriptRet;
-                if(QtumDelegation::SetSignedStaker(data, PoD) && v.scriptPubKey.SetData(data, scriptRet))
+                if(YodyDelegation::SetSignedStaker(data, PoD) && v.scriptPubKey.SetData(data, scriptRet))
                 {
                     v.scriptPubKey = scriptRet;
                 }
@@ -1514,7 +1514,7 @@ public:
     CWallet* wallet() override { return m_wallet.get(); }
 
     std::shared_ptr<CWallet> m_wallet;
-    QtumDelegation m_qtumDelegation;
+    YodyDelegation m_qtumDelegation;
 };
 
 class WalletClientImpl : public WalletClient

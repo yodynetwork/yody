@@ -19,8 +19,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Qtum"
-            VALUE "FileDescription",    PACKAGE_NAME " (GUI node for Qtum)"
+            VALUE "CompanyName",        "Yody"
+            VALUE "FileDescription",    PACKAGE_NAME " (GUI node for Yody)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "qtum-qt"
             VALUE "LegalCopyright",     COPYRIGHT_STR

@@ -1,20 +1,20 @@
-# Qtum Sparknet Usage and Information
+# Yody Sparknet Usage and Information
 
-Qtum is a decentralized blockchain project built on Bitcoin's UTXO model, but with support for Ethereum Virtual Machine based smart contracts. It achieves this through the revolutionary Account Abstraction Layer. For more general information about Qtum as well as links to join our community, go to https://qtum.org
+Yody is a decentralized blockchain project built on Bitcoin's UTXO model, but with support for Ethereum Virtual Machine based smart contracts. It achieves this through the revolutionary Account Abstraction Layer. For more general information about Yody as well as links to join our community, go to https://qtum.org
 
-Welcome to Qtum Sparknet, the first public testnet for the Qtum blockchain. Sparknet is designed primarily for developers, and as such documentation at this point will be technical and suited more for developers. The mainnet is expected to be released in September and will be suited for the general public. Testnet tokens do not hold any value and should not be traded for any monetary instruments. The testnet can be reset or forked at anytime as deemed necessary for development. Sparknet does not include support for Mutualized Proof Of Stake, or for the Decentralized Governance Protocol. Both of these features are implemented, and their code is available on alternative branches (check the pull requests), but have not been tested and proven stable enough to include in this testnet. They will be implemented in the 2nd public testnet for Qtum. 
+Welcome to Yody Sparknet, the first public testnet for the Yody blockchain. Sparknet is designed primarily for developers, and as such documentation at this point will be technical and suited more for developers. The mainnet is expected to be released in September and will be suited for the general public. Testnet tokens do not hold any value and should not be traded for any monetary instruments. The testnet can be reset or forked at anytime as deemed necessary for development. Sparknet does not include support for Mutualized Proof Of Stake, or for the Decentralized Governance Protocol. Both of these features are implemented, and their code is available on alternative branches (check the pull requests), but have not been tested and proven stable enough to include in this testnet. They will be implemented in the 2nd public testnet for Yody. 
 
-# Using Smart Contracts with Qtum
+# Using Smart Contracts with Yody
 
-The smart contract interface in Qtum still requires some technical knowledge. The GUI is not completed yet, so all smart contract interation must happen either using `qtum-cli` at the command line, or in the debug window of `qtum-qt`. 
+The smart contract interface in Yody still requires some technical knowledge. The GUI is not completed yet, so all smart contract interation must happen either using `qtum-cli` at the command line, or in the debug window of `qtum-qt`. 
 
 To demonstrate how to deploy and interact with a simple we will use this contract:
 
     pragma solidity ^0.4.0;
 
-    contract QtumTest {
+    contract YodyTest {
        uint storedNumber;
-       function QtumTest() {
+       function YodyTest() {
            storedNumber=1;
        }
        function setNumber(uint number) public{
@@ -59,7 +59,7 @@ And finally, has the following JSON interface file:
 
 This info can easily be retrieved for any contract by using [Browser Solidity](https://ethereum.github.io/browser-solidity/), inputing your contract's source code, and then on the right hand side clicking "contract details" 
 
-(note, if using the debug window in the Qtum Qt application, don't include `./qtum-cli` in the commands)
+(note, if using the debug window in the Yody Qt application, don't include `./qtum-cli` in the commands)
 
 First, we need to deploy the contract:
 
@@ -153,7 +153,7 @@ Afterwards, we can call `returnNumber()` again and check the `output` field:
 
 This is 123456 encoded as hex. 
 
-You can also use the `logNumber()` function in order to generate logs. If your node was started with `-record-log-opcodes`, then the file `vmExecLogs.json` will contain any log operations that occur on the blockchain. This is what is used for events on the Ethereum blockchain, and eventually it is our intention to bring similar functionality to Qtum.
+You can also use the `logNumber()` function in order to generate logs. If your node was started with `-record-log-opcodes`, then the file `vmExecLogs.json` will contain any log operations that occur on the blockchain. This is what is used for events on the Ethereum blockchain, and eventually it is our intention to bring similar functionality to Yody.
 
 You can also deposit and withdraw coins from this test contract using the `deposit()` and `withdraw()` functions.
 
@@ -186,17 +186,17 @@ When creating this contract transaction, nothing will immediately happen, when t
 * Q: "I used `createcontract`, but can't call my contract and it's not in listcontract" A: You probably did not provide enough gas for the contract's constructor to be executed and it's code persisted in the blockchain. The vm.log file should confirm this by saying how much gas was needed
 * Q: "I sent a large amount of gas but I never got a refund" A: Refunds are generated from the coinstake transaction, so you must wait 500 blocks for the gas refund to mature before it can be spent again
 * Q: "I used -reindex and now my node is taking forever to resync" A: Currently when doing a reindex, all contracts are reprocessed, so in a chain with many contract executions this can add up to a significant amount of time. This will be made faster in the future, as well as the initial syncing speed of nodes
-* Q: "I think I found a bug in Qtum" A: Please report any bugs at https://github.com/yodynetwork/qtum/issues
+* Q: "I think I found a bug in Yody" A: Please report any bugs at https://github.com/yodynetwork/qtum/issues
 
 
 
-# New Qtum RPC Commands
+# New Yody RPC Commands
 
-Qtum supports all of the RPC commands supported by Bitcoin Core, but also includes the following commands unique to Qtum:
+Yody supports all of the RPC commands supported by Bitcoin Core, but also includes the following commands unique to Yody:
 
-* `createcontract` - This will create and deploy a new smart contract to the Qtum blockchain. This requires gas.
-* `callcontract` - This will interact with an already deployed smart contract on the Qtum blockchain, with all computation taking place off-chain and no persistence to the blockchain. This does not require gas
-* `sendtocontract` - This will interact with an already deployed smart contract on the Qtum blockchain. All computation takes place on-chain and any state changes will be persisted to the blockchain. This allows tokens to be sent to a smart contract. This requires gas.
+* `createcontract` - This will create and deploy a new smart contract to the Yody blockchain. This requires gas.
+* `callcontract` - This will interact with an already deployed smart contract on the Yody blockchain, with all computation taking place off-chain and no persistence to the blockchain. This does not require gas
+* `sendtocontract` - This will interact with an already deployed smart contract on the Yody blockchain. All computation takes place on-chain and any state changes will be persisted to the blockchain. This allows tokens to be sent to a smart contract. This requires gas.
 * `getaccountinfo` - This will show some low level information about a contract, including the contract's bytecode, stored data, and balance on the blockchain.
 * `listcontracts` - This will output a list of currently deployed contract addresses with their respective balance. This RPC call may change or be removed in the future.
 * `reservebalance` - This will reserve a set amount of coins so that they do not participate in staking. If you reserve as many or more coins than are in your wallet, then you will not participate at all in staking and block creation for the network.
@@ -205,25 +205,25 @@ Qtum supports all of the RPC commands supported by Bitcoin Core, but also includ
 * `fromhexaddress` - this will convert a hex address used in smart contracts to a standard Base58 pubkeyhash address
 
 
-# New Qtum Command Line Arguments
+# New Yody Command Line Arguments
 
-Qtum supports all of the usual command line arguments that Bitcoin Core supports. In addition it adds the following new command line arguments:
+Yody supports all of the usual command line arguments that Bitcoin Core supports. In addition it adds the following new command line arguments:
 
-* `-record-log-opcodes` - This will create a new log file in the Qtum data directory (usually ~/.qtum) named vmExecLogs.json, where any EVM LOG opcode is logged along with topics and data that the contract requested be logged. 
+* `-record-log-opcodes` - This will create a new log file in the Yody data directory (usually ~/.qtum) named vmExecLogs.json, where any EVM LOG opcode is logged along with topics and data that the contract requested be logged. 
 
 # Untested features
 
-Some features included in Bitcoin Core have not been tested in it's porting to Qtum. This includes:
+Some features included in Bitcoin Core have not been tested in it's porting to Yody. This includes:
 
 * Pruning
 
 # EVM Smart Contract Changes and Limitations
 
-Because of Qtum's underlying technical differences, there are a few operations that can have different results or limitations when executed in Qtum than when compared to Ethereum. 
+Because of Yody's underlying technical differences, there are a few operations that can have different results or limitations when executed in Yody than when compared to Ethereum. 
 
 These include the following, though there may be others introduced in the future:  
 
-* The gas schedule for Qtum is different from Ethereum. Certain operations are more or less expensive. As such, gas cost estimators designed for Ethereum will not give accurate results for Qtum. We will develop our own gas estimating tools as well as fully documenting these differences at a later date. 
+* The gas schedule for Yody is different from Ethereum. Certain operations are more or less expensive. As such, gas cost estimators designed for Ethereum will not give accurate results for Yody. We will develop our own gas estimating tools as well as fully documenting these differences at a later date. 
 * `block.coinbase` or the `COINBASE` opcode currently is not supported and will only return 0. When MPoS is released in the 2nd testnet this should be functioning as expected
 * `block.number` will return the previous block height before this block containing the contract's execution
 * `block.difficulty` will return the previous block's difficulty

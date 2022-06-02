@@ -46,7 +46,7 @@ const QString BITCOIN_IPC_PREFIX("qtum:");
 //
 static QString ipcServerName()
 {
-    QString name("QtumQt");
+    QString name("YodyQt");
 
     // Append a simple hash of the datadir
     // Note that gArgs.GetDataDirNet() returns a different path
@@ -251,7 +251,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
             }
             else
                 Q_EMIT message(tr("URI handling"),
-                    tr("URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters."),
+                    tr("URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters."),
                     CClientUIInterface::ICON_WARNING);
 
             return;

@@ -66,8 +66,8 @@
         <translation type="unfinished">Direcciones de recibo</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation type="unfinished">Estas son tus direcciones de Qtum para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation type="unfinished">Estas son tus direcciones de Yody para enviar pagos. Siempre revisa el monto y la dirección de envío antes de enviar monedas.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -238,7 +238,7 @@
     </message>
 </context>
 <context>
-    <name>QtumApplication</name>
+    <name>YodyApplication</name>
     <message>
         <source>A fatal error occurred. %1 can no longer continue safely and will quit.</source>
         <translation type="unfinished">Ha ocurrido un error grave. %1 no puede continuar de forma segura y se cerrará.</translation>
@@ -322,7 +322,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Vista previa</translation>
@@ -385,8 +385,8 @@
         <translation type="unfinished">El proxy está &lt;b&gt;habilitado&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
-        <translation>Enviar monedas a una dirección Qtum</translation>
+        <source>Send coins to a Yody address</source>
+        <translation>Enviar monedas a una dirección Yody</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -433,16 +433,16 @@
         <translation type="unfinished">&amp;Cambiar contraseña...</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
-        <translation>Firme mensajes con sus direcciones de Qtum para demostrar que los posee</translation>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
+        <translation>Firme mensajes con sus direcciones de Yody para demostrar que los posee</translation>
     </message>
     <message>
         <source>&amp;Verify message…</source>
         <translation type="unfinished">&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
-        <translation>Verifique los mensajes para asegurarse de que se firmaron con direcciones de Qtum especificadas.</translation>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
+        <translation>Verifique los mensajes para asegurarse de que se firmaron con direcciones de Yody especificadas.</translation>
     </message>
     <message>
         <source>&amp;Load PSBT from file…</source>
@@ -558,8 +558,8 @@ Solicitar pagos (genera códigos QR y qtum: URI)
         <translation type="unfinished">Cerrar todas las carteras</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">Mostrar mensaje de ayuda %1  para obtener una lista con posibles líneas de comando de Qtum </translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">Mostrar mensaje de ayuda %1  para obtener una lista con posibles líneas de comando de Yody </translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -582,11 +582,11 @@ Solicitar pagos (genera códigos QR y qtum: URI)
         <translation type="unfinished">Ventana Principal</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
-            <numerusform>%n conexiones activas con la red Qtum</numerusform>
-            <numerusform>%n conexiones activas con la red Qtum </numerusform>
+            <numerusform>%n conexiones activas con la red Yody</numerusform>
+            <numerusform>%n conexiones activas con la red Yody </numerusform>
         </translation>
     </message>
     <message>
@@ -1292,8 +1292,8 @@ Para obtener más información, escriba %6.
         <translation type="unfinished">Mensaje:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
-        <translation type="unfinished">Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Qtum.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
+        <translation type="unfinished">Mensaje opcional para agregar a la solicitud de pago, el cual será mostrado cuando la solicitud este abierta. Nota: El mensaje no se manda con el pago a travéz de la red de Yody.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1536,8 +1536,8 @@ Para obtener más información, escriba %6.
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
-        <translation type="unfinished">Advertencia: Dirección de Qtum invalida</translation>
+        <source>Warning: Invalid Yody address</source>
+        <translation type="unfinished">Advertencia: Dirección de Yody invalida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -1571,8 +1571,8 @@ Para obtener más información, escriba %6.
         <translation type="unfinished">Elegir la dirección utilizada anteriormente</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
-        <translation type="unfinished">La dirección de Qtum para enviar el pago a</translation>
+        <source>The Yody address to send the payment to</source>
+        <translation type="unfinished">La dirección de Yody para enviar el pago a</translation>
     </message>
     <message>
         <source>Paste address from clipboard</source>

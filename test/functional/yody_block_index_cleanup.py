@@ -11,7 +11,7 @@ from test_framework.qtum import *
 from test_framework.qtumconfig import *
 import sys
 
-class QtumBlockIndexCleanupTest(BitcoinTestFramework):
+class YodyBlockIndexCleanupTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -147,4 +147,4 @@ class QtumBlockIndexCleanupTest(BitcoinTestFramework):
             assert_equal(self.node.getchaintips(), n.getchaintips())
 
 if __name__ == '__main__':
-    QtumBlockIndexCleanupTest().main()
+    YodyBlockIndexCleanupTest().main()

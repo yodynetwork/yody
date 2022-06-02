@@ -115,7 +115,7 @@ void SplitUTXOPage::setModel(WalletModel *_model)
 
     if (bCreateUnsigned) {
         ui->splitCoinsButton->setText(tr("Cr&eate Unsigned"));
-        ui->splitCoinsButton->setToolTip(tr("Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.").arg(PACKAGE_NAME));
+        ui->splitCoinsButton->setToolTip(tr("Creates a Partially Signed Yody Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.").arg(PACKAGE_NAME));
     }
 
     if(m_model && m_model->wallet().privateKeysDisabled())
@@ -229,7 +229,7 @@ void SplitUTXOPage::on_splitCoinsClicked()
         if (bCreateUnsigned) {
             questionString.append(tr("Do you want to draft this create contract transaction?"));
             questionString.append("<br /><span style='font-size:10pt;'>");
-            questionString.append(tr("Please, review your transaction proposal. This will produce a Partially Signed Qtum Transaction (PSBT) which you can copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.").arg(PACKAGE_NAME));
+            questionString.append(tr("Please, review your transaction proposal. This will produce a Partially Signed Yody Transaction (PSBT) which you can copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.").arg(PACKAGE_NAME));
             questionString.append("</span>");
             questionString.append(tr("<br/><br/>Split coins for address:<br/>"));
         } else {

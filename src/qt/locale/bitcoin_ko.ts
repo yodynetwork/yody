@@ -147,11 +147,11 @@
         <translation>받는 주소</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>송금이 가능한 QTUM 주소입니다. 송금 전에 반드시 주소와 금액이 정확한지 확인해주세요. </translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
+        <source>These are your Yody addresses for receiving payments. Use the 'Create new receiving address' button in the receive tab to create new addresses.
 Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>지불 수신용 QTUM주소. 신규 주소를 만들려면 'Create new receiving address' 버튼을 사용하세요.
 서명은 '레거시' 타입의 주소만 가능합니다.</translation>
@@ -370,7 +370,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">보내기</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
+        <source>Send coins to a Yody address</source>
         <translation type="unfinished">QTUM 주소로 QTUM 코인 보내기</translation>
     </message>
     <message>
@@ -526,7 +526,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">메시지 서명(&amp;M)</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
         <translation type="unfinished">소유하고 있는 QTUM 주소의 키로 메시지 서명을 하여 해당 QTUM 주소의 소유권을 증명하세요. </translation>
     </message>
     <message>
@@ -534,7 +534,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">메시지 검증(&amp;V)</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
         <translation type="unfinished">메시지 검증. 메시지에 특정 퀀텀 주소의 서명이 있는지 확인 </translation>
     </message>
     <message>
@@ -598,7 +598,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">커멘드 라인 옵션</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
         <translation type="unfinished">%1 도움 정보 표시로 사용 가능한 커멘드 라인 옵션 리스트 불러오기</translation>
     </message>
     <message>
@@ -662,8 +662,8 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">지갑：</translation>
     </message>
     <message>
-        <source>New version of Qtum wallet is available on the Qtum source code repository: &lt;br /&gt; %1. &lt;br /&gt;It is recommended to download it and update this application</source>
-        <translation type="unfinished">최신 버전의 Qtum 지갑은 Qtum 소스코드 레포지토리 &lt;br /&gt; %1. &lt;br /&gt;에서 받을 수 있습니다. 다운로드 및 업데이트를 권장 드립니다. </translation>
+        <source>New version of Yody wallet is available on the Yody source code repository: &lt;br /&gt; %1. &lt;br /&gt;It is recommended to download it and update this application</source>
+        <translation type="unfinished">최신 버전의 Yody 지갑은 Yody 소스코드 레포지토리 &lt;br /&gt; %1. &lt;br /&gt;에서 받을 수 있습니다. 다운로드 및 업데이트를 권장 드립니다. </translation>
     </message>
     <message>
         <source>Check for updates</source>
@@ -674,7 +674,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">%1 클라이언트</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform>QTUM 네트워크에 %n 개의 연결이 활성화 되고 있습니다.</numerusform>
@@ -744,7 +744,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>파일에서 PSBT 불러오기(&amp;L)</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction</source>
+        <source>Load Partially Signed Yody Transaction</source>
         <translation>부분적으로 서명된 QTUM 트랜잭션 불러오기</translation>
     </message>
     <message>
@@ -752,7 +752,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>클립보드에서 PSBT 불러오기</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+        <source>Load Partially Signed Yody Transaction from clipboard</source>
         <translation>클립보드로부터 부분적으로 서명된 QTUM 트랜잭션 불러오기</translation>
     </message>
     <message>
@@ -772,7 +772,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation type="unfinished">해당 지점 이후 거래 내역이 없습니다. </translation>
     </message>
     <message>
-        <source>Qtum</source>
+        <source>Yody</source>
         <translation type="unfinished">QTUM</translation>
     </message>
     <message>
@@ -1409,7 +1409,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
     </message>
     <message>
         <source>The qtum address that will be used to create the contract.</source>
-        <translation type="unfinished">컨트랙트 생성을 위한 Qtum주소</translation>
+        <translation type="unfinished">컨트랙트 생성을 위한 Yody주소</translation>
     </message>
     <message>
         <source>The Gas Price is too high, are you sure you want to possibly spend a max of %1 for this transaction?</source>
@@ -1479,7 +1479,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>송금주소 편집</translation>
     </message>
     <message>
-        <source>The entered address &quot;%1&quot; is not a valid Qtum address.</source>
+        <source>The entered address &quot;%1&quot; is not a valid Yody address.</source>
         <translation>입력한 주소 %1는 유효한 QTUM 주소가 아닙니다. </translation>
     </message>
     <message>
@@ -1628,7 +1628,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         <translation>사용자 지정 데이터 디렉터리 사용</translation>
     </message>
     <message>
-        <source>Qtum</source>
+        <source>Yody</source>
         <translation>QTUM</translation>
     </message>
     <message>
@@ -1647,7 +1647,7 @@ Signing is only possible with addresses of the type 'legacy'.</source>
         </translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Qtum block chain.</source>
+        <source>%1 will download and store a copy of the Yody block chain.</source>
         <translation>%1이 QTUM 블록체인을 다운로드 및 저장할 예정입니다. </translation>
     </message>
     <message>
@@ -1872,7 +1872,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>승인 대기 중인 잔액 사용</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>라우터에서 QTUM 클라이언트 포트를 자동적으로 엽니다. 라우터에서 UPnP를 지원하고 활성화 했을 경우에만 동작합니다.</translation>
     </message>
     <message>
@@ -1880,7 +1880,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>&amp;UPnP를 통한 포트 맵핑</translation>
     </message>
     <message>
-        <source>Automatically open the Qtum client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
+        <source>Automatically open the Yody client port on the router. This only works when your router supports NAT-PMP and it is enabled. The external port could be random.</source>
         <translation>라우터에서 QTUM 클라이언트 포트를 자동으로 엽니다. 이는 라우터가 NAT-PMP를 지원하고 활성화 된 경우에만 작동합니다. 외부 포트는 무작위 일 수 있습니다.</translation>
     </message>
     <message>
@@ -1896,7 +1896,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>연결 유입 허용</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a SOCKS5 proxy.</source>
+        <source>Connect to the Yody network through a SOCKS5 proxy.</source>
         <translation>SOCKS5 프록시를 통해 QTUM 네트워크에 연결합니다.</translation>
     </message>
     <message>
@@ -1968,8 +1968,8 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>코인 통제 기능 표시 여부</translation>
     </message>
     <message>
-        <source>Connect to the Qtum network through a separate SOCKS5 proxy for Tor onion services.</source>
-        <translation>Tor onion 서비스를 위한 별도의 SOCKS5 프록시를 통해 Qtum 네트워크에 연결합니다.</translation>
+        <source>Connect to the Yody network through a separate SOCKS5 proxy for Tor onion services.</source>
+        <translation>Tor onion 서비스를 위한 별도의 SOCKS5 프록시를 통해 Yody 네트워크에 연결합니다.</translation>
     </message>
     <message>
         <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor onion services:</source>
@@ -2083,7 +2083,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>서식</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Qtum network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Yody network after a connection is established, but this process has not completed yet.</source>
         <translation>현재 표시된 내용은 지난 정보일 수 있습니다. 퀀텀 네트워크에 연결 후 동기화를 실행하지만 아직 완료되진 않았습니다. </translation>
     </message>
     <message>
@@ -2336,7 +2336,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>'qtum://"은 잘못된 URI입니다. 'qtum:'을 사용하십시오.</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Qtum address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Yody address or malformed URI parameters.</source>
         <translation>URI 주소를 분석할 수 없습니다. 무효한 퀀텀 주소 또는 URI 파라미터 서식 오류일 수 있습니다. </translation>
     </message>
     <message>
@@ -2398,7 +2398,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>금액</translation>
     </message>
     <message>
-        <source>Enter a Qtum address (e.g. %1)</source>
+        <source>Enter a Yody address (e.g. %1)</source>
         <translation>QTUM 주소를 입력해주세요 (예시, %1)</translation>
     </message>
     <message>
@@ -2605,7 +2605,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
     </message>
 </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation type="vanished">메시지 서명</translation>
@@ -2715,7 +2715,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation type="vanished">프록시 &lt;b&gt;활성화&lt;/b&gt;：%1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
+        <source>Send coins to a Yody address</source>
         <translation type="vanished">QTUM 주소로 QTUM 코인 보내기</translation>
     </message>
     <message>
@@ -2731,7 +2731,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation type="vanished">메시지 검증</translation>
     </message>
     <message>
-        <source>Qtum</source>
+        <source>Yody</source>
         <translation type="vanished">QTUM</translation>
     </message>
     <message>
@@ -2755,11 +2755,11 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation type="vanished">지갑 프라이빗 키 암호화</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
         <translation type="vanished">소유하고 있는 QTUM 주소의 키로 메시지 서명을 하여 해당 QTUM 주소의 소유권을 증명하세요. </translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
         <translation type="vanished">메시지 검증. 메시지에 특정 퀀텀 주소의 서명이 있는지 확인 </translation>
     </message>
     <message>
@@ -2795,7 +2795,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation type="vanished">커멘드 라인 옵션</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <translation type="vanished">
             <numerusform>QTUM네트워크에 대한 활성화된 연결은 %n 개입니다.</numerusform>
         </translation>
@@ -2847,7 +2847,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>파일로부터 PSBT 불러오기(&amp;L)</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction</source>
+        <source>Load Partially Signed Yody Transaction</source>
         <translation>부분적으로 서명된 QTUM 트랜잭션 불러오기</translation>
     </message>
     <message>
@@ -2855,7 +2855,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>클립보드로부터 PSBT 불러오기...</translation>
     </message>
     <message>
-        <source>Load Partially Signed Qtum Transaction from clipboard</source>
+        <source>Load Partially Signed Yody Transaction from clipboard</source>
         <translation>클립보드로부터 부분적으로 서명된 QTUM 트랜잭션 불러오기</translation>
     </message>
     <message>
@@ -2903,7 +2903,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>모든 지갑 닫기</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
         <translation type="vanished">%1 도움 정보 표시로 사용 가능한 커멘드 라인 옵션 리스트 불러오기</translation>
     </message>
     <message>
@@ -3330,7 +3330,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>메시지</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Qtum network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Yody network.</source>
         <translation>지불 요청에 메시지를 추가할 수 있습니다. 지불 요청 확인 시 메시지 확인이 가능합니다. 주의: 메시지는 퀀텀 네트워크를 통해 전달되는 것은 아닙니다. </translation>
     </message>
     <message>
@@ -3789,7 +3789,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>사인되지 않은 것을 생성(&amp;e)</translation>
     </message>
     <message>
-        <source>Creates a Partially Signed Qtum Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Creates a Partially Signed Yody Transaction (PSBT) for use with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation>오프라인 %1 지갑 또는 PSBT가 호환되는 하드웨어 지갑과의 사용을 위한 '부분적으로 서명 된 비트 코인 트랜잭션(PSBT)'를 생성합니다.</translation>
     </message>
     <message>
@@ -3833,7 +3833,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>추후 수수료를 늘릴 수 있습니다. (signals Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction proposal. This will produce a Partially Signed Qtum Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
+        <source>Please, review your transaction proposal. This will produce a Partially Signed Yody Transaction (PSBT) which you can save or copy and then sign with e.g. an offline %1 wallet, or a PSBT-compatible hardware wallet.</source>
         <translation>거래 제안을 검토해 주십시오. 이것은 당신이 저장하거나 복사한 뒤 e.g. 오프라인 %1 지갑 또는 PSBT 호환 하드웨어 지갑으로 서명할 수 있는 PSBT (부분적으로 서명된 QTUM 트랜잭션)를 생성할 것입니다.</translation>
     </message>
     <message>
@@ -3911,7 +3911,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
+        <source>Warning: Invalid Yody address</source>
         <translation>경고: 무효한 QTUM 주소</translation>
     </message>
     <message>
@@ -3962,7 +3962,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>이전에 사용했던 주소 선택</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
+        <source>The Yody address to send the payment to</source>
         <translation>지불 목적 주소</translation>
     </message>
     <message>
@@ -4006,7 +4006,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>해당 주소에 라벨을 추가하여 사용했던 리스트에 추가해주세요. </translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
         <translation>퀀텀 URI에 첨부된 메시지는 참조를 위해 거래와 함께 저장됩니다. 주의: 메시지는 퀀텀 네트워크를 통해 전달되는 것은 아닙니다. </translation>
     </message>
     <message>
@@ -4242,7 +4242,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>소유하고 계신 주소로 메시지/협의에 대해 서명하여 해당 주소를 통해 QTUM을 받을 수 있음을 증명할 수 있습니다. 피싱 공격을 예방하기 위해 명확하지 않은 내용 또는 랜덤 메시지에 대한 서명은 삼가 하시고 메시지에 대해 충분히 동의할 경우에만 서명하세요. </translation>
     </message>
     <message>
-        <source>The Qtum address to sign the message with</source>
+        <source>The Yody address to sign the message with</source>
         <translation>메시지 서명에 사용된 퀀텀 주소</translation>
     </message>
     <message>
@@ -4266,7 +4266,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>시스템 클립보드에 해당 서명 복사</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Qtum address</source>
+        <source>Sign the message to prove you own this Yody address</source>
         <translation>메시지 서명을 통해 퀀텀 주소의 소유권을 증명하세요</translation>
     </message>
     <message>
@@ -4290,7 +4290,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>받는이의 주소와 메시지 (띄어쓰기, 빈칸, 부호 등이 정확한지 확인해주세요)를 입력하고 서명하여 아래 메시지를 검증하세요. 미들맨의 공격을 예방하기 위해 서명된 메시지 외에는 읽지 않을 것을 권장 드립니다. 받는이가 서명한 주소라는 것만 증명할 수 있고 그 외에 어떤 거래도 증명할 수 없다는 것을 유의해주시길 바랍니다. </translation>
     </message>
     <message>
-        <source>The Qtum address the message was signed with</source>
+        <source>The Yody address the message was signed with</source>
         <translation>메시지 서명에 사용된 퀀텀 주소</translation>
     </message>
     <message>
@@ -4302,7 +4302,7 @@ Please make sure to keep an updated antivirus and operating system. We can not r
         <translation>메세지의 서명되었을 때의 시그니처</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Qtum address</source>
+        <source>Verify the message to ensure it was signed with the specified Yody address</source>
         <translation>메시지 검증을 통해 지정된 퀀텀 주소를 통해 서명한 것을 확인하세요. </translation>
     </message>
     <message>
@@ -5335,8 +5335,8 @@ Go to File &gt; Open Wallet to load a wallet.
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Qtum Core</source>
-        <translation type="unfinished">Qtum Core</translation>
+        <source>Yody Core</source>
+        <translation type="unfinished">Yody Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -5838,8 +5838,8 @@ Go to File &gt; Open Wallet to load a wallet.
         <translation type="vanished">HTTP 서비스를 활성화하지 못했습니다. 디버그 로그에서 더 많은 정보를 확인하세요. </translation>
     </message>
     <message>
-        <source>Qtum Core</source>
-        <translation type="vanished">Qtum Core</translation>
+        <source>Yody Core</source>
+        <translation type="vanished">Yody Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

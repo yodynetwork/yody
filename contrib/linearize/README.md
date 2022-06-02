@@ -1,5 +1,5 @@
 # Linearize
-Construct a linear, no-fork, best version of the Qtum blockchain.
+Construct a linear, no-fork, best version of the Yody blockchain.
 
 ## Step 1: Download hash list
 

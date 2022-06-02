@@ -66,7 +66,7 @@
         <translation type="unfinished">接收地址</translation>
     </message>
     <message>
-        <source>These are your Qtum addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Yody addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation type="unfinished">这些是你的比特币支付地址。在发送之前，一定要核对金额和接收地址。</translation>
     </message>
     <message>
@@ -276,7 +276,7 @@
     </message>
     </context>
 <context>
-    <name>QtumGUI</name>
+    <name>YodyGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;概述</translation>
@@ -335,7 +335,7 @@
         <translation type="unfinished">启用代理:%1</translation>
     </message>
     <message>
-        <source>Send coins to a Qtum address</source>
+        <source>Send coins to a Yody address</source>
         <translation>发送比特币到一个比特币地址</translation>
     </message>
     <message>
@@ -367,11 +367,11 @@
         <translation>加密您的钱包私钥</translation>
     </message>
     <message>
-        <source>Sign messages with your Qtum addresses to prove you own them</source>
+        <source>Sign messages with your Yody addresses to prove you own them</source>
         <translation>用您的比特币地址签名信息，以证明拥有它们</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Qtum addresses</source>
+        <source>Verify messages to ensure they were signed with specified Yody addresses</source>
         <translation>验证消息，确保它们是用指定的比特币地址签名的</translation>
     </message>
     <message>
@@ -473,8 +473,8 @@
         <translation type="unfinished">关闭钱包</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Qtum command-line options</source>
-        <translation type="unfinished">显示%1帮助消息以获得可能包含Qtum命令行选项的列表</translation>
+        <source>Show the %1 help message to get a list with possible Yody command-line options</source>
+        <translation type="unfinished">显示%1帮助消息以获得可能包含Yody命令行选项的列表</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -505,7 +505,7 @@
         <translation type="unfinished">%1 客户端</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Qtum network.</source>
+        <source>%n active connection(s) to Yody network.</source>
         <extracomment>A substring of the tooltip.</extracomment>
         <translation type="unfinished">
             <numerusform />
@@ -779,7 +779,7 @@
         <translation type="unfinished">编辑发送地址</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Qtum address.</source>
+        <source>The entered address "%1" is not a valid Yody address.</source>
         <translation type="unfinished">输入的地址"%1"不是有效的比特币地址。</translation>
     </message>
     <message>
@@ -825,7 +825,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Qtum</source>
+        <source>Yody</source>
         <translation type="unfinished">比特币</translation>
     </message>
     <message numerus="yes">
@@ -1192,7 +1192,7 @@
         </translation>
     </message>
     <message>
-        <source>Warning: Invalid Qtum address</source>
+        <source>Warning: Invalid Yody address</source>
         <translation type="unfinished">警告：比特币地址无效</translation>
     </message>
     <message>
@@ -1215,7 +1215,7 @@
         <translation type="unfinished">选择以前使用的地址</translation>
     </message>
     <message>
-        <source>The Qtum address to send the payment to</source>
+        <source>The Yody address to send the payment to</source>
         <translation type="unfinished">支付到的比特币地址</translation>
     </message>
     <message>
@@ -1231,7 +1231,7 @@
         <translation type="unfinished">输入此地址的标签，将其添加到使用的地址列表中</translation>
     </message>
     <message>
-        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Qtum network.</source>
+        <source>A message that was attached to the qtum: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Yody network.</source>
         <translation type="unfinished">附在比特币上的消息:URI将与交易一起存储，供参考。注意：此信息不会通过比特币网络发送。</translation>
     </message>
     </context>

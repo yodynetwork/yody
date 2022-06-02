@@ -75,12 +75,12 @@
              <item>
               <widget class="QValidatedLineEdit" name="addressIn_SM">
                <property name="toolTip">
-                <string>The Qtum address to sign the message with</string>
+                <string>The Yody address to sign the message with</string>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QtumPushButton" name="addressBookButton_SM">
+              <widget class="YodyPushButton" name="addressBookButton_SM">
                <property name="toolTip">
                 <string>Choose previously used address</string>
                </property>
@@ -113,7 +113,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QtumPushButton" name="pasteButton_SM">
+              <widget class="YodyPushButton" name="pasteButton_SM">
                <property name="toolTip">
                 <string>Paste address from clipboard</string>
                </property>
@@ -165,7 +165,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QtumPushButton" name="copySignatureButton_SM">
+              <widget class="YodyPushButton" name="copySignatureButton_SM">
                <property name="toolTip">
                 <string>Copy the current signature to the system clipboard</string>
                </property>
@@ -265,7 +265,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QtumPushButton" name="clearButton_SM">
+           <widget class="YodyPushButton" name="clearButton_SM">
             <property name="toolTip">
              <string>Reset all sign message fields</string>
             </property>
@@ -282,9 +282,9 @@
            </widget>
           </item>
           <item>
-           <widget class="QtumPushButton" name="signMessageButton_SM">
+           <widget class="YodyPushButton" name="signMessageButton_SM">
             <property name="toolTip">
-             <string>Sign the message to prove you own this Qtum address</string>
+             <string>Sign the message to prove you own this Yody address</string>
             </property>
             <property name="text">
              <string>Sign &amp;Message</string>
@@ -358,12 +358,12 @@
            <item>
             <widget class="QValidatedLineEdit" name="addressIn_VM">
              <property name="toolTip">
-              <string>The Qtum address the message was signed with</string>
+              <string>The Yody address the message was signed with</string>
              </property>
             </widget>
            </item>
            <item>
-            <widget class="QtumPushButton" name="addressBookButton_VM">
+            <widget class="YodyPushButton" name="addressBookButton_VM">
              <property name="toolTip">
               <string>Choose previously used address</string>
              </property>
@@ -461,7 +461,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QtumPushButton" name="clearButton_VM">
+           <widget class="YodyPushButton" name="clearButton_VM">
             <property name="toolTip">
              <string>Reset all verify message fields</string>
             </property>
@@ -478,9 +478,9 @@
            </widget>
           </item>
           <item>
-           <widget class="QtumPushButton" name="verifyMessageButton_VM">
+           <widget class="YodyPushButton" name="verifyMessageButton_VM">
             <property name="toolTip">
-             <string>Verify the message to ensure it was signed with the specified Qtum address</string>
+             <string>Verify the message to ensure it was signed with the specified Yody address</string>
             </property>
             <property name="text">
              <string>Verify &amp;Message</string>
@@ -510,7 +510,7 @@
    <header>qt/qvalidatedlineedit.h</header>
   </customwidget>
   <customwidget>
-   <class>QtumPushButton</class>
+   <class>YodyPushButton</class>
    <extends>QPushButton</extends>
    <header>qt/qtumpushbutton.h</header>
   </customwidget>

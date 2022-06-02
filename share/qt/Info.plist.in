@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Qtum-Qt</string>
+  <string>Yody-Qt</string>
 
   <key>CFBundleName</key>
-  <string>Qtum-Qt</string>
+  <string>Yody-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.yodynetwork.Qtum-Qt</string>
+  <string>org.yodynetwork.Yody-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.qtum.QtumPayment</string>
+      <string>org.qtum.YodyPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>qtum</string>

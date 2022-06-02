@@ -14,7 +14,7 @@ std::string const& dev::eth::genesisInfo(Network _n)
     switch (_n)
     {
     //Client genesis
-    case Network::qtumNetwork: return c_genesisInfoQtumNetwork;
+    case Network::qtumNetwork: return c_genesisInfoYodyNetwork;
 
     default:
         throw std::invalid_argument("Invalid network value");
@@ -25,7 +25,7 @@ h256 const& dev::eth::genesisStateRoot(Network _n)
 {
     switch (_n)
     {
-    case Network::qtumNetwork: return c_genesisStateRootQtumNetwork;
+    case Network::qtumNetwork: return c_genesisStateRootYodyNetwork;
     default:
         throw std::invalid_argument("Invalid network value");
     }
@@ -41,7 +41,7 @@ void ReplaceInt(uint64_t number, const std::string& key, std::string& str)
     str = str_replaced;
 }
 
-std::string dev::eth::genesisInfoQtum(Network _n, EVMConsensus _consensus)
+std::string dev::eth::genesisInfoYody(Network _n, EVMConsensus _consensus)
 {
     std::string _genesisInfo = dev::eth::genesisInfo(_n);
     ReplaceInt(_consensus.QIP6Height,         "QIP6_STARTING_BLOCK", _genesisInfo);

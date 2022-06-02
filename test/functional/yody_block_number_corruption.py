@@ -7,7 +7,7 @@ from test_framework.p2p import *
 from test_framework.address import *
 from test_framework.qtum import *
 
-class QtumBlockNumberCorruptionTest(BitcoinTestFramework):
+class YodyBlockNumberCorruptionTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -38,4 +38,4 @@ class QtumBlockNumberCorruptionTest(BitcoinTestFramework):
 
 
 if __name__ == '__main__':
-    QtumBlockNumberCorruptionTest().main()
+    YodyBlockNumberCorruptionTest().main()

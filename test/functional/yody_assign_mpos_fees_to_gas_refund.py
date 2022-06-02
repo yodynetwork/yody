@@ -11,7 +11,7 @@ import random
 import time
 import io
 
-class QtumAssignMPoSFeesToGasRefundTest(BitcoinTestFramework):
+class YodyAssignMPoSFeesToGasRefundTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1
@@ -74,4 +74,4 @@ class QtumAssignMPoSFeesToGasRefundTest(BitcoinTestFramework):
         assert_equal(self.node.getblockcount(), blockcount)
 
 if __name__ == '__main__':
-    QtumAssignMPoSFeesToGasRefundTest().main()
+    YodyAssignMPoSFeesToGasRefundTest().main()

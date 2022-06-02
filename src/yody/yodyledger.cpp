@@ -21,7 +21,7 @@
 
 RecursiveMutex cs_ledger;
 
-namespace QtumLedger_NS {
+namespace YodyLedger_NS {
 // Read json document
 UniValue json_read_doc(const std::string& jsondata)
 {
@@ -178,12 +178,12 @@ private:
     std::string m_std_err;
 };
 }
-using namespace QtumLedger_NS;
+using namespace YodyLedger_NS;
 
-class QtumLedgerPriv
+class YodyLedgerPriv
 {
 public:
-    QtumLedgerPriv()
+    YodyLedgerPriv()
     {
         toolPath = gArgs.GetArg("-hwitoolpath", "");
         toolExists = boost::filesystem::exists(toolPath);
@@ -198,7 +198,7 @@ public:
 
         if(!toolExists)
         {
-            LogPrintf("QtumLedger(): HWI tool not found %s\n", toolPath);
+            LogPrintf("YodyLedger(): HWI tool not found %s\n", toolPath);
         }
     }
 
@@ -249,26 +249,26 @@ public:
     bool ledgerMainPath = true;
 };
 
-QtumLedger::QtumLedger():
+YodyLedger::YodyLedger():
     d(0)
 {
-    d = new QtumLedgerPriv();
+    d = new YodyLedgerPriv();
 }
 
-QtumLedger::~QtumLedger()
+YodyLedger::~YodyLedger()
 {
     if(d)
         delete d;
     d = 0;
 }
 
-QtumLedger &QtumLedger::instance()
+YodyLedger &YodyLedger::instance()
 {
-    static QtumLedger device;
+    static YodyLedger device;
     return device;
 }
 
-bool QtumLedger::signCoinStake(const std::string &fingerprint, std::string &psbt)
+bool YodyLedger::signCoinStake(const std::string &fingerprint, std::string &psbt)
 {
     LOCK(cs_ledger);
     // Check if tool exists
@@ -287,7 +287,7 @@ bool QtumLedger::signCoinStake(const std::string &fingerprint, std::string &psbt
     return endSignTx(fingerprint, psbt);
 }
 
-bool QtumLedger::signBlockHeader(const std::string &fingerprint, const std::string &header, const std::string &path, std::vector<unsigned char> &vchSig)
+bool YodyLedger::signBlockHeader(const std::string &fingerprint, const std::string &header, const std::string &path, std::vector<unsigned char> &vchSig)
 {
     LOCK(cs_ledger);
     // Check if tool exists
@@ -306,7 +306,7 @@ bool QtumLedger::signBlockHeader(const std::string &fingerprint, const std::stri
     return endSignBlockHeader(fingerprint, header, path, vchSig);
 }
 
-bool QtumLedger::isConnected(const std::string &fingerprint, bool stake)
+bool YodyLedger::isConnected(const std::string &fingerprint, bool stake)
 {
     // Check if a device is connected
     std::vector<LedgerDevice> devices;
@@ -322,7 +322,7 @@ bool QtumLedger::isConnected(const std::string &fingerprint, bool stake)
     return false;
 }
 
-bool QtumLedger::enumerate(std::vector<LedgerDevice> &devices, bool stake)
+bool YodyLedger::enumerate(std::vector<LedgerDevice> &devices, bool stake)
 {
     LOCK(cs_ledger);
     // Check if tool exists
@@ -341,7 +341,7 @@ bool QtumLedger::enumerate(std::vector<LedgerDevice> &devices, bool stake)
     return endEnumerate(devices, stake);
 }
 
-bool QtumLedger::signTx(const std::string &fingerprint, std::string &psbt)
+bool YodyLedger::signTx(const std::string &fingerprint, std::string &psbt)
 {
     LOCK(cs_ledger);
     // Check if tool exists
@@ -360,7 +360,7 @@ bool QtumLedger::signTx(const std::string &fingerprint, std::string &psbt)
     return endSignTx(fingerprint, psbt);
 }
 
-bool QtumLedger::signMessage(const std::string &fingerprint, const std::string &message, const std::string &path, std::string &signature)
+bool YodyLedger::signMessage(const std::string &fingerprint, const std::string &message, const std::string &path, std::string &signature)
 {
     LOCK(cs_ledger);
     // Check if tool exists
@@ -379,7 +379,7 @@ bool QtumLedger::signMessage(const std::string &fingerprint, const std::string &
     return endSignMessage(fingerprint, message, path, signature);
 }
 
-bool QtumLedger::getKeyPool(const std::string &fingerprint, int type, const std::string& path, bool internal, int from, int to, std::string &desc)
+bool YodyLedger::getKeyPool(const std::string &fingerprint, int type, const std::string& path, bool internal, int from, int to, std::string &desc)
 {
     LOCK(cs_ledger);
     // Check if tool exists
@@ -398,7 +398,7 @@ bool QtumLedger::getKeyPool(const std::string &fingerprint, int type, const std:
     return endGetKeyPool(fingerprint, type, path, internal, from, to, desc);
 }
 
-std::string QtumLedger::errorMessage()
+std::string YodyLedger::errorMessage()
 {
     LOCK(cs_ledger);
     if(d->strError.empty() == false)
@@ -420,17 +420,17 @@ std::string QtumLedger::errorMessage()
     return "unknown error";
 }
 
-bool QtumLedger::toolExists()
+bool YodyLedger::toolExists()
 {
     return d->toolExists;
 }
 
-bool QtumLedger::isStarted()
+bool YodyLedger::isStarted()
 {
     return d->fStarted;
 }
 
-void QtumLedger::wait()
+void YodyLedger::wait()
 {
     if(d->fStarted)
     {
@@ -441,7 +441,7 @@ void QtumLedger::wait()
     }
 }
 
-bool QtumLedger::beginSignTx(const std::string &fingerprint, std::string &psbt)
+bool YodyLedger::beginSignTx(const std::string &fingerprint, std::string &psbt)
 {
     // Execute command line
     std::vector<std::string> arguments = d->arguments;
@@ -452,7 +452,7 @@ bool QtumLedger::beginSignTx(const std::string &fingerprint, std::string &psbt)
     return d->fStarted;
 }
 
-bool QtumLedger::endSignTx(const std::string &, std::string &psbt)
+bool YodyLedger::endSignTx(const std::string &, std::string &psbt)
 {
     // Decode command line results
     UniValue jsonDocument = json_read_doc(d->strStdout);
@@ -467,7 +467,7 @@ bool QtumLedger::endSignTx(const std::string &, std::string &psbt)
     return false;
 }
 
-bool QtumLedger::beginSignBlockHeader(const std::string &fingerprint, const std::string &header, const std::string &path, std::vector<unsigned char> &)
+bool YodyLedger::beginSignBlockHeader(const std::string &fingerprint, const std::string &header, const std::string &path, std::vector<unsigned char> &)
 {
     // Execute command line
     std::vector<std::string> arguments = d->arguments;
@@ -478,7 +478,7 @@ bool QtumLedger::beginSignBlockHeader(const std::string &fingerprint, const std:
     return d->fStarted;
 }
 
-bool QtumLedger::endSignBlockHeader(const std::string &, const std::string &, const std::string &, std::vector<unsigned char> &vchSig)
+bool YodyLedger::endSignBlockHeader(const std::string &, const std::string &, const std::string &, std::vector<unsigned char> &vchSig)
 {
     // Decode command line results
     UniValue jsonDocument = json_read_doc(d->strStdout);
@@ -493,7 +493,7 @@ bool QtumLedger::endSignBlockHeader(const std::string &, const std::string &, co
     return false;
 }
 
-bool QtumLedger::beginEnumerate(std::vector<LedgerDevice> &)
+bool YodyLedger::beginEnumerate(std::vector<LedgerDevice> &)
 {
     // Execute command line
     std::vector<std::string> arguments = d->arguments;
@@ -504,7 +504,7 @@ bool QtumLedger::beginEnumerate(std::vector<LedgerDevice> &)
     return d->fStarted;
 }
 
-bool QtumLedger::endEnumerate(std::vector<LedgerDevice> &devices, bool stake)
+bool YodyLedger::endEnumerate(std::vector<LedgerDevice> &devices, bool stake)
 {
     // Decode command line results
     UniValue jsonDocument = json_read_doc(d->strStdout);
@@ -526,7 +526,7 @@ bool QtumLedger::endEnumerate(std::vector<LedgerDevice> &devices, bool stake)
         device.model = json_get_key_string(data, "model");
         device.code = json_get_key_string(data, "code");
         device.app_name = json_get_key_string(data, "app_name");
-        bool isStakeApp = device.app_name == "Qtum Stake" || device.app_name == "Qtum Stake Test";
+        bool isStakeApp = device.app_name == "Yody Stake" || device.app_name == "Yody Stake Test";
         if(isStakeApp == stake)
         {
             devices.push_back(device);
@@ -536,7 +536,7 @@ bool QtumLedger::endEnumerate(std::vector<LedgerDevice> &devices, bool stake)
     return devices.size() > 0;
 }
 
-bool QtumLedger::beginSignMessage(const std::string &fingerprint, const std::string &message, const std::string &path, std::string &)
+bool YodyLedger::beginSignMessage(const std::string &fingerprint, const std::string &message, const std::string &path, std::string &)
 {
     // Execute command line
     std::vector<std::string> arguments = d->arguments;
@@ -547,7 +547,7 @@ bool QtumLedger::beginSignMessage(const std::string &fingerprint, const std::str
     return d->fStarted;
 }
 
-bool QtumLedger::endSignMessage(const std::string &, const std::string &, const std::string &, std::string &signature)
+bool YodyLedger::endSignMessage(const std::string &, const std::string &, const std::string &, std::string &signature)
 {
     // Decode command line results
     UniValue jsonDocument = json_read_doc(d->strStdout);
@@ -562,7 +562,7 @@ bool QtumLedger::endSignMessage(const std::string &, const std::string &, const 
     return false;
 }
 
-bool QtumLedger::beginGetKeyPool(const std::string &fingerprint, int type, const std::string& path, bool internal, int from, int to, std::string &)
+bool YodyLedger::beginGetKeyPool(const std::string &fingerprint, int type, const std::string& path, bool internal, int from, int to, std::string &)
 {
     // Get the output type
     std::string descType;
@@ -600,7 +600,7 @@ bool QtumLedger::beginGetKeyPool(const std::string &fingerprint, int type, const
     return d->fStarted;
 }
 
-bool QtumLedger::endGetKeyPool(const std::string &, int, const std::string& , bool, int, int, std::string &desc)
+bool YodyLedger::endGetKeyPool(const std::string &, int, const std::string& , bool, int, int, std::string &desc)
 {
     // Decode command line results
     bool ret = d->strStdout.find("desc")!=std::string::npos;
@@ -609,7 +609,7 @@ bool QtumLedger::endGetKeyPool(const std::string &, int, const std::string& , bo
 }
 
 
-std::string QtumLedger::derivationPath(int type)
+std::string YodyLedger::derivationPath(int type)
 {
     std::string derivPath;
     if(d->ledgerMainPath)

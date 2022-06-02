@@ -6,7 +6,7 @@
 #include <stdint.h>
 #include <uint256.h>
 
-class QtumDelegationPriv;
+class YodyDelegationPriv;
 class ContractABI;
 class ChainstateManager;
 class CChainState;
@@ -79,7 +79,7 @@ struct DelegationEvent
 };
 
 /**
- * @brief The IQtumStaker class Delegation filter
+ * @brief The IYodyStaker class Delegation filter
  */
 class IDelegationFilter
 {
@@ -88,20 +88,20 @@ public:
 };
 
 /**
- * @brief The QtumDelegation class Communicate with the qtum delegation contract
+ * @brief The YodyDelegation class Communicate with the qtum delegation contract
  */
-class QtumDelegation {
+class YodyDelegation {
     
 public:
     /**
-     * @brief QtumDelegation Constructor
+     * @brief YodyDelegation Constructor
      */
-    QtumDelegation();
+    YodyDelegation();
 
     /**
-     * @brief ~QtumDelegation Destructor
+     * @brief ~YodyDelegation Destructor
      */
-    virtual ~QtumDelegation();
+    virtual ~YodyDelegation();
 
     /**
      * @brief GetDelegation Get delegation for an address
@@ -192,8 +192,8 @@ public:
     static bool SetSignedStaker(std::vector<unsigned char>& data, const std::string& base64PoD);
 
 private:
-    QtumDelegation(const QtumDelegation&);
-    QtumDelegation& operator=(const QtumDelegation&);
-    QtumDelegationPriv* priv;
+    YodyDelegation(const YodyDelegation&);
+    YodyDelegation& operator=(const YodyDelegation&);
+    YodyDelegationPriv* priv;
 };
 #endif

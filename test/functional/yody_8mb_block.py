@@ -7,7 +7,7 @@ from test_framework.p2p import *
 from test_framework.blocktools import *
 from test_framework.qtum import *
 
-class Qtum8MBBlock(BitcoinTestFramework):
+class Yody8MBBlock(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2
@@ -84,4 +84,4 @@ class Qtum8MBBlock(BitcoinTestFramework):
         assert_equal(block_count+1, self.nodes[1].getblockcount())
 
 if __name__ == '__main__':
-    Qtum8MBBlock().main()
+    Yody8MBBlock().main()

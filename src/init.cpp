@@ -662,7 +662,7 @@ void DeleteBlockChainData()
     fs::path datadir = gArgs.GetDataDirNet();
     fs::remove_all(datadir / "chainstate");
     fs::remove_all(gArgs.GetBlocksDirPath());
-    fs::remove_all(datadir / "stateQtum");
+    fs::remove_all(datadir / "stateYody");
     fs::remove(datadir / "banlist.dat");
     fs::remove(datadir / FEE_ESTIMATES_FILENAME);
     fs::remove(datadir / "mempool.dat");
@@ -1714,12 +1714,12 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
                 }
 
                 dev::eth::NoProof::init();
-                fs::path qtumStateDir = gArgs.GetDataDirNet() / "stateQtum";
+                fs::path qtumStateDir = gArgs.GetDataDirNet() / "stateYody";
                 bool fStatus = fs::exists(qtumStateDir);
-                const std::string dirQtum(qtumStateDir.string());
+                const std::string dirYody(qtumStateDir.string());
                 const dev::h256 hashDB(dev::sha3(dev::rlp("")));
-                dev::eth::BaseState existsQtumstate = fStatus ? dev::eth::BaseState::PreExisting : dev::eth::BaseState::Empty;
-                globalState = std::unique_ptr<QtumState>(new QtumState(dev::u256(0), QtumState::openDB(dirQtum, hashDB, dev::WithExisting::Trust), dirQtum, existsQtumstate));
+                dev::eth::BaseState existsYodystate = fStatus ? dev::eth::BaseState::PreExisting : dev::eth::BaseState::Empty;
+                globalState = std::unique_ptr<YodyState>(new YodyState(dev::u256(0), YodyState::openDB(dirYody, hashDB, dev::WithExisting::Trust), dirYody, existsYodystate));
                 globalSealEngine = std::unique_ptr<dev::eth::SealEngineFace>(cp.createSealEngine());
 
                 pstorageresult.reset(new StorageResults(qtumStateDir.string()));
@@ -1840,8 +1840,8 @@ bool AppInitMain(NodeContext& node, interfaces::BlockAndHeaderTipInfo* tip_info)
                 LOCK(cs_main);
 
                 CChain& active_chain = chainman.ActiveChain();
-                QtumDGP qtumDGP(globalState.get(), chainman.ActiveChainstate(), fGettingValuesDGP);
-                globalSealEngine->setQtumSchedule(qtumDGP.getGasSchedule(active_chain.Height() + (active_chain.Height()+1 >= chainparams.GetConsensus().QIP7Height ? 0 : 1) ));
+                YodyDGP qtumDGP(globalState.get(), chainman.ActiveChainstate(), fGettingValuesDGP);
+                globalSealEngine->setYodySchedule(qtumDGP.getGasSchedule(active_chain.Height() + (active_chain.Height()+1 >= chainparams.GetConsensus().QIP7Height ? 0 : 1) ));
 
                 for (CChainState* chainstate : chainman.GetAll()) {
                     if (!is_coinsview_empty(chainstate)) {

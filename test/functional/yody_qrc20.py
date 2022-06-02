@@ -31,7 +31,7 @@ qrc20listtransactions
 """
 
 
-class QtumQRC20Test(BitcoinTestFramework):
+class YodyQRC20Test(BitcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.setup_clean_chain = True
@@ -329,4 +329,4 @@ class QtumQRC20Test(BitcoinTestFramework):
 
 
 if __name__ == '__main__':
-    QtumQRC20Test().main()
+    YodyQRC20Test().main()

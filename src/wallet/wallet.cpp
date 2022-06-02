@@ -4584,23 +4584,23 @@ bool CWallet::RemoveSuperStakerEntry(const uint256& superStakerHash, bool fFlush
     return true;
 }
 
-void CWallet::StakeQtums(bool fStake)
+void CWallet::StakeYodys(bool fStake)
 {
-    ::StakeQtums(fStake, this, stakeThread);
+    ::StakeYodys(fStake, this, stakeThread);
 }
 
 void CWallet::StartStake()
 {
     if(IsWalletFlagSet(WALLET_FLAG_DISABLE_PRIVATE_KEYS))
     {
-        m_enabled_staking = !m_ledger_id.empty() && QtumLedger::instance().toolExists();
+        m_enabled_staking = !m_ledger_id.empty() && YodyLedger::instance().toolExists();
     }
     else
     {
         m_enabled_staking = true;
     }
 
-    StakeQtums(true);
+    StakeYodys(true);
 }
 
 void CWallet::StopStake()
@@ -4614,7 +4614,7 @@ void CWallet::StopStake()
     {
         m_stop_staking_thread = true;
         m_enabled_staking = false;
-        StakeQtums(false);
+        StakeYodys(false);
         stakeThread = 0;
         m_stop_staking_thread = false;
     }

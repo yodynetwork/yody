@@ -15,7 +15,7 @@ from test_framework.qtum import *
 
 
 
-class QtumBitcoreTest(BitcoinTestFramework):
+class YodyBitcoreTest(BitcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.extra_args = [['-addrindex=1'], ['-addrindex=0']]
@@ -102,4 +102,4 @@ class QtumBitcoreTest(BitcoinTestFramework):
 
 
 if __name__ == '__main__':
-    QtumBitcoreTest().main()
+    YodyBitcoreTest().main()

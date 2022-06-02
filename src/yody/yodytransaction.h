@@ -42,16 +42,16 @@ struct VersionVM{
     }
 }__attribute__((__packed__));
 
-class QtumTransaction : public dev::eth::Transaction{
+class YodyTransaction : public dev::eth::Transaction{
 
 public:
 
-    QtumTransaction() : nVout(0), hasRefundSender(false) {}
+    YodyTransaction() : nVout(0), hasRefundSender(false) {}
 
-    QtumTransaction(dev::u256 const& _value, dev::u256 const& _gasPrice, dev::u256 const& _gas, dev::bytes const& _data, dev::u256 const& _nonce = dev::Invalid256):
+    YodyTransaction(dev::u256 const& _value, dev::u256 const& _gasPrice, dev::u256 const& _gas, dev::bytes const& _data, dev::u256 const& _nonce = dev::Invalid256):
         dev::eth::Transaction(_value, _gasPrice, _gas, _data, _nonce) , nVout(0), hasRefundSender(false) {}
 
-    QtumTransaction(dev::u256 const& _value, dev::u256 const& _gasPrice, dev::u256 const& _gas, dev::Address const& _dest, dev::bytes const& _data, dev::u256 const& _nonce = dev::Invalid256):
+    YodyTransaction(dev::u256 const& _value, dev::u256 const& _gasPrice, dev::u256 const& _gas, dev::Address const& _dest, dev::bytes const& _data, dev::u256 const& _nonce = dev::Invalid256):
         dev::eth::Transaction(_value, _gasPrice, _gas, _dest, _data, _nonce) , nVout(0), hasRefundSender(false) {}
 
     void setHashWith(const dev::h256 hash) { m_hashWith = hash; }

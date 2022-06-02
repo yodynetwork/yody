@@ -145,10 +145,10 @@ public:
         // This is fine at runtime as we'll fall back to using them as an addrfetch if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("qtum3.dynu.net"); // Qtum mainnet
-        vSeeds.emplace_back("qtum5.dynu.net"); // Qtum mainnet
-        vSeeds.emplace_back("qtum6.dynu.net"); // Qtum mainnet
-        vSeeds.emplace_back("qtum7.dynu.net"); // Qtum mainnet
+        vSeeds.emplace_back("qtum3.dynu.net"); // Yody mainnet
+        vSeeds.emplace_back("qtum5.dynu.net"); // Yody mainnet
+        vSeeds.emplace_back("qtum6.dynu.net"); // Yody mainnet
+        vSeeds.emplace_back("qtum7.dynu.net"); // Yody mainnet
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,58);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,50);
@@ -294,7 +294,7 @@ public:
         vFixedSeeds.clear();
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("qtum4.dynu.net"); // Qtum testnet
+        vSeeds.emplace_back("qtum4.dynu.net"); // Yody testnet
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,120);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,110);
@@ -774,18 +774,18 @@ std::string CChainParams::EVMGenesisInfo() const
     evmConsensus.QIP7Height = consensus.QIP7Height;
     evmConsensus.nMuirGlacierHeight = consensus.nMuirGlacierHeight;
     evmConsensus.nLondonHeight = consensus.nLondonHeight;
-    return dev::eth::genesisInfoQtum(GetEVMNetwork(), evmConsensus);
+    return dev::eth::genesisInfoYody(GetEVMNetwork(), evmConsensus);
 }
 
 std::string CChainParams::EVMGenesisInfo(int nHeight) const
 {
     dev::eth::EVMConsensus evmConsensus(nHeight);
-    return dev::eth::genesisInfoQtum(GetEVMNetwork(), evmConsensus);
+    return dev::eth::genesisInfoYody(GetEVMNetwork(), evmConsensus);
 }
 
 std::string CChainParams::EVMGenesisInfo(const dev::eth::EVMConsensus& evmConsensus) const
 {
-    return dev::eth::genesisInfoQtum(GetEVMNetwork(), evmConsensus);
+    return dev::eth::genesisInfoYody(GetEVMNetwork(), evmConsensus);
 }
 
 dev::eth::Network CChainParams::GetEVMNetwork() const

@@ -36,10 +36,10 @@ static const QString RC_PATH_FORMAT = ":/ledger";
 static const int ADDRESS_FROM = 0;
 static const int ADDRESS_TO = 1000;
 
-class QtumHwiToolPriv
+class YodyHwiToolPriv
 {
 public:
-    QtumHwiToolPriv(QObject *parent)
+    YodyHwiToolPriv(QObject *parent)
     {
         QStringList optionalRescan = QStringList() << PARAM_START_HEIGHT << PARAM_STOP_HEIGHT;
         cmdRescan = new ExecRPCCommand("rescanblockchain", QStringList(), optionalRescan,  QMap<QString, QString>(), parent);
@@ -100,22 +100,22 @@ HWDevice toHWDevice(const LedgerDevice& device)
     return hwDevice;
 }
 
-QtumHwiTool::QtumHwiTool(QObject *parent) : QObject(parent)
+YodyHwiTool::YodyHwiTool(QObject *parent) : QObject(parent)
 {
-    d = new QtumHwiToolPriv(this);
+    d = new YodyHwiToolPriv(this);
 }
 
-QtumHwiTool::~QtumHwiTool()
+YodyHwiTool::~YodyHwiTool()
 {
     delete d;
 }
 
-bool QtumHwiTool::enumerate(QList<HWDevice> &devices, bool stake)
+bool YodyHwiTool::enumerate(QList<HWDevice> &devices, bool stake)
 {
     LOCK(cs_ledger);
     devices.clear();
     std::vector<LedgerDevice> vecDevices;
-    if(QtumLedger::instance().enumerate(vecDevices, stake))
+    if(YodyLedger::instance().enumerate(vecDevices, stake))
     {
         for(LedgerDevice device : vecDevices)
         {
@@ -130,22 +130,22 @@ bool QtumHwiTool::enumerate(QList<HWDevice> &devices, bool stake)
     }
     else
     {
-        d->strError = QString::fromStdString(QtumLedger::instance().errorMessage());
+        d->strError = QString::fromStdString(YodyLedger::instance().errorMessage());
     }
 
     return devices.size() > 0;
 }
 
-bool QtumHwiTool::isConnected(const QString &fingerprint, bool stake)
+bool YodyHwiTool::isConnected(const QString &fingerprint, bool stake)
 {
     LOCK(cs_ledger);
     std::string strFingerprint = fingerprint.toStdString();
-    bool ret = QtumLedger::instance().isConnected(strFingerprint, stake);
-    if(!ret) d->strError = QString::fromStdString(QtumLedger::instance().errorMessage());
+    bool ret = YodyLedger::instance().isConnected(strFingerprint, stake);
+    if(!ret) d->strError = QString::fromStdString(YodyLedger::instance().errorMessage());
     return ret;
 }
 
-bool QtumHwiTool::getKeyPool(const QString &fingerprint, int type, const QString& path, bool internal, QString &desc)
+bool YodyHwiTool::getKeyPool(const QString &fingerprint, int type, const QString& path, bool internal, QString &desc)
 {
     LOCK(cs_ledger);
     std::string strFingerprint = fingerprint.toStdString();
@@ -155,7 +155,7 @@ bool QtumHwiTool::getKeyPool(const QString &fingerprint, int type, const QString
     {
         strPath += internal ? "/1/*" : "/0/*";
     }
-    bool ret = QtumLedger::instance().getKeyPool(strFingerprint, type, strPath, internal, d->from, d->to, strDesc);
+    bool ret = YodyLedger::instance().getKeyPool(strFingerprint, type, strPath, internal, d->from, d->to, strDesc);
     desc = QString::fromStdString(strDesc);
     if(ret)
     {
@@ -163,12 +163,12 @@ bool QtumHwiTool::getKeyPool(const QString &fingerprint, int type, const QString
     }
     else
     {
-        d->strError = QString::fromStdString(QtumLedger::instance().errorMessage());
+        d->strError = QString::fromStdString(YodyLedger::instance().errorMessage());
     }
     return ret;
 }
 
-bool QtumHwiTool::getKeyPool(const QString &fingerprint, int type, const QString &path, QStringList &descs)
+bool YodyHwiTool::getKeyPool(const QString &fingerprint, int type, const QString &path, QStringList &descs)
 {
     LOCK(cs_ledger);
     bool ret = true;
@@ -186,46 +186,46 @@ bool QtumHwiTool::getKeyPool(const QString &fingerprint, int type, const QString
     return ret;
 }
 
-bool QtumHwiTool::getKeyPoolPKH(const QString &fingerprint, const QString& path, QStringList &descs)
+bool YodyHwiTool::getKeyPoolPKH(const QString &fingerprint, const QString& path, QStringList &descs)
 {
     return getKeyPool(fingerprint, (int)OutputType::LEGACY, path, descs);
 }
 
-bool QtumHwiTool::getKeyPoolP2SH(const QString &fingerprint, const QString& path, QStringList &descs)
+bool YodyHwiTool::getKeyPoolP2SH(const QString &fingerprint, const QString& path, QStringList &descs)
 {
     return getKeyPool(fingerprint, (int)OutputType::P2SH_SEGWIT, path, descs);
 }
 
-bool QtumHwiTool::getKeyPoolBech32(const QString &fingerprint, const QString& path, QStringList &descs)
+bool YodyHwiTool::getKeyPoolBech32(const QString &fingerprint, const QString& path, QStringList &descs)
 {
     return getKeyPool(fingerprint, (int)OutputType::BECH32, path, descs);
 }
 
-bool QtumHwiTool::signTx(const QString &fingerprint, QString &psbt)
+bool YodyHwiTool::signTx(const QString &fingerprint, QString &psbt)
 {
     LOCK(cs_ledger);
     std::string strFingerprint = fingerprint.toStdString();
     std::string strPsbt = psbt.toStdString();
-    bool ret = QtumLedger::instance().signTx(strFingerprint, strPsbt);
+    bool ret = YodyLedger::instance().signTx(strFingerprint, strPsbt);
     psbt = QString::fromStdString(strPsbt);
-    if(!ret) d->strError = QString::fromStdString(QtumLedger::instance().errorMessage());
+    if(!ret) d->strError = QString::fromStdString(YodyLedger::instance().errorMessage());
     return ret;
 }
 
-bool QtumHwiTool::signMessage(const QString &fingerprint, const QString &message, const QString &path, QString &signature)
+bool YodyHwiTool::signMessage(const QString &fingerprint, const QString &message, const QString &path, QString &signature)
 {
     LOCK(cs_ledger);
     std::string strFingerprint = fingerprint.toStdString();
     std::string strMessage = message.toStdString();
     std::string strPath = path.toStdString();
     std::string strSignature = signature.toStdString();
-    bool ret = QtumLedger::instance().signMessage(strFingerprint, strMessage, strPath, strSignature);
+    bool ret = YodyLedger::instance().signMessage(strFingerprint, strMessage, strPath, strSignature);
     signature = QString::fromStdString(strSignature);
-    if(!ret) d->strError = QString::fromStdString(QtumLedger::instance().errorMessage());
+    if(!ret) d->strError = QString::fromStdString(YodyLedger::instance().errorMessage());
     return ret;
 }
 
-bool QtumHwiTool::signDelegate(const QString &fingerprint, QString &psbt)
+bool YodyHwiTool::signDelegate(const QString &fingerprint, QString &psbt)
 {
     if(!d->model) return false;
 
@@ -269,7 +269,7 @@ bool QtumHwiTool::signDelegate(const QString &fingerprint, QString &psbt)
     return true;
 }
 
-QString QtumHwiTool::errorMessage()
+QString YodyHwiTool::errorMessage()
 {
     // Get the last error message
     if(d->fStarted)
@@ -278,12 +278,12 @@ QString QtumHwiTool::errorMessage()
     return d->strError;
 }
 
-bool QtumHwiTool::isStarted()
+bool YodyHwiTool::isStarted()
 {
     return d->fStarted;
 }
 
-void QtumHwiTool::wait()
+void YodyHwiTool::wait()
 {
     if(d->fStarted)
     {
@@ -303,7 +303,7 @@ void QtumHwiTool::wait()
     }
 }
 
-bool QtumHwiTool::rescanBlockchain(int startHeight, int stopHeight)
+bool YodyHwiTool::rescanBlockchain(int startHeight, int stopHeight)
 {
     if(!d->model) return false;
 
@@ -329,7 +329,7 @@ bool QtumHwiTool::rescanBlockchain(int startHeight, int stopHeight)
     return resStartHeight < resStopHeight;
 }
 
-bool QtumHwiTool::importAddresses(const QString &desc)
+bool YodyHwiTool::importAddresses(const QString &desc)
 {
     if(!d->model) return false;
 
@@ -356,7 +356,7 @@ bool QtumHwiTool::importAddresses(const QString &desc)
     return countSuccess > 0;
 }
 
-bool QtumHwiTool::importMulti(const QStringList &descs)
+bool YodyHwiTool::importMulti(const QStringList &descs)
 {
     bool ret = true;
     for(QString desc : descs)
@@ -368,7 +368,7 @@ bool QtumHwiTool::importMulti(const QStringList &descs)
     return ret;
 }
 
-bool QtumHwiTool::finalizePsbt(const QString &psbt, QString &hexTx, bool &complete)
+bool YodyHwiTool::finalizePsbt(const QString &psbt, QString &hexTx, bool &complete)
 {
     if(!d->model) return false;
 
@@ -390,7 +390,7 @@ bool QtumHwiTool::finalizePsbt(const QString &psbt, QString &hexTx, bool &comple
     return true;
 }
 
-bool QtumHwiTool::sendRawTransaction(const QString &hexTx, QVariantMap& variantMap)
+bool YodyHwiTool::sendRawTransaction(const QString &hexTx, QVariantMap& variantMap)
 {
     if(!d->model) return false;
 
@@ -420,7 +420,7 @@ bool QtumHwiTool::sendRawTransaction(const QString &hexTx, QVariantMap& variantM
     return variantMap.contains("txid");
 }
 
-bool QtumHwiTool::decodePsbt(const QString &psbt, QString &decoded)
+bool YodyHwiTool::decodePsbt(const QString &psbt, QString &decoded)
 {
     if(!d->model) return false;
 
@@ -440,12 +440,12 @@ bool QtumHwiTool::decodePsbt(const QString &psbt, QString &decoded)
     return true;
 }
 
-void QtumHwiTool::setModel(WalletModel *model)
+void YodyHwiTool::setModel(WalletModel *model)
 {
     d->model = model;
 }
 
-bool QtumHwiTool::execRPC(ExecRPCCommand *cmd, const QMap<QString, QString> &lstParams, QVariant &result, QString &resultJson)
+bool YodyHwiTool::execRPC(ExecRPCCommand *cmd, const QMap<QString, QString> &lstParams, QVariant &result, QString &resultJson)
 {
     d->strError.clear();
     if(!cmd->exec(d->model->node(), d->model, lstParams, result, resultJson, d->strError))
@@ -454,27 +454,27 @@ bool QtumHwiTool::execRPC(ExecRPCCommand *cmd, const QMap<QString, QString> &lst
     return true;
 }
 
-void QtumHwiTool::addError(const QString &error)
+void YodyHwiTool::addError(const QString &error)
 {
     if(d->strError != "")
         d->strError += "\n";
     d->strError += error;
 }
 
-QString QtumHwiTool::derivationPathPKH()
+QString YodyHwiTool::derivationPathPKH()
 {
-    std::string path = QtumLedger::instance().derivationPath((int)OutputType::LEGACY);
+    std::string path = YodyLedger::instance().derivationPath((int)OutputType::LEGACY);
     return QString::fromStdString(path);
 }
 
-QString QtumHwiTool::derivationPathP2SH()
+QString YodyHwiTool::derivationPathP2SH()
 {
-    std::string path = QtumLedger::instance().derivationPath((int)OutputType::P2SH_SEGWIT);
+    std::string path = YodyLedger::instance().derivationPath((int)OutputType::P2SH_SEGWIT);
     return QString::fromStdString(path);
 }
 
-QString QtumHwiTool::derivationPathBech32()
+QString YodyHwiTool::derivationPathBech32()
 {
-    std::string path = QtumLedger::instance().derivationPath((int)OutputType::BECH32);
+    std::string path = YodyLedger::instance().derivationPath((int)OutputType::BECH32);
     return QString::fromStdString(path);
 }

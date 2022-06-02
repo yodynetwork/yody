@@ -5,7 +5,7 @@
 #include <map>
 #include <uint256.h>
 
-struct QtumTokenData;
+struct YodyTokenData;
 
 struct TokenEvent{
     std::string address;
@@ -30,7 +30,7 @@ struct TokenEvent{
     }
 };
 
-class QtumTokenExec
+class YodyTokenExec
 {
 public:
     virtual bool execValid(const int& func, const bool& sendTo);
@@ -38,16 +38,16 @@ public:
     virtual bool exec(const bool& sendTo, const std::map<std::string, std::string>& lstParams, std::string& result, std::string& message);
     virtual bool execEvents(const int64_t& fromBlock, const int64_t& toBlock, const int64_t& minconf, const std::string& eventName, const std::string& contractAddress, const std::string& senderAddress, const int& numTopics, std::vector<TokenEvent>& result);
     virtual bool privateKeysDisabled();
-    virtual ~QtumTokenExec();
+    virtual ~YodyTokenExec();
 };
 
-class QtumToken
+class YodyToken
 {
 public:
-    QtumToken();
-    virtual ~QtumToken();
+    YodyToken();
+    virtual ~YodyToken();
 
-    void setQtumTokenExec(QtumTokenExec* tokenExec);
+    void setYodyTokenExec(YodyTokenExec* tokenExec);
 
     // Set command data
     void setAddress(const std::string &address);
@@ -87,8 +87,8 @@ public:
     bool burnEvents(std::vector<TokenEvent>& tokenEvents, int64_t fromBlock = 0, int64_t toBlock = -1, int64_t minconf = 0);
 
     // Static functions
-    static bool ToHash160(const std::string& strQtumAddress, std::string& strHash160);
-    static bool ToQtumAddress(const std::string& strHash160, std::string& strQtumAddress);
+    static bool ToHash160(const std::string& strYodyAddress, std::string& strHash160);
+    static bool ToYodyAddress(const std::string& strHash160, std::string& strYodyAddress);
     static uint256 ToUint256(const std::string& data);
     static void addTokenEvent(std::vector<TokenEvent> &tokenEvents, TokenEvent tokenEvent);
 
@@ -107,11 +107,11 @@ private:
     bool exec(const std::vector<std::string>& input, int func, std::vector<std::string>& output, bool sendTo);
     bool execEvents(int64_t fromBlock, int64_t toBlock, int64_t minconf, int func, std::vector<TokenEvent> &tokenEvents);
 
-    QtumToken(QtumToken const&);
-    QtumToken& operator=(QtumToken const&);
+    YodyToken(YodyToken const&);
+    YodyToken& operator=(YodyToken const&);
 
 private:
-    QtumTokenData* d;
+    YodyTokenData* d;
 };
 
 #endif // QTUMTOKEN_H

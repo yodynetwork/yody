@@ -16,8 +16,8 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Qtum"
-            VALUE "FileDescription",    "qtum-tx (CLI Qtum transaction editor utility)"
+            VALUE "CompanyName",        "Yody"
+            VALUE "FileDescription",    "qtum-tx (CLI Yody transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
             VALUE "InternalName",       "qtum-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
